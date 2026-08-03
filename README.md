@@ -1,4 +1,3 @@
-
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -48,12 +47,12 @@
     <div class="fixed inset-0 bg-pattern opacity-50 pointer-events-none z-0"></div>
 
     <div class="relative z-10 flex-grow">
-        <!-- Banner / Header Principal -->
-        <header class="bg-bordo text-white shadow-2xl relative overflow-hidden border-b-4 border-rosa">
+        <!-- Banner / Header Principal (Sem a borda/risco inferior) -->
+        <header class="bg-bordo text-white shadow-2xl relative overflow-hidden">
             <div class="absolute -right-16 -top-16 w-80 h-80 bg-rosa rounded-full opacity-20 blur-3xl pointer-events-none"></div>
             <div class="absolute -left-16 -bottom-16 w-80 h-80 bg-amarelo rounded-full opacity-15 blur-3xl pointer-events-none"></div>
 
-            <div class="max-w-4xl mx-auto px-6 py-14 text-center relative z-10">
+            <div class="max-w-4xl mx-auto px-6 py-12 text-center relative z-10">
                 
                 <!-- Foto de Perfil Oficial -->
                 <div class="relative inline-block mb-6">
