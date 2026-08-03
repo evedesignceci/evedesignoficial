@@ -137,7 +137,7 @@
                 </div>
             </section>
 
-            <!-- SEÇÃO SOBRE MIM (ATUALIZADA) -->
+            <!-- SEÇÃO SOBRE MIM (TOTALMENTE LIMPA SEM CITAÇÕES) -->
             <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-rosaclaro/60 relative">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     
@@ -155,7 +155,7 @@
                             <span class="bg-rosaclaro/60 text-bordo font-extrabold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full border border-rosa/30">Prazer, Evelyn!</span>
                             <h2 class="text-3xl sm:text-4xl font-extrabold text-bordo mt-3">Designer Gráfica, Web Designer & IA Criativa</h2>
                             <p class="text-slate-600 text-sm sm:text-base leading-relaxed mt-3">
-                                Desenvolvo identidades visuais autênticas, mascotes, quadrinhos e <strong>sites responsivos</strong>[cite: 1]. Sou especialista em <strong>engenharia de prompts</strong> para gerar imagens sintéticas, documentos estruturados, guias de estudo e roteiros de revisão interativos.
+                                Desenvolvo identidades visuais autênticas, mascotes, quadrinhos e <strong>sites responsivos</strong>. Sou especialista em <strong>engenharia de prompts</strong> para gerar imagens sintéticas, documentos estruturados, guias de estudo e roteiros de revisão interativos.
                             </p>
                         </div>
 
@@ -182,23 +182,23 @@
                                 </div>
                                 <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
                                     <span class="font-extrabold text-bordo text-xs block">Adobe Illustrator</span>
-                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Vetores, mascotes, ícones e identidades.</span>[cite: 1]
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Vetores, mascotes, ícones e identidades.</span>
                                 </div>
                                 <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
                                     <span class="font-extrabold text-bordo text-xs block">Blender 3D</span>
-                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Modelagem 3D, texturização e animação.</span>[cite: 1]
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Modelagem 3D, texturização e animação.</span>
                                 </div>
                                 <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
                                     <span class="font-extrabold text-bordo text-xs block">Gemini & ChatGPT</span>
-                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Prompts para estudos, roteiros e revisão.</span>[cite: 1]
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Prompts para estudos, roteiros e revisão.</span>
                                 </div>
                                 <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
                                     <span class="font-extrabold text-bordo text-xs block">Grok / Midjourney</span>
-                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Animações de IA e fotos conceituais.</span>[cite: 1]
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Animações de IA e fotos conceituais.</span>
                                 </div>
                                 <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
                                     <span class="font-extrabold text-bordo text-xs block">CapCut</span>
-                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Edição dinâmica, ritmo e vídeos de redes.</span>[cite: 1]
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Edição dinâmica, ritmo e vídeos de redes.</span>
                                 </div>
                             </div>
                         </div>
