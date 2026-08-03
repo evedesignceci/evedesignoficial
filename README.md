@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eve Design | Identidade Visual, Social Media & IA</title>
+    <title>Eve Design | Bio Link, Sobre Mim & Orçamento Interativo</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -52,325 +52,426 @@
             <div class="absolute -right-16 -top-16 w-80 h-80 bg-rosa rounded-full opacity-20 blur-3xl pointer-events-none"></div>
             <div class="absolute -left-16 -bottom-16 w-80 h-80 bg-amarelo rounded-full opacity-15 blur-3xl pointer-events-none"></div>
 
-            <div class="max-w-4xl mx-auto px-6 py-12 text-center relative z-10">
+            <div class="max-w-6xl mx-auto px-6 py-10 sm:py-14 text-center relative z-10">
                 
                 <!-- Foto de Perfil Oficial -->
-                <div class="relative inline-block mb-6">
-                    <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1.5 bg-gradient-to-tr from-amarelo via-rosa to-amarelo shadow-2xl transform transition hover:scale-105 duration-300">
+                <div class="relative inline-block mb-4 sm:mb-6">
+                    <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full p-1.5 bg-gradient-to-tr from-amarelo via-rosa to-amarelo shadow-2xl transform transition hover:scale-105 duration-300">
                         <img src="https://i.imgur.com/vxkHf9m.png" alt="Evelyn Cecilia - Eve Design" class="w-full h-full object-cover rounded-full bg-bordo">
                     </div>
-                    <span class="absolute bottom-1 right-1 bg-amarelo text-bordo p-1.5 rounded-full shadow-md text-xs font-black">✨</span>
+                    <span class="absolute bottom-1 right-1 bg-amarelo text-bordo p-1.5 sm:p-2 rounded-full shadow-md text-xs sm:text-sm font-black">✨</span>
                 </div>
 
-                <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight mb-2">
                     Eve Design
                 </h1>
-                <p class="text-rosa font-semibold text-lg sm:text-xl mb-4">
-                    Evelyn Cecilia | Designer Gráfica & Criadora de Conteúdo Visual <span class="text-amarelo">(@eve.desi_gn)</span>
+                <p class="text-rosa font-semibold text-lg sm:text-2xl mb-4">
+                    Evelyn Cecilia | Designer Gráfica, Ilustradora & IA Criativa <span class="text-amarelo block sm:inline">(@eve.desi_gn)</span>
                 </p>
 
-                <p class="max-w-2xl mx-auto text-rosaclaro/95 text-sm sm:text-base leading-relaxed mb-8">
-                    Desenvolvo identidades visuais autênticas, conteúdos estratégicos para redes sociais, edições de vídeo dinâmicas e produções inovadoras com IA.
+                <p class="max-w-3xl mx-auto text-rosaclaro/95 text-sm sm:text-lg leading-relaxed mb-6">
+                    Desenvolvo identidades visuais autênticas, mascotes e quadrinhos, além de criar conteúdos estratégicos para redes sociais, edições de vídeo e produções inovadoras com IA.
                 </p>
 
-                <!-- Botões de Ação Principal -->
-                <div class="flex flex-wrap justify-center gap-3.5">
-                    <a href="https://canva.link/ow9ck1a7pq2qwr7" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center px-6 py-3.5 rounded-full bg-amarelo text-bordo font-extrabold text-sm shadow-lg hover:bg-yellow-300 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                        Ver Portfólio no Canva
-                    </a>
-
-                    <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center px-6 py-3.5 rounded-full bg-rosa text-bordo font-extrabold text-sm shadow-lg hover:bg-pink-300 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        Instagram
-                    </a>
-
-                    <a href="https://linktr.ee/eve.desi_gn" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center px-6 py-3.5 rounded-full bg-white/10 text-white border border-rosaclaro/40 font-extrabold text-sm shadow-lg hover:bg-white/20 transition-all duration-200 backdrop-blur-md">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-                        Central de Links
+                <!-- Botão de Destaque Canva -->
+                <div class="flex justify-center">
+                    <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center px-8 py-4 rounded-full bg-amarelo text-bordo font-extrabold text-base shadow-xl hover:bg-yellow-300 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200">
+                        <svg class="w-6 h-6 mr-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        Acessar Portfólio Principal no Canva
                     </a>
                 </div>
             </div>
         </header>
 
-        <main class="max-w-4xl mx-auto px-4 py-12 space-y-12">
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="max-w-6xl mx-auto px-4 py-8 sm:py-12 space-y-12">
 
-            <!-- SEÇÃO DE EXPLICAÇÃO DOS SERVIÇOS -->
-            <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-rosaclaro/60 relative">
-                <div class="text-center max-w-2xl mx-auto mb-10">
-                    <span class="bg-rosaclaro/60 text-bordo font-extrabold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full border border-rosa/30">Soluções Visuais</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-bordo mt-3">Conheça Nossos Serviços</h2>
-                    <p class="text-slate-600 text-sm sm:text-base mt-2">Soluções completas para posicionar sua marca com beleza, estratégia e inovação.</p>
+            <!-- SEÇÃO DE LINKS DA BIO -->
+            <section class="bg-white/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-xl border border-rosaclaro/60">
+                <div class="text-center mb-6">
+                    <span class="bg-bordo text-rosaclaro font-extrabold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full">Central de Conexões</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-bordo mt-2">Minhas Redes & Portfólios</h2>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Serviço 1: Identidade Visual -->
-                    <div class="p-6 rounded-2xl bg-creme/40 border border-rosaclaro/70 hover:border-rosa hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 sm:gap-4">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" 
+                       class="flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-rosa hover:bg-rosaclaro/20 hover:-translate-y-1 transition-all duration-300 shadow-sm group">
+                        <img src="https://i.imgur.com/ben7xpB.png" alt="Instagram" class="w-10 h-10 object-contain mb-2 group-hover:scale-110 transition-transform">
+                        <span class="font-extrabold text-bordo text-xs sm:text-sm">Instagram</span>
+                        <span class="text-[10px] text-slate-500">@eve.desi_gn</span>
+                    </a>
+
+                    <!-- Threads -->
+                    <a href="https://www.threads.com/@eve.desi_gn" target="_blank" rel="noopener noreferrer" 
+                       class="flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-rosa hover:bg-rosaclaro/20 hover:-translate-y-1 transition-all duration-300 shadow-sm group">
+                        <img src="https://i.imgur.com/7cE4xVg.png" alt="Threads" class="w-10 h-10 object-contain mb-2 group-hover:scale-110 transition-transform">
+                        <span class="font-extrabold text-bordo text-xs sm:text-sm">Threads</span>
+                        <span class="text-[10px] text-slate-500">Ideias & Bastidores</span>
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@eve.desi_gn?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" 
+                       class="flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-rosa hover:bg-rosaclaro/20 hover:-translate-y-1 transition-all duration-300 shadow-sm group">
+                        <img src="https://i.imgur.com/lFFcr85.png" alt="TikTok" class="w-10 h-10 object-contain mb-2 group-hover:scale-110 transition-transform">
+                        <span class="font-extrabold text-bordo text-xs sm:text-sm">TikTok</span>
+                        <span class="text-[10px] text-slate-500">Vídeos & Animações</span>
+                    </a>
+
+                    <!-- Pinterest -->
+                    <a href="https://br.pinterest.com/evedesignergrafica/" target="_blank" rel="noopener noreferrer" 
+                       class="flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-rosa hover:bg-rosaclaro/20 hover:-translate-y-1 transition-all duration-300 shadow-sm group">
+                        <img src="https://i.imgur.com/p5IKxMv.png" alt="Pinterest" class="w-10 h-10 object-contain mb-2 group-hover:scale-110 transition-transform">
+                        <span class="font-extrabold text-bordo text-xs sm:text-sm">Pinterest</span>
+                        <span class="text-[10px] text-slate-500">Pastas de Inspiração</span>
+                    </a>
+
+                    <!-- Behance -->
+                    <a href="https://www.behance.net/evelynceclia" target="_blank" rel="noopener noreferrer" 
+                       class="flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-rosa hover:bg-rosaclaro/20 hover:-translate-y-1 transition-all duration-300 shadow-sm group col-span-2 sm:col-span-1">
+                        <img src="https://i.imgur.com/37ITJHQ.png" alt="Behance" class="w-10 h-10 object-contain mb-2 group-hover:scale-110 transition-transform">
+                        <span class="font-extrabold text-bordo text-xs sm:text-sm">Behance</span>
+                        <span class="text-[10px] text-slate-500">Projetos Completos</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SEÇÃO SOBRE MIM (INSPIRADA NO PORTFÓLIO PDF) -->
+            <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-rosaclaro/60 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Desenho da Evelyn -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl p-2 bg-gradient-to-tr from-bordo via-rosa to-amarelo shadow-2xl transform hover:scale-102 transition duration-300">
+                            <img src="https://i.imgur.com/P7J8yyp.png" alt="Ilustração Evelyn - Eve Design" class="w-full h-full object-cover rounded-2xl bg-creme">
+                            <span class="absolute -bottom-3 -right-3 bg-bordo text-amarelo px-4 py-1.5 rounded-full font-black text-xs shadow-lg border border-rosa/30">🎨 Evelyn Cecilia</span>
+                        </div>
+                    </div>
+
+                    <!-- Apresentação e Ferramentas -->
+                    <div class="lg:col-span-7 space-y-6">
                         <div>
-                            <div class="w-14 h-14 rounded-2xl bg-bordo/10 p-2.5 mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <span class="bg-rosaclaro/60 text-bordo font-extrabold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full border border-rosa/30">Prazer, Evelyn!</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-bordo mt-3">Designer Gráfica, Ilustradora & IA Criativa</h2>
+                            <p class="text-slate-600 text-sm sm:text-base leading-relaxed mt-3">
+                                Desenvolvo identidades visuais autênticas, mascotes e quadrinhos. Além disso, crio conteúdos estratégicos para redes sociais, edições de vídeo dinâmicas e produções inovadoras integrando inteligência artificial.
+                            </p>
+                        </div>
+
+                        <!-- Grade de Ferramentas -->
+                        <div>
+                            <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest mb-3">Minhas Ferramentas de Trabalho</h3>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
+                                    <span class="font-extrabold text-bordo text-xs block">Adobe Illustrator</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Vetores, mascotes, ícones e identidades.</span>
+                                </div>
+                                <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
+                                    <span class="font-extrabold text-bordo text-xs block">Blender 3D</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Modelagem 3D, texturização e animação.</span>
+                                </div>
+                                <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
+                                    <span class="font-extrabold text-bordo text-xs block">Canva</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Layouts rápidos, redes e apresentações.</span>
+                                </div>
+                                <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
+                                    <span class="font-extrabold text-bordo text-xs block">Gemini</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Ideação criativa, roteiros e estratégias.</span>
+                                </div>
+                                <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
+                                    <span class="font-extrabold text-bordo text-xs block">Grok / Midjourney</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Cenários falsos e animações geradas por IA.</span>
+                                </div>
+                                <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
+                                    <span class="font-extrabold text-bordo text-xs block">CapCut</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Edição dinâmica, ritmo e vídeos rápidos.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- COLUNAS RESPONSIVAS (EXPOSIÇÃO DOS SERVIÇOS + CALCULADORA) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                <!-- COLUNA DA ESQUERDA: SERVIÇOS DETALHADOS -->
+                <section class="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-rosaclaro/60">
+                    <div class="mb-6">
+                        <span class="bg-rosaclaro/60 text-bordo font-extrabold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full border border-rosa/30">Soluções Visuais</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-bordo mt-2">O que eu faço</h2>
+                        <p class="text-slate-600 text-xs sm:text-sm mt-1">Serviços personalizados para elevar sua marca.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Serviço 1: Identidade Visual -->
+                        <div class="p-4 rounded-2xl bg-creme/40 border border-rosaclaro/70 hover:border-rosa transition-all duration-300 flex items-start space-x-3.5">
+                            <div class="w-12 h-12 rounded-xl bg-bordo/10 p-2 shrink-0">
                                 <img src="https://i.imgur.com/elM9bc9.png" alt="Identidade Visual" class="w-full h-full object-contain">
                             </div>
-                            <h3 class="text-xl font-bold text-bordo mb-2">Identidade Visual Completa</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                                Criação da alma da sua marca! Inclui logotipo principal, marcas d'água, paleta de cores estratégica, tipografias corporativas e manual básico para garantir uma presença memorável.
-                            </p>
+                            <div>
+                                <h3 class="text-base font-bold text-bordo">Identidade Visual Completa</h3>
+                                <p class="text-slate-600 text-xs mt-1 leading-relaxed">Logo principal, marcas d'água, paleta de cores, tipografia corporativa e manual da marca.</p>
+                            </div>
                         </div>
-                        <span class="text-xs font-bold text-bordo bg-rosaclaro/50 px-3.5 py-2 rounded-xl w-fit border border-rosa/20">Incluso: Logo, Paleta, Tipografia e Manual</span>
-                    </div>
 
-                    <!-- Serviço 2: Social Media -->
-                    <div class="p-6 rounded-2xl bg-creme/40 border border-rosaclaro/70 hover:border-rosa hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="w-14 h-14 rounded-2xl bg-rosa/20 p-2.5 mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <!-- Serviço 2: Social Media -->
+                        <div class="p-4 rounded-2xl bg-creme/40 border border-rosaclaro/70 hover:border-rosa transition-all duration-300 flex items-start space-x-3.5">
+                            <div class="w-12 h-12 rounded-xl bg-rosa/20 p-2 shrink-0">
                                 <img src="https://i.imgur.com/JVXPzr0.png" alt="Social Media" class="w-full h-full object-contain">
                             </div>
-                            <h3 class="text-xl font-bold text-bordo mb-2">Gestão de Conteúdo / Social Media</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                                Designs que capturam a atenção e geram conexão no Instagram. Opções com artes estáticas atraentes, carrosséis informativos e capas/templates para Reels.
-                            </p>
+                            <div>
+                                <h3 class="text-base font-bold text-bordo">Social Media & Conteúdo</h3>
+                                <p class="text-slate-600 text-xs mt-1 leading-relaxed">Artes estáticas de alto impacto, carrosséis informativos e templates estratégicos.</p>
+                            </div>
                         </div>
-                        <span class="text-xs font-bold text-bordo bg-rosaclaro/50 px-3.5 py-2 rounded-xl w-fit border border-rosa/20">Foco em Engajamento e Conversão</span>
-                    </div>
 
-                    <!-- Serviço 3: Edição de Vídeo -->
-                    <div class="p-6 rounded-2xl bg-creme/40 border border-rosaclaro/70 hover:border-rosa hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="w-14 h-14 rounded-2xl bg-amarelo/20 p-2.5 mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <!-- Serviço 3: Edição de Vídeo -->
+                        <div class="p-4 rounded-2xl bg-creme/40 border border-rosaclaro/70 hover:border-rosa transition-all duration-300 flex items-start space-x-3.5">
+                            <div class="w-12 h-12 rounded-xl bg-amarelo/20 p-2 shrink-0">
                                 <img src="https://i.imgur.com/5HE7RED.png" alt="Edição de Vídeo" class="w-full h-full object-contain">
                             </div>
-                            <h3 class="text-xl font-bold text-bordo mb-2">Edição de Vídeo Tradicional</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                                Cortes dinâmicos, legendas estilizadas, transições fluidas, efeitos sonoros e correção de cor para manter o público atento do início ao fim do seu vídeo.
-                            </p>
+                            <div>
+                                <h3 class="text-base font-bold text-bordo">Edição Audiovisual</h3>
+                                <p class="text-slate-600 text-xs mt-1 leading-relaxed">Cortes dinâmicos, legendas estilizadas, efeitos sonoros e tratamento de cor.</p>
+                            </div>
                         </div>
-                        <span class="text-xs font-bold text-bordo bg-rosaclaro/50 px-3.5 py-2 rounded-xl w-fit border border-rosa/20">Cálculo proporcional por minuto</span>
-                    </div>
 
-                    <!-- Serviço 4: IA & Prompts -->
-                    <div class="p-6 rounded-2xl bg-creme/40 border border-rosaclaro/70 hover:border-rosa hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="w-14 h-14 rounded-2xl bg-bordo/10 p-2.5 mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <!-- Serviço 4: IA & Prompts -->
+                        <div class="p-4 rounded-2xl bg-creme/40 border border-rosaclaro/70 hover:border-rosa transition-all duration-300 flex items-start space-x-3.5">
+                            <div class="w-12 h-12 rounded-xl bg-bordo/10 p-2 shrink-0">
                                 <img src="https://i.imgur.com/BExWyKT.png" alt="IA & Prompts" class="w-full h-full object-contain">
                             </div>
-                            <h3 class="text-xl font-bold text-bordo mb-2">IA Sintética & Prompts Estratégicos</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed mb-5">
-                                O futuro do conteúdo visual! Geração de imagens ultrarrealistas, cenários falsos para vídeos, avatares, fotos conceituais e engenharia de prompts sob medida para sua equipe.
-                            </p>
-                        </div>
-                        <span class="text-xs font-bold text-bordo bg-rosaclaro/50 px-3.5 py-2 rounded-xl w-fit border border-rosa/20">Projetos Curtos ou Animações Complexas</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CALCULADORA DE ORÇAMENTO (ORGANIZADA E REFORMULADA) -->
-            <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-2xl border-2 border-rosa/40 relative">
-                <div class="text-center max-w-2xl mx-auto mb-10">
-                    <span class="bg-amarelo text-bordo font-black text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full shadow-sm">Simulador Interativo</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-bordo mt-3">Simulador de Orçamento</h2>
-                    <p class="text-slate-600 text-sm sm:text-base mt-2">Selecione os pacotes e serviços desejados para calcular uma estimativa instantânea do investimento.</p>
-                </div>
-
-                <form id="calculatorForm" class="space-y-8">
-                    
-                    <!-- Grupo 1: Design & Social Media -->
-                    <div class="space-y-4">
-                        <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest px-1">Identidade Visual & Redes Sociais</h3>
-                        
-                        <div class="grid grid-cols-1 gap-3">
-                            <!-- Item 1: Identidade Visual -->
-                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
-                                <div class="flex items-center space-x-4">
-                                    <input type="checkbox" id="item_id_visual" data-price="300" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
-                                    <div class="flex flex-col">
-                                        <span class="font-bold text-bordo text-sm sm:text-base group-hover:text-bordo">Identidade Visual Completa</span>
-                                        <span class="text-xs text-slate-500">Logo, paleta de cores, tipografia e manual da marca</span>
-                                    </div>
-                                </div>
-                                <span class="font-extrabold text-bordo bg-rosaclaro/40 px-3 py-1.5 rounded-xl text-xs sm:text-sm whitespace-nowrap ml-3 border border-rosa/20">R$ 300,00</span>
-                            </label>
-
-                            <!-- Item 2: Social Media Pacote Completo -->
-                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
-                                <div class="flex items-center space-x-4">
-                                    <input type="checkbox" id="item_sm_completo" data-price="400" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
-                                    <div class="flex flex-col">
-                                        <span class="font-bold text-bordo text-sm sm:text-base group-hover:text-bordo">Social Media - Pacote Completo</span>
-                                        <span class="text-xs text-slate-500">Reels, Artes Estáticas e Carrosséis estratégicos</span>
-                                    </div>
-                                </div>
-                                <span class="font-extrabold text-bordo bg-rosaclaro/40 px-3 py-1.5 rounded-xl text-xs sm:text-sm whitespace-nowrap ml-3 border border-rosa/20">R$ 400,00</span>
-                            </label>
-
-                            <!-- Item 3: Social Media Apenas Estáticos -->
-                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
-                                <div class="flex items-center space-x-4">
-                                    <input type="checkbox" id="item_sm_estaticos" data-price="200" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
-                                    <div class="flex flex-col">
-                                        <span class="font-bold text-bordo text-sm sm:text-base group-hover:text-bordo">Social Media - Pacote Apenas Estáticos</span>
-                                        <span class="text-xs text-slate-500">Artes focadas em feed com design de alto impacto</span>
-                                    </div>
-                                </div>
-                                <span class="font-extrabold text-bordo bg-rosaclaro/40 px-3 py-1.5 rounded-xl text-xs sm:text-sm whitespace-nowrap ml-3 border border-rosa/20">R$ 200,00</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Grupo 2: Edição de Vídeo -->
-                    <div class="space-y-4 pt-4 border-t border-slate-100">
-                        <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest px-1">Edição Áudio Visual</h3>
-
-                        <div class="p-5 rounded-2xl border-2 border-slate-100 bg-slate-50/70 space-y-4 shadow-sm">
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                                <label for="video_minutes" class="font-bold text-bordo flex items-center text-sm sm:text-base">
-                                    <svg class="w-5 h-5 mr-2 text-rosa" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                                    Edição de Vídeo Tradicional
-                                </label>
-                                <span class="text-xs font-bold text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200 self-start sm:self-auto">R$ 50,00 / minuto</span>
-                            </div>
-
-                            <div class="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-200/60">
-                                <span class="text-xs sm:text-sm text-slate-600 font-semibold">Duração estimada do vídeo:</span>
-                                
-                                <div class="flex items-center space-x-3">
-                                    <div class="flex items-center space-x-1.5 bg-white p-1 rounded-2xl border border-slate-200 shadow-inner">
-                                        <button type="button" id="btn_minus_min" class="w-8 h-8 rounded-xl bg-rosaclaro/60 text-bordo font-extrabold text-lg hover:bg-rosa transition flex items-center justify-center">-</button>
-                                        <input type="number" id="video_minutes" min="0" value="0" class="w-14 text-center font-extrabold text-bordo bg-transparent border-none py-1 focus:outline-none text-base">
-                                        <button type="button" id="btn_plus_min" class="w-8 h-8 rounded-xl bg-rosaclaro/60 text-bordo font-extrabold text-lg hover:bg-rosa transition flex items-center justify-center">+</button>
-                                    </div>
-                                    <span class="text-xs font-semibold text-slate-500">min.</span>
-                                </div>
-
-                                <div class="font-extrabold text-bordo bg-rosaclaro/40 px-3.5 py-1.5 rounded-xl text-sm border border-rosa/20 ml-auto sm:ml-0">
-                                    Subtotal: R$ <span id="video_subtotal">0</span>,00
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Grupo 3: IA e Sintéticos -->
-                    <div class="space-y-4 pt-4 border-t border-slate-100">
-                        <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest px-1">Inteligência Artificial & Prompts</h3>
-
-                        <div class="grid grid-cols-1 gap-3">
-                            <!-- Item IA Simples -->
-                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
-                                <div class="flex items-center space-x-4">
-                                    <input type="checkbox" id="item_ia_simples" data-price="50" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
-                                    <div class="flex flex-col">
-                                        <span class="font-bold text-bordo text-sm sm:text-base group-hover:text-bordo">IA Simples / Curtas (Até 1 min)</span>
-                                        <span class="text-xs text-slate-500">Cenários rápidos, fotos sintéticas e retratos com IA</span>
-                                    </div>
-                                </div>
-                                <span class="font-extrabold text-bordo bg-rosaclaro/40 px-3 py-1.5 rounded-xl text-xs sm:text-sm whitespace-nowrap ml-3 border border-rosa/20">R$ 50,00</span>
-                            </label>
-
-                            <!-- Item IA Complexa Selecionável -->
-                            <div class="p-5 rounded-2xl border-2 border-slate-100 bg-slate-50/70 space-y-4 shadow-sm">
-                                <div class="flex flex-col">
-                                    <span class="font-bold text-bordo text-sm sm:text-base">IA Complexa / Vídeos Longos (Mais de 2 min)</span>
-                                    <span class="text-xs text-slate-500">Cenários falsos, animações complexas, produção sintética avançada</span>
-                                </div>
-
-                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-                                    <label class="flex items-center justify-center p-3 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
-                                        <input type="radio" name="ia_complexa" value="0" checked class="text-bordo focus:ring-bordo accent-bordo mr-2">
-                                        <span class="text-xs font-bold text-slate-700 group-hover:text-bordo">Nenhum</span>
-                                    </label>
-                                    <label class="flex items-center justify-center p-3 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
-                                        <input type="radio" name="ia_complexa" value="200" class="text-bordo focus:ring-bordo accent-bordo mr-2">
-                                        <span class="text-xs font-bold text-bordo">R$ 200,00</span>
-                                    </label>
-                                    <label class="flex items-center justify-center p-3 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
-                                        <input type="radio" name="ia_complexa" value="350" class="text-bordo focus:ring-bordo accent-bordo mr-2">
-                                        <span class="text-xs font-bold text-bordo">R$ 350,00</span>
-                                    </label>
-                                    <label class="flex items-center justify-center p-3 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
-                                        <input type="radio" name="ia_complexa" value="500" class="text-bordo focus:ring-bordo accent-bordo mr-2">
-                                        <span class="text-xs font-bold text-bordo">R$ 500,00+</span>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Item Prompts & Estudos -->
-                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
-                                <div class="flex items-center space-x-4">
-                                    <input type="checkbox" id="item_prompts" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
-                                    <div class="flex flex-col">
-                                        <span class="font-bold text-bordo text-sm sm:text-base group-hover:text-bordo">Prompts para Estudos, Anúncios e Produtividade</span>
-                                        <span class="text-xs text-slate-500">Engenharia de prompts personalizada para sua necessidade</span>
-                                    </div>
-                                </div>
-                                <span class="text-xs font-extrabold text-bordo bg-amarelo/50 px-3 py-1.5 rounded-xl whitespace-nowrap ml-3 border border-amarelo">A combinar</span>
-                            </label>
-                        </div>
-
-                        <!-- Amostra de Prompt Mestre -->
-                        <div class="mt-4 p-5 rounded-2xl bg-bordo/5 border border-rosa/30 space-y-3.5 relative overflow-hidden">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center space-x-2.5">
-                                    <img src="https://i.imgur.com/72WCVYn.png" alt="Ícone Prompt" class="w-6 h-6 object-contain">
-                                    <h4 class="text-xs font-extrabold text-bordo uppercase tracking-wider">Amostra Grátis • Prompt Mestre Demonstrativo</h4>
-                                </div>
-                                <span class="text-[10px] bg-rosa/30 text-bordo px-2.5 py-0.5 rounded-full font-black">Amostra</span>
-                            </div>
-                            <div class="relative bg-white p-3.5 rounded-xl border border-rosaclaro/60 text-xs text-slate-700 leading-relaxed font-mono shadow-inner">
-                                <p id="samplePromptText">"Atue como um Especialista em Branding e crie uma linha editorial de 5 posts de alto impacto para Instagram no nicho de estética, focando em topo de funil com ganchos visuais e textos persuasivos em tom elegante."</p>
-                            </div>
-                            <button type="button" id="btnCopyPrompt" class="w-full py-3 px-4 bg-bordo text-white font-bold text-xs rounded-xl hover:bg-bordo/90 transition flex items-center justify-center space-x-2 shadow-md active:scale-98">
-                                <svg class="w-4 h-4 text-amarelo" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                                <span id="btnCopyPromptText">Copiar Prompt Mestre de Amostra</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- RESUMO E TOTALIZADOR -->
-                    <div class="mt-10 p-6 sm:p-8 bg-bordo text-white rounded-3xl shadow-2xl relative overflow-hidden">
-                        <div class="absolute right-0 bottom-0 transform translate-x-4 translate-y-4 w-40 h-40 bg-rosa/20 rounded-full blur-2xl pointer-events-none"></div>
-
-                        <div class="flex flex-col sm:flex-row items-center justify-between gap-6 relative z-10">
                             <div>
-                                <span class="text-xs uppercase tracking-widest text-rosaclaro font-bold block">Valor Total Estimado</span>
-                                <div class="text-4xl sm:text-5xl font-black text-amarelo flex items-baseline mt-1">
-                                    <span>R$</span>
-                                    <span id="total_price" class="ml-2">0,00</span>
-                                </div>
-                                <p class="text-xs text-rosaclaro/80 mt-1.5">*O valor final pode variar após alinhamento detalhado do briefing.</p>
+                                <h3 class="text-base font-bold text-bordo">IA Sintética & Prompts</h3>
+                                <p class="text-slate-600 text-xs mt-1 leading-relaxed">Imagens ultrarrealistas, fotos conceituais, cenários falsos e engenharia de prompts.</p>
                             </div>
-
-                            <!-- Botão de Enviar no IG Direct -->
-                            <button type="button" id="btn_send_instagram" 
-                                    class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-rosa hover:bg-pink-300 text-bordo font-black text-base shadow-xl transition-all duration-200 flex items-center justify-center space-x-2.5 transform active:scale-95 hover:scale-105">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                                <span>Enviar Pedido pelo Instagram</span>
-                            </button>
                         </div>
                     </div>
+                </section>
 
-                </form>
-            </section>
+                <!-- COLUNA DA DIREITA: SIMULADOR DE ORÇAMENTO COM DUPLA OPÇÃO DE ENVIO -->
+                <section class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border-2 border-rosa/40 relative">
+                    <div class="text-center sm:text-left mb-8">
+                        <span class="bg-amarelo text-bordo font-black text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full shadow-sm">Simulador Interativo</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-bordo mt-2">Simule seu Projeto</h2>
+                        <p class="text-slate-600 text-xs sm:text-sm mt-1">Marque as opções para calcular uma estimativa em tempo real.</p>
+                    </div>
+
+                    <form id="calculatorForm" class="space-y-6">
+                        
+                        <!-- Grupo 1: Design & Social Media -->
+                        <div class="space-y-3">
+                            <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest px-1">Identidade Visual & Redes Sociais</h3>
+                            
+                            <div class="grid grid-cols-1 gap-2.5">
+                                <!-- Item 1: Identidade Visual -->
+                                <label class="flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="checkbox" id="item_id_visual" data-price="300" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
+                                        <div class="flex flex-col">
+                                            <span class="font-bold text-bordo text-sm">Identidade Visual Completa</span>
+                                            <span class="text-[11px] text-slate-500">Logo, paleta de cores, tipografia e manual</span>
+                                        </div>
+                                    </div>
+                                    <span class="font-extrabold text-bordo bg-rosaclaro/40 px-2.5 py-1 rounded-xl text-xs whitespace-nowrap ml-2 border border-rosa/20">R$ 300,00</span>
+                                </label>
+
+                                <!-- Item 2: Social Media Pacote Completo -->
+                                <label class="flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="checkbox" id="item_sm_completo" data-price="400" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
+                                        <div class="flex flex-col">
+                                            <span class="font-bold text-bordo text-sm">Social Media - Completo</span>
+                                            <span class="text-[11px] text-slate-500">Reels, Estáticos e Carrosséis</span>
+                                        </div>
+                                    </div>
+                                    <span class="font-extrabold text-bordo bg-rosaclaro/40 px-2.5 py-1 rounded-xl text-xs whitespace-nowrap ml-2 border border-rosa/20">R$ 400,00</span>
+                                </label>
+
+                                <!-- Item 3: Social Media Apenas Estáticos -->
+                                <label class="flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="checkbox" id="item_sm_estaticos" data-price="200" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
+                                        <div class="flex flex-col">
+                                            <span class="font-bold text-bordo text-sm">Social Media - Estáticos</span>
+                                            <span class="text-[11px] text-slate-500">Artes de feed com alto impacto</span>
+                                        </div>
+                                    </div>
+                                    <span class="font-extrabold text-bordo bg-rosaclaro/40 px-2.5 py-1 rounded-xl text-xs whitespace-nowrap ml-2 border border-rosa/20">R$ 200,00</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Grupo 2: Edição de Vídeo -->
+                        <div class="space-y-3 pt-3 border-t border-slate-100">
+                            <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest px-1">Edição Áudio Visual</h3>
+
+                            <div class="p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 space-y-3 shadow-sm">
+                                <div class="flex items-center justify-between">
+                                    <label for="video_minutes" class="font-bold text-bordo flex items-center text-sm">
+                                        <svg class="w-4 h-4 mr-1.5 text-rosa" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                        Edição de Vídeo Tradicional
+                                    </label>
+                                    <span class="text-[11px] font-bold text-slate-500 bg-white px-2.5 py-0.5 rounded-full border border-slate-200">R$ 50,00 / min</span>
+                                </div>
+
+                                <div class="flex items-center justify-between gap-3 pt-2 border-t border-slate-200/60">
+                                    <span class="text-xs text-slate-600 font-semibold">Minutos de vídeo:</span>
+                                    
+                                    <div class="flex items-center space-x-1.5 bg-white p-1 rounded-2xl border border-slate-200 shadow-inner">
+                                        <button type="button" id="btn_minus_min" class="w-7 h-7 rounded-xl bg-rosaclaro/60 text-bordo font-extrabold text-base hover:bg-rosa transition flex items-center justify-center">-</button>
+                                        <input type="number" id="video_minutes" min="0" value="0" class="w-12 text-center font-extrabold text-bordo bg-transparent border-none py-0.5 focus:outline-none text-sm">
+                                        <button type="button" id="btn_plus_min" class="w-7 h-7 rounded-xl bg-rosaclaro/60 text-bordo font-extrabold text-base hover:bg-rosa transition flex items-center justify-center">+</button>
+                                    </div>
+
+                                    <div class="font-extrabold text-bordo bg-rosaclaro/40 px-3 py-1 rounded-xl text-xs border border-rosa/20 ml-auto">
+                                        R$ <span id="video_subtotal">0</span>,00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Grupo 3: IA e Sintéticos -->
+                        <div class="space-y-3 pt-3 border-t border-slate-100">
+                            <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest px-1">Inteligência Artificial & Prompts</h3>
+
+                            <div class="grid grid-cols-1 gap-2.5">
+                                <!-- Item IA Simples -->
+                                <label class="flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="checkbox" id="item_ia_simples" data-price="50" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
+                                        <div class="flex flex-col">
+                                            <span class="font-bold text-bordo text-sm">IA Simples (Até 1 min)</span>
+                                            <span class="text-[11px] text-slate-500">Cenários rápidos e retratos sintéticos</span>
+                                        </div>
+                                    </div>
+                                    <span class="font-extrabold text-bordo bg-rosaclaro/40 px-2.5 py-1 rounded-xl text-xs whitespace-nowrap ml-2 border border-rosa/20">R$ 50,00</span>
+                                </label>
+
+                                <!-- Item IA Complexa Selecionável -->
+                                <div class="p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 space-y-3 shadow-sm">
+                                    <div class="flex flex-col">
+                                        <span class="font-bold text-bordo text-sm">IA Complexa / Vídeos Longos (2 min+)</span>
+                                        <span class="text-[11px] text-slate-500">Cenários falsos e animações complexas</span>
+                                    </div>
+
+                                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+                                        <label class="flex items-center justify-center p-2.5 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
+                                            <input type="radio" name="ia_complexa" value="0" checked class="text-bordo focus:ring-bordo accent-bordo mr-1.5">
+                                            <span class="text-xs font-bold text-slate-700">Nenhum</span>
+                                        </label>
+                                        <label class="flex items-center justify-center p-2.5 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
+                                            <input type="radio" name="ia_complexa" value="200" class="text-bordo focus:ring-bordo accent-bordo mr-1.5">
+                                            <span class="text-xs font-bold text-bordo">R$ 200</span>
+                                        </label>
+                                        <label class="flex items-center justify-center p-2.5 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
+                                            <input type="radio" name="ia_complexa" value="350" class="text-bordo focus:ring-bordo accent-bordo mr-1.5">
+                                            <span class="text-xs font-bold text-bordo">R$ 350</span>
+                                        </label>
+                                        <label class="flex items-center justify-center p-2.5 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
+                                            <input type="radio" name="ia_complexa" value="500" class="text-bordo focus:ring-bordo accent-bordo mr-1.5">
+                                            <span class="text-xs font-bold text-bordo">R$ 500+</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Item Prompts & Estudos -->
+                                <label class="flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="checkbox" id="item_prompts" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
+                                        <div class="flex flex-col">
+                                            <span class="font-bold text-bordo text-sm">Prompts & Engenharia</span>
+                                            <span class="text-[11px] text-slate-500">Engenharia personalizada sob demanda</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-[11px] font-extrabold text-bordo bg-amarelo/50 px-2.5 py-1 rounded-xl whitespace-nowrap ml-2 border border-amarelo">A combinar</span>
+                                </label>
+                            </div>
+
+                            <!-- Amostra de Prompt Mestre -->
+                            <div class="mt-4 p-4 rounded-2xl bg-bordo/5 border border-rosa/30 space-y-3 relative overflow-hidden">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center space-x-2">
+                                        <img src="https://i.imgur.com/72WCVYn.png" alt="Ícone Prompt" class="w-5 h-5 object-contain">
+                                        <h4 class="text-[11px] font-extrabold text-bordo uppercase tracking-wider">Amostra Grátis • Prompt Mestre</h4>
+                                    </div>
+                                    <span class="text-[9px] bg-rosa/30 text-bordo px-2 py-0.5 rounded-full font-black">Demonstrativo</span>
+                                </div>
+                                <div class="relative bg-white p-3 rounded-xl border border-rosaclaro/60 text-[11px] text-slate-700 leading-relaxed font-mono shadow-inner">
+                                    <p id="samplePromptText">"Atue como um Especialista em Branding e crie uma linha editorial de 5 posts de alto impacto para Instagram no nicho de estética..."</p>
+                                </div>
+                                <button type="button" id="btnCopyPrompt" class="w-full py-2.5 px-3 bg-bordo text-white font-bold text-xs rounded-xl hover:bg-bordo/90 transition flex items-center justify-center space-x-2 shadow-md active:scale-98">
+                                    <svg class="w-4 h-4 text-amarelo" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                    <span id="btnCopyPromptText">Copiar Prompt Mestre de Amostra</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- RESUMO E TOTALIZADOR COM OPÇÕES DE ENVIO -->
+                        <div class="mt-8 p-6 bg-bordo text-white rounded-3xl shadow-2xl relative overflow-hidden">
+                            <div class="absolute right-0 bottom-0 transform translate-x-4 translate-y-4 w-36 h-36 bg-rosa/20 rounded-full blur-2xl pointer-events-none"></div>
+
+                            <div class="flex flex-col gap-5 relative z-10">
+                                <div class="flex items-baseline justify-between border-b border-rosaclaro/20 pb-4">
+                                    <div>
+                                        <span class="text-[10px] uppercase tracking-widest text-rosaclaro font-bold block">Valor Total Estimado</span>
+                                        <div class="text-3xl sm:text-4xl font-black text-amarelo flex items-baseline mt-1">
+                                            <span>R$</span>
+                                            <span id="total_price" class="ml-1.5">0,00</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-[10px] text-rosaclaro/80 text-right max-w-[140px]">*Sujeito a alinhamento de briefing.</p>
+                                </div>
+
+                                <!-- Botões de Ação Duplos -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <!-- Botão 1: Instagram Direct -->
+                                    <button type="button" id="btn_send_instagram" 
+                                            class="w-full px-4 py-3.5 rounded-2xl bg-rosa hover:bg-pink-300 text-bordo font-black text-xs sm:text-sm shadow-xl transition-all duration-200 flex items-center justify-center space-x-2 transform active:scale-95">
+                                        <svg class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                        <span>Enviar pelo Instagram</span>
+                                    </button>
+
+                                    <!-- Botão 2: Formulário Direto -->
+                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDi3881g7lPEPwnAe5SdmuIHeXm-Kli1lxOQ7ybQxVu8edkg/viewform?usp=header" target="_blank" rel="noopener noreferrer" 
+                                       class="w-full px-4 py-3.5 rounded-2xl bg-amarelo hover:bg-yellow-300 text-bordo font-black text-xs sm:text-sm shadow-xl transition-all duration-200 flex items-center justify-center space-x-2 transform active:scale-95">
+                                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                                        <span>Preencher Formulário</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </section>
+            </div>
 
         </main>
     </div>
 
-    <!-- MODAL DE NOTIFICAÇÃO -->
+    <!-- MODAL DE NOTIFICAÇÃO DE ORÇAMENTO COPIADO -->
     <div id="customModal" class="fixed inset-0 bg-bordo/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl border-2 border-rosa text-center space-y-4 transform transition-all scale-100">
             <div class="w-16 h-16 bg-amarelo/30 rounded-2xl flex items-center justify-center mx-auto p-3 border border-amarelo">
                 <img src="https://i.imgur.com/72WCVYn.png" alt="Sucesso" class="w-full h-full object-contain">
             </div>
-            <h3 class="text-2xl font-extrabold text-bordo">Pedido Copiado com Sucesso!</h3>
-            <p id="modalMessage" class="text-sm text-slate-600 leading-relaxed">
-                O resumo do seu orçamento foi copiado para a área de transferência. Clique no botão abaixo para ir direto ao perfil e colar na mensagem privada (Direct).
+            <h3 class="text-2xl font-extrabold text-bordo">Resumo Copiado!</h3>
+            <p id="modalMessage" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                O resumo do seu orçamento estimado foi copiado com sucesso! Escolha por onde você prefere me enviar abaixo:
             </p>
             <div class="pt-2 flex flex-col gap-2.5">
                 <a id="btnModalRedirect" href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" 
-                   class="w-full py-3.5 px-4 bg-bordo text-white font-extrabold rounded-xl hover:bg-bordo/90 transition shadow-lg">
-                    Ir para o Instagram Direct
+                   class="w-full py-3.5 px-4 bg-bordo text-white font-extrabold rounded-xl hover:bg-bordo/90 transition shadow-lg text-sm flex items-center justify-center">
+                    Enviar no Direct do Instagram
                 </a>
-                <button type="button" id="btnModalClose" class="w-full py-2.5 px-4 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 text-sm transition">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDi3881g7lPEPwnAe5SdmuIHeXm-Kli1lxOQ7ybQxVu8edkg/viewform?usp=header" target="_blank" rel="noopener noreferrer" 
+                   class="w-full py-3.5 px-4 bg-amarelo text-bordo font-extrabold rounded-xl hover:bg-yellow-300 transition shadow-md text-sm flex items-center justify-center">
+                    Enviar via Formulário Completo
+                </a>
+                <button type="button" id="btnModalClose" class="w-full py-2.5 px-4 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 text-xs transition">
                     Fechar
                 </button>
             </div>
@@ -379,7 +480,7 @@
 
     <!-- RODAPÉ -->
     <footer class="bg-bordo text-rosaclaro py-10 px-6 mt-16 border-t-4 border-rosa relative z-10">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center space-x-3">
                 <img src="https://i.imgur.com/vxkHf9m.png" alt="Logo Footer" class="w-10 h-10 rounded-full border-2 border-amarelo object-cover">
                 <div>
@@ -397,10 +498,6 @@
                 <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="hover:text-amarelo transition flex items-center font-medium">
                     <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     @eve.desi_gn
-                </a>
-                <a href="https://linktr.ee/eve.desi_gn" target="_blank" rel="noopener noreferrer" class="hover:text-amarelo transition flex items-center font-medium">
-                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-                    linktr.ee/eve.desi_gn
                 </a>
             </div>
         </div>
