@@ -66,11 +66,11 @@
                     Eve Design
                 </h1>
                 <p class="text-rosa font-semibold text-lg sm:text-2xl mb-4">
-                    Evelyn Cecilia | Designer Gráfica, Ilustradora & IA Criativa <span class="text-amarelo block sm:inline">(@eve.desi_gn)</span>
+                    Evelyn Cecilia | Designer Gráfica, Web Designer & IA Criativa <span class="text-amarelo block sm:inline">(@eve.desi_gn)</span>
                 </p>
 
                 <p class="max-w-3xl mx-auto text-rosaclaro/95 text-sm sm:text-lg leading-relaxed mb-6">
-                    Desenvolvo identidades visuais autênticas, mascotes e quadrinhos, além de criar conteúdos estratégicos para redes sociais, edições de vídeo e produções inovadoras com IA.
+                    Desenvolvo identidades visuais autênticas, sites funcionais, materiais de estudo com engenharia de prompts, edições de vídeo e soluções criativas com IA.
                 </p>
 
                 <!-- Botão de Destaque Canva -->
@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 sm:gap-4">
-                    <!-- Instagram -->
+                    <!-- Instagram Eve Design -->
                     <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" 
                        class="flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-rosa hover:bg-rosaclaro/20 hover:-translate-y-1 transition-all duration-300 shadow-sm group">
                         <img src="https://i.imgur.com/ben7xpB.png" alt="Instagram" class="w-10 h-10 object-contain mb-2 group-hover:scale-110 transition-transform">
@@ -137,7 +137,7 @@
                 </div>
             </section>
 
-            <!-- SEÇÃO SOBRE MIM (INSPIRADA NO PORTFÓLIO PDF) -->
+            <!-- SEÇÃO SOBRE MIM (ATUALIZADA) -->
             <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-rosaclaro/60 relative">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     
@@ -149,14 +149,27 @@
                         </div>
                     </div>
 
-                    <!-- Apresentação e Ferramentas -->
+                    <!-- Apresentação + Projetos Atuais -->
                     <div class="lg:col-span-7 space-y-6">
                         <div>
                             <span class="bg-rosaclaro/60 text-bordo font-extrabold text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full border border-rosa/30">Prazer, Evelyn!</span>
-                            <h2 class="text-3xl sm:text-4xl font-extrabold text-bordo mt-3">Designer Gráfica, Ilustradora & IA Criativa</h2>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-bordo mt-3">Designer Gráfica, Web Designer & IA Criativa</h2>
                             <p class="text-slate-600 text-sm sm:text-base leading-relaxed mt-3">
-                                Desenvolvo identidades visuais autênticas, mascotes e quadrinhos. Além disso, crio conteúdos estratégicos para redes sociais, edições de vídeo dinâmicas e produções inovadoras integrando inteligência artificial.
+                                Desenvolvo identidades visuais autênticas, mascotes, quadrinhos e <strong>sites responsivos</strong>[cite: 1]. Sou especialista em <strong>engenharia de prompts</strong> para gerar imagens sintéticas, documentos estruturados, guias de estudo e roteiros de revisão interativos.
                             </p>
+                        </div>
+
+                        <!-- Card Projeto em Destaque: Turminha do Xexéu -->
+                        <div class="p-4 rounded-2xl bg-rosaclaro/30 border border-rosa/40 flex items-center justify-between gap-4">
+                            <div>
+                                <span class="text-[10px] font-extrabold text-bordo uppercase tracking-wider bg-amarelo/60 px-2.5 py-0.5 rounded-full">Projeto de Conteúdo & IA</span>
+                                <h3 class="font-extrabold text-bordo text-sm sm:text-base mt-1">Turminha do Xexéu</h3>
+                                <p class="text-xs text-slate-600">Canal infantil de animação e conteúdo que estou cuidando e produzindo com IA.</p>
+                            </div>
+                            <a href="https://www.instagram.com/turminhaxe_xeu" target="_blank" rel="noopener noreferrer" 
+                               class="px-3.5 py-2 rounded-xl bg-bordo text-white font-extrabold text-xs shrink-0 hover:bg-bordo/90 transition shadow-md">
+                                @turminhaxe_xeu
+                            </a>
                         </div>
 
                         <!-- Grade de Ferramentas -->
@@ -164,28 +177,28 @@
                             <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest mb-3">Minhas Ferramentas de Trabalho</h3>
                             <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
                                 <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
+                                    <span class="font-extrabold text-bordo text-xs block">HTML5 / Tailwind</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Criação de sites e landing pages responsivas.</span>
+                                </div>
+                                <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
                                     <span class="font-extrabold text-bordo text-xs block">Adobe Illustrator</span>
-                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Vetores, mascotes, ícones e identidades.</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Vetores, mascotes, ícones e identidades.</span>[cite: 1]
                                 </div>
                                 <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
                                     <span class="font-extrabold text-bordo text-xs block">Blender 3D</span>
-                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Modelagem 3D, texturização e animação.</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Modelagem 3D, texturização e animação.</span>[cite: 1]
                                 </div>
                                 <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
-                                    <span class="font-extrabold text-bordo text-xs block">Canva</span>
-                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Layouts rápidos, redes e apresentações.</span>
-                                </div>
-                                <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
-                                    <span class="font-extrabold text-bordo text-xs block">Gemini</span>
-                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Ideação criativa, roteiros e estratégias.</span>
+                                    <span class="font-extrabold text-bordo text-xs block">Gemini & ChatGPT</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Prompts para estudos, roteiros e revisão.</span>[cite: 1]
                                 </div>
                                 <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
                                     <span class="font-extrabold text-bordo text-xs block">Grok / Midjourney</span>
-                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Cenários falsos e animações geradas por IA.</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Animações de IA e fotos conceituais.</span>[cite: 1]
                                 </div>
                                 <div class="p-3 rounded-2xl bg-creme/50 border border-rosaclaro/60">
                                     <span class="font-extrabold text-bordo text-xs block">CapCut</span>
-                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Edição dinâmica, ritmo e vídeos rápidos.</span>
+                                    <span class="text-[10px] text-slate-500 leading-tight block mt-0.5">Edição dinâmica, ritmo e vídeos de redes.</span>[cite: 1]
                                 </div>
                             </div>
                         </div>
@@ -194,7 +207,7 @@
                 </div>
             </section>
 
-            <!-- COLUNAS RESPONSIVAS (EXPOSIÇÃO DOS SERVIÇOS + CALCULADORA) -->
+            <!-- COLUNAS RESPONSIVAS (SERVIÇOS + CALCULADORA) -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
                 <!-- COLUNA DA ESQUERDA: SERVIÇOS DETALHADOS -->
@@ -217,14 +230,14 @@
                             </div>
                         </div>
 
-                        <!-- Serviço 2: Social Media -->
+                        <!-- Serviço 2: Social Media & Sites -->
                         <div class="p-4 rounded-2xl bg-creme/40 border border-rosaclaro/70 hover:border-rosa transition-all duration-300 flex items-start space-x-3.5">
                             <div class="w-12 h-12 rounded-xl bg-rosa/20 p-2 shrink-0">
                                 <img src="https://i.imgur.com/JVXPzr0.png" alt="Social Media" class="w-full h-full object-contain">
                             </div>
                             <div>
-                                <h3 class="text-base font-bold text-bordo">Social Media & Conteúdo</h3>
-                                <p class="text-slate-600 text-xs mt-1 leading-relaxed">Artes estáticas de alto impacto, carrosséis informativos e templates estratégicos.</p>
+                                <h3 class="text-base font-bold text-bordo">Web Design & Social Media</h3>
+                                <p class="text-slate-600 text-xs mt-1 leading-relaxed">Sites interativos, links da bio, artes estáticas de alto impacto e carrosséis estratégicos.</p>
                             </div>
                         </div>
 
@@ -239,14 +252,14 @@
                             </div>
                         </div>
 
-                        <!-- Serviço 4: IA & Prompts -->
+                        <!-- Serviço 4: IA, Prompts & Estudos -->
                         <div class="p-4 rounded-2xl bg-creme/40 border border-rosaclaro/70 hover:border-rosa transition-all duration-300 flex items-start space-x-3.5">
                             <div class="w-12 h-12 rounded-xl bg-bordo/10 p-2 shrink-0">
                                 <img src="https://i.imgur.com/BExWyKT.png" alt="IA & Prompts" class="w-full h-full object-contain">
                             </div>
                             <div>
-                                <h3 class="text-base font-bold text-bordo">IA Sintética & Prompts</h3>
-                                <p class="text-slate-600 text-xs mt-1 leading-relaxed">Imagens ultrarrealistas, fotos conceituais, cenários falsos e engenharia de prompts.</p>
+                                <h3 class="text-base font-bold text-bordo">IA Sintética, Prompts & Estudos</h3>
+                                <p class="text-slate-600 text-xs mt-1 leading-relaxed">Imagens ultrarrealistas, engenharia de prompts para resumos, estudos e documentos de revisão.</p>
                             </div>
                         </div>
                     </div>
@@ -334,9 +347,9 @@
                             </div>
                         </div>
 
-                        <!-- Grupo 3: IA e Sintéticos -->
+                        <!-- Grupo 3: IA, Sites & Prompts -->
                         <div class="space-y-3 pt-3 border-t border-slate-100">
-                            <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest px-1">Inteligência Artificial & Prompts</h3>
+                            <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest px-1">Inteligência Artificial, Sites & Prompts</h3>
 
                             <div class="grid grid-cols-1 gap-2.5">
                                 <!-- Item IA Simples -->
@@ -378,13 +391,13 @@
                                     </div>
                                 </div>
 
-                                <!-- Item Prompts & Estudos -->
+                                <!-- Item Prompts, Sites e Estudos -->
                                 <label class="flex items-center justify-between p-3.5 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
                                     <div class="flex items-center space-x-3">
                                         <input type="checkbox" id="item_prompts" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
                                         <div class="flex flex-col">
-                                            <span class="font-bold text-bordo text-sm">Prompts & Engenharia</span>
-                                            <span class="text-[11px] text-slate-500">Engenharia personalizada sob demanda</span>
+                                            <span class="font-bold text-bordo text-sm">Sites, Prompts & Materiais de Estudo</span>
+                                            <span class="text-[11px] text-slate-500">Landing pages, engenharia de prompts e documentos</span>
                                         </div>
                                     </div>
                                     <span class="text-[11px] font-extrabold text-bordo bg-amarelo/50 px-2.5 py-1 rounded-xl whitespace-nowrap ml-2 border border-amarelo">A combinar</span>
@@ -460,7 +473,7 @@
             </div>
             <h3 class="text-2xl font-extrabold text-bordo">Resumo Copiado!</h3>
             <p id="modalMessage" class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                O resumo do seu orçamento estimado foi copiado com sucesso! Escolha por onde você prefere me enviar abaixo:
+                O resumo do seu orçamento estimado foi copiado para a área de transferência! Escolha por onde você prefere me enviar abaixo:
             </p>
             <div class="pt-2 flex flex-col gap-2.5">
                 <a id="btnModalRedirect" href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" 
@@ -605,7 +618,7 @@
                     }
                 });
 
-                if (itemPrompts.checked) selectedItems.push('• Prompts para Estudos/Anúncios (A combinar)');
+                if (itemPrompts.checked) selectedItems.push('• Sites, Prompts & Materiais de Estudo (A combinar)');
 
                 const totalVal = totalPriceEl.textContent;
 
