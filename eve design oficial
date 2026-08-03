@@ -73,20 +73,20 @@
                 <!-- Botões de Ação Principal -->
                 <div class="flex flex-wrap justify-center gap-3">
                     <a href="https://canva.link/ow9ck1a7pq2qwr7" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center px-5 py-3 rounded-full bg-amarelo text-bordo font-bold text-sm shadow-md hover:bg-yellow-300 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5">
+                       class="inline-flex items-center px-5 py-3 rounded-full bg-amarelo text-bordo font-bold text-sm shadow-md hover:bg-yellow-300 hover:shadow-lg transition-all duration-200 transform hover:scale-105">
                         <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                         Ver Portfólio no Canva
                     </a>
 
                     <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center px-5 py-3 rounded-full bg-rosa text-bordo font-bold text-sm shadow-md hover:bg-pink-300 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                       class="inline-flex items-center px-5 py-3 rounded-full bg-rosa text-bordo font-bold text-sm shadow-md hover:bg-pink-300 hover:shadow-lg transition-all duration-200 transform hover:scale-105">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.204-.012 3.584-.07 4.85-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/></svg>
                         Instagram
                     </a>
 
                     <a href="https://linktr.ee/eve.desi_gn" target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center px-5 py-3 rounded-full bg-white/10 text-white border border-rosaclaro/30 font-bold text-sm shadow-md hover:bg-white/20 transition-all duration-200 backdrop-blur-sm">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                       class="inline-flex items-center px-5 py-3 rounded-full bg-white/10 text-white border border-rosaclaro/30 font-bold text-sm shadow-md hover:bg-white/20 transition-all duration-200 transform hover:scale-105">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4.243 4.243a4 4 0 105.656 5.656l4.243-4.243"/></svg>
                         Central de Links (Linktree)
                     </a>
                 </div>
@@ -112,7 +112,7 @@
                             </div>
                             <h3 class="text-lg font-bold text-bordo mb-2">Identidade Visual Completa</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                Criação da alma da sua marca! Inclui logotipo principal, marcas d'água, paleta de cores estratégica, tipografias corporativas e manual básico para garantir uma presença memorável.
+                                Criação da alma da sua marca! Inclui logotipo principal, marcas d'água, paleta de cores estratégica, tipografias corporativas e manual básico para garantir uma presença coesa.
                             </p>
                         </div>
                         <span class="text-xs font-semibold text-bordo bg-rosaclaro/40 px-3 py-1.5 rounded-lg w-fit">Incluso: Logo, Paleta, Tipografia e Aplicações</span>
@@ -154,7 +154,7 @@
                             </div>
                             <h3 class="text-lg font-bold text-bordo mb-2">IA Sintética & Prompts Estratégicos</h3>
                             <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                O futuro do conteúdo visual! Geração de imagens ultrarrealistas, cenários falsos para vídeos, avatares, fotos conceituais e engenharia de prompts sob medida para sua equipe.
+                                O futuro do conteúdo visual! Geração de imagens ultrarrealistas, cenários falsos para vídeos, avatares, fotos conceituais e engenharia de prompts sob medida para suas demandas.
                             </p>
                         </div>
                         <span class="text-xs font-semibold text-bordo bg-rosaclaro/40 px-3 py-1.5 rounded-lg w-fit">Projetos Curtos ou Animações Complexas</span>
@@ -177,7 +177,7 @@
                         <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Identidade Visual & Redes Sociais</h3>
                         
                         <!-- Item 1: Identidade Visual -->
-                        <label class="flex items-start sm:items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition cursor-pointer group">
+                        <label class="flex items-start sm:items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition cursor-pointer">
                             <div class="flex items-center space-x-3">
                                 <input type="checkbox" id="item_id_visual" data-price="300" class="w-5 h-5 text-bordo border-slate-300 rounded focus:ring-bordo cursor-pointer">
                                 <div>
@@ -189,7 +189,7 @@
                         </label>
 
                         <!-- Item 2: Social Media Pacote Completo -->
-                        <label class="flex items-start sm:items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition cursor-pointer group">
+                        <label class="flex items-start sm:items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition cursor-pointer">
                             <div class="flex items-center space-x-3">
                                 <input type="checkbox" id="item_sm_completo" data-price="400" class="w-5 h-5 text-bordo border-slate-300 rounded focus:ring-bordo cursor-pointer">
                                 <div>
@@ -201,7 +201,7 @@
                         </label>
 
                         <!-- Item 3: Social Media Apenas Estáticos -->
-                        <label class="flex items-start sm:items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition cursor-pointer group">
+                        <label class="flex items-start sm:items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition cursor-pointer">
                             <div class="flex items-center space-x-3">
                                 <input type="checkbox" id="item_sm_estaticos" data-price="200" class="w-5 h-5 text-bordo border-slate-300 rounded focus:ring-bordo cursor-pointer">
                                 <div>
@@ -220,7 +220,7 @@
                         <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-3">
                             <div class="flex items-center justify-between">
                                 <label for="video_minutes" class="font-bold text-bordo flex items-center">
-                                    <svg class="w-4 h-4 mr-1.5 text-rosa" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                    <svg class="w-4 h-4 mr-1.5 text-rosa" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                     Edição de Vídeo Tradicional
                                 </label>
                                 <span class="text-xs font-semibold text-slate-500">R$ 50,00 / minuto</span>
@@ -229,8 +229,8 @@
                             <div class="flex items-center space-x-4">
                                 <span class="text-xs text-slate-500 font-medium whitespace-nowrap">Duração do vídeo:</span>
                                 <div class="flex items-center space-x-2">
-                                    <button type="button" id="btn_minus_min" class="w-8 h-8 rounded-lg bg-rosaclaro/50 text-bordo font-bold hover:bg-rosa transition flex items-center justify-center">-</button>
-                                    <input type="number" id="video_minutes" min="0" value="0" class="w-16 text-center font-extrabold text-bordo bg-white border border-slate-300 rounded-lg py-1 focus:outline-none focus:ring-2 focus:ring-bordo">
+                                    <button type="button" id="btn_minus_min" class="w-8 h-8 rounded-lg bg-rosaclaro/50 text-bordo font-bold hover:bg-rosa transition flex items-center justify-center">−</button>
+                                    <input type="number" id="video_minutes" min="0" value="0" class="w-16 text-center font-extrabold text-bordo bg-white border border-slate-300 rounded-lg py-1 focus:outline-none focus:ring-2 focus:ring-rosa">
                                     <button type="button" id="btn_plus_min" class="w-8 h-8 rounded-lg bg-rosaclaro/50 text-bordo font-bold hover:bg-rosa transition flex items-center justify-center">+</button>
                                 </div>
                                 <span class="text-sm font-bold text-bordo ml-auto">
@@ -245,7 +245,7 @@
                         <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Inteligência Artificial & Prompts</h3>
 
                         <!-- Item IA Simples -->
-                        <label class="flex items-start sm:items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition cursor-pointer group">
+                        <label class="flex items-start sm:items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition cursor-pointer">
                             <div class="flex items-center space-x-3">
                                 <input type="checkbox" id="item_ia_simples" data-price="50" class="w-5 h-5 text-bordo border-slate-300 rounded focus:ring-bordo cursor-pointer">
                                 <div>
@@ -286,7 +286,7 @@
                         </div>
 
                         <!-- Item Prompts & Estudos -->
-                        <label class="flex items-start sm:items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition cursor-pointer group">
+                        <label class="flex items-start sm:items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition cursor-pointer">
                             <div class="flex items-center space-x-3">
                                 <input type="checkbox" id="item_prompts" class="w-5 h-5 text-bordo border-slate-300 rounded focus:ring-bordo cursor-pointer">
                                 <div>
@@ -307,10 +307,10 @@
                                 <span class="text-[10px] bg-rosa/30 text-bordo px-2 py-0.5 rounded-full font-extrabold">Amostra</span>
                             </div>
                             <div class="relative bg-white p-3 rounded-xl border border-rosaclaro/60 text-xs text-slate-700 leading-relaxed font-mono">
-                                <p id="samplePromptText">"Atue como um Especialista em Branding e crie uma linha editorial de 5 posts de alto impacto para Instagram no nicho de estética, focando em topo de funil com ganchos visuais e textos persuasivos em tom elegante."</p>
+                                <p id="samplePromptText">"Atue como um Especialista em Branding e crie uma linha editorial de 5 posts de alto impacto para Instagram no nicho de estética, focando em tendências visuais e copywriting persuasivo. Cada post deve incluir: 1) Tema principal com gancho emocional, 2) Descrição do visual esperado, 3) 3 hashtags relevantes e 4) Call-to-action estratégico. Utilize tons de voz sofisticado mas acessível, sempre destacando a exclusividade e qualidade do serviço."</p>
                             </div>
-                            <button type="button" id="btnCopyPrompt" class="w-full py-2.5 px-4 bg-bordo text-white font-bold text-xs rounded-xl hover:bg-opacity-90 transition flex items-center justify-center space-x-2 shadow-sm active:scale-95">
-                                <svg class="w-4 h-4 text-amarelo" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            <button type="button" id="btnCopyPrompt" class="w-full py-2.5 px-4 bg-bordo text-white font-bold text-xs rounded-xl hover:bg-opacity-90 transition flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4 text-amarelo" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                                 <span id="btnCopyPromptText">Copiar Prompt Mestre de Amostra</span>
                             </button>
                         </div>
@@ -332,8 +332,8 @@
 
                             <!-- Botão de Enviar no IG Direct -->
                             <button type="button" id="btn_send_instagram" 
-                                    class="w-full sm:w-auto px-6 py-4 rounded-xl bg-rosa hover:bg-pink-300 text-bordo font-extrabold text-base shadow-lg transition-all duration-200 flex items-center justify-center space-x-2 transform active:scale-95">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                    class="w-full sm:w-auto px-6 py-4 rounded-xl bg-rosa hover:bg-pink-300 text-bordo font-extrabold text-base shadow-lg transition-all duration-200 flex items-center justify-center gap-2">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.204-.012 3.584-.07 4.85-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
                                 <span>Enviar Pedido pelo Instagram</span>
                             </button>
                         </div>
@@ -378,15 +378,15 @@
             <!-- Contatos Diretos -->
             <div class="flex flex-wrap items-center gap-4 text-xs">
                 <a href="mailto:evececi.design@gmail.com" class="hover:text-amarelo transition flex items-center">
-                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     evececi.design@gmail.com
                 </a>
                 <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" class="hover:text-amarelo transition flex items-center">
-                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.204-.012 3.584-.07 4.85-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
                     @eve.desi_gn
                 </a>
                 <a href="https://linktr.ee/eve.desi_gn" target="_blank" class="hover:text-amarelo transition flex items-center">
-                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4.243 4.243a4 4 0 105.656 5.656l4.243-4.243"></path></svg>
                     linktr.ee/eve.desi_gn
                 </a>
             </div>
@@ -451,7 +451,6 @@
                 // Minutos de vídeo
                 const minutes = Math.max(0, parseInt(videoInput.value) || 0);
                 const videoSubtotal = minutes * 50;
-                // exibe sem casas decimais (vai concatenar ,00 no layout)
                 videoSubtotalEl.textContent = videoSubtotal.toLocaleString('pt-BR');
                 total += videoSubtotal;
 
@@ -464,12 +463,12 @@
                 });
                 total += iaComplexaVal;
 
-                // Atualizar DOM Total (formatado pt-BR com 2 casas decimais)
+                // Atualizar DOM Total
                 totalPriceEl.textContent = total.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                 return total;
             }
 
-            // Função robusta para copiar texto (retorna Promise)
+            // Função robusta para copiar texto
             function copyTextToClipboard(text) {
                 if (navigator.clipboard && window.isSecureContext) {
                     return navigator.clipboard.writeText(text);
@@ -534,7 +533,6 @@
                 }
                 message += `*Valor Total Estimado:* R$ ${totalFormatted}\n\nGostaria de alinhar os detalhes do meu projeto!`;
 
-                // tenta copiar primeiro; só abre modal após sucesso (ou avisa no catch)
                 copyTextToClipboard(message)
                     .then(() => {
                         modalMessage.textContent = 'O resumo do seu orçamento foi copiado para a área de transferência. Clique abaixo para ir ao Direct.';
@@ -544,7 +542,6 @@
                         console.error('Erro ao copiar:', err);
                         modalMessage.textContent = 'Não foi possível copiar automaticamente. O texto do pedido foi gerado — selecione e copie manualmente se necessário.';
                         customModal.classList.remove('hidden');
-                        // como fallback, também podemos abrir o modal e deixar o usuário copiar manualmente
                     });
             });
 
