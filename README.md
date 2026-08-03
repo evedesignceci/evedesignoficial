@@ -47,7 +47,7 @@
     <div class="fixed inset-0 bg-pattern opacity-50 pointer-events-none z-0"></div>
 
     <div class="relative z-10 flex-grow">
-        <!-- Banner / Header Principal (Sem a borda/risco inferior) -->
+        <!-- Banner / Header Principal -->
         <header class="bg-bordo text-white shadow-2xl relative overflow-hidden">
             <div class="absolute -right-16 -top-16 w-80 h-80 bg-rosa rounded-full opacity-20 blur-3xl pointer-events-none"></div>
             <div class="absolute -left-16 -bottom-16 w-80 h-80 bg-amarelo rounded-full opacity-15 blur-3xl pointer-events-none"></div>
@@ -165,7 +165,7 @@
                 </div>
             </section>
 
-            <!-- CALCULADORA DE ORÇAMENTO -->
+            <!-- CALCULADORA DE ORÇAMENTO (ORGANIZADA E REFORMULADA) -->
             <section class="bg-white rounded-3xl p-6 sm:p-10 shadow-2xl border-2 border-rosa/40 relative">
                 <div class="text-center max-w-2xl mx-auto mb-10">
                     <span class="bg-amarelo text-bordo font-black text-xs uppercase tracking-widest px-3.5 py-1.5 rounded-full shadow-sm">Simulador Interativo</span>
@@ -173,132 +173,139 @@
                     <p class="text-slate-600 text-sm sm:text-base mt-2">Selecione os pacotes e serviços desejados para calcular uma estimativa instantânea do investimento.</p>
                 </div>
 
-                <form id="calculatorForm" class="space-y-6">
+                <form id="calculatorForm" class="space-y-8">
                     
                     <!-- Grupo 1: Design & Social Media -->
-                    <div class="space-y-3">
-                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Identidade Visual & Redes Sociais</h3>
+                    <div class="space-y-4">
+                        <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest px-1">Identidade Visual & Redes Sociais</h3>
                         
-                        <!-- Item 1: Identidade Visual -->
-                        <label class="flex items-start sm:items-center justify-between p-4.5 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition-all cursor-pointer group shadow-sm">
-                            <div class="flex items-center space-x-3.5">
-                                <input type="checkbox" id="item_id_visual" data-price="300" class="w-5 h-5 text-bordo border-slate-300 rounded focus:ring-bordo cursor-pointer">
-                                <div>
-                                    <span class="font-bold text-bordo block text-base">Identidade Visual Completa</span>
-                                    <span class="text-xs text-slate-500">Logo, paleta de cores, tipografia e manual da marca</span>
+                        <div class="grid grid-cols-1 gap-3">
+                            <!-- Item 1: Identidade Visual -->
+                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
+                                <div class="flex items-center space-x-4">
+                                    <input type="checkbox" id="item_id_visual" data-price="300" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
+                                    <div class="flex flex-col">
+                                        <span class="font-bold text-bordo text-sm sm:text-base group-hover:text-bordo">Identidade Visual Completa</span>
+                                        <span class="text-xs text-slate-500">Logo, paleta de cores, tipografia e manual da marca</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <span class="font-extrabold text-bordo whitespace-nowrap ml-2 text-base">R$ 300,00</span>
-                        </label>
+                                <span class="font-extrabold text-bordo bg-rosaclaro/40 px-3 py-1.5 rounded-xl text-xs sm:text-sm whitespace-nowrap ml-3 border border-rosa/20">R$ 300,00</span>
+                            </label>
 
-                        <!-- Item 2: Social Media Pacote Completo -->
-                        <label class="flex items-start sm:items-center justify-between p-4.5 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition-all cursor-pointer group shadow-sm">
-                            <div class="flex items-center space-x-3.5">
-                                <input type="checkbox" id="item_sm_completo" data-price="400" class="w-5 h-5 text-bordo border-slate-300 rounded focus:ring-bordo cursor-pointer">
-                                <div>
-                                    <span class="font-bold text-bordo block text-base">Social Media - Pacote Completo</span>
-                                    <span class="text-xs text-slate-500">Reels, Artes Estáticas e Carrosséis estratégicos</span>
+                            <!-- Item 2: Social Media Pacote Completo -->
+                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
+                                <div class="flex items-center space-x-4">
+                                    <input type="checkbox" id="item_sm_completo" data-price="400" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
+                                    <div class="flex flex-col">
+                                        <span class="font-bold text-bordo text-sm sm:text-base group-hover:text-bordo">Social Media - Pacote Completo</span>
+                                        <span class="text-xs text-slate-500">Reels, Artes Estáticas e Carrosséis estratégicos</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <span class="font-extrabold text-bordo whitespace-nowrap ml-2 text-base">R$ 400,00</span>
-                        </label>
+                                <span class="font-extrabold text-bordo bg-rosaclaro/40 px-3 py-1.5 rounded-xl text-xs sm:text-sm whitespace-nowrap ml-3 border border-rosa/20">R$ 400,00</span>
+                            </label>
 
-                        <!-- Item 3: Social Media Apenas Estáticos -->
-                        <label class="flex items-start sm:items-center justify-between p-4.5 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition-all cursor-pointer group shadow-sm">
-                            <div class="flex items-center space-x-3.5">
-                                <input type="checkbox" id="item_sm_estaticos" data-price="200" class="w-5 h-5 text-bordo border-slate-300 rounded focus:ring-bordo cursor-pointer">
-                                <div>
-                                    <span class="font-bold text-bordo block text-base">Social Media - Pacote Apenas Estáticos</span>
-                                    <span class="text-xs text-slate-500">Artes focadas em feed com design de alto impacto</span>
+                            <!-- Item 3: Social Media Apenas Estáticos -->
+                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
+                                <div class="flex items-center space-x-4">
+                                    <input type="checkbox" id="item_sm_estaticos" data-price="200" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
+                                    <div class="flex flex-col">
+                                        <span class="font-bold text-bordo text-sm sm:text-base group-hover:text-bordo">Social Media - Pacote Apenas Estáticos</span>
+                                        <span class="text-xs text-slate-500">Artes focadas em feed com design de alto impacto</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <span class="font-extrabold text-bordo whitespace-nowrap ml-2 text-base">R$ 200,00</span>
-                        </label>
+                                <span class="font-extrabold text-bordo bg-rosaclaro/40 px-3 py-1.5 rounded-xl text-xs sm:text-sm whitespace-nowrap ml-3 border border-rosa/20">R$ 200,00</span>
+                            </label>
+                        </div>
                     </div>
 
                     <!-- Grupo 2: Edição de Vídeo -->
-                    <div class="space-y-3 pt-5 border-t border-slate-100">
-                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Edição Áudio Visual</h3>
+                    <div class="space-y-4 pt-4 border-t border-slate-100">
+                        <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest px-1">Edição Áudio Visual</h3>
 
-                        <div class="p-4.5 rounded-2xl border border-slate-200 bg-slate-50 space-y-3.5 shadow-sm">
-                            <div class="flex items-center justify-between">
-                                <label for="video_minutes" class="font-bold text-bordo flex items-center text-base">
+                        <div class="p-5 rounded-2xl border-2 border-slate-100 bg-slate-50/70 space-y-4 shadow-sm">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                <label for="video_minutes" class="font-bold text-bordo flex items-center text-sm sm:text-base">
                                     <svg class="w-5 h-5 mr-2 text-rosa" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                                     Edição de Vídeo Tradicional
                                 </label>
-                                <span class="text-xs font-bold text-slate-500 bg-white px-2.5 py-1 rounded-lg border border-slate-200">R$ 50,00 / minuto</span>
+                                <span class="text-xs font-bold text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200 self-start sm:self-auto">R$ 50,00 / minuto</span>
                             </div>
 
-                            <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
-                                <span class="text-xs text-slate-500 font-medium whitespace-nowrap">Duração do vídeo:</span>
-                                <div class="flex items-center space-x-2">
-                                    <button type="button" id="btn_minus_min" class="w-9 h-9 rounded-xl bg-rosaclaro/60 text-bordo font-extrabold text-lg hover:bg-rosa transition flex items-center justify-center shadow-sm">-</button>
-                                    <input type="number" id="video_minutes" min="0" value="0" class="w-16 text-center font-extrabold text-bordo bg-white border border-slate-300 rounded-xl py-1.5 focus:outline-none focus:ring-2 focus:ring-bordo shadow-inner">
-                                    <button type="button" id="btn_plus_min" class="w-9 h-9 rounded-xl bg-rosaclaro/60 text-bordo font-extrabold text-lg hover:bg-rosa transition flex items-center justify-center shadow-sm">+</button>
+                            <div class="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-200/60">
+                                <span class="text-xs sm:text-sm text-slate-600 font-semibold">Duração estimada do vídeo:</span>
+                                
+                                <div class="flex items-center space-x-3">
+                                    <div class="flex items-center space-x-1.5 bg-white p-1 rounded-2xl border border-slate-200 shadow-inner">
+                                        <button type="button" id="btn_minus_min" class="w-8 h-8 rounded-xl bg-rosaclaro/60 text-bordo font-extrabold text-lg hover:bg-rosa transition flex items-center justify-center">-</button>
+                                        <input type="number" id="video_minutes" min="0" value="0" class="w-14 text-center font-extrabold text-bordo bg-transparent border-none py-1 focus:outline-none text-base">
+                                        <button type="button" id="btn_plus_min" class="w-8 h-8 rounded-xl bg-rosaclaro/60 text-bordo font-extrabold text-lg hover:bg-rosa transition flex items-center justify-center">+</button>
+                                    </div>
+                                    <span class="text-xs font-semibold text-slate-500">min.</span>
                                 </div>
-                                <span class="text-base font-extrabold text-bordo ml-auto">
-                                    = R$ <span id="video_subtotal">0</span>,00
-                                </span>
+
+                                <div class="font-extrabold text-bordo bg-rosaclaro/40 px-3.5 py-1.5 rounded-xl text-sm border border-rosa/20 ml-auto sm:ml-0">
+                                    Subtotal: R$ <span id="video_subtotal">0</span>,00
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Grupo 3: IA e Sintéticos -->
-                    <div class="space-y-3 pt-5 border-t border-slate-100">
-                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Inteligência Artificial & Prompts</h3>
+                    <div class="space-y-4 pt-4 border-t border-slate-100">
+                        <h3 class="text-xs font-extrabold text-bordo/60 uppercase tracking-widest px-1">Inteligência Artificial & Prompts</h3>
 
-                        <!-- Item IA Simples -->
-                        <label class="flex items-start sm:items-center justify-between p-4.5 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition-all cursor-pointer group shadow-sm">
-                            <div class="flex items-center space-x-3.5">
-                                <input type="checkbox" id="item_ia_simples" data-price="50" class="w-5 h-5 text-bordo border-slate-300 rounded focus:ring-bordo cursor-pointer">
-                                <div>
-                                    <span class="font-bold text-bordo block text-base">IA Simples / Curtas (Até 1 min)</span>
-                                    <span class="text-xs text-slate-500">Cenários rápidos, fotos sintéticas e retratos com IA</span>
+                        <div class="grid grid-cols-1 gap-3">
+                            <!-- Item IA Simples -->
+                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
+                                <div class="flex items-center space-x-4">
+                                    <input type="checkbox" id="item_ia_simples" data-price="50" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
+                                    <div class="flex flex-col">
+                                        <span class="font-bold text-bordo text-sm sm:text-base group-hover:text-bordo">IA Simples / Curtas (Até 1 min)</span>
+                                        <span class="text-xs text-slate-500">Cenários rápidos, fotos sintéticas e retratos com IA</span>
+                                    </div>
+                                </div>
+                                <span class="font-extrabold text-bordo bg-rosaclaro/40 px-3 py-1.5 rounded-xl text-xs sm:text-sm whitespace-nowrap ml-3 border border-rosa/20">R$ 50,00</span>
+                            </label>
+
+                            <!-- Item IA Complexa Selecionável -->
+                            <div class="p-5 rounded-2xl border-2 border-slate-100 bg-slate-50/70 space-y-4 shadow-sm">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-bordo text-sm sm:text-base">IA Complexa / Vídeos Longos (Mais de 2 min)</span>
+                                    <span class="text-xs text-slate-500">Cenários falsos, animações complexas, produção sintética avançada</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+                                    <label class="flex items-center justify-center p-3 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
+                                        <input type="radio" name="ia_complexa" value="0" checked class="text-bordo focus:ring-bordo accent-bordo mr-2">
+                                        <span class="text-xs font-bold text-slate-700 group-hover:text-bordo">Nenhum</span>
+                                    </label>
+                                    <label class="flex items-center justify-center p-3 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
+                                        <input type="radio" name="ia_complexa" value="200" class="text-bordo focus:ring-bordo accent-bordo mr-2">
+                                        <span class="text-xs font-bold text-bordo">R$ 200,00</span>
+                                    </label>
+                                    <label class="flex items-center justify-center p-3 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
+                                        <input type="radio" name="ia_complexa" value="350" class="text-bordo focus:ring-bordo accent-bordo mr-2">
+                                        <span class="text-xs font-bold text-bordo">R$ 350,00</span>
+                                    </label>
+                                    <label class="flex items-center justify-center p-3 rounded-xl border-2 border-slate-200 bg-white cursor-pointer hover:border-rosa transition group has-[:checked]:border-bordo has-[:checked]:bg-rosaclaro/20">
+                                        <input type="radio" name="ia_complexa" value="500" class="text-bordo focus:ring-bordo accent-bordo mr-2">
+                                        <span class="text-xs font-bold text-bordo">R$ 500,00+</span>
+                                    </label>
                                 </div>
                             </div>
-                            <span class="font-extrabold text-bordo whitespace-nowrap ml-2 text-base">R$ 50,00</span>
-                        </label>
 
-                        <!-- Item IA Complexa Selecionável -->
-                        <div class="p-4.5 rounded-2xl border border-slate-200 bg-slate-50 space-y-3.5 shadow-sm">
-                            <div class="flex items-start justify-between">
-                                <div>
-                                    <span class="font-bold text-bordo block text-base">IA Complexa / Vídeos Longos (Mais de 2 min)</span>
-                                    <span class="text-xs text-slate-500">Cenários falsos, animações complexas, produção em IA</span>
+                            <!-- Item Prompts & Estudos -->
+                            <label class="flex items-center justify-between p-4 rounded-2xl border-2 border-slate-100 bg-slate-50/70 hover:bg-rosaclaro/20 hover:border-rosa transition-all duration-200 cursor-pointer group shadow-sm">
+                                <div class="flex items-center space-x-4">
+                                    <input type="checkbox" id="item_prompts" class="w-5 h-5 text-bordo border-2 border-slate-300 rounded-md focus:ring-bordo cursor-pointer accent-bordo">
+                                    <div class="flex flex-col">
+                                        <span class="font-bold text-bordo text-sm sm:text-base group-hover:text-bordo">Prompts para Estudos, Anúncios e Produtividade</span>
+                                        <span class="text-xs text-slate-500">Engenharia de prompts personalizada para sua necessidade</span>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 pt-1">
-                                <label class="flex items-center p-2.5 rounded-xl border border-slate-200 bg-white cursor-pointer hover:border-rosa transition">
-                                    <input type="radio" name="ia_complexa" value="0" checked class="text-bordo focus:ring-bordo">
-                                    <span class="text-xs font-medium ml-2">Nenhum</span>
-                                </label>
-                                <label class="flex items-center p-2.5 rounded-xl border border-slate-200 bg-white cursor-pointer hover:border-rosa transition">
-                                    <input type="radio" name="ia_complexa" value="200" class="text-bordo focus:ring-bordo">
-                                    <span class="text-xs font-bold ml-2">R$ 200,00</span>
-                                </label>
-                                <label class="flex items-center p-2.5 rounded-xl border border-slate-200 bg-white cursor-pointer hover:border-rosa transition">
-                                    <input type="radio" name="ia_complexa" value="350" class="text-bordo focus:ring-bordo">
-                                    <span class="text-xs font-bold ml-2">R$ 350,00</span>
-                                </label>
-                                <label class="flex items-center p-2.5 rounded-xl border border-slate-200 bg-white cursor-pointer hover:border-rosa transition">
-                                    <input type="radio" name="ia_complexa" value="500" class="text-bordo focus:ring-bordo">
-                                    <span class="text-xs font-bold ml-2">R$ 500,00+</span>
-                                </label>
-                            </div>
+                                <span class="text-xs font-extrabold text-bordo bg-amarelo/50 px-3 py-1.5 rounded-xl whitespace-nowrap ml-3 border border-amarelo">A combinar</span>
+                            </label>
                         </div>
-
-                        <!-- Item Prompts & Estudos -->
-                        <label class="flex items-start sm:items-center justify-between p-4.5 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-rosaclaro/20 hover:border-rosa transition-all cursor-pointer group shadow-sm">
-                            <div class="flex items-center space-x-3.5">
-                                <input type="checkbox" id="item_prompts" class="w-5 h-5 text-bordo border-slate-300 rounded focus:ring-bordo cursor-pointer">
-                                <div>
-                                    <span class="font-bold text-bordo block text-base">Prompts para Estudos, Anúncios e Produtividade</span>
-                                    <span class="text-xs text-slate-500">Engenharia de prompts personalizada para sua necessidade</span>
-                                </div>
-                            </div>
-                            <span class="text-xs font-extrabold text-bordo bg-amarelo/50 px-3 py-1 rounded-full whitespace-nowrap ml-2 border border-amarelo">A combinar</span>
-                        </label>
 
                         <!-- Amostra de Prompt Mestre -->
                         <div class="mt-4 p-5 rounded-2xl bg-bordo/5 border border-rosa/30 space-y-3.5 relative overflow-hidden">
@@ -348,7 +355,7 @@
         </main>
     </div>
 
-    <!-- MODAL DE NOTIFICAÇÃO (Substitui alert) -->
+    <!-- MODAL DE NOTIFICAÇÃO -->
     <div id="customModal" class="fixed inset-0 bg-bordo/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl border-2 border-rosa text-center space-y-4 transform transition-all scale-100">
             <div class="w-16 h-16 bg-amarelo/30 rounded-2xl flex items-center justify-center mx-auto p-3 border border-amarelo">
