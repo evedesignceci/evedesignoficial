@@ -172,7 +172,7 @@
             Acompanhe meus trabalhos, simule valores e escolha o melhor formato para o seu projeto.
         </p>
 
-        <!-- LINKS PESSOAIS (SEM OS DA TURMINHA, POIS ESTÃO NA SEÇÃO DE EXEMPLOS ABAIXO) -->
+        <!-- LINKS PESSOAIS -->
         <div class="flex items-center justify-center gap-3 sm:gap-4 flex-wrap mb-6">
             <a href="https://instagram.com/eve.desi_gn" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-white border-2 border-rosaclaro rounded-2xl flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs font-extrabold text-bordo" title="Instagram Pessoal">
                 <img src="https://i.imgur.com/EE5DwcB.png" alt="IG" class="w-5 h-5 object-contain"> @eve.desi_gn
@@ -234,7 +234,7 @@
 
     </main>
 
-    <!-- SEÇÃO: EXEMPLOS DE PÁGINAS & PROJETOS DE CLIENTES -->
+    <!-- SEÇÃO: EXEMPLOS DE PÁGINAS & PROJETOS DE CLIENTES (COM LINK PARA KRAKENS) -->
     <section id="exemplos" class="w-full max-w-6xl mx-auto px-6 py-8">
         <div class="text-center mb-8">
             <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
@@ -293,7 +293,7 @@
                 </a>
             </div>
 
-            <!-- EXEMPLO 3: KRAKENS -->
+            <!-- EXEMPLO 3: KRAKENS (COM LINK DIRECIONADO) -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-3">
@@ -310,9 +310,9 @@
                         </a>
                     </div>
                 </div>
-                <span class="w-full bg-rosaclaro/40 text-bordo/70 font-extrabold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 cursor-default">
-                    ✨ Perfil Parceiro / Cliente
-                </span>
+                <a href="https://instagram.com/krakens_" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-extrabold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                    ✨ Visitar Perfil Parceiro ➔
+                </a>
             </div>
 
         </div>
@@ -385,9 +385,9 @@
                             <strong class="text-bordo font-bold block">Social Media Apenas Estáticos ➔</strong>
                             <span>R$ 200,00</span>
                         </li>
-                        <li class="cursor-pointer hover:text-rosa transition-colors" onclick="selecionarServicoPorTabela('Edição de Vídeo (2 min)')">
+                        <li class="cursor-pointer hover:text-rosa transition-colors" onclick="selecionarServicoPorTabela('Edição de Vídeo')">
                             <strong class="text-bordo font-bold block">Edição de Vídeo / IA Criativa ➔</strong>
-                            <span>R$ 100,00 (Pacote base)</span>
+                            <span>R$ 50,00 por minuto</span>
                         </li>
                     </ul>
                 </div>
@@ -396,7 +396,7 @@
         </div>
     </section>
 
-    <!-- CALCULADORA DE SOMA AUTOMÁTICA -->
+    <!-- CALCULADORA DE SOMA AUTOMÁTICA (COM EDIÇÃO DE VÍDEO POR MINUTO) -->
     <section id="simulador" class="w-full max-w-6xl mx-auto px-6 py-8">
         <div class="bg-white border-2 border-rosa/80 rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
             <div class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-3 shadow-sm">
@@ -406,7 +406,7 @@
                 Simule seu Projeto e Veja o Resumo de Entregas 💻
             </h3>
             <p class="text-sm sm:text-base text-bordo/80 font-medium mb-6">
-                Marque os serviços desejados. O valor total e o resumo do que você recebe serão atualizados na hora:
+                Marque os serviços desejados. Se escolher edição de vídeo, defina quantos minutos deseja. A soma total é feita na hora:
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -456,14 +456,27 @@
                     <span class="ml-auto font-black text-bordo text-sm sm:text-base shrink-0">R$ 200</span>
                 </label>
 
-                <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="100" data-name="Edição de Vídeo (2 min)" data-summary="Cortes dinâmicos, legendas estilizadas, efeitos sonoros e transições atraentes para Reels/TikTok." onchange="calcularTotal()">
-                    <div>
-                        <span class="font-extrabold text-bordo text-sm sm:text-base">Edição de Vídeo Dinâmica (2 min)</span>
-                        <p class="text-xs text-bordo/75">Cortes estratégicos e legendas (R$ 50/minuto)</p>
+                <!-- ITEM ESPECIAL DE EDIÇÃO DE VÍDEO POR MINUTO -->
+                <div class="flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30">
+                    <div class="flex items-center gap-4 cursor-pointer">
+                        <input type="checkbox" id="check-video" class="w-5 h-5 accent-bordo" onchange="toggleVideoMinutos(); calcularTotal();">
+                        <div>
+                            <span class="font-extrabold text-bordo text-sm sm:text-base">Edição de Vídeo (R$ 50/minuto)</span>
+                            <p class="text-xs text-bordo/75">Cortes dinâmicos, legendas e efeitos</p>
+                        </div>
+                        <span class="ml-auto font-black text-bordo text-sm sm:text-base shrink-0" id="preco-video-unit">R$ 50</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-sm sm:text-base shrink-0">R$ 100</span>
-                </label>
+
+                    <!-- SELETOR DE MINUTOS (SÓ APARECE SE MARCADO) -->
+                    <div id="box-minutos" class="hidden flex items-center justify-between pt-2 border-t border-rosaclaro/50 pl-9">
+                        <span class="text-xs font-bold text-bordo">Quantos Minutos?</span>
+                        <div class="flex items-center gap-2">
+                            <button type="button" onclick="mudarMinutos(-1)" class="w-7 h-7 bg-bordo text-creme rounded-lg font-bold flex items-center justify-center">-</button>
+                            <input type="number" id="input-minutos" value="1" min="1" max="120" onchange="calcularTotal()" class="w-14 text-center border-2 border-rosaclaro rounded-lg font-bold text-sm py-1 bg-white">
+                            <button type="button" onclick="mudarMinutos(1)" class="w-7 h-7 bg-bordo text-creme rounded-lg font-bold flex items-center justify-center">+</button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -515,14 +528,39 @@
     <!-- SCRIPTS DE INTERATIVIDADE -->
     <script>
         function selecionarServicoPorTabela(nomeServico) {
-            const items = document.querySelectorAll('.calc-item');
-            items.forEach(item => {
-                if(item.getAttribute('data-name') === nomeServico) {
-                    item.checked = true;
-                }
-            });
+            if(nomeServico === 'Edição de Vídeo') {
+                document.getElementById('check-video').checked = true;
+                toggleVideoMinutos();
+            } else {
+                const items = document.querySelectorAll('.calc-item');
+                items.forEach(item => {
+                    if(item.getAttribute('data-name') === nomeServico) {
+                        item.checked = true;
+                    }
+                });
+            }
             calcularTotal();
             document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleVideoMinutos() {
+            const isChecked = document.getElementById('check-video').checked;
+            const box = document.getElementById('box-minutos');
+            if(isChecked) {
+                box.classList.remove('hidden');
+                box.classList.add('flex');
+            } else {
+                box.classList.remove('flex');
+                box.classList.add('hidden');
+            }
+        }
+
+        function mudarMinutos(qtd) {
+            const input = document.getElementById('input-minutos');
+            let valor = parseInt(input.value) + qtd;
+            if(valor < 1) valor = 1;
+            input.value = valor;
+            calcularTotal();
         }
 
         function calcularTotal() {
@@ -532,6 +570,7 @@
             resumoUl.innerHTML = '';
             let selecionados = 0;
 
+            // Soma itens normais
             items.forEach(item => {
                 if(item.checked) {
                     total += parseFloat(item.getAttribute('data-price'));
@@ -542,6 +581,19 @@
                     resumoUl.appendChild(li);
                 }
             });
+
+            // Soma edição de vídeo por minuto
+            const checkVideo = document.getElementById('check-video');
+            if(checkVideo.checked) {
+                const minutos = parseInt(document.getElementById('input-minutos').value) || 1;
+                const precoVideo = minutos * 50;
+                total += precoVideo;
+                selecionados++;
+
+                const li = document.createElement('li');
+                li.innerHTML = `<strong class="text-bordo">Edição de Vídeo (${minutos} min):</strong> Cortes dinâmicos, legendas estilizadas, efeitos sonoros e transições (R$ 50/min).`;
+                resumoUl.appendChild(li);
+            }
 
             if(selecionados === 0) {
                 resumoUl.innerHTML = '<li>Nenhum item selecionado. Marque as opções acima para ver o resumo.</li>';
