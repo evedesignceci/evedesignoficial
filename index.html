@@ -234,7 +234,7 @@
 
     </main>
 
-    <!-- SEÇÃO: EXEMPLOS DE PÁGINAS & PROJETOS DE CLIENTES (COM LINK PARA KRAKENS) -->
+    <!-- SEÇÃO: EXEMPLOS DE PÁGINAS & PROJETOS DE CLIENTES -->
     <section id="exemplos" class="w-full max-w-6xl mx-auto px-6 py-8">
         <div class="text-center mb-8">
             <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
@@ -283,7 +283,7 @@
                         Gestão de redes sociais e landing page otimizada com simulador de cotação integrado ao WhatsApp.
                     </p>
                     <div class="flex gap-2 flex-wrap mb-4">
-                        <a href="https://instagram.com/4gprotecaoveicular" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-bold text-xs px-3 py-1.5 rounded-lg hover:bg-rosa transition-colors flex items-center gap-1.5">
+                        <a href="https://www.instagram.com/4gprotecaoveicular/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-bold text-xs px-3 py-1.5 rounded-lg hover:bg-rosa transition-colors flex items-center gap-1.5">
                             <img src="https://i.imgur.com/EE5DwcB.png" class="w-3.5 h-3.5 object-contain"> @4gprotecaoveicular
                         </a>
                     </div>
@@ -293,7 +293,7 @@
                 </a>
             </div>
 
-            <!-- EXEMPLO 3: KRAKENS (COM LINK DIRECIONADO) -->
+            <!-- EXEMPLO 3: KRAKENS -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-3">
@@ -305,12 +305,12 @@
                         Desenvolvimento de identidade visual e estratégias de posicionamento de marca nas redes sociais.
                     </p>
                     <div class="flex gap-2 flex-wrap mb-4">
-                        <a href="https://instagram.com/krakens_" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-bold text-xs px-3 py-1.5 rounded-lg hover:bg-rosa transition-colors flex items-center gap-1.5">
+                        <a href="https://www.instagram.com/krakens__/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-bold text-xs px-3 py-1.5 rounded-lg hover:bg-rosa transition-colors flex items-center gap-1.5">
                             <img src="https://i.imgur.com/EE5DwcB.png" class="w-3.5 h-3.5 object-contain"> @krakens_
                         </a>
                     </div>
                 </div>
-                <a href="https://instagram.com/krakens_" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-extrabold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                <a href="https://www.instagram.com/krakens__/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-extrabold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
                     ✨ Visitar Perfil Parceiro ➔
                 </a>
             </div>
@@ -396,7 +396,7 @@
         </div>
     </section>
 
-    <!-- CALCULADORA DE SOMA AUTOMÁTICA (COM EDIÇÃO DE VÍDEO POR MINUTO) -->
+    <!-- CALCULADORA DE SOMA AUTOMÁTICA -->
     <section id="simulador" class="w-full max-w-6xl mx-auto px-6 py-8">
         <div class="bg-white border-2 border-rosa/80 rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
             <div class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-3 shadow-sm">
@@ -456,7 +456,6 @@
                     <span class="ml-auto font-black text-bordo text-sm sm:text-base shrink-0">R$ 200</span>
                 </label>
 
-                <!-- ITEM ESPECIAL DE EDIÇÃO DE VÍDEO POR MINUTO -->
                 <div class="flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30">
                     <div class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video" class="w-5 h-5 accent-bordo" onchange="toggleVideoMinutos(); calcularTotal();">
@@ -467,7 +466,6 @@
                         <span class="ml-auto font-black text-bordo text-sm sm:text-base shrink-0" id="preco-video-unit">R$ 50</span>
                     </div>
 
-                    <!-- SELETOR DE MINUTOS (SÓ APARECE SE MARCADO) -->
                     <div id="box-minutos" class="hidden flex items-center justify-between pt-2 border-t border-rosaclaro/50 pl-9">
                         <span class="text-xs font-bold text-bordo">Quantos Minutos?</span>
                         <div class="flex items-center gap-2">
@@ -570,7 +568,6 @@
             resumoUl.innerHTML = '';
             let selecionados = 0;
 
-            // Soma itens normais
             items.forEach(item => {
                 if(item.checked) {
                     total += parseFloat(item.getAttribute('data-price'));
@@ -582,7 +579,6 @@
                 }
             });
 
-            // Soma edição de vídeo por minuto
             const checkVideo = document.getElementById('check-video');
             if(checkVideo.checked) {
                 const minutos = parseInt(document.getElementById('input-minutos').value) || 1;
