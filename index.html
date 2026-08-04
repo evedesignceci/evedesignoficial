@@ -564,14 +564,23 @@
             <p class="text-xs sm:text-sm text-bordo/80 font-semibold mb-6">Preencha seus dados para que eu receba sua simulação no e-mail e na planilha:</p>
             
             <form id="formLead" onsubmit="enviarDadosPlanilha(event)">
-                <div class="mb-4 text-left">
+                <div class="mb-3 text-left">
                     <label class="block text-xs font-bold text-bordo mb-1">Seu Nome:</label>
                     <input type="text" id="cliente-nome" required placeholder="Digite seu nome" class="w-full p-3 border-2 border-rosaclaro rounded-xl text-sm font-semibold outline-none focus:border-rosa">
                 </div>
-                <div class="mb-6 text-left">
+                <div class="mb-3 text-left">
                     <label class="block text-xs font-bold text-bordo mb-1">Seu Contato (WhatsApp ou Instagram):</label>
                     <input type="text" id="cliente-contato" required placeholder="Ex: (11) 99999-9999 ou @seuinsta" class="w-full p-3 border-2 border-rosaclaro rounded-xl text-sm font-semibold outline-none focus:border-rosa">
                 </div>
+                <div class="mb-5 text-left">
+                    <label class="block text-xs font-bold text-bordo mb-1">Prazo Desejado / Observações (Opcional):</label>
+                    <input type="text" id="cliente-prazo" placeholder="Ex: Preciso para daqui a 10 dias" class="w-full p-3 border-2 border-rosaclaro rounded-xl text-sm font-semibold outline-none focus:border-rosa">
+                </div>
+
+                <div id="mensagem-status" class="hidden text-xs font-bold mb-3 p-2.5 rounded-xl bg-green-100 text-green-800 border border-green-300">
+                    ✨ Orçamento enviado com êxito!
+                </div>
+
                 <button type="submit" id="btn-enviar-lead" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3.5 rounded-xl transition-all shadow-md">
                     Confirmar e Enviar Orçamento ➔
                 </button>
@@ -596,9 +605,9 @@
         © Eve Design Studio. Todos os direitos reservados.
     </footer>
 
-    <!-- SCRIPTS DE INTEGRAÇÃO PERFEITA PARA A VERCEL -->
+    <!-- SCRIPTS DE INTEGRAÇÃO COM O APPS SCRIPT ATUALIZADO -->
     <script>
-        const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbykFpswfIQ-xe0vrmugygMjKoaXhmxoAWkJuV1sSS36OyNDh2KGnIt-vc99xcV7Q2Vccg/exec";
+        const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbxzTO3dE89sUNz6eCpnieggZOR_6DnLcZMN3wBzR1gfWtzXiFgTeNt5p6mnUj9C0hpTHA/exec";
 
         function selecionarServicoPorTabela(nomeServico) {
             if(nomeServico === 'Edição de Vídeo') {
@@ -686,6 +695,7 @@
         function fecharModalOrcamento() {
             document.getElementById('modalOrcamento').classList.add('hidden');
             document.getElementById('modalOrcamento').classList.remove('flex');
+            document.getElementById('mensagem-status').classList.add('hidden');
         }
 
         function enviarDadosPlanilha(e) {
@@ -693,6 +703,7 @@
             
             const nome = document.getElementById('cliente-nome').value;
             const contato = document.getElementById('cliente-contato').value;
+            const prazoDigitado = document.getElementById('cliente-prazo').value;
             const valorTotal = document.getElementById('total-valor').innerText;
 
             let servicosArray = [];
@@ -712,7 +723,13 @@
                 detalhesArray.push(`Quantidade: ${minutos} minuto(s)`);
             }
 
+            if(prazoDigitado) {
+                detalhesArray.push(`Prazo/Obs: ${prazoDigitado}`);
+            }
+
             const btn = document.getElementById('btn-enviar-lead');
+            const msgStatus = document.getElementById('mensagem-status');
+            
             btn.innerText = "Enviando dados...";
             btn.disabled = true;
 
@@ -720,7 +737,7 @@
                 nome: nome,
                 contato: contato,
                 servicos: servicosArray.join(', '),
-                detalhes: detalhesArray.join(' | ') || 'Nenhum adicional',
+                detalhes: detalhesArray.join(' | ') || 'Nenhum detalhe extra',
                 valorTotal: valorTotal
             };
 
@@ -730,11 +747,14 @@
                 headers: { "Content-Type": "text/plain;charset=utf-8" },
                 body: JSON.stringify(dadosOrcamento)
             }).then(() => {
-                alert("Orçamento enviado com sucesso! Já recebi seus dados na planilha e o e-mail de alerta foi disparado.");
+                msgStatus.classList.remove('hidden');
                 btn.innerText = "Confirmar e Enviar Orçamento ➔";
                 btn.disabled = false;
-                fecharModalOrcamento();
-                document.getElementById('formLead').reset();
+                
+                setTimeout(() => {
+                    fecharModalOrcamento();
+                    document.getElementById('formLead').reset();
+                }, 2000);
             }).catch(err => {
                 console.log("Erro:", err);
                 alert("Ocorreu um erro ao enviar. Tente novamente.");
