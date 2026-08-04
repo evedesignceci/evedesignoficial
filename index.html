@@ -234,7 +234,7 @@
 
     </main>
 
-    <!-- SEÇÃO: EXEMPLOS DE PÁGINAS & PROJETOS (LAYOUT ESPAÇADO E LIMPO) -->
+    <!-- SEÇÃO: EXEMPLOS DE PÁGINAS & PROJETOS (INCLUINDO SAINT VISION HOME) -->
     <section id="exemplos" class="w-full max-w-6xl mx-auto px-6 py-12">
         <div class="text-center mb-10">
             <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
@@ -244,7 +244,7 @@
             <p class="text-xs sm:text-sm text-bordo/80 font-bold mt-2">Conheça abaixo os projetos, canais e redes sociais que gerencio como exemplos do meu trabalho:</p>
         </div>
 
-        <!-- GRID COM MAIS ESPAÇO E 2 COLUNAS BEM DISTRIBUÍDAS -->
+        <!-- GRID COM 2 COLUNAS ESPAÇADAS E LIMPAS -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             <!-- EXEMPLO 1: TURMINHA DO XEXÉU -->
@@ -316,8 +316,30 @@
                 </a>
             </div>
 
-            <!-- EXEMPLO 4: CANAL JULIA SALES -->
+            <!-- EXEMPLO 4: SAINT VISION HOME -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-8 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-amarelo text-bordo font-black text-xs px-3.5 py-1.5 rounded-full border border-bordo/30">Exemplo Cliente</span>
+                        <span class="text-3xl">👓</span>
+                    </div>
+                    <h3 class="font-black text-bordo text-2xl mb-3">Saint Vision Home</h3>
+                    <p class="text-sm sm:text-base text-bordo/80 font-medium mb-6 leading-relaxed">
+                        Gestão de social media (posts estáticos, carrosséis e vídeos/reels) para ótica itinerante que atende na casa dos clientes.
+                    </p>
+                    <div class="flex gap-3 flex-wrap mb-6">
+                        <a href="https://www.instagram.com/saint.visionhome/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-bold text-xs sm:text-sm px-4 py-2 rounded-xl hover:bg-rosa transition-colors flex items-center gap-2">
+                            <img src="https://i.imgur.com/EE5DwcB.png" class="w-4 h-4 object-contain"> @saint.visionhome
+                        </a>
+                    </div>
+                </div>
+                <a href="https://www.instagram.com/saint.visionhome/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-extrabold text-sm py-4 px-6 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                    👓 Visitar Perfil da Ótica ➔
+                </a>
+            </div>
+
+            <!-- EXEMPLO 5: CANAL JULIA SALES -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-8 shadow-md flex flex-col justify-between md:col-span-2">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <span class="bg-amarelo text-bordo font-black text-xs px-3.5 py-1.5 rounded-full border border-bordo/30">Exemplo Canal</span>
@@ -452,7 +474,6 @@
                     <span class="ml-auto font-black text-bordo text-sm sm:text-base shrink-0">R$ 400</span>
                 </label>
 
-                <!-- SITE INSTITUCIONAL / SOB MEDIDA NA CALCULADORA -->
                 <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="600" data-name="Sites Institucionais / Portfólios" data-summary="Site completo multitelas, design exclusivo sob medida, painéis e integração total." onchange="calcularTotal()">
                     <div>
@@ -489,7 +510,6 @@
                     <span class="ml-auto font-black text-bordo text-sm sm:text-base shrink-0">R$ 200</span>
                 </label>
 
-                <!-- EDIÇÃO DE VÍDEO POR MINUTO -->
                 <div class="flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2">
                     <div class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video" class="w-5 h-5 accent-bordo" onchange="toggleVideoMinutos(); calcularTotal();">
