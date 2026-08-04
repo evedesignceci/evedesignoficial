@@ -226,15 +226,15 @@
                 <a href="https://instagram.com/eve.desi_gn" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs py-3 px-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
                     <img src="https://i.imgur.com/EE5DwcB.png" alt="Insta" class="w-4 h-4 object-contain brightness-200"> Falar no Instagram
                 </a>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDi3881g7lPEPwnAe5SdmuIHeXm-Kli1lxOQ7ybQxVu8edkg/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-bold text-xs py-3 px-3 rounded-xl flex items-center justify-center gap-2 transition-all">
-                    📋 Formulário de Orçamento
+                <a href="#simulador" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-bold text-xs py-3 px-3 rounded-xl flex items-center justify-center gap-2 transition-all">
+                    📋 Simular na Calculadora
                 </a>
             </div>
         </div>
 
     </main>
 
-    <!-- SEÇÃO: EXEMPLOS DE PÁGINAS & PROJETOS (INCLUINDO SAINT VISION HOME) -->
+    <!-- SEÇÃO: EXEMPLOS DE PÁGINAS & PROJETOS -->
     <section id="exemplos" class="w-full max-w-6xl mx-auto px-6 py-12">
         <div class="text-center mb-10">
             <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
@@ -244,7 +244,6 @@
             <p class="text-xs sm:text-sm text-bordo/80 font-bold mt-2">Conheça abaixo os projetos, canais e redes sociais que gerencio como exemplos do meu trabalho:</p>
         </div>
 
-        <!-- GRID COM 2 COLUNAS ESPAÇADAS E LIMPAS -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             <!-- EXEMPLO 1: TURMINHA DO XEXÉU -->
@@ -441,17 +440,17 @@
         </div>
     </section>
 
-    <!-- CALCULADORA DE SOMA AUTOMÁTICA -->
+    <!-- CALCULADORA COM ENVIO AUTOMÁTICO PARA PLANILHA E E-MAIL -->
     <section id="simulador" class="w-full max-w-6xl mx-auto px-6 py-8">
         <div class="bg-white border-2 border-rosa/80 rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
             <div class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-3 shadow-sm">
-                🧮 Calculadora com Soma Automática
+                🧮 Calculadora com Envio Automático
             </div>
             <h3 class="text-2xl sm:text-3xl font-black text-bordo mb-2">
-                Simule seu Projeto e Veja o Resumo de Entregas 💻
+                Simule seu Projeto e Envie direto para mim 💻
             </h3>
             <p class="text-sm sm:text-base text-bordo/80 font-medium mb-6">
-                Marque os serviços desejados. Se escolher edição de vídeo ou site institucional, defina as opções. A soma total é feita na hora:
+                Marque os serviços desejados. A soma é feita na hora e você pode enviar o orçamento direto para a minha planilha e e-mail:
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -541,11 +540,8 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                        <button onclick="enviarOrçamento('insta')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-extrabold text-xs sm:text-sm py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md">
-                            Mandar no Instagram ➔
-                        </button>
-                        <button onclick="enviarOrçamento('form')" class="bg-rosaclaro text-bordo hover:bg-rosa font-extrabold text-xs sm:text-sm py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 transition-all">
-                            Enviar p/ Formulário 📋
+                        <button onclick="abrirModalOrcamento()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-extrabold text-xs sm:text-sm py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md">
+                            Enviar Orçamento para Evelyn ➔
                         </button>
                     </div>
                 </div>
@@ -559,6 +555,29 @@
             </div>
         </div>
     </section>
+
+    <!-- MODAL DE CAPTURA DE DADOS PARA A PLANILHA -->
+    <div id="modalOrcamento" class="fixed inset-0 bg-bordo/60 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-center relative">
+            <span class="absolute top-4 right-4 text-2xl font-bold cursor-pointer text-bordo" onclick="fecharModalOrcamento()">&times;</span>
+            <h3 class="text-2xl font-black text-bordo mb-2">Quase Pronto! ✨</h3>
+            <p class="text-xs sm:text-sm text-bordo/80 font-semibold mb-6">Preencha seus dados para que eu receba sua simulação no e-mail e na planilha:</p>
+            
+            <form id="formLead" onsubmit="enviarDadosPlanilha(event)">
+                <div class="mb-4 text-left">
+                    <label class="block text-xs font-bold text-bordo mb-1">Seu Nome:</label>
+                    <input type="text" id="cliente-nome" required placeholder="Digite seu nome" class="w-full p-3 border-2 border-rosaclaro rounded-xl text-sm font-semibold outline-none focus:border-rosa">
+                </div>
+                <div class="mb-6 text-left">
+                    <label class="block text-xs font-bold text-bordo mb-1">Seu Contato (WhatsApp ou Instagram):</label>
+                    <input type="text" id="cliente-contato" required placeholder="Ex: (11) 99999-9999 ou @seuinsta" class="w-full p-3 border-2 border-rosaclaro rounded-xl text-sm font-semibold outline-none focus:border-rosa">
+                </div>
+                <button type="submit" id="btn-enviar-lead" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3.5 rounded-xl transition-all shadow-md">
+                    Confirmar e Enviar Orçamento ➔
+                </button>
+            </form>
+        </div>
+    </div>
 
     <!-- MODAL DA CAIXA DE FERRAMENTAS -->
     <div id="modal-ferramenta" class="fixed inset-0 bg-bordo/60 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
@@ -577,8 +596,10 @@
         © Eve Design Studio. Todos os direitos reservados.
     </footer>
 
-    <!-- SCRIPTS DE INTERATIVIDADE -->
+    <!-- SCRIPTS DE INTERATIVIDADE E INTEGRAÇÃO COM A PLANILHA -->
     <script>
+        const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbykFpswfIQ-xe0vrmugygMjKoaXhmxoAWkJuV1sSS36OyNDh2KGnIt-vc99xcV7Q2Vccg/exec";
+
         function selecionarServicoPorTabela(nomeServico) {
             if(nomeServico === 'Edição de Vídeo') {
                 document.getElementById('check-video').checked = true;
@@ -652,17 +673,74 @@
             document.getElementById('total-valor').innerText = 'R$ ' + total.toFixed(2).replace('.', ',');
         }
 
-        function enviarOrçamento(tipo) {
+        function abrirModalOrcamento() {
             const total = document.getElementById('total-valor').innerText;
-            const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfDi3881g7lPEPwnAe5SdmuIHeXm-Kli1lxOQ7ybQxVu8edkg/viewform?usp=header";
-            const instaUrl = "https://instagram.com/eve.desi_gn";
-
-            if (tipo === 'insta') {
-                alert("Redirecionando para o Instagram da Eve Design! Mande uma mensagem informando o valor total simulado (" + total + ") para darmos início.");
-                window.open(instaUrl, '_blank');
-            } else {
-                window.open(formUrl, '_blank');
+            if(total === 'R$ 0,00') {
+                alert('Por favor, selecione pelo menos um serviço na calculadora antes de enviar.');
+                return;
             }
+            document.getElementById('modalOrcamento').classList.remove('hidden');
+            document.getElementById('modalOrcamento').classList.add('flex');
+        }
+
+        function fecharModalOrcamento() {
+            document.getElementById('modalOrcamento').classList.add('hidden');
+            document.getElementById('modalOrcamento').classList.remove('flex');
+        }
+
+        function enviarDadosPlanilha(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('cliente-nome').value;
+            const contato = document.getElementById('cliente-contato').value;
+            const valorTotal = document.getElementById('total-valor').innerText;
+
+            let servicosArray = [];
+            let detalhesArray = [];
+
+            const items = document.querySelectorAll('.calc-item');
+            items.forEach(item => {
+                if(item.checked) {
+                    servicosArray.push(item.getAttribute('data-name'));
+                }
+            });
+
+            const checkVideo = document.getElementById('check-video');
+            if(checkVideo.checked) {
+                const minutos = document.getElementById('input-minutos').value;
+                servicosArray.push(`Edição de Vídeo (${minutos} min)`);
+                detalhesArray.push(`Quantidade: ${minutos} minuto(s)`);
+            }
+
+            const btn = document.getElementById('btn-enviar-lead');
+            btn.innerText = "Enviando para a Evelyn...";
+            btn.disabled = true;
+
+            const dadosOrcamento = {
+                nome: nome,
+                contato: contato,
+                servicos: servicosArray.join(', '),
+                detalhes: detalhesArray.join(' | ') || 'Nenhum adicional',
+                valorTotal: valorTotal
+            };
+
+            fetch(URL_APPS_SCRIPT, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(dadosOrcamento)
+            }).then(() => {
+                alert("Orçamento enviado com sucesso! Já recebi seus dados na planilha e no e-mail. Entraremos em contato em breve!");
+                btn.innerText = "Confirmar e Enviar Orçamento ➔";
+                btn.disabled = false;
+                fecharModalOrcamento();
+                document.getElementById('formLead').reset();
+            }).catch(err => {
+                console.log("Erro:", err);
+                alert("Ocorreu um erro ao enviar. Tente novamente.");
+                btn.innerText = "Confirmar e Enviar Orçamento ➔";
+                btn.disabled = false;
+            });
         }
 
         function mostrarNivel(nome, nivel, desc) {
