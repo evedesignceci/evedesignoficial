@@ -26,83 +26,77 @@
 </head>
 <body class="bg-pattern min-h-screen text-bordo">
 
-    <!-- Feedback Visual (Toast) -->
-    <div id="toast" class="fixed top-20 right-5 bg-bordo text-creme px-6 py-3 rounded-xl shadow-xl hidden z-50 animate-bounce">
-        Serviço adicionado à calculadora! ✨
-    </div>
+    <!-- Toast Feedback -->
+    <div id="toast" class="fixed top-20 right-5 bg-bordo text-creme px-6 py-3 rounded-xl shadow-xl hidden z-50">Serviço adicionado! ✨</div>
 
-    <!-- HEADER -->
+    <!-- Header -->
     <header class="w-full bg-white/95 backdrop-blur-md border-b-2 border-rosaclaro sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#sobre-mim" class="flex items-center gap-3">
                 <img src="https://i.imgur.com/vxkHf9m.png" class="w-10 h-10 rounded-full border-2 border-rosa">
                 <div>
                     <h2 class="font-black text-sm">Evelyn Cecilia</h2>
-                    <p class="text-[10px] uppercase tracking-widest font-bold opacity-70">Eve Design Studio</p>
+                    <p class="text-[10px] uppercase font-bold opacity-70">Eve Design Studio</p>
                 </div>
             </a>
             <nav class="hidden md:flex gap-6 text-xs font-black uppercase">
                 <a href="#sobre-mim" class="hover:text-rosa">Sobre</a>
                 <a href="#design-posts" class="hover:text-rosa">Especialidades</a>
                 <a href="#exemplos" class="hover:text-rosa">Projetos</a>
-                <a href="#tabela" class="hover:text-rosa">Tabela</a>
+                <a href="#tabela" class="hover:text-rosa">Preços</a>
                 <a href="#simulador" class="hover:text-rosa">Calculadora</a>
             </nav>
         </div>
     </header>
 
-    <!-- SEÇÃO ESPECIALIDADES (Interativa) -->
+    <!-- Seção: Design e IA -->
     <section id="design-posts" class="w-full max-w-7xl mx-auto px-6 py-12">
         <div class="text-center mb-10">
-            <span class="bg-rosa text-bordo text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Etapa 2: Soluções</span>
-            <h2 class="text-4xl font-black mt-3 mb-4">Design de Posts & IA Criativa</h2>
-            <p class="max-w-2xl mx-auto opacity-80 font-medium">Design intencional com inteligência artificial para destacar sua marca.</p>
+            <span class="bg-rosa text-bordo text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-widest">Especialidades</span>
+            <h2 class="text-3xl font-black mt-3 mb-4">Design de Posts & IA Criativa</h2>
+            <p class="max-w-2xl mx-auto font-medium">Design intencional unindo estética refinada à Inteligência Artificial.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <!-- Card 1 -->
-            <div onclick="adicionarESelecionar('Design de Posts Completo')" class="bg-white p-6 rounded-3xl border-2 border-rosaclaro hover:border-rosa cursor-pointer transition-all hover:-translate-y-2">
-                <div class="text-3xl mb-4">✨</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div onclick="adicionarESelecionar('Design de Posts Completo')" class="bg-white p-6 rounded-3xl border-2 border-rosaclaro hover:border-rosa cursor-pointer transition-all flex flex-col justify-between">
+                <div><div class="text-3xl mb-4">✨</div>
                 <h3 class="font-black text-lg mb-2">Design de Posts Completo</h3>
-                <p class="text-xs opacity-75 mb-4">Estratégia total: artes estáticas + carrosséis de alta retenção + vídeos dinâmicos.</p>
+                <p class="text-xs opacity-75 mb-4">Estratégia total: artes estáticas + carrosséis de alta retenção + vídeos dinâmicos.</p></div>
                 <span class="text-xs font-black text-rosa">Simular R$ 400 ➔</span>
             </div>
-            <!-- Card 2 -->
-            <div onclick="adicionarESelecionar('Design de Posts Apenas Estáticos')" class="bg-white p-6 rounded-3xl border-2 border-rosaclaro hover:border-rosa cursor-pointer transition-all hover:-translate-y-2">
-                <div class="text-3xl mb-4">🖼️</div>
+            <div onclick="adicionarESelecionar('Design de Posts Apenas Estáticos')" class="bg-white p-6 rounded-3xl border-2 border-rosaclaro hover:border-rosa cursor-pointer transition-all flex flex-col justify-between">
+                <div><div class="text-3xl mb-4">🖼️</div>
                 <h3 class="font-black text-lg mb-2">Estáticos & Carrosséis</h3>
-                <p class="text-xs opacity-75 mb-4">Focado em artes estáticas individuais e carrosséis com hierarquia visual e autoridade.</p>
+                <p class="text-xs opacity-75 mb-4">Focado em artes estáticas individuais e carrosséis com hierarquia visual e autoridade.</p></div>
                 <span class="text-xs font-black text-rosa">Simular R$ 200 ➔</span>
             </div>
-            <!-- Card 3 -->
-            <div onclick="adicionarESelecionar('Edição de Vídeo')" class="bg-white p-6 rounded-3xl border-2 border-rosaclaro hover:border-rosa cursor-pointer transition-all hover:-translate-y-2">
-                <div class="text-3xl mb-4">🎬</div>
+            <div onclick="adicionarESelecionar('Edição de Vídeo')" class="bg-white p-6 rounded-3xl border-2 border-rosaclaro hover:border-rosa cursor-pointer transition-all flex flex-col justify-between">
+                <div><div class="text-3xl mb-4">🎬</div>
                 <h3 class="font-black text-lg mb-2">Cenários & Vídeos IA</h3>
-                <p class="text-xs opacity-75 mb-4">Geração de cenários conceituais, vinhetas e animações de vídeo integradas com IA.</p>
+                <p class="text-xs opacity-75 mb-4">Geração de cenários conceituais, vinhetas e animações de vídeo integradas com IA.</p></div>
                 <span class="text-xs font-black text-rosa">Simular R$ 50/min ➔</span>
             </div>
-            <!-- Card 4 -->
-            <div onclick="adicionarESelecionar('Prompts para Estruturação de Sites e Copy')" class="bg-white p-6 rounded-3xl border-2 border-rosaclaro hover:border-rosa cursor-pointer transition-all hover:-translate-y-2">
-                <div class="text-3xl mb-4">🤖</div>
+            <div onclick="adicionarESelecionar('Prompts para Estruturação de Sites e Copy')" class="bg-white p-6 rounded-3xl border-2 border-rosaclaro hover:border-rosa cursor-pointer transition-all flex flex-col justify-between">
+                <div><div class="text-3xl mb-4">🤖</div>
                 <h3 class="font-black text-lg mb-2">Engenharia de Prompts</h3>
-                <p class="text-xs opacity-75 mb-4">Comandos estruturados para copywriting persuasivo, roteiros, cenários e modelos de IA.</p>
+                <p class="text-xs opacity-75 mb-4">Comandos estruturados para gerar copywriting persuasivo, roteiros e cenários em IA.</p></div>
                 <span class="text-xs font-black text-rosa">Simular R$ 100 ➔</span>
             </div>
         </div>
     </section>
 
-    <!-- (Adicionar aqui as demais seções seguindo o mesmo padrão de organização) -->
+    <!-- Aqui entrariam as outras seções (Projetos, Tabela, Calculadora) -->
 
     <script>
         function adicionarESelecionar(nomeServico) {
-            selecionarServicoPorTabela(nomeServico);
-            // Feedback de resposta
+            // Se você já tem a função selecionarServicoPorTabela, ela será chamada aqui
+            if(typeof selecionarServicoPorTabela === 'function') {
+                selecionarServicoPorTabela(nomeServico);
+            }
             const toast = document.getElementById('toast');
             toast.classList.remove('hidden');
             setTimeout(() => { toast.classList.add('hidden'); }, 3000);
         }
-
-        // [Mantenha aqui as funções existentes de calcularTotal, selecionarServicoPorTabela, etc]
     </script>
 </body>
 </html>
