@@ -235,7 +235,7 @@
 
     </main>
 
-    <!-- SEÇÃO DEDICADA: DESIGN DE POSTS & IA CRIATIVA -->
+    <!-- SEÇÃO DEDICADA: DESIGN DE POSTS & IA CRIATIVA (COM LINKS PARA CALCULADORA) -->
     <section id="design-posts" class="w-full max-w-6xl mx-auto px-6 py-8">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-lg relative overflow-hidden">
             <div class="inline-block bg-amarelo text-bordo font-black text-xs px-3.5 py-1.5 rounded-full mb-3 border border-bordo/20">
@@ -243,41 +243,55 @@
             </div>
             <h2 class="text-3xl font-black text-bordo mb-4">Design de Posts & IA Criativa</h2>
             <p class="text-sm sm:text-base text-bordo/80 font-semibold leading-relaxed mb-6 max-w-4xl">
-                Desenvolvo artes intencionais e conteúdos visuais avançados. Unindo o design gráfico tradicional às possibilidades da Inteligência Artificial, crio postagens, cenários, roteiros e vídeos totalmente personalizados para destacar sua marca.
+                Desenvolvo artes intencionais e conteúdos visuais avançados. Unindo o design gráfico tradicional às possibilidades da Inteligência Artificial, crio postagens, cenários, roteiros e vídeos totalmente personalizados para destacar sua marca. Clique abaixo para simular na calculadora:
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-creme/50 border-2 border-rosaclaro p-5 rounded-2xl">
-                    <div class="text-2xl mb-2">🎠</div>
-                    <h3 class="font-extrabold text-bordo text-lg mb-2">Carrosséis de Alta Retenção</h3>
-                    <p class="text-xs text-bordo/80 font-medium leading-relaxed">
-                        Design contínuo e fluido com narrativa visual estruturada para aumentar o tempo de tela e o engajamento no feed.
-                    </p>
+                
+                <div onclick="selecionarServicoPorTabela('Design de Posts Completo')" class="bg-creme/50 border-2 border-rosaclaro hover:border-rosa p-5 rounded-2xl cursor-pointer hover:scale-105 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="text-2xl mb-2">🎠</div>
+                        <h3 class="font-extrabold text-bordo text-lg mb-2 group-hover:text-rosa transition-colors">Carrosséis de Alta Retenção</h3>
+                        <p class="text-xs text-bordo/80 font-medium leading-relaxed mb-4">
+                            Design contínuo e fluido com narrativa visual estruturada para aumentar o tempo de tela e o engajamento no feed.
+                        </p>
+                    </div>
+                    <span class="text-xs font-black text-bordo group-hover:text-rosa flex items-center gap-1">Simular R$ 400 ➔</span>
                 </div>
 
-                <div class="bg-creme/50 border-2 border-rosaclaro p-5 rounded-2xl">
-                    <div class="text-2xl mb-2">🖼️</div>
-                    <h3 class="font-extrabold text-bordo text-lg mb-2">Posts Estáticos Premium</h3>
-                    <p class="text-xs text-bordo/80 font-medium leading-relaxed">
-                        Artes únicas em altíssima resolução, focadas em avisos, produtos, autoridade de marca e campanhas diretas.
-                    </p>
+                <div onclick="selecionarServicoPorTabela('Design de Posts Apenas Estáticos')" class="bg-creme/50 border-2 border-rosaclaro hover:border-rosa p-5 rounded-2xl cursor-pointer hover:scale-105 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="text-2xl mb-2">🖼️</div>
+                        <h3 class="font-extrabold text-bordo text-lg mb-2 group-hover:text-rosa transition-colors">Posts Estáticos Premium</h3>
+                        <p class="text-xs text-bordo/80 font-medium leading-relaxed mb-4">
+                            Artes únicas em altíssima resolução, focadas em avisos, produtos, autoridade de marca e campanhas diretas.
+                        </p>
+                    </div>
+                    <span class="text-xs font-black text-bordo group-hover:text-rosa flex items-center gap-1">Simular R$ 200 ➔</span>
                 </div>
 
-                <div class="bg-creme/50 border-2 border-rosaclaro p-5 rounded-2xl">
-                    <div class="text-2xl mb-2">🎬</div>
-                    <h3 class="font-extrabold text-bordo text-lg mb-2">Cenários & IA Criativa</h3>
-                    <p class="text-xs text-bordo/80 font-medium leading-relaxed">
-                        Geração de cenários conceituais, elementos visuais únicos e animações com IA para campanhas, posts e projetos.
-                    </p>
+                <div onclick="selecionarServicoPorTabela('Edição de Vídeo')" class="bg-creme/50 border-2 border-rosaclaro hover:border-rosa p-5 rounded-2xl cursor-pointer hover:scale-105 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="text-2xl mb-2">🎬</div>
+                        <h3 class="font-extrabold text-bordo text-lg mb-2 group-hover:text-rosa transition-colors">Cenários & IA Criativa</h3>
+                        <p class="text-xs text-bordo/80 font-medium leading-relaxed mb-4">
+                            Geração de cenários conceituais, elementos visuais únicos e animações de vídeo geradas com IA para suas redes.
+                        </p>
+                    </div>
+                    <span class="text-xs font-black text-bordo group-hover:text-rosa flex items-center gap-1">Simular R$ 50/min ➔</span>
                 </div>
 
-                <div class="bg-creme/50 border-2 border-rosaclaro p-5 rounded-2xl">
-                    <div class="text-2xl mb-2">🤖</div>
-                    <h3 class="font-extrabold text-bordo text-lg mb-2">Engenharia de Prompts</h3>
-                    <p class="text-xs text-bordo/80 font-medium leading-relaxed">
-                        Criação de comandos inteligentes para estruturação de cópias, roteiros de vídeo, ideias e resumos de estudo.
-                    </p>
+                <div onclick="selecionarServicoPorTabela('Prompts para Estruturação de Sites e Copy')" class="bg-creme/50 border-2 border-rosaclaro hover:border-rosa p-5 rounded-2xl cursor-pointer hover:scale-105 transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="text-2xl mb-2">🤖</div>
+                        <h3 class="font-extrabold text-bordo text-lg mb-2 group-hover:text-rosa transition-colors">Engenharia de Prompts</h3>
+                        <p class="text-xs text-bordo/80 font-medium leading-relaxed mb-4">
+                            Comandos personalizados para geração de copywriting, textos estratégicos, resumos e estruturas de site.
+                        </p>
+                    </div>
+                    <span class="text-xs font-black text-bordo group-hover:text-rosa flex items-center gap-1">Simular R$ 100 ➔</span>
                 </div>
+
             </div>
         </div>
     </section>
@@ -451,7 +465,7 @@
                     <ul class="space-y-3 text-sm text-bordo/80 font-medium">
                         <li class="pb-2 border-b border-rosaclaro/40 cursor-pointer hover:text-rosa transition-colors" onclick="selecionarServicoPorTabela('Prompts para Estruturação de Sites e Copy')">
                             <strong class="text-bordo font-bold block">Prompts para Sites, Cenários & Copy ➔</strong>
-                            <span>Criação de comandos inteligentes para cenários, páginas e textos persuasivos (R$ 100,00)</span>
+                            <span>Criação de comandos inteligentes para cenários, páginas e copywriting (R$ 100,00)</span>
                         </li>
                         <li class="cursor-pointer hover:text-rosa transition-colors" onclick="selecionarServicoPorTabela('Prompts para Estudos e Guias de Revisão')">
                             <strong class="text-bordo font-bold block">Prompts para Estudos & Guias ➔</strong>
@@ -542,10 +556,10 @@
 
                 <!-- PROMPTS PARA SITES E CENÁRIOS -->
                 <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="100" data-name="Prompts para Sites, Cenários e Copy" data-summary="Criação de comandos inteligentes para estruturação de páginas, cenários em IA e textos persuasivos (Copy/UI)." onchange="calcularTotal()">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="100" data-name="Prompts para Estruturação de Sites e Copy" data-summary="Criação de comandos inteligentes para estruturação de páginas, cenários em IA e copywriting." onchange="calcularTotal()">
                     <div>
-                        <span class="font-extrabold text-bordo text-sm sm:text-base">Prompts para Sites, Cenários & Copy</span>
-                        <p class="text-xs text-bordo/75">Comandos para cenários, estruturas e textos</p>
+                        <span class="font-extrabold text-bordo text-sm sm:text-base">Prompts para Sites, Cenários & Copywriting</span>
+                        <p class="text-xs text-bordo/75">Comandos para cenários, estruturas e copywriting</p>
                     </div>
                     <span class="ml-auto font-black text-bordo text-sm sm:text-base shrink-0">R$ 100</span>
                 </label>
