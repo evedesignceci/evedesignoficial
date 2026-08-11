@@ -102,7 +102,7 @@
         </div>
     </header>
 
-    <!-- SEÇÃO SOBRE MIM & APRESENTAÇÃO DA EVE DESIGN (COM RESUMO COMPLETO DE TUDO) -->
+    <!-- SEÇÃO SOBRE MIM & APRESENTAÇÃO DINÂMICA DA EVE DESIGN -->
     <section id="sobre-mim" class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-4">
         <div class="bg-white/90 border-2 border-rosaclaro rounded-3xl p-6 sm:p-10 shadow-lg backdrop-blur-sm">
             <div class="flex flex-col md:flex-row items-center gap-8">
@@ -123,19 +123,33 @@
                         Olá, sou a Evelyn Cecilia! Designer Gráfica & Especialista em IA Criativa 🎨🤖
                     </h3>
                     <p class="text-sm sm:text-base text-bordo/80 font-semibold leading-relaxed mb-4">
-                        No <strong class="text-bordo font-black">Eve Design Studio</strong>, transformo ideias em ecossistemas visuais completos de alta performance. Meu trabalho une estética profissional, estratégia de conversão e Inteligência Artificial para entregar soluções pontuais ou estruturadas para o seu negócio:
+                        No <strong class="text-bordo font-black">Eve Design Studio</strong>, transformo conceitos em projetos visuais de altíssimo impacto. Uno estética profissional, inteligência artificial e estratégias visuais para entregar soluções completas e interativas para o seu negócio:
                     </p>
 
-                    <!-- RESUMO LITERAL DE TUDO QUE FAÇO (CONECTADO À CALCULADORA) -->
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-bordo/90 font-bold mb-6 bg-creme/50 p-4 rounded-2xl border-2 border-rosaclaro/60">
-                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Identidade Visual Completa')">Identidade Visual Completa</span></li>
-                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Link na Bio / Cartão Interativo')">Link na Bio & Cartões Interativos</span></li>
-                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Landing Page de Vendas/Captura')">Landing Pages de Vendas / Captura</span></li>
-                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Sites Institucionais / Portfólios')">Sites Institucionais & Portfólios</span></li>
-                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Design de Posts Completo')">Design de Posts & Carrosséis</span></li>
-                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Edição de Vídeo')">Edição de Vídeos, Reels & IA</span></li>
-                        <li class="flex items-center gap-2 sm:col-span-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Prompts para Estruturação de Sites e Copy')">Engenharia de Prompts (Sites, Cenários & Copy)</span></li>
-                    </ul>
+                    <!-- PAINEL INTERATIVO DE SERVIÇOS (CLICÁVEL PARA A CALCULADORA) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-bordo/90 font-bold mb-6 bg-creme/50 p-4 rounded-2xl border-2 border-rosaclaro/60">
+                        <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-rosaclaro/40 cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Identidade Visual Completa')">
+                            🎨 <span class="text-bordo underline decoration-rosa underline-offset-2">Identidade Visual Completa</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-rosaclaro/40 cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Link na Bio / Cartão Interativo')">
+                            📱 <span class="text-bordo underline decoration-rosa underline-offset-2">Link na Bio & Cartões Interativos</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-rosaclaro/40 cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Landing Page de Vendas/Captura')">
+                            💻 <span class="text-bordo underline decoration-rosa underline-offset-2">Landing Pages de Vendas / Captura</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-rosaclaro/40 cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Sites Institucionais / Portfólios')">
+                            🌐 <span class="text-bordo underline decoration-rosa underline-offset-2">Sites Institucionais & Portfólios</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-rosaclaro/40 cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Design de Posts Completo')">
+                            ✨ <span class="text-bordo underline decoration-rosa underline-offset-2">Design de Posts & Carrosséis</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-rosaclaro/40 cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Edição de Vídeo')">
+                            🎬 <span class="text-bordo underline decoration-rosa underline-offset-2">Edição de Vídeos, Reels & IA</span>
+                        </div>
+                        <div class="flex items-center gap-2 p-1.5 rounded-lg hover:bg-rosaclaro/40 cursor-pointer transition-colors sm:col-span-2" onclick="selecionarServicoPorTabela('Prompts para Estruturação de Sites e Copy')">
+                            🤖 <span class="text-bordo underline decoration-rosa underline-offset-2">Engenharia de Prompts (Sites, Cenários & Layouts em IA)</span>
+                        </div>
+                    </div>
 
                     <div>
                         <h4 class="text-xs font-black text-bordo/70 uppercase tracking-wider mb-3">
@@ -158,7 +172,7 @@
                                 <span class="text-[11px] font-bold text-bordo">Canva</span>
                             </button>
 
-                            <button onclick="mostrarNivel('Gemini IA', 'Avançado', 'Ideação criativa, geração de conceitos visuais, cenários, escrita de roteiros e textos estratégicos.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button onclick="mostrarNivel('Gemini IA', 'Avançado', 'Ideação criativa, geração de conceitos visuais, cenários e ideias estruturadas.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/6SiNY40.png" alt="Gemini" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-[11px] font-bold text-bordo">Gemini IA</span>
                             </button>
@@ -168,7 +182,7 @@
                                 <span class="text-[11px] font-bold text-bordo">Grok IA</span>
                             </button>
 
-                            <button onclick="mostrarNivel('ChatGPT', 'Avançado', 'Engenharia de prompts, estruturação de conteúdo, copywriting e suporte em código HTML/CSS.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button onclick="mostrarNivel('ChatGPT', 'Avançado', 'Engenharia de prompts, estruturação de conteúdo e suporte em código HTML/CSS.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/wgue6kv.png" alt="ChatGPT" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-[11px] font-bold text-bordo">ChatGPT</span>
                             </button>
@@ -273,7 +287,7 @@
             </div>
             <h2 class="text-2xl sm:text-3xl font-black text-bordo mb-3">Design de Posts & IA Criativa</h2>
             <p class="text-xs sm:text-base text-bordo/80 font-semibold leading-relaxed mb-6 max-w-4xl">
-                Combino estética visual refinada, psicologia do consumo e ferramentas avançadas de Inteligência Artificial para gerar conteúdos de alto impacto. Clique nos blocos abaixo para simular na calculadora com feedback instantâneo:
+                Combino estética visual refinada, harmonia de cores e ferramentas avançadas de Inteligência Artificial para gerar conteúdos de alto impacto. Clique nos blocos abaixo para simular na calculadora com feedback instantâneo:
             </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -316,7 +330,7 @@
                         <div class="text-2xl mb-2">🤖</div>
                         <h3 class="font-extrabold text-bordo text-base mb-2 group-hover:text-rosa transition-colors">Engenharia de Prompts</h3>
                         <p class="text-xs text-bordo/80 font-medium leading-relaxed mb-4">
-                            Comandos estruturados para gerar copywriting persuasivo, roteiros de vendas, arquitetura de páginas e modelos em IA.
+                            Comandos estruturados para gerar orientações visuais, arquitetura de páginas e modelos em IA de alta fidelidade.
                         </p>
                     </div>
                     <span class="text-xs font-black text-bordo group-hover:text-rosa flex items-center gap-1">Simular R$ 100 ➔</span>
@@ -347,7 +361,7 @@
                     </div>
                     <h3 class="font-black text-bordo text-xl sm:text-2xl mb-2">Turminha do Xexéu</h3>
                     <p class="text-xs sm:text-sm text-bordo/80 font-semibold mb-6 leading-relaxed">
-                        Universo infantil autoral desenvolvido com Inteligência Artificial para geração de cenários 3D, roteirização, engenharia de prompts, portal interativo com minijogos e animações completas para YouTube e redes sociais.
+                        Universo infantil autoral desenvolvido com Inteligência Artificial para geração de cenários 3D, engenharia de prompts visuais, portal interativo com minijogos e animações completas para YouTube e redes sociais.
                     </p>
                     <div class="flex gap-2 flex-wrap mb-6">
                         <a href="https://www.instagram.com/turminhaxe_xeu" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-bold text-xs px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
@@ -394,7 +408,7 @@
                     </div>
                     <h3 class="font-black text-bordo text-xl sm:text-2xl mb-2">Krakens</h3>
                     <p class="text-xs sm:text-sm text-bordo/80 font-semibold mb-6 leading-relaxed">
-                        Criação e estruturação completa da identidade visual da marca, definindo paleta de cores, tipografia e diretrizes de posicionamento estratégico aplicadas ao design de posts para o Instagram.
+                        Criação e estruturação completa da identidade visual da marca, definindo paleta de cores, tipografia e diretrizes de posicionamento estético aplicadas ao design de posts para o Instagram.
                     </p>
                     <div class="flex gap-2 flex-wrap mb-6">
                         <a href="https://www.instagram.com/krakens__/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-bold text-xs px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
@@ -493,12 +507,12 @@
                     <h3 class="font-black text-bordo text-lg mb-3">2. Engenharia de Prompts & IA</h3>
                     <ul class="space-y-3 text-xs sm:text-sm text-bordo/80 font-medium">
                         <li class="pb-2 border-b border-rosaclaro/40 cursor-pointer hover:text-rosa transition-colors p-1 rounded-lg" onclick="selecionarServicoPorTabela('Prompts para Estruturação de Sites e Copy', this)">
-                            <strong class="text-bordo font-bold block">Prompts para Sites, Cenários & Copy ➔</strong>
-                            <span>Modelos avançados em IA para textos, UI e cenários (R$ 100,00)</span>
+                            <strong class="text-bordo font-bold block">Prompts para Sites, Cenários & Layouts ➔</strong>
+                            <span>Modelos avançados em IA para cenários e estruturas visuais (R$ 100,00)</span>
                         </li>
                         <li class="cursor-pointer hover:text-rosa transition-colors p-1 rounded-lg" onclick="selecionarServicoPorTabela('Prompts para Estudos e Guias de Revisão', this)">
                             <strong class="text-bordo font-bold block">Prompts para Estudos & Guias ➔</strong>
-                            <span>Comandos estruturados para resumos e cronogramas (R$ 80,00)</span>
+                            <span>Comandos estruturados para organização de conteúdos (R$ 80,00)</span>
                         </li>
                     </ul>
                 </div>
@@ -583,16 +597,16 @@
                 </label>
 
                 <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="100" data-name="Prompts para Estruturação de Sites e Copy" data-summary="Criação de comandos inteligentes para estruturação de páginas, cenários em IA e copywriting." onchange="calcularTotal()">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="100" data-name="Prompts para Estruturação de Sites e Copy" data-summary="Criação de comandos inteligentes para estruturação de páginas e cenários em IA." onchange="calcularTotal()">
                     <div>
-                        <span class="font-extrabold text-bordo text-sm sm:text-base">Prompts para Sites, Cenários & Copywriting</span>
-                        <p class="text-xs text-bordo/75">Comandos para cenários, estruturas e textos</p>
+                        <span class="font-extrabold text-bordo text-sm sm:text-base">Prompts para Sites, Cenários & Estruturas</span>
+                        <p class="text-xs text-bordo/75">Comandos para cenários, layouts e inteligência visual</p>
                     </div>
                     <span class="ml-auto font-black text-bordo text-sm sm:text-base shrink-0">R$ 100</span>
                 </label>
 
                 <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="80" data-name="Prompts para Estudos e Guias de Revisão" data-summary="Desenvolvimento de prompts personalizados para transformar conteúdos densos em resumos, cronogramas e roteiros de revisão." onchange="calcularTotal()">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="80" data-name="Prompts para Estudos e Guias de Revisão" data-summary="Desenvolvimento de prompts personalizados para transformar conteúdos densos em resumos e guias visuais." onchange="calcularTotal()">
                     <div>
                         <span class="font-extrabold text-bordo text-sm sm:text-base">Prompts para Estudos & Guias</span>
                         <p class="text-xs text-bordo/75">Resumos, cronogramas e guias dinâmicos em IA</p>
