@@ -49,7 +49,6 @@
             background-image: radial-gradient(#F0C4D7 0.9px, transparent 0.9px);
             background-size: 20px 20px;
         }
-        /* Animações e Feedbacks Visuais */
         @keyframes pulse-card {
             0% { transform: scale(1); }
             50% { transform: scale(1.02); border-color: #6E1940; }
@@ -103,7 +102,7 @@
         </div>
     </header>
 
-    <!-- SEÇÃO SOBRE MIM -->
+    <!-- SEÇÃO SOBRE MIM & APRESENTAÇÃO DA EVE DESIGN (COM RESUMO COMPLETO DE TUDO) -->
     <section id="sobre-mim" class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-4">
         <div class="bg-white/90 border-2 border-rosaclaro rounded-3xl p-6 sm:p-10 shadow-lg backdrop-blur-sm">
             <div class="flex flex-col md:flex-row items-center gap-8">
@@ -118,14 +117,25 @@
 
                 <div class="flex-1 text-left">
                     <div class="inline-block bg-rosa text-bordo font-black text-xs px-3.5 py-1.5 rounded-full mb-3 shadow-sm">
-                        👋 Prazer, Evelyn!
+                        ✨ Bem-vindo(a) ao Eve Design Studio!
                     </div>
                     <h3 class="text-2xl sm:text-3xl font-black text-bordo mb-3">
-                        Designer Gráfica, Ilustradora & Especialista em IA Criativa ✨
+                        Olá, sou a Evelyn Cecilia! Designer Gráfica & Especialista em IA Criativa 🎨🤖
                     </h3>
-                    <p class="text-sm sm:text-base text-bordo/80 font-semibold leading-relaxed mb-6">
-                        Especializada na criação de <strong class="text-bordo font-black">Design de Posts estratégicos</strong> e na aplicação de <strong class="text-bordo font-black">IA Criativa</strong> para marcas. Desenvolvo cenários avançados, engenharia de prompts sob medida, identidades visuais marcantes, sites responsivos e edições de vídeo focadas em engajamento.
+                    <p class="text-sm sm:text-base text-bordo/80 font-semibold leading-relaxed mb-4">
+                        No <strong class="text-bordo font-black">Eve Design Studio</strong>, transformo ideias em ecossistemas visuais completos de alta performance. Meu trabalho une estética profissional, estratégia de conversão e Inteligência Artificial para entregar soluções pontuais ou estruturadas para o seu negócio:
                     </p>
+
+                    <!-- RESUMO LITERAL DE TUDO QUE FAÇO (CONECTADO À CALCULADORA) -->
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-bordo/90 font-bold mb-6 bg-creme/50 p-4 rounded-2xl border-2 border-rosaclaro/60">
+                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Identidade Visual Completa')">Identidade Visual Completa</span></li>
+                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Link na Bio / Cartão Interativo')">Link na Bio & Cartões Interativos</span></li>
+                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Landing Page de Vendas/Captura')">Landing Pages de Vendas / Captura</span></li>
+                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Sites Institucionais / Portfólios')">Sites Institucionais & Portfólios</span></li>
+                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Design de Posts Completo')">Design de Posts & Carrosséis</span></li>
+                        <li class="flex items-center gap-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Edição de Vídeo')">Edição de Vídeos, Reels & IA</span></li>
+                        <li class="flex items-center gap-2 sm:col-span-2">🔹 <span class="hover:text-rosa cursor-pointer transition-colors" onclick="selecionarServicoPorTabela('Prompts para Estruturação de Sites e Copy')">Engenharia de Prompts (Sites, Cenários & Copy)</span></li>
+                    </ul>
 
                     <div>
                         <h4 class="text-xs font-black text-bordo/70 uppercase tracking-wider mb-3">
@@ -219,7 +229,6 @@
     <!-- CARDS DE ACESSO RÁPIDO -->
     <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-4 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
         
-        <!-- CARD 1 -->
         <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="group relative w-full bg-white border-2 border-rosaclaro/80 rounded-3xl p-6 flex flex-col justify-between text-left shadow-sm hover:shadow-2xl hover:border-rosa hover:-translate-y-1 transition-all duration-300">
             <div>
                 <div class="w-12 h-12 rounded-2xl bg-bordo text-creme flex items-center justify-center font-bold text-xl group-hover:bg-rosa group-hover:text-bordo transition-colors mb-4 shadow-md">📁</div>
@@ -229,7 +238,6 @@
             <span class="text-bordo font-extrabold text-xs sm:text-sm flex items-center gap-2 group-hover:translate-x-2 transition-transform">Abrir Portfólio ➔</span>
         </a>
 
-        <!-- CARD 2 -->
         <a href="#simulador" class="group relative w-full bg-white border-2 border-rosaclaro/80 rounded-3xl p-6 flex flex-col justify-between text-left shadow-sm hover:shadow-2xl hover:border-rosa hover:-translate-y-1 transition-all duration-300">
             <div>
                 <div class="w-12 h-12 rounded-2xl bg-bordo text-creme flex items-center justify-center font-bold text-xl group-hover:bg-rosa group-hover:text-bordo transition-colors mb-4 shadow-md">🧮</div>
@@ -239,7 +247,6 @@
             <span class="text-bordo font-extrabold text-xs sm:text-sm flex items-center gap-2 group-hover:translate-x-2 transition-transform">Simular Agora ➔</span>
         </a>
 
-        <!-- CARD 3 -->
         <div class="group relative w-full bg-white border-2 border-rosaclaro/80 rounded-3xl p-6 flex flex-col justify-between text-left shadow-sm hover:shadow-2xl hover:border-rosa transition-all duration-300">
             <div>
                 <div class="w-12 h-12 rounded-2xl bg-bordo text-creme flex items-center justify-center font-bold text-xl group-hover:bg-rosa group-hover:text-bordo transition-colors mb-4 shadow-md">📩</div>
@@ -720,7 +727,6 @@
     <script>
         const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbxzTO3dE89sUNz6eCpnieggZOR_6DnLcZMN3wBzR1gfWtzXiFgTeNt5p6mnUj9C0hpTHA/exec";
 
-        // Função de Toast Visual (Feedback na tela)
         function mostrarToast(mensagem, icone = "✨") {
             const toast = document.getElementById('toast-feedback');
             document.getElementById('toast-msg').innerText = mensagem;
@@ -749,7 +755,6 @@
                 });
             }
 
-            // Feedback visual no elemento clicado se houver
             if(elementoClicado) {
                 elementoClicado.classList.add('card-feedback');
                 setTimeout(() => elementoClicado.classList.remove('card-feedback'), 500);
