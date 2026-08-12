@@ -65,7 +65,7 @@
             transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         }
         /* Foco visível de acessibilidade */
-        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
             outline: 3px solid #6E1940;
             outline-offset: 2px;
         }
@@ -128,7 +128,7 @@
         </h1>
         
         <p class="text-base sm:text-xl text-bordo font-bold max-w-2xl mx-auto leading-normal mb-6">
-            Transformo ideias em ecossistemas visuais de alta conversão. Simule seu investimento em tempo real ou conheça meus trabalhos recentes.
+            Transformo ideias em ecossistemas visuais de alta conversão. Simule seu investimento em tempo real e envie seu pedido completo diretamente pelo Instagram.
         </p>
 
         <!-- REDES SOCIAIS -->
@@ -734,24 +734,73 @@
         </div>
     </section>
 
-    <!-- MODAL DE CAPTURA & BRIEFING -->
+    <!-- MODAL DE CAPTURA & MINI BRIEFING INTEGRADO AO INSTAGRAM -->
     <div id="modalOrcamento" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
-        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-xl w-full shadow-2xl text-center relative my-8 max-h-[90vh] overflow-y-auto">
+        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-xl w-full shadow-2xl text-left relative my-8 max-h-[90vh] overflow-y-auto">
             <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo p-1 hover:text-rosa transition-colors" onclick="fecharModalOrcamento()">&times;</button>
-            <h2 class="text-2xl sm:text-3xl font-black text-bordo mb-2">Quase Pronto! ✨</h2>
+            
+            <div class="text-center mb-4">
+                <span class="inline-block bg-rosa text-bordo font-black text-xs px-3.5 py-1 rounded-full mb-1">📋 Mini Briefing & Pedido</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-bordo">Quase Pronto! ✨</h2>
+                <p class="text-xs sm:text-sm text-bordo font-bold">Preencha os detalhes para gerar seu pedido e abrir nosso Direct no Instagram!</p>
+            </div>
+
+            <!-- RESUMO DO PEDIDO NO MODAL -->
+            <div class="bg-creme/60 p-3.5 rounded-2xl border border-rosaclaro mb-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-black text-bordo uppercase">Resumo da Simulação:</span>
+                    <strong class="text-base font-black text-bordo" id="modal-total-valor">R$ 0,00</strong>
+                </div>
+                <div id="modal-resumo-itens" class="text-xs text-bordo font-bold mt-1 max-h-20 overflow-y-auto">
+                    <!-- Itens inseridos via JS -->
+                </div>
+            </div>
+
             <form id="formLead" onsubmit="enviarDadosPlanilha(event)">
-                <div class="bg-creme/40 p-4 rounded-2xl border border-rosaclaro mb-4 text-left space-y-3">
+                <div class="space-y-3">
                     <div>
-                        <label class="block text-xs font-bold text-bordo mb-1">Seu Nome / Empresa:*</label>
-                        <input type="text" id="cliente-nome" required class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white">
+                        <label class="block text-xs font-black text-bordo mb-1">1. Seu Nome / Nome da Empresa:*</label>
+                        <input type="text" id="cliente-nome" placeholder="Ex: Evelyn / Turminha do Xexéu" required class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
                     </div>
+
                     <div>
-                        <label class="block text-xs font-bold text-bordo mb-1">Seu Contato (Instagram / WhatsApp):*</label>
-                        <input type="text" id="cliente-contato" required class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white">
+                        <label class="block text-xs font-black text-bordo mb-1">2. Seu @ no Instagram:*</label>
+                        <input type="text" id="cliente-contato" placeholder="Ex: @seu_perfil" required class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">3. Qual é o seu segmento / nicho?</label>
+                        <input type="text" id="cliente-ramo" placeholder="Ex: Loja Infantil, Ótica, Canal de YouTube, Proteção Veicular..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-black text-bordo mb-1">4. Prazo de Entrega Desejado:</label>
+                            <select id="cliente-prazo" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                                <option value="Sem urgência (Fluxo normal)">Sem urgência (Padrão)</option>
+                                <option value="Prazo rápido (Até 5 dias)">Rápido (Até 5 dias)</option>
+                                <option value="Urgente / Expresso">Urgente / Expresso ⚡</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black text-bordo mb-1">5. Já possui marca/logo?</label>
+                            <select id="cliente-logo-status" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                                <option value="Sim, já tenho pronta">Sim, já tenho pronta</option>
+                                <option value="Não, preciso criar no projeto">Não, vou precisar criar</option>
+                                <option value="Quero reformular/Redesign">Quero reformular (Redesign)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">6. Detalhes / Breve Briefing do Projeto:</label>
+                        <textarea id="cliente-briefing" rows="3" placeholder="Conte um pouco sobre suas ideias, cores de preferência, objetivo do vídeo/post ou referências que você gosta..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
                     </div>
                 </div>
-                <button type="submit" id="btn-enviar-lead" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3.5 rounded-xl transition-all shadow-md">
-                    Confirmar e Enviar Projeto ➔
+
+                <button type="submit" id="btn-enviar-lead" class="w-full mt-4 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                    <img src="https://i.imgur.com/EE5DwcB.png" alt="" class="w-4 h-4 object-contain brightness-200">
+                    Enviar Pedido via Direct do Instagram ➔
                 </button>
             </form>
         </div>
@@ -773,6 +822,7 @@
     <!-- SCRIPTS DE INTEGRAÇÃO & FEEDBACKS -->
     <script>
         const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbw4mo8y5YGCTsjDDekoW__6b-RDWn93BG8ehQNx0l0bWKnlesyAw7MiP05mDIspZ2iPyQ/exec";
+        const SEU_INSTAGRAM = "eve.desi_gn"; 
 
         function mostrarToast(mensagem, icone = "✨") {
             const toast = document.getElementById('toast-feedback');
@@ -786,7 +836,7 @@
                 toast.classList.remove('opacity-100');
                 toast.classList.add('opacity-0');
                 setTimeout(() => toast.classList.add('hidden'), 300);
-            }, 2500);
+            }, 3000);
         }
 
         function selecionarServicoPorTabela(nomeServico) {
@@ -897,6 +947,30 @@
             mostrarToast("Carrinho esvaziado!", "🔄");
         }
 
+        function obterItensSelecionadosTexto() {
+            let lista = [];
+
+            document.querySelectorAll('.calc-item').forEach(item => {
+                if(item.checked) {
+                    lista.push(item.getAttribute('data-name'));
+                }
+            });
+
+            const checkIa = document.getElementById('check-video-ia');
+            if(checkIa.checked) {
+                const minIa = document.getElementById('input-minutos-ia').value || 1;
+                lista.push(`Vídeos com IA + CapCut (${minIa} min)`);
+            }
+
+            const checkGeral = document.getElementById('check-video-geral');
+            if(checkGeral.checked) {
+                const minGeral = document.getElementById('input-minutos-geral').value || 1;
+                lista.push(`Edição Geral de Vídeos (${minGeral} min)`);
+            }
+
+            return lista;
+        }
+
         function calcularTotal() {
             let total = 0;
             const resumoUl = document.getElementById('resumo-entregas');
@@ -949,7 +1023,9 @@
                 resumoUl.innerHTML = '<li class="pt-1">Seu carrinho está vazio. Adicione itens acima ou clique nas especialidades.</li>';
             }
 
-            document.getElementById('total-valor').innerText = 'R$ ' + total.toFixed(2).replace('.', ',');
+            const totalFormatado = 'R$ ' + total.toFixed(2).replace('.', ',');
+            document.getElementById('total-valor').innerText = totalFormatado;
+            document.getElementById('modal-total-valor').innerText = totalFormatado;
         }
 
         function abrirModalOrcamento() {
@@ -958,9 +1034,14 @@
                 mostrarToast('Selecione pelo menos um serviço no carrinho!', '⚠️');
                 return;
             }
+
+            const itens = obterItensSelecionadosTexto();
+            const resumoDiv = document.getElementById('modal-resumo-itens');
+            resumoDiv.innerHTML = '• ' + itens.join('<br>• ');
+
             document.getElementById('modalOrcamento').classList.remove('hidden');
             document.getElementById('modalOrcamento').classList.add('flex');
-            mostrarToast("Abrindo formulário de orçamento...", "📋");
+            mostrarToast("Abrindo formulário de briefing...", "📋");
         }
 
         function fecharModalOrcamento() {
@@ -970,8 +1051,61 @@
 
         function enviarDadosPlanilha(e) {
             e.preventDefault();
-            mostrarToast("Briefing e orçamento enviados com sucesso!", "🚀");
+
+            const nome = document.getElementById('cliente-nome').value;
+            const contato = document.getElementById('cliente-contato').value;
+            const ramo = document.getElementById('cliente-ramo').value || 'Não informado';
+            const prazo = document.getElementById('cliente-prazo').value;
+            const logoStatus = document.getElementById('cliente-logo-status').value;
+            const briefing = document.getElementById('cliente-briefing').value || 'Nenhum detalhe adicional informado.';
+            const total = document.getElementById('total-valor').innerText;
+            const servicos = obterItensSelecionadosTexto().join(', ');
+
+            const payload = {
+                nome: nome,
+                contato: contato,
+                ramo: ramo,
+                prazo: prazo,
+                logoStatus: logoStatus,
+                briefing: briefing,
+                total: total,
+                servicos: servicos
+            };
+
+            // Envia para o Apps Script em segundo plano
+            if (URL_APPS_SCRIPT && !URL_APPS_SCRIPT.includes('SEU_SCRIPT_AQUI')) {
+                fetch(URL_APPS_SCRIPT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }).catch(err => console.log('Erro envio script:', err));
+            }
+
+            // Monta o texto legível para o Direct do Instagram
+            const textoInstagram = `✨ NOVO PEDIDO DE DESIGN - EVE DESIGN STUDIO ✨\n\n` +
+                `👤 Cliente: ${nome}\n` +
+                `📞 Instagram: ${contato}\n` +
+                `🏢 Segmento: ${ramo}\n` +
+                `⏱️ Prazo Desejado: ${prazo}\n` +
+                `🎨 Status do Logo: ${logoStatus}\n\n` +
+                `🛍️ Serviços Selecionados:\n${payload.servicos.split(', ').map(s => '• ' + s).join('\n')}\n\n` +
+                `💰 Valor Total Simulado: ${total}\n\n` +
+                `📝 Mini Briefing:\n"${briefing}"`;
+
+            // Copia o briefing para a área de transferência do cliente
+            navigator.clipboard.writeText(textoInstagram).then(() => {
+                mostrarToast("Briefing COPIADO! Cole no Direct do Instagram 📋✨", "📋");
+            }).catch(() => {
+                mostrarToast("Redirecionando para o Instagram...", "🚀");
+            });
+
             fecharModalOrcamento();
+
+            // Abre o Instagram diretamente no seu perfil
+            setTimeout(() => {
+                window.open(`https://www.instagram.com/${SEU_INSTAGRAM}/`, '_blank');
+            }, 1000);
         }
 
         function mostrarNivel(nome, nivel, desc) {
