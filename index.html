@@ -734,7 +734,7 @@
         </div>
     </section>
 
-    <!-- MODAL DE CAPTURA & MINI BRIEFING INTEGRADO AO SEU GOOGLE SHEETS & EMAIL -->
+    <!-- MODAL DE CAPTURA & MINI BRIEFING DE ALTA CONVERSÃO -->
     <div id="modalOrcamento" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-xl w-full shadow-2xl text-left relative my-8 max-h-[90vh] overflow-y-auto">
             <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo p-1 hover:text-rosa transition-colors" onclick="fecharModalOrcamento()">&times;</button>
@@ -742,7 +742,7 @@
             <div class="text-center mb-4">
                 <span class="inline-block bg-rosa text-bordo font-black text-xs px-3.5 py-1 rounded-full mb-1">📋 Mini Briefing & Pedido</span>
                 <h2 class="text-2xl sm:text-3xl font-black text-bordo">Quase Pronto! ✨</h2>
-                <p class="text-xs sm:text-sm text-bordo font-bold">Preencha o briefing abaixo para salvarmos na planilha e abrirmos nosso Instagram!</p>
+                <p class="text-xs sm:text-sm text-bordo font-bold">Preencha os detalhes abaixo para enviarmos seu pedido direto no Instagram!</p>
             </div>
 
             <!-- RESUMO DO PEDIDO NO MODAL -->
@@ -764,35 +764,22 @@
                     </div>
 
                     <div>
-                        <label class="block text-xs font-black text-bordo mb-1">2. Contato (@Instagram / WhatsApp):*</label>
+                        <label class="block text-xs font-black text-bordo mb-1">2. Contato (WhatsApp / Insta):*</label>
                         <input type="text" id="cliente-contato" placeholder="Ex: @seu_perfil ou (11) 99999-9999" required class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-xs font-black text-bordo mb-1">3. Prazo Desejado:</label>
-                            <input type="text" id="cliente-prazo" placeholder="Ex: 5 dias, Urgente..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-black text-bordo mb-1">4. Objetivo do Projeto:</label>
-                            <input type="text" id="cliente-objetivo" placeholder="Ex: Lançar canal, vender seguros..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-xs font-black text-bordo mb-1">5. Público-Alvo:</label>
-                            <input type="text" id="cliente-publico" placeholder="Ex: Mães, Crianças, Motoristas..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-black text-bordo mb-1">6. Estilo Visual & Cores:</label>
-                            <input type="text" id="cliente-estilo" placeholder="Ex: Colorido, Tons de Rosa, Minimalista..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
-                        </div>
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">3. Status do Logo:*</label>
+                        <select id="cliente-logo-status" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                            <option value="Já possui marca/logo pronta">Já possuo marca/logo pronta</option>
+                            <option value="Preciso criar do zero no projeto">Preciso criar do zero no projeto</option>
+                            <option value="Quero reformular/Redesign">Quero reformular (Redesign)</option>
+                        </select>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-black text-bordo mb-1">7. Detalhes da Marca / Briefing:</label>
-                        <textarea id="cliente-detalhes" rows="3" placeholder="Descreva os detalhes importantes da sua marca, o que não pode faltar ou o roteiro do vídeo..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
+                        <label class="block text-xs font-black text-bordo mb-1">4. Detalhes / Prazos / Minutos do Vídeo:*</label>
+                        <textarea id="cliente-detalhes-prazos" rows="4" required placeholder="Descreva os detalhes importantes da sua ideia, prazo desejado, minutagem estimada do vídeo, cores de preferência ou objetivo principal..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
                     </div>
                 </div>
 
@@ -1052,59 +1039,50 @@
 
             const nome = document.getElementById('cliente-nome').value;
             const contato = document.getElementById('cliente-contato').value;
-            const prazo = document.getElementById('cliente-prazo').value || 'Não informado';
-            const objetivo = document.getElementById('cliente-objetivo').value || 'Não informado';
-            const publico = document.getElementById('cliente-publico').value || 'Não informado';
-            const estilo = document.getElementById('cliente-estilo').value || 'Não informado';
-            const detalhesMarca = document.getElementById('cliente-detalhes').value || 'Não informado';
+            const logoStatus = document.getElementById('cliente-logo-status').value;
+            const detalhesPrazos = document.getElementById('cliente-detalhes-prazos').value;
             const valorTotal = document.getElementById('total-valor').innerText;
             const servicos = obterItensSelecionadosTexto().join(', ');
 
-            // Estrutura enviada em JSON idêntica ao que seu Google Apps Script espera receber
+            // Objeto de dados idêntico ao que o Apps Script da sua nova planilha espera
             const payload = {
                 nome: nome,
                 contato: contato,
                 servicos: servicos,
-                valorTotal: valorTotal,
-                prazo: prazo,
-                objetivo: objetivo,
-                publico: publico,
-                estilo: estilo,
-                detalhesMarca: detalhesMarca
+                logoStatus: logoStatus,
+                detalhesPrazos: detalhesPrazos,
+                valorTotal: valorTotal
             };
 
-            // Disparo silencioso para o Google Sheets (Apps Script)
+            // Envia para o Google Apps Script em segundo plano
             if (URL_APPS_SCRIPT) {
                 fetch(URL_APPS_SCRIPT, {
                     method: 'POST',
                     mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
-                }).catch(err => console.log('Erro ao enviar dados para a planilha:', err));
+                }).catch(err => console.log('Erro ao enviar para planilha:', err));
             }
 
-            // Formatação amigável do texto para ser colado no Direct
+            // Mensagem formatada para o cliente colar no Direct do Instagram
             const textoInstagram = `✨ NOVO BRIEFING & PEDIDO - EVE DESIGN STUDIO ✨\n\n` +
-                `👤 Nome: ${nome}\n` +
+                `👤 Cliente: ${nome}\n` +
                 `📱 Contato: ${contato}\n` +
-                `🛠️ Serviços: ${servicos}\n` +
-                `💰 Valor Total: ${valorTotal}\n` +
-                `⏳ Prazo: ${prazo}\n\n` +
-                `🎯 Objetivo: ${objetivo}\n` +
-                `👥 Público-Alvo: ${publico}\n` +
-                `🎨 Estilo/Cores: ${estilo}\n` +
-                `📝 Detalhes: "${detalhesMarca}"`;
+                `🛠️ Serviços Escolhidos: ${servicos}\n` +
+                `🎨 Status do Logo: ${logoStatus}\n` +
+                `💰 Valor Total Simulado: ${valorTotal}\n\n` +
+                `📝 Detalhes / Prazos / Minutos:\n"${detalhesPrazos}"`;
 
-            // Copia o briefing para a área de transferência do cliente
+            // Copia o texto para a área de transferência do cliente
             navigator.clipboard.writeText(textoInstagram).then(() => {
                 mostrarToast("Briefing salvo & COPIADO! Cole no Direct do Instagram 📋✨", "📋");
             }).catch(() => {
-                mostrarToast("Briefing enviado com sucesso! Redirecionando...", "🚀");
+                mostrarToast("Briefing salvo! Redirecionando para o Instagram...", "🚀");
             });
 
             fecharModalOrcamento();
 
-            // Redireciona o usuário para o seu perfil no Instagram
+            // Redireciona o cliente para o seu Instagram
             setTimeout(() => {
                 window.open(`https://www.instagram.com/${SEU_INSTAGRAM}/`, '_blank');
             }, 1000);
