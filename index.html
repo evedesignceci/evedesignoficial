@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="64x64" href="https://i.imgur.com/bm07Eug.png">
     <link rel="apple-touch-icon" href="https://i.imgur.com/bm07Eug.png">
     
-    <!-- Meta tags Open Graph (Prévia de Link Atualizada) -->
+    <!-- Meta tags Open Graph (Prévia de Link) -->
     <meta property="og:title" content="Eve Design | Identidade Visual, IA Criativa & Ecossistemas Digitais">
     <meta property="og:description" content="Desenvolvo identidades visuais, design de posts, sites, sistemas de estudos, cenários e personagens gerados por IA, vídeos profissionais pelo CapCut para qualquer formato e criativos de anúncios.">
     <meta property="og:image" content="https://i.imgur.com/RLBQIdy.png">
@@ -111,8 +111,15 @@
         </div>
     </header>
 
-    <!-- BANNER HERO PRINCIPAL -->
-    <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-4 text-center">
+    <!-- BANNER HERO COM A SUA ARTE EXCLUSIVA -->
+    <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2">
+        <div class="rounded-3xl overflow-hidden border-2 border-rosa shadow-lg bg-white">
+            <img src="https://i.imgur.com/dXVvX40.png" alt="Eve Design Studio - Banner" class="w-full h-auto object-cover max-h-[400px]">
+        </div>
+    </section>
+
+    <!-- BANNER HERO TEXTO & CHAMADA -->
+    <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-4 text-center">
         <span class="inline-flex items-center gap-2 bg-white/90 border-2 border-rosa text-bordo font-black text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-4 shadow-sm">
             ✨ Soluções Criativas & Visuais
         </span>
@@ -218,37 +225,29 @@
                             Minha Caixa de Ferramentas (Clique para detalhes):
                         </h3>
                         <div class="flex flex-wrap gap-2.5">
-                            
                             <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais e vetorização.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/Q5aIApP.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Illustrator</span>
                             </button>
-
                             <button type="button" onclick="mostrarNivel('Blender 3D', 'Intermediário', 'Modelagem 3D e texturização.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/jQt50UJ.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Blender 3D</span>
                             </button>
-
                             <button type="button" onclick="mostrarNivel('Canva Pro', 'Especialista', 'Layouts e carrosséis ágeis.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/9eCY7fO.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Canva</span>
                             </button>
-
                             <button type="button" onclick="mostrarNivel('Gemini IA', 'Avançado', 'Criação de conceitos visuais e roteiros.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/jzEwkZc.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Gemini IA</span>
                             </button>
-
                             <button type="button" onclick="mostrarNivel('CapCut', 'Avançado', 'Edição profissional de vídeos e Reels.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/7nzUf4g.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">CapCut</span>
                             </button>
-
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </section>
@@ -396,7 +395,6 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 450</span>
                 </label>
 
-                <!-- OPÇÕES SEPARADAS DE POSTS E CARROSSÉIS -->
                 <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="250" data-name="Apenas Posts Estáticos" data-summary="Criação exclusiva de artes estáticas para o feed." onchange="calcularTotal()">
                     <div>
