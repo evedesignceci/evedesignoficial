@@ -341,10 +341,43 @@
                                 <span class="text-bordo font-bold">R$ 500,00</span>
                             </button>
                         </li>
+                        <li>
+                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Pacote Completo: Posts + Reels e Stories (CapCut)', this)">
+                                <strong class="text-bordo font-black">Posts + Reels e Stories (CapCut) ➔</strong>
+                                <span class="text-bordo font-bold">R$ 1.200,00</span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE EXPLICAÇÃO DA CALCULADORA -->
+    <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-4">
+        <div class="bg-white/90 border-2 border-rosaclaro rounded-3xl p-6 sm:p-8 shadow-md">
+            <div class="flex items-center gap-3 mb-3">
+                <span class="text-2xl">💡</span>
+                <h3 class="text-xl sm:text-2xl font-black text-bordo">Como funciona a nossa Calculadora de Projetos?</h3>
+            </div>
+            <p class="text-sm sm:text-base text-bordo font-bold leading-relaxed mb-4">
+                Esta ferramenta foi criada para facilitar o planejamento do seu investimento. Veja como é simples montar sua proposta:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm font-bold text-bordo">
+                <div class="bg-creme/50 p-4 rounded-2xl border border-rosaclaro">
+                    <strong class="block text-base font-black mb-1">1. Selecione</strong>
+                    Marque os serviços que você precisa na lista abaixo (você pode escolher posts avulsos, pacotes completos de redes sociais ou edição de vídeos por minutagem).
+                </div>
+                <div class="bg-creme/50 p-4 rounded-2xl border border-rosaclaro">
+                    <strong class="block text-base font-black mb-1">2. Acompanhe</strong>
+                    O valor total do investimento e o resumo detalhado das entregas são calculados automaticamente em tempo real para você não ter dúvidas.
+                </div>
+                <div class="bg-creme/50 p-4 rounded-2xl border border-rosaclaro">
+                    <strong class="block text-base font-black mb-1">3. Envie o Briefing</strong>
+                    Clique no botão de envio, preencha seus dados de contato e responda às perguntas rápidas para recebermos a sua ideia pronta para execução.
+                </div>
+            </div>
         </div>
     </section>
 
@@ -417,6 +450,16 @@
                         <span class="font-black text-bordo text-base sm:text-lg">Estáticos + Carrosséis (Pacote)</span>
                     </div>
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 500</span>
+                </label>
+
+                <!-- NOVO PACOTE: POSTS + REELS E STORIES (CAPCUT) -->
+                <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60 md:col-span-2">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="1200" data-name="Pacote Completo: Posts + Reels e Stories (CapCut)" data-summary="Pacote mensal robusto contendo posts para feed, carrosséis, mais edição de Reels e Stories profissionais no CapCut." onchange="calcularTotal()">
+                    <div>
+                        <span class="font-black text-bordo text-base sm:text-lg">Pacote Completo: Posts + Reels e Stories (CapCut)</span>
+                        <p class="text-xs sm:text-sm text-bordo font-bold">Artes para feed/carrosséis + edição completa de vídeos para redes sociais</p>
+                    </div>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 1.200</span>
                 </label>
 
                 <!-- EDIÇÃO DE VÍDEO GERAL POR MINUTAGEM (R$ 50/min) -->
