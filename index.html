@@ -55,12 +55,11 @@
         }
         @keyframes pulse-card {
             0% { transform: scale(1); }
-            50% { transform: scale(1.02); border-color: #6E1940; }
+            50% { transform: scale(1.02); border-color: #6E1940; background-color: #F0C4D7 !important; }
             100% { transform: scale(1); }
         }
         .card-feedback {
-            animation: pulse-card 0.4s ease-in-out;
-            background-color: #F0C4D7 !important;
+            animation: pulse-card 0.5s ease-in-out;
         }
         .toast-transition {
             transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -97,7 +96,7 @@
 
             <nav class="hidden md:flex items-center gap-5 text-sm font-black text-bordo uppercase tracking-wide">
                 <a href="#sobre-mim" class="hover:text-rosa transition-colors">Sobre Mim</a>
-                <a href="#design-posts" class="hover:text-rosa transition-colors">Especialidades</a>
+                <a href="#especialidades" class="hover:text-rosa transition-colors">Especialidades</a>
                 <a href="#exemplos" class="hover:text-rosa transition-colors">Projetos</a>
                 <a href="#tabela" class="hover:text-rosa transition-colors">Tabela</a>
                 <a href="#simulador" class="hover:text-rosa transition-colors">Calculadora</a>
@@ -252,6 +251,111 @@
         </div>
     </section>
 
+    <!-- SEÇÃO: ESPECIALIDADES & SERVIÇOS EM DESTAQUE -->
+    <section id="especialidades" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
+        <div class="text-center mb-8">
+            <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
+                ⭐ O que eu faço
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black text-bordo">Especialidades & Soluções</h2>
+            <p class="text-sm sm:text-base text-bordo font-bold mt-1">Conheça cada área de atuação e clique para selecionar diretamente na calculadora:</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Link na Bio -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">🔗</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Link na Bio</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Central de links interativa e responsiva para organizar sua presença nas redes sociais.</p>
+                </div>
+                <button type="button" onclick="selecionarServicoPorTabela('Link na Bio / Cartão Interativo')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Simular R$ 150 ➔</button>
+            </div>
+
+            <!-- Landing Page -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">🌐</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Landing Page</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Página de alta conversão para capturar leads, apresentar serviços e fechar vendas.</p>
+                </div>
+                <button type="button" onclick="selecionarServicoPorTabela('Landing Page de Vendas/Captura')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Simular R$ 400 ➔</button>
+            </div>
+
+            <!-- Identidade Visual -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">🎨</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Identidade Visual</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Logo profissional, paleta de cores, tipografia e manual de marca completo em PDF.</p>
+                </div>
+                <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Simular R$ 300 ➔</button>
+            </div>
+
+            <!-- Posts Estáticos -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">🖼️</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Posts Estáticos</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Criação exclusiva de artes estáticas individuais para o feed do Instagram.</p>
+                </div>
+                <button type="button" onclick="selecionarServicoPorTabela('Apenas Posts Estáticos')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Simular R$ 150 ➔</button>
+            </div>
+
+            <!-- Carrosséis -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">📑</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Carrosséis Informativos</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Sequência de artes educativas estruturadas para gerar alto engajamento e salvamentos.</p>
+                </div>
+                <button type="button" onclick="selecionarServicoPorTabela('Apenas Carrosséis Informativos')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Simular R$ 200 ➔</button>
+            </div>
+
+            <!-- Pacote Redes Sociais -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">🚀</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Posts + Reels & Stories</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Mix completo mensal de posts, carrosséis, mais edição de Reels e Stories profissionais no CapCut.</p>
+                </div>
+                <button type="button" onclick="selecionarServicoPorTabela('Posts + Reels e Stories (CapCut)')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Simular R$ 800 ➔</button>
+            </div>
+
+            <!-- Sistemas de Estudos -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">📚</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Sistemas de Estudos & Guias</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Organização inteligente de cronogramas e conteúdos estruturados através de Inteligência Artificial.</p>
+                </div>
+                <button type="button" onclick="selecionarServicoPorTabela('Sistemas de Estudos & Guias em IA')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Simular R$ 80 ➔</button>
+            </div>
+
+            <!-- Vídeos com IA -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">🤖</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Vídeos & Animações com IA</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Geração de cenários e personagens via IA, cobrindo o uso de créditos e montagem no CapCut.</p>
+                </div>
+                <button type="button" onclick="destacarOpcaoCalculadora('check-video-ia')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Simular por Minuto ➔</button>
+            </div>
+
+            <!-- Edição Geral -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">🎬</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Edição Geral de Vídeos</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Edição técnica para Reels, TikTok e Vlogs com cortes dinâmicos e legendas (CapCut).</p>
+                </div>
+                <button type="button" onclick="destacarOpcaoCalculadora('check-video-geral')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Simular por Minuto ➔</button>
+            </div>
+
+        </div>
+    </section>
+
     <!-- SEÇÃO: EXEMPLOS DE PÁGINAS & PROJETOS -->
     <section id="exemplos" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div class="text-center mb-8">
@@ -398,13 +502,13 @@
                     <h3 class="font-black text-bordo text-xl mb-3">1. Web Design & Sites</h3>
                     <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Link na Bio / Cartão Interativo', this)">
+                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Link na Bio / Cartão Interativo')">
                                 <strong class="text-bordo font-black">Link na Bio / Cartão Interativo ➔</strong>
                                 <span class="text-bordo font-bold">R$ 150,00</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Landing Page de Vendas/Captura', this)">
+                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Landing Page de Vendas/Captura')">
                                 <strong class="text-bordo font-black">Landing Page de Vendas / Captura ➔</strong>
                                 <span class="text-bordo font-bold">R$ 400,00</span>
                             </button>
@@ -419,13 +523,13 @@
                     <h3 class="font-black text-bordo text-xl mb-3">2. Animação, IA & Guias</h3>
                     <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Vídeos & Animações com IA + CapCut', this)">
+                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="destacarOpcaoCalculadora('check-video-ia')">
                                 <strong class="text-bordo font-black">Vídeos com IA (por Minuto) ➔</strong>
                                 <span class="text-bordo font-bold">R$ 80,00 / min (Base créditos)</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Sistemas de Estudos & Guias em IA', this)">
+                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Sistemas de Estudos & Guias em IA')">
                                 <strong class="text-bordo font-black">Sistemas de Estudos & Guias ➔</strong>
                                 <span class="text-bordo font-bold">R$ 80,00</span>
                             </button>
@@ -440,25 +544,25 @@
                     <h3 class="font-black text-bordo text-xl mb-3">3. Design & Redes Sociais</h3>
                     <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Identidade Visual Completa', this)">
+                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Identidade Visual Completa')">
                                 <strong class="text-bordo font-black">Identidade Visual Completa ➔</strong>
                                 <span class="text-bordo font-bold">R$ 300,00</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Apenas Posts Estáticos', this)">
+                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Apenas Posts Estáticos')">
                                 <strong class="text-bordo font-black">Apenas Posts Estáticos ➔</strong>
                                 <span class="text-bordo font-bold">R$ 150,00</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Apenas Carrosséis Informativos', this)">
+                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Apenas Carrosséis Informativos')">
                                 <strong class="text-bordo font-black">Apenas Carrosséis Informativos ➔</strong>
                                 <span class="text-bordo font-bold">R$ 200,00</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Pacote Completo: Posts + Reels e Stories (CapCut)', this)">
+                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Posts + Reels e Stories (CapCut)')">
                                 <strong class="text-bordo font-black">Posts + Reels e Stories (CapCut) ➔</strong>
                                 <span class="text-bordo font-bold">R$ 800,00</span>
                             </button>
@@ -520,7 +624,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 
-                <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
+                <label id="label-link-bio" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="150" data-name="Link na Bio / Cartão Interativo" data-summary="Central de links personalizada e responsiva." onchange="calcularTotal()">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Link na Bio / Cartão Interativo</span>
@@ -528,7 +632,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 150</span>
                 </label>
 
-                <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
+                <label id="label-landing-page" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="400" data-name="Landing Page de Vendas/Captura" data-summary="Página focada em atração e conversão de leads." onchange="calcularTotal()">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Landing Page de Vendas / Captura</span>
@@ -536,7 +640,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 400</span>
                 </label>
 
-                <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
+                <label id="label-identidade-visual" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="300" data-name="Identidade Visual Completa" data-summary="Logo, paleta, tipografia e manual em PDF." onchange="calcularTotal()">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Identidade Visual Completa</span>
@@ -544,7 +648,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 300</span>
                 </label>
 
-                <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
+                <label id="label-posts-estaticos" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="150" data-name="Apenas Posts Estáticos" data-summary="Criação exclusiva de artes estáticas para o feed." onchange="calcularTotal()">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Apenas Posts Estáticos</span>
@@ -552,7 +656,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 150</span>
                 </label>
 
-                <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
+                <label id="label-carrosseis" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="200" data-name="Apenas Carrosséis Informativos" data-summary="Criação exclusiva de carrosséis educativos/informativos." onchange="calcularTotal()">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Apenas Carrosséis Informativos</span>
@@ -560,7 +664,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 200</span>
                 </label>
 
-                <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
+                <label id="label-pacote-completo" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="800" data-name="Posts + Reels e Stories (CapCut)" data-summary="Mix completo de posts para feed, carrosséis, reels e stories." onchange="calcularTotal()">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Posts + Reels e Stories (CapCut)</span>
@@ -568,7 +672,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 800</span>
                 </label>
 
-                <label class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
+                <label id="label-sistema-estudos" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="80" data-name="Sistemas de Estudos & Guias em IA" data-summary="Organização inteligente de cronogramas e conteúdos." onchange="calcularTotal()">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Sistemas de Estudos & Guias em IA</span>
@@ -577,7 +681,7 @@
                 </label>
 
                 <!-- VÍDEOS COM IA POR MINUTAGEM (BASEADO EM CRÉDITOS) -->
-                <div class="flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2">
+                <div id="wrapper-video-ia" class="flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all">
                     <label class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo" onchange="toggleIaMinutos(); calcularTotal();">
                         <div>
@@ -598,7 +702,7 @@
                 </div>
 
                 <!-- EDIÇÃO DE VÍDEO GERAL POR MINUTAGEM (R$ 40/min) -->
-                <div class="flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2">
+                <div id="wrapper-video-geral" class="flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all">
                     <label class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo" onchange="toggleVideoGeral(); calcularTotal();">
                         <div>
@@ -684,18 +788,60 @@
     <script>
         const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbw4mo8y5YGCTsjDDekoW__6b-RDWn93BG8ehQNx0l0bWKnlesyAw7MiP05mDIspZ2iPyQ/exec";
 
-        function selecionarServicoPorTabela(nomeServico, elementoClicado = null) {
+        function mostrarToast(mensagem, icone = "✨") {
+            const toast = document.getElementById('toast-feedback');
+            document.getElementById('toast-msg').innerText = mensagem;
+            document.getElementById('toast-icon').innerText = icone;
+            
+            toast.classList.remove('hidden', 'opacity-0');
+            toast.classList.add('opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+                setTimeout(() => toast.classList.add('hidden'), 300);
+            }, 2500);
+        }
+
+        function selecionarServicoPorTabela(nomeServico) {
             const items = document.querySelectorAll('.calc-item');
+            let itemEncontrado = null;
+            
             items.forEach(item => {
                 if(item.getAttribute('data-name') === nomeServico) {
                     item.checked = true;
+                    itemEncontrado = item;
                 }
             });
-            if(elementoClicado) {
-                elementoClicado.classList.add('card-feedback');
-                setTimeout(() => elementoClicado.classList.remove('card-feedback'), 500);
+
+            if (itemEncontrado) {
+                const labelParent = itemEncontrado.closest('label');
+                if (labelParent) {
+                    labelParent.classList.add('card-feedback');
+                    setTimeout(() => labelParent.classList.remove('card-feedback'), 600);
+                }
+            }
+
+            calcularTotal();
+            mostrarToast(`"${nomeServico}" adicionado à calculadora!`, "🛒");
+            document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function destacarOpcaoCalculadora(idCheckbox) {
+            const checkbox = document.getElementById(idCheckbox);
+            if (checkbox) {
+                checkbox.checked = true;
+                if(idCheckbox === 'check-video-ia') toggleIaMinutos();
+                if(idCheckbox === 'check-video-geral') toggleVideoGeral();
+                
+                const wrapper = document.getElementById('wrapper-' + idCheckbox.replace('check-', ''));
+                if (wrapper) {
+                    wrapper.classList.add('card-feedback');
+                    setTimeout(() => wrapper.classList.remove('card-feedback'), 600);
+                }
             }
             calcularTotal();
+            mostrarToast("Opção selecionada na calculadora!", "🤖");
             document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -741,6 +887,7 @@
             document.getElementById('input-minutos-ia').value = 1;
             
             calcularTotal();
+            mostrarToast("Calculadora limpa com sucesso!", "🔄");
         }
 
         function calcularTotal() {
@@ -799,7 +946,7 @@
         function abrirModalOrcamento() {
             const total = document.getElementById('total-valor').innerText;
             if(total === 'R$ 0,00') {
-                alert('Selecione pelo menos um serviço antes de continuar!');
+                mostrarToast('Selecione pelo menos um serviço antes de continuar!', '⚠️');
                 return;
             }
             document.getElementById('modalOrcamento').classList.remove('hidden');
@@ -813,7 +960,7 @@
 
         function enviarDadosPlanilha(e) {
             e.preventDefault();
-            alert("Briefing enviado com sucesso!");
+            mostrarToast("Briefing enviado com sucesso!", "🚀");
             fecharModalOrcamento();
         }
 
