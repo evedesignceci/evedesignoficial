@@ -734,7 +734,7 @@
         </div>
     </section>
 
-    <!-- MODAL DE CAPTURA & MINI BRIEFING INTEGRADO AO INSTAGRAM -->
+    <!-- MODAL DE CAPTURA & MINI BRIEFING INTEGRADO AO SEU GOOGLE SHEETS & EMAIL -->
     <div id="modalOrcamento" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-xl w-full shadow-2xl text-left relative my-8 max-h-[90vh] overflow-y-auto">
             <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo p-1 hover:text-rosa transition-colors" onclick="fecharModalOrcamento()">&times;</button>
@@ -742,7 +742,7 @@
             <div class="text-center mb-4">
                 <span class="inline-block bg-rosa text-bordo font-black text-xs px-3.5 py-1 rounded-full mb-1">📋 Mini Briefing & Pedido</span>
                 <h2 class="text-2xl sm:text-3xl font-black text-bordo">Quase Pronto! ✨</h2>
-                <p class="text-xs sm:text-sm text-bordo font-bold">Preencha os detalhes para gerar seu pedido e abrir nosso Direct no Instagram!</p>
+                <p class="text-xs sm:text-sm text-bordo font-bold">Preencha o briefing abaixo para salvarmos na planilha e abrirmos nosso Instagram!</p>
             </div>
 
             <!-- RESUMO DO PEDIDO NO MODAL -->
@@ -759,48 +759,46 @@
             <form id="formLead" onsubmit="enviarDadosPlanilha(event)">
                 <div class="space-y-3">
                     <div>
-                        <label class="block text-xs font-black text-bordo mb-1">1. Seu Nome / Nome da Empresa:*</label>
+                        <label class="block text-xs font-black text-bordo mb-1">1. Nome do Cliente / Empresa:*</label>
                         <input type="text" id="cliente-nome" placeholder="Ex: Evelyn / Turminha do Xexéu" required class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-black text-bordo mb-1">2. Seu @ no Instagram:*</label>
-                        <input type="text" id="cliente-contato" placeholder="Ex: @seu_perfil" required class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-black text-bordo mb-1">3. Qual é o seu segmento / nicho?</label>
-                        <input type="text" id="cliente-ramo" placeholder="Ex: Loja Infantil, Ótica, Canal de YouTube, Proteção Veicular..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                        <label class="block text-xs font-black text-bordo mb-1">2. Contato (@Instagram / WhatsApp):*</label>
+                        <input type="text" id="cliente-contato" placeholder="Ex: @seu_perfil ou (11) 99999-9999" required class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div>
-                            <label class="block text-xs font-black text-bordo mb-1">4. Prazo de Entrega Desejado:</label>
-                            <select id="cliente-prazo" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
-                                <option value="Sem urgência (Fluxo normal)">Sem urgência (Padrão)</option>
-                                <option value="Prazo rápido (Até 5 dias)">Rápido (Até 5 dias)</option>
-                                <option value="Urgente / Expresso">Urgente / Expresso ⚡</option>
-                            </select>
+                            <label class="block text-xs font-black text-bordo mb-1">3. Prazo Desejado:</label>
+                            <input type="text" id="cliente-prazo" placeholder="Ex: 5 dias, Urgente..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
                         </div>
                         <div>
-                            <label class="block text-xs font-black text-bordo mb-1">5. Já possui marca/logo?</label>
-                            <select id="cliente-logo-status" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
-                                <option value="Sim, já tenho pronta">Sim, já tenho pronta</option>
-                                <option value="Não, preciso criar no projeto">Não, vou precisar criar</option>
-                                <option value="Quero reformular/Redesign">Quero reformular (Redesign)</option>
-                            </select>
+                            <label class="block text-xs font-black text-bordo mb-1">4. Objetivo do Projeto:</label>
+                            <input type="text" id="cliente-objetivo" placeholder="Ex: Lançar canal, vender seguros..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-black text-bordo mb-1">5. Público-Alvo:</label>
+                            <input type="text" id="cliente-publico" placeholder="Ex: Mães, Crianças, Motoristas..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black text-bordo mb-1">6. Estilo Visual & Cores:</label>
+                            <input type="text" id="cliente-estilo" placeholder="Ex: Colorido, Tons de Rosa, Minimalista..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-black text-bordo mb-1">6. Detalhes / Breve Briefing do Projeto:</label>
-                        <textarea id="cliente-briefing" rows="3" placeholder="Conte um pouco sobre suas ideias, cores de preferência, objetivo do vídeo/post ou referências que você gosta..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
+                        <label class="block text-xs font-black text-bordo mb-1">7. Detalhes da Marca / Briefing:</label>
+                        <textarea id="cliente-detalhes" rows="3" placeholder="Descreva os detalhes importantes da sua marca, o que não pode faltar ou o roteiro do vídeo..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
                     </div>
                 </div>
 
                 <button type="submit" id="btn-enviar-lead" class="w-full mt-4 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
                     <img src="https://i.imgur.com/EE5DwcB.png" alt="" class="w-4 h-4 object-contain brightness-200">
-                    Enviar Pedido via Direct do Instagram ➔
+                    Enviar Briefing & Abrir Instagram ➔
                 </button>
             </form>
         </div>
@@ -1054,55 +1052,59 @@
 
             const nome = document.getElementById('cliente-nome').value;
             const contato = document.getElementById('cliente-contato').value;
-            const ramo = document.getElementById('cliente-ramo').value || 'Não informado';
-            const prazo = document.getElementById('cliente-prazo').value;
-            const logoStatus = document.getElementById('cliente-logo-status').value;
-            const briefing = document.getElementById('cliente-briefing').value || 'Nenhum detalhe adicional informado.';
-            const total = document.getElementById('total-valor').innerText;
+            const prazo = document.getElementById('cliente-prazo').value || 'Não informado';
+            const objetivo = document.getElementById('cliente-objetivo').value || 'Não informado';
+            const publico = document.getElementById('cliente-publico').value || 'Não informado';
+            const estilo = document.getElementById('cliente-estilo').value || 'Não informado';
+            const detalhesMarca = document.getElementById('cliente-detalhes').value || 'Não informado';
+            const valorTotal = document.getElementById('total-valor').innerText;
             const servicos = obterItensSelecionadosTexto().join(', ');
 
+            // Estrutura enviada em JSON idêntica ao que seu Google Apps Script espera receber
             const payload = {
                 nome: nome,
                 contato: contato,
-                ramo: ramo,
+                servicos: servicos,
+                valorTotal: valorTotal,
                 prazo: prazo,
-                logoStatus: logoStatus,
-                briefing: briefing,
-                total: total,
-                servicos: servicos
+                objetivo: objetivo,
+                publico: publico,
+                estilo: estilo,
+                detalhesMarca: detalhesMarca
             };
 
-            // Envia para o Apps Script em segundo plano
-            if (URL_APPS_SCRIPT && !URL_APPS_SCRIPT.includes('SEU_SCRIPT_AQUI')) {
+            // Disparo silencioso para o Google Sheets (Apps Script)
+            if (URL_APPS_SCRIPT) {
                 fetch(URL_APPS_SCRIPT, {
                     method: 'POST',
                     mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
-                }).catch(err => console.log('Erro envio script:', err));
+                }).catch(err => console.log('Erro ao enviar dados para a planilha:', err));
             }
 
-            // Monta o texto legível para o Direct do Instagram
-            const textoInstagram = `✨ NOVO PEDIDO DE DESIGN - EVE DESIGN STUDIO ✨\n\n` +
-                `👤 Cliente: ${nome}\n` +
-                `📞 Instagram: ${contato}\n` +
-                `🏢 Segmento: ${ramo}\n` +
-                `⏱️ Prazo Desejado: ${prazo}\n` +
-                `🎨 Status do Logo: ${logoStatus}\n\n` +
-                `🛍️ Serviços Selecionados:\n${payload.servicos.split(', ').map(s => '• ' + s).join('\n')}\n\n` +
-                `💰 Valor Total Simulado: ${total}\n\n` +
-                `📝 Mini Briefing:\n"${briefing}"`;
+            // Formatação amigável do texto para ser colado no Direct
+            const textoInstagram = `✨ NOVO BRIEFING & PEDIDO - EVE DESIGN STUDIO ✨\n\n` +
+                `👤 Nome: ${nome}\n` +
+                `📱 Contato: ${contato}\n` +
+                `🛠️ Serviços: ${servicos}\n` +
+                `💰 Valor Total: ${valorTotal}\n` +
+                `⏳ Prazo: ${prazo}\n\n` +
+                `🎯 Objetivo: ${objetivo}\n` +
+                `👥 Público-Alvo: ${publico}\n` +
+                `🎨 Estilo/Cores: ${estilo}\n` +
+                `📝 Detalhes: "${detalhesMarca}"`;
 
             // Copia o briefing para a área de transferência do cliente
             navigator.clipboard.writeText(textoInstagram).then(() => {
-                mostrarToast("Briefing COPIADO! Cole no Direct do Instagram 📋✨", "📋");
+                mostrarToast("Briefing salvo & COPIADO! Cole no Direct do Instagram 📋✨", "📋");
             }).catch(() => {
-                mostrarToast("Redirecionando para o Instagram...", "🚀");
+                mostrarToast("Briefing enviado com sucesso! Redirecionando...", "🚀");
             });
 
             fecharModalOrcamento();
 
-            // Abre o Instagram diretamente no seu perfil
+            // Redireciona o usuário para o seu perfil no Instagram
             setTimeout(() => {
                 window.open(`https://www.instagram.com/${SEU_INSTAGRAM}/`, '_blank');
             }, 1000);
