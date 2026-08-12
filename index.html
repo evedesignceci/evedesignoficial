@@ -734,7 +734,7 @@
         </div>
     </section>
 
-    <!-- MODAL DE CAPTURA & MINI BRIEFING DE ALTA CONVERSÃO -->
+    <!-- MODAL DE CAPTURA & MINI BRIEFING INTEGRADO AO SEU DASHBOARD DA PLANILHA -->
     <div id="modalOrcamento" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-xl w-full shadow-2xl text-left relative my-8 max-h-[90vh] overflow-y-auto">
             <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo p-1 hover:text-rosa transition-colors" onclick="fecharModalOrcamento()">&times;</button>
@@ -742,7 +742,7 @@
             <div class="text-center mb-4">
                 <span class="inline-block bg-rosa text-bordo font-black text-xs px-3.5 py-1 rounded-full mb-1">📋 Mini Briefing & Pedido</span>
                 <h2 class="text-2xl sm:text-3xl font-black text-bordo">Quase Pronto! ✨</h2>
-                <p class="text-xs sm:text-sm text-bordo font-bold">Preencha os detalhes abaixo para enviarmos seu pedido direto no Instagram!</p>
+                <p class="text-xs sm:text-sm text-bordo font-bold">Preencha os detalhes abaixo para salvarmos no Dashboard e abrirmos nosso Instagram!</p>
             </div>
 
             <!-- RESUMO DO PEDIDO NO MODAL -->
@@ -778,8 +778,8 @@
                     </div>
 
                     <div>
-                        <label class="block text-xs font-black text-bordo mb-1">4. Detalhes / Prazos / Minutos do Vídeo:*</label>
-                        <textarea id="cliente-detalhes-prazos" rows="4" required placeholder="Descreva os detalhes importantes da sua ideia, prazo desejado, minutagem estimada do vídeo, cores de preferência ou objetivo principal..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
+                        <label class="block text-xs font-black text-bordo mb-1">4. Detalhes / Prazos / Minutos:*</label>
+                        <textarea id="cliente-detalhes-prazos" rows="4" required placeholder="Descreva o objetivo do projeto, minutagem do vídeo, prazos desejados, cores ou informações importantes..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
                     </div>
                 </div>
 
@@ -806,7 +806,7 @@
 
     <!-- SCRIPTS DE INTEGRAÇÃO & FEEDBACKS -->
     <script>
-        const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbw4mo8y5YGCTsjDDekoW__6b-RDWn93BG8ehQNx0l0bWKnlesyAw7MiP05mDIspZ2iPyQ/exec";
+        const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbxK1UhBOR7nuytXQPuH7mTEhOSsFnFQ6wsGIh_njE1Z2djqCYvMdklKgY7Bl_jz_6mp6w/exec";
         const SEU_INSTAGRAM = "eve.desi_gn"; 
 
         function mostrarToast(mensagem, icone = "✨") {
@@ -1044,7 +1044,7 @@
             const valorTotal = document.getElementById('total-valor').innerText;
             const servicos = obterItensSelecionadosTexto().join(', ');
 
-            // Objeto de dados idêntico ao que o Apps Script da sua nova planilha espera
+            // Dados correspondentes às colunas da planilha do Dashboard
             const payload = {
                 nome: nome,
                 contato: contato,
@@ -1054,7 +1054,7 @@
                 valorTotal: valorTotal
             };
 
-            // Envia para o Google Apps Script em segundo plano
+            // Envia para o Google Apps Script
             if (URL_APPS_SCRIPT) {
                 fetch(URL_APPS_SCRIPT, {
                     method: 'POST',
@@ -1064,7 +1064,7 @@
                 }).catch(err => console.log('Erro ao enviar para planilha:', err));
             }
 
-            // Mensagem formatada para o cliente colar no Direct do Instagram
+            // Copia o briefing formatado para o Instagram
             const textoInstagram = `✨ NOVO BRIEFING & PEDIDO - EVE DESIGN STUDIO ✨\n\n` +
                 `👤 Cliente: ${nome}\n` +
                 `📱 Contato: ${contato}\n` +
@@ -1073,16 +1073,15 @@
                 `💰 Valor Total Simulado: ${valorTotal}\n\n` +
                 `📝 Detalhes / Prazos / Minutos:\n"${detalhesPrazos}"`;
 
-            // Copia o texto para a área de transferência do cliente
             navigator.clipboard.writeText(textoInstagram).then(() => {
-                mostrarToast("Briefing salvo & COPIADO! Cole no Direct do Instagram 📋✨", "📋");
+                mostrarToast("Briefing salvo na planilha & COPIADO! Cole no Direct 📋✨", "📋");
             }).catch(() => {
-                mostrarToast("Briefing salvo! Redirecionando para o Instagram...", "🚀");
+                mostrarToast("Briefing salvo na planilha! Redirecionando...", "🚀");
             });
 
             fecharModalOrcamento();
 
-            // Redireciona o cliente para o seu Instagram
+            // Redireciona para o Instagram
             setTimeout(() => {
                 window.open(`https://www.instagram.com/${SEU_INSTAGRAM}/`, '_blank');
             }, 1000);
