@@ -953,7 +953,7 @@
                 }).catch(err => console.log('Erro feedback:', err));
             }
 
-            mostrarToast("Feedback enviado! Muito obrigada! ⭐✨", "💖");
+            mostrarToast("Feedback enviado com sucesso! Muito obrigada! ⭐✨", "💖");
             fecharModalFeedback();
             document.getElementById('formFeedback').reset();
         }
@@ -1178,12 +1178,12 @@
             const valorTotal = document.getElementById('total-valor').innerText;
             const servicos = obterItensSelecionadosTexto().join(', ');
 
-            // Dados correspondentes às colunas da planilha do Dashboard
+            // Objeto de dados idêntico ao que o Apps Script da sua nova planilha espera
             const payload = {
                 tipo: "pedido",
                 nome: nome,
                 contato: contato,
-                servicos: servicos,
+                servicos: servicos.length > 0 ? servicos : "Nenhum selecionado",
                 logoStatus: logoStatus,
                 detalhesPrazos: detalhesPrazos,
                 valorTotal: valorTotal
