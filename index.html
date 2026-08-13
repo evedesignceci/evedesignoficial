@@ -1,342 +1,534 @@
-<script>
-    const URL_APPS_SCRIPT = "SEU_LINK_DO_APPS_SCRIPT_AQUI";
-    const SEU_INSTAGRAM = "suaempresa"; 
-
-    function mostrarToast(mensagem, icone = "✨") {
-        const toast = document.getElementById('toast-feedback');
-        document.getElementById('toast-msg').innerText = mensagem;
-        document.getElementById('toast-icon').innerText = icone;
-        
-        toast.classList.remove('hidden', 'opacity-0');
-        toast.classList.add('opacity-100');
-
-        setTimeout(() => {
-            toast.classList.remove('opacity-100');
-            toast.classList.add('opacity-0');
-            setTimeout(() => toast.classList.add('hidden'), 300);
-        }, 3000);
-    }
-
-    function abrirModalFeedback() {
-        document.getElementById('modalFeedback').classList.remove('hidden');
-        document.getElementById('modalFeedback').classList.add('flex');
-    }
-
-    function fecharModalFeedback() {
-        document.getElementById('modalFeedback').classList.add('hidden');
-        document.getElementById('modalFeedback').classList.remove('flex');
-    }
-
-    function enviarFeedbackPlanilha(e) {
-        e.preventDefault();
-        const nomeVal = document.getElementById('fb-nome').value.trim();
-        const estrelasVal = document.getElementById('fb-estrelas').value;
-        const comentarioVal = document.getElementById('fb-comentario').value.trim();
-
-        const payload = {
-            tipo: "feedback",
-            nome: nomeVal,
-            estrelas: estrelasVal,
-            comentario: comentarioVal
-        };
-
-        if (URL_APPS_SCRIPT && URL_APPS_SCRIPT !== "SEU_LINK_DO_APPS_SCRIPT_AQUI") {
-            fetch(URL_APPS_SCRIPT, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            }).catch(err => console.log('Erro feedback:', err));
-        }
-
-        mostrarToast("Feedback enviado com sucesso! ⭐✨", "💖");
-        fecharModalFeedback();
-        document.getElementById('formFeedback').reset();
-    }
-
-    function selecionarServicoPorTabela(nomeServico) {
-        const items = document.querySelectorAll('.calc-item');
-        let itemEncontrado = null;
-        
-        items.forEach(item => {
-            if(item.getAttribute('data-name') === nomeServico) {
-                item.checked = true;
-                itemEncontrado = item;
-            }
-        });
-
-        if (itemEncontrado) {
-            const labelParent = itemEncontrado.closest('label');
-            if (labelParent) {
-                labelParent.classList.add('card-feedback');
-                setTimeout(() => labelParent.classList.remove('card-feedback'), 600);
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Creative | Design & Social Media</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bordo: '#4a1525',
+                        bordoHover: '#330e19',
+                    }
+                }
             }
         }
+    </script>
+    <style>
+        .card-feedback {
+            animation: pulse 0.6s ease-in-out;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); background-color: #fdf2f4; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col items-center justify-between p-4 sm:p-6">
 
-        calcularTotal();
-        mostrarToast(`"${nomeServico}" adicionado ao carrinho!`, "🛒");
-        document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
-    }
+    <!-- Toast de Notificações -->
+    <div id="toast-feedback" class="fixed top-5 z-50 hidden opacity-0 transition-opacity duration-300 bg-white border border-slate-200 shadow-xl rounded-2xl px-4 py-3 flex items-center gap-3">
+        <span id="toast-icon" class="text-xl">✨</span>
+        <span id="toast-msg" class="text-sm font-medium text-slate-700">Mensagem do sistema</span>
+    </div>
 
-    function destacarOpcaoCalculadora(idCheckbox) {
-        const checkbox = document.getElementById(idCheckbox);
-        if (checkbox) {
-            checkbox.checked = !checkbox.checked;
-            if(idCheckbox === 'check-video-ia') toggleIaMinutos();
-            if(idCheckbox === 'check-video-geral') toggleVideoGeral();
+    <!-- Container Principal (Link na Bio) -->
+    <main class="w-full max-w-md bg-white rounded-3xl shadow-xl border border-slate-100 p-6 flex flex-col gap-6 my-auto">
+        
+        <!-- Header / Perfil -->
+        <div class="flex flex-col items-center text-center gap-2">
+            <div class="w-24 h-24 rounded-full bg-bordo text-white font-black text-3xl flex items-center justify-center shadow-lg">
+                SC
+            </div>
+            <h1 class="text-xl font-black text-slate-900 mt-2">Studio Creative</h1>
+            <p class="text-xs text-slate-500 font-medium px-4">Design Gráfico, Identidade Visual e Soluções em Conteúdo para Impulsionar sua Marca.</p>
+        </div>
+
+        <!-- Botões de Ação Rapida / Links -->
+        <div class="flex flex-col gap-3">
+            <button onclick="document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' })" class="w-full py-3 px-4 bg-bordo hover:bg-bordoHover text-white font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-2 text-sm">
+                <span>🛒</span> Acessar Carrinho & Serviços
+            </button>
+            <button onclick="abrirModalFeedback()" class="w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition-all flex items-center justify-center gap-2 text-sm">
+                <span>⭐</span> Deixar um Feedback
+            </button>
+        </div>
+
+        <hr class="border-slate-100">
+
+        <!-- Seção do Simulador / Carrinho -->
+        <div id="simulador" class="flex flex-col gap-4">
+            <h2 class="text-sm font-black text-slate-900 uppercase tracking-wider">Simulador & Carrinho</h2>
             
-            const wrapper = document.getElementById('wrapper-' + idCheckbox.replace('check-', ''));
-            if (wrapper) {
-                wrapper.classList.add('card-feedback');
-                setTimeout(() => wrapper.classList.remove('card-feedback'), 600);
+            <!-- Lista de Opções da Calculadora -->
+            <div class="flex flex-col gap-2">
+                <label id="wrapper-identidade" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-bordo cursor-pointer transition-all">
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" id="check-identidade" class="calc-item w-4 h-4 accent-bordo" data-name="Identidade Visual Completa" data-price="450" data-summary="Logotipo, manual de marca e aplicações.">
+                        <span class="text-sm font-bold text-slate-700">Identidade Visual Completa</span>
+                    </div>
+                    <span class="text-xs font-black text-bordo">R$ 450,00</span>
+                </label>
+
+                <label id="wrapper-social" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-bordo cursor-pointer transition-all">
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" id="check-social" class="calc-item w-4 h-4 accent-bordo" data-name="Pacote Social Media (10 Posts)" data-price="350" data-summary="Artes criadas sob medida para o feed.">
+                        <span class="text-sm font-bold text-slate-700">Pacote Social Media (10 Posts)</span>
+                    </div>
+                    <span class="text-xs font-black text-bordo">R$ 350,00</span>
+                </label>
+
+                <!-- Vídeo com IA -->
+                <div id="wrapper-video-ia" class="flex flex-col p-3 rounded-xl border border-slate-200 gap-2">
+                    <div class="flex items-center justify-between cursor-pointer" onclick="destacarOpcaoCalculadora('check-video-ia')">
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" id="check-video-ia" class="w-4 h-4 accent-bordo pointer-events-none" onclick="event.stopPropagation()">
+                            <span class="text-sm font-bold text-slate-700">Vídeos com IA + Edição</span>
+                        </div>
+                        <span class="text-xs font-black text-bordo">R$ 80/min</span>
+                    </div>
+                    <div id="box-minutos-ia" class="hidden items-center justify-between bg-slate-50 p-2 rounded-lg mt-1">
+                        <span class="text-xs text-slate-500 font-medium">Minutos:</span>
+                        <div class="flex items-center gap-2">
+                            <button type="button" onclick="mudarIaMinutos(-1)" class="w-6 h-6 bg-slate-200 rounded font-bold text-xs">-</button>
+                            <input type="number" id="input-minutos-ia" value="1" min="1" class="w-10 text-center text-xs font-bold bg-transparent" onchange="calcularTotal()">
+                            <button type="button" onclick="mudarIaMinutos(1)" class="w-6 h-6 bg-slate-200 rounded font-bold text-xs">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Edição Geral -->
+                <div id="wrapper-video-geral" class="flex flex-col p-3 rounded-xl border border-slate-200 gap-2">
+                    <div class="flex items-center justify-between cursor-pointer" onclick="destacarOpcaoCalculadora('check-video-geral')">
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" id="check-video-geral" class="w-4 h-4 accent-bordo pointer-events-none" onclick="event.stopPropagation()">
+                            <span class="text-sm font-bold text-slate-700">Edição Geral de Vídeos</span>
+                        </div>
+                        <span class="text-xs font-black text-bordo">R$ 40/min</span>
+                    </div>
+                    <div id="box-minutos-geral" class="hidden items-center justify-between bg-slate-50 p-2 rounded-lg mt-1">
+                        <span class="text-xs text-slate-500 font-medium">Minutos:</span>
+                        <div class="flex items-center gap-2">
+                            <button type="button" onclick="mudarMinutosGeral(-1)" class="w-6 h-6 bg-slate-200 rounded font-bold text-xs">-</button>
+                            <input type="number" id="input-minutos-geral" value="1" min="1" class="w-10 text-center text-xs font-bold bg-transparent" onchange="calcularTotal()">
+                            <button type="button" onclick="mudarMinutosGeral(1)" class="w-6 h-6 bg-slate-200 rounded font-bold text-xs">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumo do Carrinho -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 flex flex-col gap-3">
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-bold uppercase text-slate-500">Itens no Carrinho</span>
+                    <button type="button" onclick="limparCalculadora()" class="text-xs text-red-500 font-bold hover:underline">Esvaziar</button>
+                </div>
+                <ul id="resumo-entregas" class="text-xs text-slate-600 divide-y divide-slate-200">
+                    <li class="pt-1">Seu carrinho está vazio. Adicione itens acima.</li>
+                </ul>
+                <div class="border-t border-slate-200 pt-3 flex justify-between items-center">
+                    <span class="text-sm font-black text-slate-800">Total:</span>
+                    <span id="total-valor" class="text-base font-black text-bordo">R$ 0,00</span>
+                </div>
+                <button onclick="abrirModalOrcamento()" class="w-full mt-2 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-md transition-all text-sm flex items-center justify-center gap-2">
+                    <span>📋</span> Fechar Pedido / Briefing
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="mt-6 text-center text-xs text-slate-400 font-medium">
+        &copy; 2026 Studio Creative. Todos os direitos reservados.
+    </footer>
+
+    <!-- Modal de Briefing / Pedido -->
+    <div id="modalOrcamento" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 flex flex-col gap-4 shadow-2xl">
+            <div class="flex justify-between items-center">
+                <h3 class="text-base font-black text-slate-900">Finalizar Briefing</h3>
+                <button onclick="fecharModalOrcamento()" class="text-slate-400 hover:text-slate-600 font-bold text-lg">&times;</button>
+            </div>
+            
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-xs text-slate-600">
+                <strong class="text-slate-800 block mb-1">Itens Escolhidos:</strong>
+                <div id="modal-resumo-itens">Nenhum</div>
+                <div class="mt-2 pt-2 border-t border-slate-200 flex justify-between font-bold text-bordo">
+                    <span>Total Estimado:</span>
+                    <span id="modal-total-valor">R$ 0,00</span>
+                </div>
+            </div>
+
+            <form id="formOrcamento" onsubmit="enviarDadosPlanilha(event)" class="flex flex-col gap-3">
+                <div class="flex flex-col gap-1">
+                    <label class="text-xs font-bold text-slate-700">Seu Nome / Empresa</label>
+                    <input type="text" id="cliente-nome" required class="p-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-bordo">
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-xs font-bold text-slate-700">Seu Contato (WhatsApp ou @)</label>
+                    <input type="text" id="cliente-contato" required class="p-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-bordo">
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-xs font-bold text-slate-700">Possui Logotipo?</label>
+                    <select id="cliente-logo-status" class="p-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-bordo bg-white">
+                        <option value="Sim, já tenho pronto">Sim, já tenho pronto</option>
+                        <option value="Tenho, mas preciso atualizar">Tenho, mas preciso atualizar</option>
+                        <option value="Não tenho, preciso criar">Não tenho, preciso criar</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-xs font-bold text-slate-700">Detalhes, prazos ou referências</label>
+                    <textarea id="cliente-detalhes-prazos" rows="2" class="p-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-bordo resize-none" placeholder="Conte um pouco sobre o projeto..."></textarea>
+                </div>
+                <button type="submit" class="w-full mt-2 py-3 bg-bordo hover:bg-bordoHover text-white font-bold rounded-xl transition-all text-sm shadow-md">
+                    Enviar Pedido & Copiar Direct 🚀
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Feedback -->
+    <div id="modalFeedback" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 flex flex-col gap-4 shadow-2xl">
+            <div class="flex justify-between items-center">
+                <h3 class="text-base font-black text-slate-900">Deixe seu Feedback</h3>
+                <button onclick="fecharModalFeedback()" class="text-slate-400 hover:text-slate-600 font-bold text-lg">&times;</button>
+            </div>
+            <form id="formFeedback" onsubmit="enviarFeedbackPlanilha(event)" class="flex flex-col gap-3">
+                <div class="flex flex-col gap-1">
+                    <label class="text-xs font-bold text-slate-700">Seu Nome</label>
+                    <input type="text" id="fb-nome" required class="p-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-bordo">
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-xs font-bold text-slate-700">Avaliação</label>
+                    <select id="fb-estrelas" class="p-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-bordo bg-white">
+                        <option value="⭐⭐⭐⭐⭐ (5/5)">⭐⭐⭐⭐⭐ (Excelente)</option>
+                        <option value="⭐⭐⭐⭐ (4/5)">⭐⭐⭐⭐ (Muito Bom)</option>
+                        <option value="⭐⭐⭐ (3/5)">⭐⭐⭐ (Bom)</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-xs font-bold text-slate-700">Comentário</label>
+                    <textarea id="fb-comentario" rows="3" required class="p-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-bordo resize-none" placeholder="O que achou do atendimento/trabalho?"></textarea>
+                </div>
+                <button type="submit" class="w-full mt-2 py-3 bg-bordo hover:bg-bordoHover text-white font-bold rounded-xl transition-all text-sm shadow-md">
+                    Enviar Feedback ⭐
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Seu Script de Lógica -->
+    <script>
+        const URL_APPS_SCRIPT = "SEU_LINK_DO_APPS_SCRIPT_AQUI";
+        const SEU_INSTAGRAM = "suaempresa"; 
+
+        function mostrarToast(mensagem, icone = "✨") {
+            const toast = document.getElementById('toast-feedback');
+            document.getElementById('toast-msg').innerText = mensagem;
+            document.getElementById('toast-icon').innerText = icone;
+            
+            toast.classList.remove('hidden', 'opacity-0');
+            toast.classList.add('opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+                setTimeout(() => toast.classList.add('hidden'), 300);
+            }, 3000);
+        }
+
+        function abrirModalFeedback() {
+            document.getElementById('modalFeedback').classList.remove('hidden');
+            document.getElementById('modalFeedback').classList.add('flex');
+        }
+
+        function fecharModalFeedback() {
+            document.getElementById('modalFeedback').classList.add('hidden');
+            document.getElementById('modalFeedback').classList.remove('flex');
+        }
+
+        function enviarFeedbackPlanilha(e) {
+            e.preventDefault();
+            const nomeVal = document.getElementById('fb-nome').value.trim();
+            const estrelasVal = document.getElementById('fb-estrelas').value;
+            const comentarioVal = document.getElementById('fb-comentario').value.trim();
+
+            const payload = {
+                tipo: "feedback",
+                nome: nomeVal,
+                estrelas: estrelasVal,
+                comentario: comentarioVal
+            };
+
+            if (URL_APPS_SCRIPT && URL_APPS_SCRIPT !== "SEU_LINK_DO_APPS_SCRIPT_AQUI") {
+                fetch(URL_APPS_SCRIPT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }).catch(err => console.log('Erro feedback:', err));
             }
-        }
-        calcularTotal();
-        const statusMsg = checkbox.checked ? "Item adicionado ao carrinho!" : "Item removido do carrinho";
-        const iconeMsg = checkbox.checked ? "🛒" : "🗑️";
-        mostrarToast(statusMsg, iconeMsg);
-        document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
-    }
 
-    function removerItemCarrinho(nomeServico) {
-        const items = document.querySelectorAll('.calc-item');
-        items.forEach(item => {
-            if(item.getAttribute('data-name') === nomeServico) {
-                item.checked = false;
-            }
-        });
-        if(nomeServico.includes('Vídeos com IA')) {
-            document.getElementById('check-video-ia').checked = false;
-            toggleIaMinutos();
-        }
-        if(nomeServico.includes('Edição Geral')) {
-            document.getElementById('check-video-geral').checked = false;
-            toggleVideoGeral();
-        }
-        calcularTotal();
-        mostrarToast("Item removido do carrinho", "🗑️");
-    }
-
-    function toggleVideoGeral() {
-        const isChecked = document.getElementById('check-video-geral').checked;
-        const box = document.getElementById('box-minutos-geral');
-        box.classList.toggle('hidden', !isChecked);
-        box.classList.toggle('flex', isChecked);
-    }
-
-    function mudarMinutosGeral(qtd) {
-        const input = document.getElementById('input-minutos-geral');
-        let valor = parseInt(input.value) + qtd;
-        if(valor < 1) valor = 1;
-        input.value = valor;
-        calcularTotal();
-    }
-
-    function toggleIaMinutos() {
-        const isChecked = document.getElementById('check-video-ia').checked;
-        const box = document.getElementById('box-minutos-ia');
-        box.classList.toggle('hidden', !isChecked);
-        box.classList.toggle('flex', isChecked);
-    }
-
-    function mudarIaMinutos(qtd) {
-        const input = document.getElementById('input-minutos-ia');
-        let valor = parseInt(input.value) + qtd;
-        if(valor < 1) valor = 1;
-        input.value = valor;
-        calcularTotal();
-    }
-
-    function limparCalculadora() {
-        document.querySelectorAll('.calc-item').forEach(item => item.checked = false);
-        
-        document.getElementById('check-video-geral').checked = false;
-        document.getElementById('box-minutos-geral').classList.add('hidden');
-        document.getElementById('input-minutos-geral').value = 1;
-
-        document.getElementById('check-video-ia').checked = false;
-        document.getElementById('box-minutos-ia').classList.add('hidden');
-        document.getElementById('input-minutos-ia').value = 1;
-        
-        calcularTotal();
-        mostrarToast("Carrinho esvaziado!", "🔄");
-    }
-
-    function obterItensSelecionadosTexto() {
-        let lista = [];
-
-        document.querySelectorAll('.calc-item').forEach(item => {
-            if(item.checked) {
-                lista.push(item.getAttribute('data-name'));
-            }
-        });
-
-        const checkIa = document.getElementById('check-video-ia');
-        if(checkIa.checked) {
-            const minIa = document.getElementById('input-minutos-ia').value || 1;
-            lista.push(`Vídeos com IA + Edição (${minIa} min)`);
+            mostrarToast("Feedback enviado com sucesso! ⭐✨", "💖");
+            fecharModalFeedback();
+            document.getElementById('formFeedback').reset();
         }
 
-        const checkGeral = document.getElementById('check-video-geral');
-        if(checkGeral.checked) {
-            const minGeral = document.getElementById('input-minutos-geral').value || 1;
-            lista.push(`Edição Geral de Vídeos (${minGeral} min)`);
-        }
-
-        return lista;
-    }
-
-    function calcularTotal() {
-        let total = 0;
-        const resumoUl = document.getElementById('resumo-entregas');
-        resumoUl.innerHTML = '';
-        let selecionados = 0;
-
-        document.querySelectorAll('.calc-item').forEach(item => {
-            if(item.checked) {
-                const preco = parseFloat(item.getAttribute('data-price'));
-                total += preco;
-                selecionados++;
-                const nomeServico = item.getAttribute('data-name');
+        function destacarOpcaoCalculadora(idCheckbox) {
+            const checkbox = document.getElementById(idCheckbox);
+            if (checkbox) {
+                checkbox.checked = !checkbox.checked;
+                if(idCheckbox === 'check-video-ia') toggleIaMinutos();
+                if(idCheckbox === 'check-video-geral') toggleVideoGeral();
                 
-                const li = document.createElement('li');
-                li.className = "pt-2 pb-1 flex justify-between items-center";
-                li.innerHTML = `<div><strong class="text-bordo">${nomeServico}</strong><br><span class="text-xs text-bordo font-bold">${item.getAttribute('data-summary')}</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${preco.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('${nomeServico}')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
-                resumoUl.appendChild(li);
+                const wrapper = document.getElementById('wrapper-' + idCheckbox);
+                if (wrapper) {
+                    wrapper.classList.add('card-feedback');
+                    setTimeout(() => wrapper.classList.remove('card-feedback'), 600);
+                }
             }
-        });
-
-        const checkVideoIa = document.getElementById('check-video-ia');
-        if(checkVideoIa.checked) {
-            const minutosIa = parseInt(document.getElementById('input-minutos-ia').value) || 1;
-            const precoIa = minutosIa * 80;
-            total += precoIa;
-            selecionados++;
-
-            const li = document.createElement('li');
-            li.className = "pt-2 pb-1 flex justify-between items-center";
-            li.innerHTML = `<div><strong class="text-bordo">Vídeos com IA + Edição (${minutosIa} min)</strong><br><span class="text-xs text-bordo font-bold">Custo de recursos e edição avançada (R$ 80/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoIa.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Vídeos com IA + CapCut')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
-            resumoUl.appendChild(li);
+            calcularTotal();
+            const statusMsg = checkbox.checked ? "Item adicionado ao carrinho!" : "Item removido do carrinho";
+            const iconeMsg = checkbox.checked ? "🛒" : "🗑️";
+            mostrarToast(statusMsg, iconeMsg);
+            document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
         }
 
-        const checkVideoGeral = document.getElementById('check-video-geral');
-        if(checkVideoGeral.checked) {
-            const minutos = parseInt(document.getElementById('input-minutos-geral').value) || 1;
-            const precoVideo = minutos * 40;
-            total += precoVideo;
-            selecionados++;
-
-            const li = document.createElement('li');
-            li.className = "pt-2 pb-1 flex justify-between items-center";
-            li.innerHTML = `<div><strong class="text-bordo">Edição Geral de Vídeos (${minutos} min)</strong><br><span class="text-xs text-bordo font-bold">Edição profissional (R$ 40/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoVideo.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Edição Geral de Vídeos')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
-            resumoUl.appendChild(li);
-        }
-
-        if(selecionados === 0) {
-            resumoUl.innerHTML = '<li class="pt-1">Seu carrinho está vazio. Adicione itens acima ou clique nas especialidades.</li>';
-        }
-
-        const totalFormatado = 'R$ ' + total.toFixed(2).replace('.', ',');
-        document.getElementById('total-valor').innerText = totalFormatado;
-        document.getElementById('modal-total-valor').innerText = totalFormatado;
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll('.calc-item').forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const nomeServico = this.getAttribute('data-name');
-                if (this.checked) {
-                    mostrarToast(`"${nomeServico}" adicionado ao carrinho!`, "🛒");
-                } else {
-                    mostrarToast(`"${nomeServico}" removido do carrinho.`, "🗑️");
+        function removerItemCarrinho(nomeServico) {
+            const items = document.querySelectorAll('.calc-item');
+            items.forEach(item => {
+                if(item.getAttribute('data-name') === nomeServico) {
+                    item.checked = false;
                 }
             });
-        });
-    });
-
-    function abrirModalOrcamento() {
-        const total = document.getElementById('total-valor').innerText;
-        if(total === 'R$ 0,00') {
-            mostrarToast('Selecione pelo menos um serviço no carrinho!', '⚠️');
-            return;
+            if(nomeServico.includes('Vídeos com IA')) {
+                document.getElementById('check-video-ia').checked = false;
+                toggleIaMinutos();
+            }
+            if(nomeServico.includes('Edição Geral')) {
+                document.getElementById('check-video-geral').checked = false;
+                toggleVideoGeral();
+            }
+            calcularTotal();
+            mostrarToast("Item removido do carrinho", "🗑️");
         }
 
-        const itens = obterItensSelecionadosTexto();
-        const resumoDiv = document.getElementById('modal-resumo-itens');
-        resumoDiv.innerHTML = '• ' + itens.join('<br>• ');
-
-        document.getElementById('modalOrcamento').classList.remove('hidden');
-        document.getElementById('modalOrcamento').classList.add('flex');
-        mostrarToast("Abrindo formulário de briefing...", "📋");
-    }
-
-    function fecharModalOrcamento() {
-        document.getElementById('modalOrcamento').classList.add('hidden');
-        document.getElementById('modalOrcamento').classList.remove('flex');
-    }
-
-    function enviarDadosPlanilha(e) {
-        e.preventDefault();
-
-        const nomeVal = document.getElementById('cliente-nome').value.trim();
-        const contatoVal = document.getElementById('cliente-contato').value.trim();
-        const logoStatusVal = document.getElementById('cliente-logo-status').value;
-        const detalhesPrazosVal = document.getElementById('cliente-detalhes-prazos').value.trim();
-        const valorTotalVal = document.getElementById('total-valor').innerText;
-        
-        const itensArray = obterItensSelecionadosTexto();
-        const servicosFormatados = itensArray.length > 0 ? itensArray.join(', ') : "Nenhum selecionado";
-
-        const payload = {
-            tipo: "pedido",
-            nome: nomeVal,
-            contato: contatoVal,
-            servicos: servicosFormatados,
-            logoStatus: logoStatusVal,
-            detalhesPrazos: detalhesPrazosVal,
-            valorTotal: valorTotalVal
-        };
-
-        if (URL_APPS_SCRIPT && URL_APPS_SCRIPT !== "SEU_LINK_DO_APPS_SCRIPT_AQUI") {
-            fetch(URL_APPS_SCRIPT, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            }).catch(err => console.log('Erro ao enviar:', err));
+        function toggleVideoGeral() {
+            const isChecked = document.getElementById('check-video-geral').checked;
+            const box = document.getElementById('box-minutos-geral');
+            box.classList.toggle('hidden', !isChecked);
+            box.classList.toggle('flex', isChecked);
         }
 
-        const textoInstagram = `✨ NOVO BRIEFING & PEDIDO - STUDIO CREATIVE ✨\n\n` +
-            `👤 Cliente: ${nomeVal}\n` +
-            `📱 Contato: ${contatoVal}\n` +
-            `🛠️ Serviços Escolhidos: ${servicosFormatados}\n` +
-            `🎨 Status do Logo: ${logoStatusVal}\n` +
-            `💰 Valor Total Simulado: ${valorTotalVal}\n\n` +
-            `📝 Detalhes / Prazos / Minutos:\n"${detalhesPrazosVal}"`;
+        function mudarMinutosGeral(qtd) {
+            const input = document.getElementById('input-minutos-geral');
+            let valor = parseInt(input.value) + qtd;
+            if(valor < 1) valor = 1;
+            input.value = valor;
+            calcularTotal();
+        }
 
-        navigator.clipboard.writeText(textoInstagram).then(() => {
-            mostrarToast("Briefing salvo na planilha & COPIADO! Cole no Direct 📋✨", "📋");
-        }).catch(() => {
-            mostrarToast("Briefing salvo na planilha! Redirecionando...", "🚀");
+        function toggleIaMinutos() {
+            const isChecked = document.getElementById('check-video-ia').checked;
+            const box = document.getElementById('box-minutos-ia');
+            box.classList.toggle('hidden', !isChecked);
+            box.classList.toggle('flex', isChecked);
+        }
+
+        function mudarIaMinutos(qtd) {
+            const input = document.getElementById('input-minutos-ia');
+            let valor = parseInt(input.value) + qtd;
+            if(valor < 1) valor = 1;
+            input.value = valor;
+            calcularTotal();
+        }
+
+        function limparCalculadora() {
+            document.querySelectorAll('.calc-item').forEach(item => item.checked = false);
+            
+            document.getElementById('check-video-geral').checked = false;
+            document.getElementById('box-minutos-geral').classList.add('hidden');
+            document.getElementById('input-minutos-geral').value = 1;
+
+            document.getElementById('check-video-ia').checked = false;
+            document.getElementById('box-minutos-ia').classList.add('hidden');
+            document.getElementById('input-minutos-ia').value = 1;
+            
+            calcularTotal();
+            mostrarToast("Carrinho esvaziado!", "🔄");
+        }
+
+        function obterItensSelecionadosTexto() {
+            let lista = [];
+
+            document.querySelectorAll('.calc-item').forEach(item => {
+                if(item.checked) {
+                    lista.push(item.getAttribute('data-name'));
+                }
+            });
+
+            const checkIa = document.getElementById('check-video-ia');
+            if(checkIa.checked) {
+                const minIa = document.getElementById('input-minutos-ia').value || 1;
+                lista.push(`Vídeos com IA + Edição (${minIa} min)`);
+            }
+
+            const checkGeral = document.getElementById('check-video-geral');
+            if(checkGeral.checked) {
+                const minGeral = document.getElementById('input-minutos-geral').value || 1;
+                lista.push(`Edição Geral de Vídeos (${minGeral} min)`);
+            }
+
+            return lista;
+        }
+
+        function calcularTotal() {
+            let total = 0;
+            const resumoUl = document.getElementById('resumo-entregas');
+            resumoUl.innerHTML = '';
+            let selecionados = 0;
+
+            document.querySelectorAll('.calc-item').forEach(item => {
+                if(item.checked) {
+                    const preco = parseFloat(item.getAttribute('data-price'));
+                    total += preco;
+                    selecionados++;
+                    const nomeServico = item.getAttribute('data-name');
+                    
+                    const li = document.createElement('li');
+                    li.className = "pt-2 pb-1 flex justify-between items-center";
+                    li.innerHTML = `<div><strong class="text-bordo">${nomeServico}</strong><br><span class="text-xs text-bordo font-bold">${item.getAttribute('data-summary')}</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${preco.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('${nomeServico}')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
+                    resumoUl.appendChild(li);
+                }
+            });
+
+            const checkVideoIa = document.getElementById('check-video-ia');
+            if(checkVideoIa.checked) {
+                const minutosIa = parseInt(document.getElementById('input-minutos-ia').value) || 1;
+                const precoIa = minutosIa * 80;
+                total += precoIa;
+                selecionados++;
+
+                const li = document.createElement('li');
+                li.className = "pt-2 pb-1 flex justify-between items-center";
+                li.innerHTML = `<div><strong class="text-bordo">Vídeos com IA + Edição (${minutosIa} min)</strong><br><span class="text-xs text-bordo font-bold">Custo de recursos e edição avançada (R$ 80/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoIa.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Vídeos com IA + CapCut')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
+                resumoUl.appendChild(li);
+            }
+
+            const checkVideoGeral = document.getElementById('check-video-geral');
+            if(checkVideoGeral.checked) {
+                const minutos = parseInt(document.getElementById('input-minutos-geral').value) || 1;
+                const precoVideo = minutos * 40;
+                total += precoVideo;
+                selecionados++;
+
+                const li = document.createElement('li');
+                li.className = "pt-2 pb-1 flex justify-between items-center";
+                li.innerHTML = `<div><strong class="text-bordo">Edição Geral de Vídeos (${minutos} min)</strong><br><span class="text-xs text-bordo font-bold">Edição profissional (R$ 40/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoVideo.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Edição Geral de Vídeos')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
+                resumoUl.appendChild(li);
+            }
+
+            if(selecionados === 0) {
+                resumoUl.innerHTML = '<li class="pt-1">Seu carrinho está vazio. Adicione itens acima.</li>';
+            }
+
+            const totalFormatado = 'R$ ' + total.toFixed(2).replace('.', ',');
+            document.getElementById('total-valor').innerText = totalFormatado;
+            document.getElementById('modal-total-valor').innerText = totalFormatado;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.calc-item').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const nomeServico = this.getAttribute('data-name');
+                    if (this.checked) {
+                        mostrarToast(`"${nomeServico}" adicionado ao carrinho!`, "🛒");
+                    } else {
+                        mostrarToast(`"${nomeServico}" removido do carrinho.`, "🗑️");
+                    }
+                    calcularTotal();
+                });
+            });
         });
 
-        fecharModalOrcamento();
+        function abrirModalOrcamento() {
+            const total = document.getElementById('total-valor').innerText;
+            if(total === 'R$ 0,00') {
+                mostrarToast('Selecione pelo menos um serviço no carrinho!', '⚠️');
+                return;
+            }
 
-        setTimeout(() => {
-            window.open(`https://www.instagram.com/${SEU_INSTAGRAM}/`, '_blank');
-        }, 1000);
-    }
+            const itens = obterItensSelecionadosTexto();
+            const resumoDiv = document.getElementById('modal-resumo-itens');
+            resumoDiv.innerHTML = '• ' + itens.join('<br>• ');
 
-    function mostrarNivel(nome, nivel, desc) {
-        document.getElementById('modal-titulo').innerText = nome;
-        document.getElementById('modal-desc').innerText = desc;
-        document.getElementById('modal-ferramenta').classList.remove('hidden');
-        document.getElementById('modal-ferramenta').classList.add('flex');
-        mostrarToast(`Visualizando ferramenta: ${nome}`, "🛠️");
-    }
+            document.getElementById('modalOrcamento').classList.remove('hidden');
+            document.getElementById('modalOrcamento').classList.add('flex');
+            mostrarToast("Abrindo formulário de briefing...", "📋");
+        }
 
-    function fecharModal() {
-        document.getElementById('modal-ferramenta').classList.add('hidden');
-        document.getElementById('modal-ferramenta').classList.remove('flex');
-    }
-</script>
+        function fecharModalOrcamento() {
+            document.getElementById('modalOrcamento').classList.add('hidden');
+            document.getElementById('modalOrcamento').classList.remove('flex');
+        }
+
+        function enviarDadosPlanilha(e) {
+            e.preventDefault();
+
+            const nomeVal = document.getElementById('cliente-nome').value.trim();
+            const contatoVal = document.getElementById('cliente-contato').value.trim();
+            const logoStatusVal = document.getElementById('cliente-logo-status').value;
+            const detalhesPrazosVal = document.getElementById('cliente-detalhes-prazos').value.trim();
+            const valorTotalVal = document.getElementById('total-valor').innerText;
+            
+            const itensArray = obterItensSelecionadosTexto();
+            const servicosFormatados = itensArray.length > 0 ? itensArray.join(', ') : "Nenhum selecionado";
+
+            const payload = {
+                tipo: "pedido",
+                nome: nomeVal,
+                contato: contatoVal,
+                servicos: servicosFormatados,
+                logoStatus: logoStatusVal,
+                detalhesPrazos: detalhesPrazosVal,
+                valorTotal: valorTotalVal
+            };
+
+            if (URL_APPS_SCRIPT && URL_APPS_SCRIPT !== "SEU_LINK_DO_APPS_SCRIPT_AQUI") {
+                fetch(URL_APPS_SCRIPT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }).catch(err => console.log('Erro ao enviar:', err));
+            }
+
+            const textoInstagram = `✨ NOVO BRIEFING & PEDIDO - STUDIO CREATIVE ✨\n\n` +
+                `👤 Cliente: ${nomeVal}\n` +
+                `📱 Contato: ${contatoVal}\n` +
+                `🛠️ Serviços Escolhidos: ${servicosFormatados}\n` +
+                `🎨 Status do Logo: ${logoStatusVal}\n` +
+                `💰 Valor Total Simulado: ${valorTotalVal}\n\n` +
+                `📝 Detalhes / Prazos / Minutos:\n"${detalhesPrazosVal}"`;
+
+            navigator.clipboard.writeText(textoInstagram).then(() => {
+                mostrarToast("Briefing salvo na planilha & COPIADO! Cole no Direct 📋✨", "📋");
+            }).catch(() => {
+                mostrarToast("Briefing salvo na planilha! Redirecionando...", "🚀");
+            });
+
+            fecharModalOrcamento();
+
+            setTimeout(() => {
+                window.open(`https://www.instagram.com/${SEU_INSTAGRAM}/`, '_blank');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
