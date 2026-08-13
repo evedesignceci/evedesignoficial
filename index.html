@@ -933,9 +933,9 @@
 
         function enviarFeedbackPlanilha(e) {
             e.preventDefault();
-            const nome = document.getElementById('fb-nome').value;
+            const nome = document.getElementById('fb-nome').value.trim();
             const estrelas = document.getElementById('fb-estrelas').value;
-            const comentario = document.getElementById('fb-comentario').value;
+            const comentario = document.getElementById('fb-comentario').value.trim();
 
             const payload = {
                 tipo: "feedback",
@@ -1171,39 +1171,38 @@
         function enviarDadosPlanilha(e) {
             e.preventDefault();
 
-            const nome = document.getElementById('cliente-nome').value;
-            const contato = document.getElementById('cliente-contato').value;
+            const nome = document.getElementById('cliente-nome').value.trim();
+            const contato = document.getElementById('cliente-contato').value.trim();
             const logoStatus = document.getElementById('cliente-logo-status').value;
-            const detalhesPrazos = document.getElementById('cliente-detalhes-prazos').value;
+            const detalhesPrazos = document.getElementById('cliente-detalhes-prazos').value.trim();
             const valorTotal = document.getElementById('total-valor').innerText;
-            const servicos = obterItensSelecionadosTexto().join(', ');
+            
+            const itensArray = obterItensSelecionadosTexto();
+            const servicosFormatados = itensArray.length > 0 ? itensArray.join(', ') : "Nenhum selecionado";
 
-            // Objeto de dados idêntico ao que o Apps Script da sua nova planilha espera
             const payload = {
                 tipo: "pedido",
                 nome: nome,
                 contato: contato,
-                servicos: servicos.length > 0 ? servicos : "Nenhum selecionado",
+                servicos: servicosFormatados,
                 logoStatus: logoStatus,
                 detalhesPrazos: detalhesPrazos,
                 valorTotal: valorTotal
             };
 
-            // Envia para o Google Apps Script
             if (URL_APPS_SCRIPT) {
                 fetch(URL_APPS_SCRIPT, {
                     method: 'POST',
                     mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
-                }).catch(err => console.log('Erro ao enviar para planilha:', err));
+                }).catch(err => console.log('Erro ao enviar:', err));
             }
 
-            // Copia o briefing formatado para o Instagram
             const textoInstagram = `✨ NOVO BRIEFING & PEDIDO - EVE DESIGN STUDIO ✨\n\n` +
                 `👤 Cliente: ${nome}\n` +
                 `📱 Contato: ${contato}\n` +
-                `🛠️ Serviços Escolhidos: ${servicos}\n` +
+                `🛠️ Serviços Escolhidos: ${servicosFormatados}\n` +
                 `🎨 Status do Logo: ${logoStatus}\n` +
                 `💰 Valor Total Simulado: ${valorTotal}\n\n` +
                 `📝 Detalhes / Prazos / Minutos:\n"${detalhesPrazos}"`;
@@ -1216,7 +1215,6 @@
 
             fecharModalOrcamento();
 
-            // Redireciona para o Instagram
             setTimeout(() => {
                 window.open(`https://www.instagram.com/${SEU_INSTAGRAM}/`, '_blank');
             }, 1000);
