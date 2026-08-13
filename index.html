@@ -1,6 +1,6 @@
 <script>
-    const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbzXhkvwxpUBB1A2cfC90JUEOY9zyPF-du1gh5vB0v-9A8V9o9H-EcQtMoNY1vdsIBnNiA/exec";
-    const SEU_INSTAGRAM = "eve.desi_gn"; 
+    const URL_APPS_SCRIPT = "SEU_LINK_DO_APPS_SCRIPT_AQUI";
+    const SEU_INSTAGRAM = "suaempresa"; 
 
     function mostrarToast(mensagem, icone = "✨") {
         const toast = document.getElementById('toast-feedback');
@@ -40,7 +40,7 @@
             comentario: comentarioVal
         };
 
-        if (URL_APPS_SCRIPT) {
+        if (URL_APPS_SCRIPT && URL_APPS_SCRIPT !== "SEU_LINK_DO_APPS_SCRIPT_AQUI") {
             fetch(URL_APPS_SCRIPT, {
                 method: 'POST',
                 mode: 'no-cors',
@@ -81,7 +81,7 @@
     function destacarOpcaoCalculadora(idCheckbox) {
         const checkbox = document.getElementById(idCheckbox);
         if (checkbox) {
-            checkbox.checked = !checkbox.checked; // Alterna entre marcar/desmarcar
+            checkbox.checked = !checkbox.checked;
             if(idCheckbox === 'check-video-ia') toggleIaMinutos();
             if(idCheckbox === 'check-video-geral') toggleVideoGeral();
             
@@ -174,7 +174,7 @@
         const checkIa = document.getElementById('check-video-ia');
         if(checkIa.checked) {
             const minIa = document.getElementById('input-minutos-ia').value || 1;
-            lista.push(`Vídeos com IA + CapCut (${minIa} min)`);
+            lista.push(`Vídeos com IA + Edição (${minIa} min)`);
         }
 
         const checkGeral = document.getElementById('check-video-geral');
@@ -192,7 +192,6 @@
         resumoUl.innerHTML = '';
         let selecionados = 0;
 
-        // Calcula itens normais da calculadora e exibe notificação ao marcar caixas diretamente
         document.querySelectorAll('.calc-item').forEach(item => {
             if(item.checked) {
                 const preco = parseFloat(item.getAttribute('data-price'));
@@ -207,7 +206,6 @@
             }
         });
 
-        // Vídeos com IA por Minutagem
         const checkVideoIa = document.getElementById('check-video-ia');
         if(checkVideoIa.checked) {
             const minutosIa = parseInt(document.getElementById('input-minutos-ia').value) || 1;
@@ -217,11 +215,10 @@
 
             const li = document.createElement('li');
             li.className = "pt-2 pb-1 flex justify-between items-center";
-            li.innerHTML = `<div><strong class="text-bordo">Vídeos com IA + CapCut (${minutosIa} min)</strong><br><span class="text-xs text-bordo font-bold">Custo de créditos de IA e edição (R$ 80/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoIa.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Vídeos com IA + CapCut')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
+            li.innerHTML = `<div><strong class="text-bordo">Vídeos com IA + Edição (${minutosIa} min)</strong><br><span class="text-xs text-bordo font-bold">Custo de recursos e edição avançada (R$ 80/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoIa.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Vídeos com IA + CapCut')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
             resumoUl.appendChild(li);
         }
 
-        // Edição Geral por Minuto
         const checkVideoGeral = document.getElementById('check-video-geral');
         if(checkVideoGeral.checked) {
             const minutos = parseInt(document.getElementById('input-minutos-geral').value) || 1;
@@ -231,7 +228,7 @@
 
             const li = document.createElement('li');
             li.className = "pt-2 pb-1 flex justify-between items-center";
-            li.innerHTML = `<div><strong class="text-bordo">Edição Geral de Vídeos (${minutos} min)</strong><br><span class="text-xs text-bordo font-bold">Edição profissional no CapCut (R$ 40/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoVideo.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Edição Geral de Vídeos')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
+            li.innerHTML = `<div><strong class="text-bordo">Edição Geral de Vídeos (${minutos} min)</strong><br><span class="text-xs text-bordo font-bold">Edição profissional (R$ 40/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoVideo.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Edição Geral de Vídeos')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
             resumoUl.appendChild(li);
         }
 
@@ -244,7 +241,6 @@
         document.getElementById('modal-total-valor').innerText = totalFormatado;
     }
 
-    // Adiciona escuta em todos os checkboxes da calculadora para disparar o Toast ao marcar/desmarcar
     document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll('.calc-item').forEach(checkbox => {
             checkbox.addEventListener('change', function() {
@@ -301,7 +297,7 @@
             valorTotal: valorTotalVal
         };
 
-        if (URL_APPS_SCRIPT) {
+        if (URL_APPS_SCRIPT && URL_APPS_SCRIPT !== "SEU_LINK_DO_APPS_SCRIPT_AQUI") {
             fetch(URL_APPS_SCRIPT, {
                 method: 'POST',
                 mode: 'no-cors',
@@ -310,7 +306,7 @@
             }).catch(err => console.log('Erro ao enviar:', err));
         }
 
-        const textoInstagram = `✨ NOVO BRIEFING & PEDIDO - EVE DESIGN STUDIO ✨\n\n` +
+        const textoInstagram = `✨ NOVO BRIEFING & PEDIDO - STUDIO CREATIVE ✨\n\n` +
             `👤 Cliente: ${nomeVal}\n` +
             `📱 Contato: ${contatoVal}\n` +
             `🛠️ Serviços Escolhidos: ${servicosFormatados}\n` +
