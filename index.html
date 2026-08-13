@@ -661,7 +661,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
 
                 <label id="label-ilustracao-2d" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="200" data-name="Ilustração 2D & Vetorização" data-summary="Capas de livros, ilustrações autorais e vetorização." onchange="calcularTotal()">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="200" data-name="Ilustração 2D & Vetorização" data-summary="Capas de livros, ilustrações autorais e vetorização." onchange="notificarCheckboxDireto(this, 'Ilustração 2D & Vetorização')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Ilustração 2D & Vetorização</span>
                     </div>
@@ -669,7 +669,7 @@
                 </label>
 
                 <label id="label-personagens-ia" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="120" data-name="Criação de Personagens com IA" data-summary="Mascotes e artes conceituais com Inteligência Artificial." onchange="calcularTotal()">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="120" data-name="Criação de Personagens com IA" data-summary="Mascotes e artes conceituais com Inteligência Artificial." onchange="notificarCheckboxDireto(this, 'Criação de Personagens com IA')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Criação de Personagens com IA</span>
                     </div>
@@ -677,7 +677,7 @@
                 </label>
 
                 <label id="label-link-bio" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="150" data-name="Link na Bio / Cartão Interativo" data-summary="Central de links personalizada e responsiva." onchange="calcularTotal()">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="150" data-name="Link na Bio / Cartão Interativo" data-summary="Central de links personalizada e responsiva." onchange="notificarCheckboxDireto(this, 'Link na Bio / Cartão Interativo')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Link na Bio / Cartão Interativo</span>
                     </div>
@@ -685,7 +685,7 @@
                 </label>
 
                 <label id="label-landing-page" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="400" data-name="Landing Page de Vendas/Captura" data-summary="Página focada em atração e conversão de leads." onchange="calcularTotal()">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="400" data-name="Landing Page de Vendas/Captura" data-summary="Página focada em atração e conversão de leads." onchange="notificarCheckboxDireto(this, 'Landing Page de Vendas/Captura')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Landing Page de Vendas / Captura</span>
                     </div>
@@ -693,7 +693,7 @@
                 </label>
 
                 <label id="label-identidade-visual" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="300" data-name="Identidade Visual Completa" data-summary="Logo, paleta, tipografia e manual em PDF." onchange="calcularTotal()">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="300" data-name="Identidade Visual Completa" data-summary="Logo, paleta, tipografia e manual em PDF." onchange="notificarCheckboxDireto(this, 'Identidade Visual Completa')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Identidade Visual Completa</span>
                     </div>
@@ -701,7 +701,7 @@
                 </label>
 
                 <label id="label-posts-estaticos" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="150" data-name="Apenas Posts Estáticos" data-summary="Criação exclusiva de artes estáticas para o feed." onchange="calcularTotal()">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="150" data-name="Apenas Posts Estáticos" data-summary="Criação exclusiva de artes estáticas para o feed." onchange="notificarCheckboxDireto(this, 'Apenas Posts Estáticos')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Apenas Posts Estáticos</span>
                     </div>
@@ -709,7 +709,7 @@
                 </label>
 
                 <label id="label-carrosseis" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="200" data-name="Apenas Carrosséis Informativos" data-summary="Criação exclusiva de carrosséis educativos/informativos." onchange="calcularTotal()">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="200" data-name="Apenas Carrosséis Informativos" data-summary="Criação exclusiva de carrosséis educativos/informativos." onchange="notificarCheckboxDireto(this, 'Apenas Carrosséis Informativos')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Apenas Carrosséis Informativos</span>
                     </div>
@@ -717,7 +717,7 @@
                 </label>
 
                 <label id="label-pacote-completo" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="800" data-name="Posts + Reels e Stories (CapCut)" data-summary="Mix completo de posts para feed, carrosséis, reels e stories." onchange="calcularTotal()">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="800" data-name="Posts + Reels e Stories (CapCut)" data-summary="Mix completo de posts para feed, carrosséis, reels e stories." onchange="notificarCheckboxDireto(this, 'Posts + Reels e Stories (CapCut)')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg">Posts + Reels e Stories (CapCut)</span>
                     </div>
@@ -727,7 +727,7 @@
                 <!-- VÍDEOS COM IA POR MINUTAGEM -->
                 <div id="wrapper-video-ia" class="flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all">
                     <label class="flex items-center gap-4 cursor-pointer">
-                        <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo" onchange="toggleIaMinutos(); calcularTotal();">
+                        <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo" onchange="toggleIaMinutos(); calcularTotal(); if(this.checked) mostrarToast('Vídeos com IA adicionado ao carrinho!', '🤖');">
                         <div>
                             <span class="font-black text-bordo text-base sm:text-lg">Vídeos & Animações com IA + CapCut (R$ 80,00 por minuto)</span>
                             <p class="text-xs sm:text-sm text-bordo font-bold">Custo proporcional considerando o gasto de créditos de IA para cenários/personagens + edição.</p>
@@ -748,7 +748,7 @@
                 <!-- EDIÇÃO DE VÍDEO GERAL POR MINUTAGEM -->
                 <div id="wrapper-video-geral" class="flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all">
                     <label class="flex items-center gap-4 cursor-pointer">
-                        <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo" onchange="toggleVideoGeral(); calcularTotal();">
+                        <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo" onchange="toggleVideoGeral(); calcularTotal(); if(this.checked) mostrarToast('Edição Geral de Vídeos adicionada ao carrinho!', '🎬');">
                         <div>
                             <span class="font-black text-bordo text-base sm:text-lg">Edição Geral de Vídeos (Reels, TikTok, Vlogs) - R$ 40,00/minuto</span>
                         </div>
@@ -950,6 +950,15 @@
             document.getElementById('formFeedback').reset();
         }
 
+        function notificarCheckboxDireto(checkbox, nomeServico) {
+            calcularTotal();
+            if (checkbox.checked) {
+                mostrarToast(`"${nomeServico}" adicionado ao carrinho!`, "🛒");
+            } else {
+                mostrarToast(`"${nomeServico}" removido do carrinho.`, "🗑️");
+            }
+        }
+
         function selecionarServicoPorTabela(nomeServico) {
             const items = document.querySelectorAll('.calc-item');
             let itemEncontrado = null;
@@ -988,7 +997,7 @@
                 }
             }
             calcularTotal();
-            mostrarToast("Item adicionado ao carrinho!", "🛒");
+            mostrarToast("Vídeos com IA adicionado ao carrinho!", "🛒");
             document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1016,7 +1025,6 @@
             const box = document.getElementById('box-minutos-geral');
             box.classList.toggle('hidden', !isChecked);
             box.classList.toggle('flex', isChecked);
-            if(isChecked) mostrarToast("Edição Geral adicionada!", "🎬");
         }
 
         function mudarMinutosGeral(qtd) {
@@ -1032,7 +1040,6 @@
             const box = document.getElementById('box-minutos-ia');
             box.classList.toggle('hidden', !isChecked);
             box.classList.toggle('flex', isChecked);
-            if(isChecked) mostrarToast("Vídeo com IA adicionado!", "🤖");
         }
 
         function mudarIaMinutos(qtd) {
