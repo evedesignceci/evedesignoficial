@@ -98,6 +98,7 @@
                 <a href="#sobre-mim" class="hover:text-rosa transition-colors">Sobre Mim</a>
                 <a href="#especialidades" class="hover:text-rosa transition-colors">Especialidades</a>
                 <a href="#exemplos" class="hover:text-rosa transition-colors">Projetos</a>
+                <a href="#depoimentos" class="hover:text-rosa transition-colors">Avaliações</a>
                 <a href="#tabela" class="hover:text-rosa transition-colors">Tabela</a>
                 <a href="#simulador" class="hover:text-rosa transition-colors">Calculadora</a>
                 <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="bg-rosa/20 text-bordo hover:bg-rosa transition-all font-black px-3.5 py-1.5 rounded-xl border border-rosa/50">Portfólio 📁</a>
@@ -140,18 +141,9 @@
                 <img src="https://i.imgur.com/EE5DwcB.png" alt="" class="w-3.5 h-3.5 object-contain">
                 <span>Instagram</span>
             </a>
-            <a href="https://www.behance.net/evelynceclia" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo">
-                <img src="https://i.imgur.com/6nPcsiA.png" alt="" class="w-3.5 h-3.5 object-contain">
-                <span>Behance</span>
-            </a>
-            <a href="https://www.tiktok.com/@eve.desi_gn?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo">
-                <img src="https://i.imgur.com/3krTpB9.png" alt="" class="w-3.5 h-3.5 object-contain">
-                <span>TikTok</span>
-            </a>
-            <a href="https://br.pinterest.com/evedesignergrafica/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo">
-                <img src="https://i.imgur.com/9A3LyWM.png" alt="" class="w-3.5 h-3.5 object-contain">
-                <span>Pinterest</span>
-            </a>
+            <button type="button" onclick="abrirModalFeedback()" class="px-4 py-2 bg-amarelo text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
+                ⭐ Deixar meu Feedback
+            </button>
         </div>
     </section>
 
@@ -467,6 +459,58 @@
                 </a>
             </div>
 
+        </div>
+    </section>
+
+    <!-- SEÇÃO: DEPOIMENTOS & FEEDBACKS DOS CLIENTES -->
+    <section id="depoimentos" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
+        <div class="text-center mb-8">
+            <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
+                ⭐ Prova Social
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black text-bordo">O que os clientes dizem</h2>
+            <p class="text-sm sm:text-base text-bordo font-bold mt-1">Confira o feedback de quem já transformou a marca com o Eve Design Studio:</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-black text-bordo text-lg">Turminha do Xexéu</span>
+                        <span class="text-amarelo text-sm font-black">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="text-sm text-bordo font-bold italic mb-4">"As animações dos personagens e os cenários no CapCut deram vida nova ao canal! O trabalho com IA e ilustração ficou perfeito."</p>
+                </div>
+                <span class="text-xs text-bordo/70 font-bold">Projeto de Animação IA</span>
+            </div>
+
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-black text-bordo text-lg">4G Proteção Veicular</span>
+                        <span class="text-amarelo text-sm font-black">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="text-sm text-bordo font-bold italic mb-4">"A landing page e o formulário integrado trouxeram muito mais cotações direto pro nosso atendimento. Recomendo demais!"</p>
+                </div>
+                <span class="text-xs text-bordo/70 font-bold">Landing Page & Artes</span>
+            </div>
+
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="font-black text-bordo text-lg">Saint Vision Home</span>
+                        <span class="text-amarelo text-sm font-black">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="text-sm text-bordo font-bold italic mb-4">"Os carrosséis para o Instagram da ótica ficaram elegantes e super explicativos. Atendimento rápido e criativo."</p>
+                </div>
+                <span class="text-xs text-bordo/70 font-bold">Identidade Visual & Posts</span>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <button type="button" onclick="abrirModalFeedback()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 px-6 rounded-2xl transition-all shadow-md">
+                ✨ Já é cliente? Deixe seu Feedback aqui!
+            </button>
         </div>
     </section>
 
@@ -805,6 +849,45 @@
         </div>
     </div>
 
+    <!-- MODAL EXCLUSIVO DE FEEDBACK / AVALIAÇÃO DO CLIENTE -->
+    <div id="modalFeedback" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
+            <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo" onclick="fecharModalFeedback()">&times;</button>
+            <div class="text-center mb-4">
+                <span class="inline-block bg-amarelo text-bordo font-black text-xs px-3.5 py-1 rounded-full mb-1">⭐ Avaliação de Cliente</span>
+                <h2 class="text-2xl font-black text-bordo">Deixe seu Feedback! ✨</h2>
+                <p class="text-xs text-bordo font-bold">Sua opinião ajuda o studio a crescer e criar artes ainda melhores!</p>
+            </div>
+
+            <form id="formFeedback" onsubmit="enviarFeedbackPlanilha(event)">
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">Seu Nome / @ do Instagram:*</label>
+                        <input type="text" id="fb-nome" required placeholder="Ex: @seu_perfil ou Nome" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">Sua Nota:*</label>
+                        <select id="fb-estrelas" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                            <option value="5">⭐⭐⭐⭐⭐ (5/5 - Excelente!)</option>
+                            <option value="4">⭐⭐⭐⭐ (4/5 - Muito Bom)</option>
+                            <option value="3">⭐⭐⭐ (3/5 - Bom)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">Seu Depoimento / Comentário:*</label>
+                        <textarea id="fb-comentario" rows="4" required placeholder="Conta pra gente como foi sua experiência com o projeto..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full mt-4 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 rounded-xl transition-all shadow-md">
+                    Enviar Feedback ➔
+                </button>
+            </form>
+        </div>
+    </div>
+
     <!-- MODAL DE FERRAMENTAS -->
     <div id="modal-ferramenta" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 max-w-md w-full text-center relative">
@@ -836,6 +919,43 @@
                 toast.classList.add('opacity-0');
                 setTimeout(() => toast.classList.add('hidden'), 300);
             }, 3000);
+        }
+
+        function abrirModalFeedback() {
+            document.getElementById('modalFeedback').classList.remove('hidden');
+            document.getElementById('modalFeedback').classList.add('flex');
+        }
+
+        function fecharModalFeedback() {
+            document.getElementById('modalFeedback').classList.add('hidden');
+            document.getElementById('modalFeedback').classList.remove('flex');
+        }
+
+        function enviarFeedbackPlanilha(e) {
+            e.preventDefault();
+            const nome = document.getElementById('fb-nome').value;
+            const estrelas = document.getElementById('fb-estrelas').value;
+            const comentario = document.getElementById('fb-comentario').value;
+
+            const payload = {
+                tipo: "feedback",
+                nome: nome,
+                estrelas: estrelas,
+                comentario: comentario
+            };
+
+            if (URL_APPS_SCRIPT) {
+                fetch(URL_APPS_SCRIPT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }).catch(err => console.log('Erro feedback:', err));
+            }
+
+            mostrarToast("Feedback enviado! Muito obrigada! ⭐✨", "💖");
+            fecharModalFeedback();
+            document.getElementById('formFeedback').reset();
         }
 
         function selecionarServicoPorTabela(nomeServico) {
@@ -1060,6 +1180,7 @@
 
             // Dados correspondentes às colunas da planilha do Dashboard
             const payload = {
+                tipo: "pedido",
                 nome: nome,
                 contato: contato,
                 servicos: servicos,
