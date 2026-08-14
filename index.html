@@ -92,6 +92,20 @@
         <span id="toast-msg">Item adicionado com sucesso!</span>
     </div>
 
+    <!-- BANNER DE COOKIES (LGPD) -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-bordo text-creme px-4 sm:px-6 py-4 shadow-2xl z-50 hidden border-t-2 border-rosa">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-bold">
+            <p class="leading-normal text-center sm:text-left">
+                🍪 Utilizamos cookies e tecnologias essenciais para garantir o funcionamento do simulador e melhorar sua experiência. Ao continuar, você concorda com a nossa <button type="button" onclick="abrirModalLegal('privacidade')" class="underline text-rosa hover:text-amarelo font-black">Política de Privacidade</button>.
+            </p>
+            <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="aceitarCookies()" class="bg-amarelo text-bordo hover:bg-rosa font-black text-xs py-2 px-6 rounded-xl transition-all shadow-sm">
+                    Concordar & Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- HEADER DE NAVEGAÇÃO FIXO -->
     <header class="w-full bg-white/95 backdrop-blur-md border-b-2 border-rosaclaro sticky top-0 z-40 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
@@ -125,7 +139,7 @@
         </div>
     </header>
 
-    <!-- BANNER HERO COM ARTE EXCLUSIVA -->
+    <!-- BANNER HERO -->
     <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2">
         <div class="rounded-3xl overflow-hidden border-2 border-rosa shadow-lg bg-white">
             <img src="https://i.imgur.com/dXVvX40.png" alt="Eve Design Studio - Banner" class="w-full h-auto object-cover max-h-[400px]">
@@ -549,7 +563,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-            <!-- COLUNA 1: Web Design & Sites -->
+            <!-- COLUNA 1: Web Design & Branding -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">💻</div>
@@ -1058,8 +1072,37 @@
         </div>
     </div>
 
-    <footer class="w-full text-center py-6 text-sm text-bordo font-black border-t border-rosaclaro/60 mt-6">
-        © Eve Design Studio. Todos os direitos reservados.
+    <!-- MODAL LEGAL (TERMOS E PRIVACIDADE) -->
+    <div id="modalLegal" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-2xl w-full shadow-2xl text-left relative my-8 max-h-[85vh] overflow-y-auto">
+            <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo p-1 hover:text-rosa transition-colors" onclick="fecharModalLegal()">&times;</button>
+            <h2 class="text-2xl sm:text-3xl font-black text-bordo mb-4" id="modal-legal-titulo">Documento Legal</h2>
+            <div class="text-sm sm:text-base text-bordo font-bold leading-relaxed space-y-3" id="modal-legal-conteudo">
+                <!-- Conteúdo dinâmico via JS -->
+            </div>
+            <div class="mt-6 text-center">
+                <button type="button" onclick="fecharModalLegal()" class="bg-bordo text-creme font-black text-xs py-2.5 px-8 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RODAPÉ LEGAL & INSTITUCIONAL -->
+    <footer class="w-full bg-white/90 border-t-2 border-rosaclaro py-8 text-center text-sm text-bordo font-bold mt-12 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 space-y-3">
+            <p class="font-black text-base text-bordo">
+                Evelyn Cecília de Sales Pereira — Eve Design Studio
+            </p>
+            <p class="text-xs sm:text-sm text-bordo/80 font-bold">
+                Francisco Morato – SP | E-mail de Contato: <a href="mailto:evececi.design@gmail.com" class="underline hover:text-rosa">evececi.design@gmail.com</a>
+            </p>
+            <p class="text-xs font-black">
+                <button type="button" onclick="abrirModalLegal('termos')" class="text-bordo hover:text-rosa underline mx-2">Termos de Uso</button> • 
+                <button type="button" onclick="abrirModalLegal('privacidade')" class="text-bordo hover:text-rosa underline mx-2">Política de Privacidade (LGPD)</button>
+            </p>
+            <p class="text-xs text-bordo/60 pt-2 border-t border-rosaclaro/40">
+                © 2026 Eve Design Studio. Todos os direitos reservados.
+            </p>
+        </div>
     </footer>
 
     <!-- SCRIPTS -->
@@ -1067,6 +1110,60 @@
         const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbzXhkvwxpUBB1A2cfC90JUEOY9zyPF-du1gh5vB0v-9A8V9o9H-EcQtMoNY1vdsIBnNiA/exec";
         const SEU_INSTAGRAM = "eve.desi_gn"; 
 
+        /* GESTÃO DE COOKIES LGPD */
+        function aceitarCookies() {
+            localStorage.setItem('eve_cookies_aceitos', 'true');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (!localStorage.getItem('eve_cookies_aceitos')) {
+                document.getElementById('cookie-banner').classList.remove('hidden');
+            }
+        });
+
+        /* GESTÃO DE MODAIS LEGAIS */
+        function abrirModalLegal(tipo) {
+            const modal = document.getElementById('modalLegal');
+            const titulo = document.getElementById('modal-legal-titulo');
+            const conteudo = document.getElementById('modal-legal-conteudo');
+
+            if (tipo === 'privacidade') {
+                titulo.innerText = "Política de Privacidade & LGPD";
+                conteudo.innerHTML = `
+                    <p><strong>Última atualização:</strong> Agosto de 2026</p>
+                    <p>A <strong>Eve Design Studio</strong>, representada por <strong>Evelyn Cecília de Sales Pereira</strong> (Francisco Morato – SP), valoriza a sua privacidade e cumpre integralmente as diretrizes da Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD).</p>
+                    <h3 class="font-black text-base pt-2">1. Coleta de Informações</h3>
+                    <p>Coletamos apenas os dados fornecidos voluntariamente através dos nossos formulários de simulação, orçamentos ou feedback (nome, contato de WhatsApp/Instagram e detalhes do projeto).</p>
+                    <h3 class="font-black text-base pt-2">2. Finalidade de Uso</h3>
+                    <p>Os dados são utilizados exclusivamente para: elaboração de briefings e orçamentos, contato direto sobre o andamento dos projetos e emissão formal de contratos de prestação de serviços.</p>
+                    <h3 class="font-black text-base pt-2">3. Segurança dos Dados</h3>
+                    <p>Nenhum dado é vendido, alugado ou compartilhado com terceiros para fins de marketing. Para solicitar a exclusão de seus dados, envie um e-mail para: <strong>evececi.design@gmail.com</strong>.</p>
+                `;
+            } else if (tipo === 'termos') {
+                titulo.innerText = "Termos de Uso";
+                conteudo.innerHTML = `
+                    <p><strong>Última atualização:</strong> Agosto de 2026</p>
+                    <p>Ao navegar e utilizar a calculadora interativa deste site, você concorda com os seguintes termos:</p>
+                    <h3 class="font-black text-base pt-2">1. Estimativa de Valores</h3>
+                    <p>Os valores gerados pelo simulador representam propostas de investimento e estão sujeitos à validação do escopo no momento da formalização do contrato.</p>
+                    <h3 class="font-black text-base pt-2">2. Direitos Autorais</h3>
+                    <p>Todas as marcas, ilustrações, códigos e conceitos apresentados neste portfólio são de propriedade de Evelyn Cecília de Sales Pereira ou de seus respectivos clientes parceiros.</p>
+                    <h3 class="font-black text-base pt-2">3. Contratação Formal</h3>
+                    <p>O início de qualquer projeto dar-se-á mediante aprovação do briefing e assinatura de Contrato de Prestação de Serviços específico.</p>
+                `;
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function fecharModalLegal() {
+            document.getElementById('modalLegal').classList.add('hidden');
+            document.getElementById('modalLegal').classList.remove('flex');
+        }
+
+        /* TOAST E NOTIFICAÇÕES */
         function mostrarToast(mensagem, icone = "✨") {
             const toast = document.getElementById('toast-feedback');
             document.getElementById('toast-msg').innerText = mensagem;
@@ -1133,6 +1230,8 @@
         }
 
         function selecionarServicoPorTabela(nomeServico) {
+            filtrarCategoria('todas', document.querySelector('.btn-filtro'));
+
             const items = document.querySelectorAll('.calc-item');
             let itemEncontrado = null;
 
@@ -1157,6 +1256,8 @@
         }
 
         function destacarOpcaoCalculadora(idCheckbox) {
+            filtrarCategoria('todas', document.querySelector('.btn-filtro'));
+
             const checkbox = document.getElementById(idCheckbox);
             if (checkbox) {
                 checkbox.checked = true;
@@ -1263,8 +1364,10 @@
                 b.classList.remove('bg-bordo', 'text-creme', 'border-bordo');
                 b.classList.add('bg-white', 'text-bordo', 'border-rosaclaro');
             });
-            btn.classList.add('bg-bordo', 'text-creme', 'border-bordo');
-            btn.classList.remove('bg-white', 'text-bordo', 'border-rosaclaro');
+            if (btn) {
+                btn.classList.add('bg-bordo', 'text-creme', 'border-bordo');
+                btn.classList.remove('bg-white', 'text-bordo', 'border-rosaclaro');
+            }
 
             document.querySelectorAll('.calc-item-card').forEach(card => {
                 if(cat === 'todas' || card.getAttribute('data-cat') === cat) {
