@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eve Design | Identidade Visual, Animações, Ilustração 2D & IA Criativa</title>
+    <title>Eve Design | Identidade Visual, Animações, Ilustração 2D, Sites & IA Criativa</title>
 
     <!-- FAVICON DA ABA DO NAVEGADOR -->
     <link rel="icon" type="image/png" sizes="64x64" href="https://i.imgur.com/bm07Eug.png">
     <link rel="apple-touch-icon" href="https://i.imgur.com/bm07Eug.png">
 
     <!-- Meta tags Open Graph (Prévia de Link) -->
-    <meta property="og:title" content="Eve Design | Identidade Visual, Animações, Ilustração 2D & IA Criativa">
-    <meta property="og:description" content="Desenvolvo identidades visuais, ilustração 2D, vetorização, criação de personagens por IA, design de posts, sites, cenários 3D e vídeos profissionais pelo CapCut.">
+    <meta property="og:title" content="Eve Design | Identidade Visual, Animações, Ilustração 2D, Sites & IA Criativa">
+    <meta property="og:description" content="Desenvolvo identidades visuais, ilustração 2D, vetorização, criação de personagens por IA, design de posts, sites e landing pages, cenários 3D e vídeos profissionais pelo CapCut.">
     <meta property="og:image" content="https://i.imgur.com/RLBQIdy.png">
     <meta property="og:type" content="website">
 
@@ -64,10 +64,23 @@
         .toast-transition {
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        /* Foco visível de acessibilidade */
         a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
             outline: 3px solid #6E1940;
             outline-offset: 2px;
+        }
+        .card-selected {
+            border-color: #6E1940 !important;
+            background-color: rgba(240, 196, 215, 0.4) !important;
+            box-shadow: 0 4px 12px rgba(110, 25, 64, 0.1);
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .faq-icon {
+            transform: rotate(180deg);
         }
     </style>
 </head>
@@ -100,6 +113,7 @@
                 <a href="#exemplos" class="hover:text-rosa transition-colors">Projetos</a>
                 <a href="#depoimentos" class="hover:text-rosa transition-colors">Avaliações</a>
                 <a href="#tabela" class="hover:text-rosa transition-colors">Tabela</a>
+                <a href="#faq" class="hover:text-rosa transition-colors">Dúvidas</a>
                 <a href="#simulador" class="hover:text-rosa transition-colors">Calculadora</a>
                 <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="bg-rosa/20 text-bordo hover:bg-rosa transition-all font-black px-3.5 py-1.5 rounded-xl border border-rosa/50">Portfólio 📁</a>
             </nav>
@@ -111,7 +125,7 @@
         </div>
     </header>
 
-    <!-- BANNER HERO COM A SUA ARTE EXCLUSIVA -->
+    <!-- BANNER HERO COM ARTE EXCLUSIVA -->
     <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2">
         <div class="rounded-3xl overflow-hidden border-2 border-rosa shadow-lg bg-white">
             <img src="https://i.imgur.com/dXVvX40.png" alt="Eve Design Studio - Banner" class="w-full h-auto object-cover max-h-[400px]">
@@ -121,15 +135,15 @@
     <!-- BANNER HERO TEXTO & CHAMADA -->
     <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-4 text-center">
         <span class="inline-flex items-center gap-2 bg-white/90 border-2 border-rosa text-bordo font-black text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-4 shadow-sm">
-            ✨ Soluções Criativas & Visuais
+            ✨ Soluções Criativas, Sites & Visuais Estratégicos
         </span>
 
         <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-bordo tracking-tight mb-3 leading-none">
-            Identidade Visual, Ilustração 2D, IA Criativa, <br class="hidden sm:inline"> Personagens, Animações & Vídeos no CapCut
+            Criação de Sites, Identidade Visual, Ilustração 2D, <br class="hidden sm:inline"> Personagens por IA, Animações & Vídeos
         </h1>
 
         <p class="text-base sm:text-xl text-bordo font-bold max-w-2xl mx-auto leading-normal mb-6">
-            Transformo ideias em ecossistemas visuais de alta conversão. Simule seu investimento em tempo real e envie seu pedido completo diretamente pelo Instagram.
+            Transformo ideias em ecossistemas digitais completos de alta conversão. Simule seu investimento em tempo real e envie seu pedido diretamente pelo Instagram.
         </p>
 
         <!-- REDES SOCIAIS -->
@@ -154,7 +168,7 @@
             <div>
                 <div class="w-12 h-12 rounded-2xl bg-bordo text-creme flex items-center justify-center font-extrabold text-2xl group-hover:bg-rosa group-hover:text-bordo transition-colors mb-4 shadow-md">📁</div>
                 <h2 class="font-black text-bordo text-xl group-hover:text-rosa transition-colors mb-1">Portfólio Interativo</h2>
-                <p class="text-sm sm:text-base text-bordo font-bold leading-snug mb-4">Acesse apresentações completas, ilustrações 2D, identidades visuais e projetos recentes organizados.</p>
+                <p class="text-sm sm:text-base text-bordo font-bold leading-snug mb-4">Acesse apresentações completas, ilustrações 2D, criação de sites e identidades visuais organizadas.</p>
             </div>
             <span class="text-bordo font-black text-sm flex items-center gap-2 group-hover:translate-x-2 transition-transform">Abrir Portfólio ➔</span>
         </a>
@@ -163,7 +177,7 @@
             <div>
                 <div class="w-12 h-12 rounded-2xl bg-bordo text-creme flex items-center justify-center font-extrabold text-2xl group-hover:bg-rosa group-hover:text-bordo transition-colors mb-4 shadow-md">🧮</div>
                 <h2 class="font-black text-bordo text-xl group-hover:text-rosa transition-colors mb-1">Calculadora de Projetos</h2>
-                <p class="text-sm sm:text-base text-bordo font-bold leading-snug mb-4">Monte seu pacote personalizado com cálculo imediato do investimento total.</p>
+                <p class="text-sm sm:text-base text-bordo font-bold leading-snug mb-4">Monte seu pacote personalizado com cálculo imediato de sites, posts, vídeos e ilustrações.</p>
             </div>
             <span class="text-bordo font-black text-sm flex items-center gap-2 group-hover:translate-x-2 transition-transform">Simular Agora ➔</span>
         </a>
@@ -204,10 +218,10 @@
                         ✨ Bem-vindo(a) ao Eve Design Studio!
                     </div>
                     <h2 class="text-2xl sm:text-4xl font-black text-bordo mb-3 leading-none">
-                        Olá, sou a Evelyn Cecilia! Designer Gráfica, Ilustradora & Especialista em IA Criativa 🎨🤖
+                        Olá, sou a Evelyn Cecilia! Web Designer, Ilustradora & Especialista em IA Criativa 🎨💻
                     </h2>
                     <p class="text-base sm:text-lg text-bordo font-bold leading-normal mb-6">
-                        No <strong class="text-bordo font-black">Eve Design Studio</strong>, crio ecossistemas digitais completos que unem design estratégico, arte autoral e Inteligência Artificial. Desenvolvo desde a <strong class="text-bordo font-black">identidade visual e vetorização até ilustração 2D (capas/livros infantis), criação de personagens com IA, cenários 3D e edição de vídeos profissionais pelo CapCut</strong>.
+                        No <strong class="text-bordo font-black">Eve Design Studio</strong>, crio ecossistemas digitais completos que unem design estratégico, arte autoral e Inteligência Artificial. Desenvolvo desde a <strong class="text-bordo font-black">criação de sites e landing pages até identidade visual, vetorização, ilustração 2D (capas/livros infantis), personagens com IA, cenários 3D e vídeos profissionais pelo CapCut</strong>.
                     </p>
 
                     <!-- CAIXA DE FERRAMENTAS -->
@@ -216,23 +230,23 @@
                             Minha Caixa de Ferramentas (Clique para detalhes):
                         </h3>
                         <div class="flex flex-wrap gap-2.5">
-                            <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais, ilustração 2D e vetorização.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais, ilustração 2D e vetorização técnica perfeita.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/Q5aIApP.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Illustrator</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Blender 3D', 'Intermediário', 'Modelagem 3D, personagens e texturização.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Blender 3D', 'Intermediário', 'Modelagem 3D, personagens e cenários texturizados.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/jQt50UJ.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Blender 3D</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Canva Pro', 'Especialista', 'Layouts, capas e carrosséis ágeis.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Canva Pro', 'Especialista', 'Layouts, capas e carrosséis com alto dinamismo.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/9eCY7fO.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Canva</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Gemini IA', 'Avançado', 'Criação de conceitos visuais, prompts de personagens e roteiros.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Gemini IA', 'Avançado', 'Criação de conceitos visuais, prompts de personagens e roteirização.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/jzEwkZc.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Gemini IA</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('CapCut', 'Avançado', 'Edição profissional de vídeos, animações e Reels.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('CapCut', 'Avançado', 'Edição profissional de vídeos, transições e cortes de alta retenção.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://i.imgur.com/7nzUf4g.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">CapCut</span>
                             </button>
@@ -255,83 +269,92 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
+            <!-- CRIAÇÃO DE SITES (MULTIUSO) -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">💻</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Criação de Sites Completos</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Sites institucionais estruturados em várias páginas com design responsivo, alta velocidade e SEO básico.</p>
+                </div>
+                <button type="button" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
+            </div>
+
+            <!-- LANDING PAGE -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">🌐</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Landing Page de Conversão</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Página de alta performance focada em captação de clientes, simulações de orçamento e conversão direta no WhatsApp.</p>
+                </div>
+                <button type="button" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
+            </div>
+
+            <!-- LINK NA BIO -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="text-2xl mb-2">🔗</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Link na Bio / Mini Site</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Central interativa com botões modernos e responsivos para reunir todos os links do seu Instagram em um só lugar.</p>
+                </div>
+                <button type="button" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
+            </div>
+
+            <!-- ILUSTRAÇÃO 2D -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">✏️</div>
                     <h3 class="font-black text-bordo text-xl mb-2">Ilustração 2D & Vetorização</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Criação de ilustrações autorais 2D, capas de livros infantis/comerciais e vetorização profissional de artes/logos.</p>
+                    <p class="text-sm text-bordo font-bold mb-4">Criação de ilustrações autorais 2D, capas de livros infantis/comerciais e vetorização profissional de logos.</p>
                 </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Ilustração 2D & Vetorização')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
+                <button type="button" onclick="selecionarServicoPorTabela('Ilustração 2D / Capas & Vetorização')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
             </div>
 
+            <!-- PERSONAGENS IA -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">🎭</div>
                     <h3 class="font-black text-bordo text-xl mb-2">Criação de Personagens com IA</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Desenvolvimento e estilização de mascotes e personagens através de Inteligência Artificial para marcas e canais.</p>
+                    <p class="text-sm text-bordo font-bold mb-4">Desenvolvimento e estilização consistente de mascotes e personagens por IA para marcas e canais.</p>
                 </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Criação de Personagens com IA')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
+                <button type="button" onclick="selecionarServicoPorTabela('Criação de Personagens IA')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
             </div>
 
+            <!-- IDENTIDADE VISUAL -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">🎨</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Identidade Visual</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Logo profissional, paleta de cores, tipografia e manual de marca completo em PDF.</p>
+                    <h3 class="font-black text-bordo text-xl mb-2">Identidade Visual Completa</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Logo profissional, paleta de cores, tipografia, aplicações e manual de marca oficial em PDF.</p>
                 </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
+                <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
             </div>
 
+            <!-- PLANOS DE POSTS -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
-                    <div class="text-2xl mb-2">🔗</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Link na Bio</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Central de links interativa e responsiva para organizar sua presença nas redes sociais.</p>
+                    <div class="text-2xl mb-2">📱</div>
+                    <h3 class="font-black text-bordo text-xl mb-2">Planos de Posts & Carrosséis</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Pacotes estruturados de artes para feed (estáticos e carrosséis educativos) com design de alto engajamento.</p>
                 </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Link na Bio / Cartão Interativo')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
+                <button type="button" onclick="selecionarServicoPorTabela('Plano Inicial: 4 Carrosséis ou 2+2')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Ver Planos de Posts 🛒</button>
             </div>
 
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">🌐</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Landing Page</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Página de alta conversão para capturar leads, apresentar serviços e fechar vendas.</p>
-                </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Landing Page de Vendas/Captura')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
-            </div>
-
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">🖼️</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Posts Estáticos</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Criação exclusiva de artes estáticas individuais para o feed do Instagram.</p>
-                </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Apenas Posts Estáticos')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
-            </div>
-
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">📑</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Carrosséis Informativos</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Sequência de artes educativas estruturadas para gerar alto engajamento e salvamentos.</p>
-                </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Apenas Carrosséis Informativos')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
-            </div>
-
+            <!-- COMBO COMPLETO -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">🚀</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Posts + Reels & Stories</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Mix completo mensal de posts, carrosséis, mais edição de Reels e Stories profissionais no CapCut.</p>
+                    <h3 class="font-black text-bordo text-xl mb-2">Combo Mensal Completo</h3>
+                    <p class="text-sm text-bordo font-bold mb-4">Gestão visual mensal com mix de posts, carrosséis, Reels dinâmicos e Stories semanais.</p>
                 </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Posts + Reels e Stories (CapCut)')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
+                <button type="button" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
             </div>
 
+            <!-- VÍDEOS COM IA -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">🤖</div>
                     <h3 class="font-black text-bordo text-xl mb-2">Vídeos & Animações com IA</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Geração de cenários e animações via IA, cobrindo créditos e montagem no CapCut.</p>
+                    <p class="text-sm text-bordo font-bold mb-4">Geração de cenários e animações com inteligência artificial, cobrindo créditos e montagem no CapCut.</p>
                 </div>
                 <button type="button" onclick="destacarOpcaoCalculadora('check-video-ia')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
             </div>
@@ -518,7 +541,7 @@
     <section id="tabela" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div class="text-center mb-8">
             <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
-                📋 Tabela Oficial
+                📋 Tabela Oficial & Precificação Justa
             </span>
             <h2 class="text-2xl sm:text-4xl font-black text-bordo">Serviços & Investimentos</h2>
             <p class="text-sm sm:text-base text-bordo font-bold mt-1">Dica: Clique em qualquer serviço para adicioná-lo automaticamente ao carrinho!</p>
@@ -526,81 +549,120 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
+            <!-- COLUNA 1: Web Design & Sites -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">💻</div>
-                    <h3 class="font-black text-bordo text-xl mb-3">1. Web Design & Sites</h3>
+                    <h3 class="font-black text-bordo text-xl mb-3">1. Web Design & Branding</h3>
                     <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Link na Bio / Cartão Interativo')">
-                                <strong class="text-bordo font-black">Link na Bio / Cartão Interativo ➔</strong>
-                                <span class="text-bordo font-bold">R$ 150,00</span>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')">
+                                <strong class="text-bordo font-black">Link na Bio / Mini Site ➔</strong>
+                                <span class="text-bordo font-bold">R$ 180,00</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Landing Page de Vendas/Captura')">
-                                <strong class="text-bordo font-black">Landing Page de Vendas / Captura ➔</strong>
-                                <span class="text-bordo font-bold">R$ 400,00</span>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')">
+                                <strong class="text-bordo font-black">Landing Page de Vendas / Leads ➔</strong>
+                                <span class="text-bordo font-bold">R$ 550,00</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')">
+                                <strong class="text-bordo font-black">Site Institucional (Multi-Páginas) ➔</strong>
+                                <span class="text-bordo font-bold">R$ 950,00</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')">
+                                <strong class="text-bordo font-black">Identidade Visual Completa + Manual ➔</strong>
+                                <span class="text-bordo font-bold">R$ 450,00</span>
                             </button>
                         </li>
                     </ul>
                 </div>
             </div>
 
+            <!-- COLUNA 2: Ilustração, IA & Audiovisual -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">🎨</div>
-                    <h3 class="font-black text-bordo text-xl mb-3">2. Ilustração, Personagens & IA</h3>
+                    <h3 class="font-black text-bordo text-xl mb-3">2. Ilustração & IA Criativa</h3>
                     <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Ilustração 2D & Vetorização')">
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Ilustração 2D / Capas & Vetorização')">
                                 <strong class="text-bordo font-black">Ilustração 2D & Vetorização ➔</strong>
-                                <span class="text-bordo font-bold">R$ 200,00</span>
+                                <span class="text-bordo font-bold">R$ 250,00</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Criação de Personagens com IA')">
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Criação de Personagens IA')">
                                 <strong class="text-bordo font-black">Criação de Personagens com IA ➔</strong>
-                                <span class="text-bordo font-bold">R$ 120,00</span>
+                                <span class="text-bordo font-bold">R$ 150,00</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="destacarOpcaoCalculadora('check-video-ia')">
-                                <strong class="text-bordo font-black">Vídeos com IA (por Minuto) ➔</strong>
-                                <span class="text-bordo font-bold">R$ 80,00 / min (Base créditos)</span>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-ia')">
+                                <strong class="text-bordo font-black">Vídeos & Animações IA (por min) ➔</strong>
+                                <span class="text-bordo font-bold">R$ 80,00 / min</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-geral')">
+                                <strong class="text-bordo font-black">Edição Geral CapCut (por min) ➔</strong>
+                                <span class="text-bordo font-bold">R$ 45,00 / min</span>
                             </button>
                         </li>
                     </ul>
                 </div>
             </div>
 
+            <!-- COLUNA 3: Planos de Social Media & Avulsos -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
-                    <div class="text-2xl mb-2">🚀</div>
-                    <h3 class="font-black text-bordo text-xl mb-3">3. Design & Redes Sociais</h3>
+                    <div class="text-2xl mb-2">📱</div>
+                    <h3 class="font-black text-bordo text-xl mb-3">3. Redes Sociais & Avulsos</h3>
                     <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Identidade Visual Completa')">
-                                <strong class="text-bordo font-black">Identidade Visual Completa ➔</strong>
-                                <span class="text-bordo font-bold">R$ 300,00</span>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Post Estático Avulso')">
+                                <strong class="text-bordo font-black">Post Estático Avulso ➔</strong>
+                                <span class="text-bordo font-bold">R$ 45,00</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Apenas Posts Estáticos')">
-                                <strong class="text-bordo font-black">Apenas Posts Estáticos ➔</strong>
-                                <span class="text-bordo font-bold">R$ 150,00</span>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Carrossel Avulso (Até 6 lâminas)')">
+                                <strong class="text-bordo font-black">Carrossel Avulso (Até 6 telas) ➔</strong>
+                                <span class="text-bordo font-bold">R$ 85,00</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Apenas Carrosséis Informativos')">
-                                <strong class="text-bordo font-black">Apenas Carrosséis Informativos ➔</strong>
-                                <span class="text-bordo font-bold">R$ 200,00</span>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Plano Inicial: 4 Carrosséis ou 2+2')">
+                                <strong class="text-bordo font-black">Plano Inicial (4 Carrosséis / 2+2) ➔</strong>
+                                <span class="text-bordo font-bold">R$ 280,00</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors flex flex-col" onclick="selecionarServicoPorTabela('Posts + Reels e Stories (CapCut)')">
-                                <strong class="text-bordo font-black">Posts + Reels e Stories (CapCut) ➔</strong>
-                                <span class="text-bordo font-bold">R$ 800,00</span>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Plano Básico: 6 Carrosséis ou 4+2')">
+                                <strong class="text-bordo font-black">Plano Básico (6 Carrosséis / 4+2) ➔</strong>
+                                <span class="text-bordo font-bold">R$ 360,00</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Plano Médio: 8 Carrosséis ou 6+2')">
+                                <strong class="text-bordo font-black">Plano Médio (8 Carrosséis / 6+2) ➔</strong>
+                                <span class="text-bordo font-bold">R$ 490,00</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Plano Avançado: 12 Carrosséis ou 6+6')">
+                                <strong class="text-bordo font-black">Plano Avançado (12 Carrosséis / 6+6) ➔</strong>
+                                <span class="text-bordo font-bold">R$ 650,00</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')">
+                                <strong class="text-bordo font-black">Combo Completo (Posts + Reels + Stories) ➔</strong>
+                                <span class="text-bordo font-bold">R$ 890,00</span>
                             </button>
                         </li>
                     </ul>
@@ -610,30 +672,56 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE EXPLICAÇÃO DA CALCULADORA -->
-    <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-4">
-        <div class="bg-white/90 border-2 border-rosaclaro rounded-3xl p-6 sm:p-8 shadow-md">
-            <div class="flex items-center gap-3 mb-3">
-                <span class="text-2xl">💡</span>
-                <h3 class="text-xl sm:text-2xl font-black text-bordo">Como funciona o nosso Carrinho & Calculadora?</h3>
-            </div>
-            <p class="text-sm sm:text-base text-bordo font-bold leading-relaxed mb-4">
-                Monte seu pacote de serviços com total autonomia. Veja como é simples:
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm font-bold text-bordo">
-                <div class="bg-creme/50 p-4 rounded-2xl border border-rosaclaro">
-                    <strong class="block text-base font-black mb-1">1. Adicione</strong>
-                    Clique nos botões dos serviços acima ou marque diretamente nas caixas abaixo para enviar ao seu carrinho de orçamento.
+    <!-- SEÇÃO: PERGUNTAS FREQUENTES (FAQ) -->
+    <section id="faq" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
+        <div class="text-center mb-8">
+            <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
+                ❓ Dúvidas Comuns
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-black text-bordo">Perguntas Frequentes</h2>
+            <p class="text-sm sm:text-base text-bordo font-bold mt-1">Tudo o que você precisa saber sobre prazos, pagamentos e processos:</p>
+        </div>
+
+        <div class="space-y-4 max-w-4xl mx-auto">
+            <details class="group bg-white border-2 border-rosaclaro rounded-2xl p-5 shadow-sm transition-all duration-300 open:border-rosa">
+                <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-base sm:text-lg select-none">
+                    <span>⏳ Em quanto tempo recebo meu projeto?</span>
+                    <span class="faq-icon transition-transform duration-300 text-rosa text-xl">▼</span>
+                </summary>
+                <div class="mt-3 text-sm sm:text-base text-bordo font-bold leading-relaxed border-t border-rosaclaro/50 pt-3">
+                    Os prazos variam conforme a complexidade. Projetos pontuais (como artes, identidade visual e landing pages) levam em média de 3 a 7 dias úteis após o envio completo do briefing. Nos planos mensais de social media, as entregas seguem um cronograma semanal organizado.
                 </div>
-                <div class="bg-creme/50 p-4 rounded-2xl border border-rosaclaro">
-                    <strong class="block text-base font-black mb-1">2. Gerencie</strong>
-                    Acompanhe os itens escolhidos, ajuste minutagens de vídeos e remova o que desejar com total controle em tempo real.
+            </details>
+
+            <details class="group bg-white border-2 border-rosaclaro rounded-2xl p-5 shadow-sm transition-all duration-300 open:border-rosa">
+                <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-base sm:text-lg select-none">
+                    <span>💳 Como funcionam as formas de pagamento?</span>
+                    <span class="faq-icon transition-transform duration-300 text-rosa text-xl">▼</span>
+                </summary>
+                <div class="mt-3 text-sm sm:text-base text-bordo font-bold leading-relaxed border-t border-rosaclaro/50 pt-3">
+                    Para projetos avulsos/fechados, trabalhamos com 50% de entrada (no início da produção) e os 50% restantes na entrega final aprovada. Para planos mensais recorrentes, o pagamento é antecipado a cada ciclo via PIX ou transferência.
                 </div>
-                <div class="bg-creme/50 p-4 rounded-2xl border border-rosaclaro">
-                    <strong class="block text-base font-black mb-1">3. Conclua</strong>
-                    Clique em enviar proposta para preencher seus dados de contato e receberemos seu briefing completo.
+            </details>
+
+            <details class="group bg-white border-2 border-rosaclaro rounded-2xl p-5 shadow-sm transition-all duration-300 open:border-rosa">
+                <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-base sm:text-lg select-none">
+                    <span>✏️ Tenho direito a quantas alterações no projeto?</span>
+                    <span class="faq-icon transition-transform duration-300 text-rosa text-xl">▼</span>
+                </summary>
+                <div class="mt-3 text-sm sm:text-base text-bordo font-bold leading-relaxed border-t border-rosaclaro/50 pt-3">
+                    Cada serviço inclui até 2 (duas) rodadas completas de revisões e ajustes finos dentro do escopo inicial acordado, garantindo que o resultado final fique 100% alinhado à sua expectativa.
                 </div>
-            </div>
+            </details>
+
+            <details class="group bg-white border-2 border-rosaclaro rounded-2xl p-5 shadow-sm transition-all duration-300 open:border-rosa">
+                <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-base sm:text-lg select-none">
+                    <span>📦 Quais arquivos e direitos eu recebo?</span>
+                    <span class="faq-icon transition-transform duration-300 text-rosa text-xl">▼</span>
+                </summary>
+                <div class="mt-3 text-sm sm:text-base text-bordo font-bold leading-relaxed border-t border-rosaclaro/50 pt-3">
+                    Após a quitação integral, você recebe todos os direitos de uso comercial das peças em alta definição (PNG, JPG, PDF e MP4 para vídeos). Identidades visuais incluem também o manual de marca oficial em PDF.
+                </div>
+            </details>
         </div>
     </section>
 
@@ -654,83 +742,158 @@
                 </button>
             </div>
 
-            <p class="text-sm sm:text-base text-bordo font-bold mb-6">
-                Marque ou ajuste os itens abaixo para compor o seu carrinho de compras em tempo real:
+            <p class="text-sm sm:text-base text-bordo font-bold mb-4">
+                Filtre por categoria e marque os serviços desejados para calcular seu investimento em tempo real:
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <!-- ABAS DE FILTRO POR CATEGORIA -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-6 text-xs sm:text-sm font-black scrollbar-none">
+                <button type="button" onclick="filtrarCategoria('todas', this)" class="btn-filtro px-4 py-2 rounded-xl bg-bordo text-creme border-2 border-bordo transition-all shrink-0">Todos os Serviços</button>
+                <button type="button" onclick="filtrarCategoria('web', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0">🌐 Web & Sites</button>
+                <button type="button" onclick="filtrarCategoria('identidade', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0">🎨 Identidade & Ilustração</button>
+                <button type="button" onclick="filtrarCategoria('social', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0">📱 Redes Sociais</button>
+                <button type="button" onclick="filtrarCategoria('video', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0">🎬 Vídeos & IA</button>
+            </div>
 
-                <label id="label-ilustracao-2d" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="200" data-name="Ilustração 2D & Vetorização" data-summary="Capas de livros, ilustrações autorais e vetorização." onchange="notificarCheckboxDireto(this, 'Ilustração 2D & Vetorização')">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8" id="grid-calc-items">
+
+                <!-- 1. SITE INSTITUCIONAL COMPLETO -->
+                <label id="label-site-completo" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="web">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="950" data-name="Site Institucional Multi-Páginas" data-summary="Site institucional completo em várias páginas, responsivo e moderno." onchange="notificarCheckboxDireto(this, 'Site Institucional Multi-Páginas')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg">Ilustração 2D & Vetorização</span>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Site Institucional Multi-Páginas</span>
+                        <span class="text-xs text-bordo font-bold">Até 5 páginas completas, institucional e responsivo</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 200</span>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 950</span>
                 </label>
 
-                <label id="label-personagens-ia" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="120" data-name="Criação de Personagens com IA" data-summary="Mascotes e artes conceituais com Inteligência Artificial." onchange="notificarCheckboxDireto(this, 'Criação de Personagens com IA')">
+                <!-- 2. LANDING PAGE -->
+                <label id="label-landing-page" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="web">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="550" data-name="Landing Page de Vendas / Captura" data-summary="Página de alta conversão responsiva com botão de WhatsApp/Cotação." onchange="notificarCheckboxDireto(this, 'Landing Page de Vendas / Captura')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg">Criação de Personagens com IA</span>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Landing Page de Vendas / Captura</span>
+                        <span class="text-xs text-bordo font-bold">Página única focada em converter clientes</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 120</span>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 550</span>
                 </label>
 
-                <label id="label-link-bio" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="150" data-name="Link na Bio / Cartão Interativo" data-summary="Central de links personalizada e responsiva." onchange="notificarCheckboxDireto(this, 'Link na Bio / Cartão Interativo')">
+                <!-- 3. LINK NA BIO -->
+                <label id="label-link-bio" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="web">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="180" data-name="Link na Bio / Mini Site Interativo" data-summary="Central de links interativa personalizada para bio." onchange="notificarCheckboxDireto(this, 'Link na Bio / Mini Site Interativo')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg">Link na Bio / Cartão Interativo</span>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Link na Bio / Mini Site Interativo</span>
+                        <span class="text-xs text-bordo font-bold">Central de botões modernos para redes sociais</span>
+                    </div>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 180</span>
+                </label>
+
+                <!-- 4. IDENTIDADE VISUAL -->
+                <label id="label-identidade-visual" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="identidade">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="450" data-name="Identidade Visual Completa + Manual" data-summary="Logo autoral, paleta cromática, tipografia e manual de marca em PDF." onchange="notificarCheckboxDireto(this, 'Identidade Visual Completa + Manual')">
+                    <div>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Identidade Visual Completa + Manual</span>
+                        <span class="text-xs text-bordo font-bold">Logo, manual em PDF e guia de uso oficial</span>
+                    </div>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 450</span>
+                </label>
+
+                <!-- 5. ILUSTRAÇÃO 2D -->
+                <label id="label-ilustracao-2d" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="identidade">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="250" data-name="Ilustração 2D / Capas & Vetorização" data-summary="Ilustrações infantis, capas de livros e vetorização vetorial." onchange="notificarCheckboxDireto(this, 'Ilustração 2D / Capas & Vetorização')">
+                    <div>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Ilustração 2D / Capas & Vetorização</span>
+                        <span class="text-xs text-bordo font-bold">Capas de livros, artes autorais e vetorização</span>
+                    </div>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 250</span>
+                </label>
+
+                <!-- 6. PERSONAGENS IA -->
+                <label id="label-personagens-ia" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="identidade">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="150" data-name="Criação de Personagens IA" data-summary="Criação de mascotes com prompts consistentes e direção de arte." onchange="notificarCheckboxDireto(this, 'Criação de Personagens IA')">
+                    <div>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Criação de Personagens IA</span>
+                        <span class="text-xs text-bordo font-bold">Mascotes e arte conceitual com Inteligência Artificial</span>
                     </div>
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 150</span>
                 </label>
 
-                <label id="label-landing-page" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="400" data-name="Landing Page de Vendas/Captura" data-summary="Página focada em atração e conversão de leads." onchange="notificarCheckboxDireto(this, 'Landing Page de Vendas/Captura')">
+                <!-- 7. POST ESTÁTICO AVULSO -->
+                <label id="label-post-avulso" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="45" data-name="Post Estático Avulso" data-summary="Criação de 1 arte estática individual personalizada para o feed." onchange="notificarCheckboxDireto(this, 'Post Estático Avulso')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg">Landing Page de Vendas / Captura</span>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Post Estático Avulso</span>
+                        <span class="text-xs text-bordo font-bold">1 arte individual de alto impacto para feed</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 400</span>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 45</span>
                 </label>
 
-                <label id="label-identidade-visual" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="300" data-name="Identidade Visual Completa" data-summary="Logo, paleta, tipografia e manual em PDF." onchange="notificarCheckboxDireto(this, 'Identidade Visual Completa')">
+                <!-- 8. CARROSSEL AVULSO -->
+                <label id="label-carrossel-avulso" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="85" data-name="Carrossel Avulso (Até 6 lâminas)" data-summary="Criação de 1 carrossel educativo/informativo com até 6 telas." onchange="notificarCheckboxDireto(this, 'Carrossel Avulso (Até 6 lâminas)')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg">Identidade Visual Completa</span>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Carrossel Avulso (Até 6 Telas)</span>
+                        <span class="text-xs text-bordo font-bold">Sequência visual contínua para alto engajamento</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 300</span>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 85</span>
                 </label>
 
-                <label id="label-posts-estaticos" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="150" data-name="Apenas Posts Estáticos" data-summary="Criação exclusiva de artes estáticas para o feed." onchange="notificarCheckboxDireto(this, 'Apenas Posts Estáticos')">
+                <!-- 9. PLANO INICIAL POSTS -->
+                <label id="label-plano-inicial" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="280" data-name="Plano Inicial: 4 Carrosséis ou 2+2" data-summary="Pacote com 4 carrosséis ou 2 carrosséis + 2 posts estáticos." onchange="notificarCheckboxDireto(this, 'Plano Inicial: 4 Carrosséis ou 2+2')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg">Apenas Posts Estáticos</span>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Plano Inicial: 4 Carrosséis ou 2+2</span>
+                        <span class="text-xs text-bordo font-bold">Ideal para começar sua presença de feed</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 150</span>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 280</span>
                 </label>
 
-                <label id="label-carrosseis" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="200" data-name="Apenas Carrosséis Informativos" data-summary="Criação exclusiva de carrosséis educativos/informativos." onchange="notificarCheckboxDireto(this, 'Apenas Carrosséis Informativos')">
+                <!-- 10. PLANO BÁSICO POSTS -->
+                <label id="label-plano-basico" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="360" data-name="Plano Básico: 6 Carrosséis ou 4+2" data-summary="Pacote com 6 carrosséis ou 4 carrosséis + 2 posts estáticos." onchange="notificarCheckboxDireto(this, 'Plano Básico: 6 Carrosséis ou 4+2')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg">Apenas Carrosséis Informativos</span>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Plano Básico: 6 Carrosséis ou 4+2</span>
+                        <span class="text-xs text-bordo font-bold">Frequência semanal constante de publicações</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 200</span>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 360</span>
                 </label>
 
-                <label id="label-pacote-completo" class="flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="800" data-name="Posts + Reels e Stories (CapCut)" data-summary="Mix completo de posts para feed, carrosséis, reels e stories." onchange="notificarCheckboxDireto(this, 'Posts + Reels e Stories (CapCut)')">
+                <!-- 11. PLANO MÉDIO POSTS -->
+                <label id="label-plano-medio" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="490" data-name="Plano Médio: 8 Carrosséis ou 6+2" data-summary="Pacote com 8 carrosséis ou 6 carrosséis + 2 posts estáticos." onchange="notificarCheckboxDireto(this, 'Plano Médio: 8 Carrosséis ou 6+2')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg">Posts + Reels e Stories (CapCut)</span>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Plano Médio: 8 Carrosséis ou 6+2</span>
+                        <span class="text-xs text-bordo font-bold">2 publicações semanais completas de alto nível</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 800</span>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 490</span>
+                </label>
+
+                <!-- 12. PLANO AVANÇADO POSTS -->
+                <label id="label-plano-avancado" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="650" data-name="Plano Avançado: 12 Carrosséis ou 6+6" data-summary="Pacote com 12 carrosséis ou 6 carrosséis + 6 posts estáticos." onchange="notificarCheckboxDireto(this, 'Plano Avançado: 12 Carrosséis ou 6+6')">
+                    <div>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Plano Avançado: 12 Carrosséis ou 6+6</span>
+                        <span class="text-xs text-bordo font-bold">3 publicações semanais para autoridade máxima</span>
+                    </div>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 650</span>
+                </label>
+
+                <!-- 13. COMBO SOCIAL MEDIA COMPLETO -->
+                <label id="label-combo-completo" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60 md:col-span-2" data-cat="social">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="890" data-name="Combo Social Media Completo: Posts + Reels + Stories" data-summary="Feed mensal completo (posts/carrosséis) + 4 Reels editados no CapCut + Stories." onchange="notificarCheckboxDireto(this, 'Combo Social Media Completo: Posts + Reels + Stories')">
+                    <div>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Combo Social Media Completo: Posts + Reels + Stories</span>
+                        <span class="text-xs text-bordo font-bold">Mix mensal completo de engajamento, carrosséis e vídeos dinâmicos</span>
+                    </div>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 890</span>
                 </label>
 
                 <!-- VÍDEOS COM IA POR MINUTAGEM -->
-                <div id="wrapper-video-ia" class="flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all">
+                <div id="wrapper-video-ia" class="calc-item-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo" onchange="toggleIaMinutos(); calcularTotal(); if(this.checked) mostrarToast('Vídeos com IA adicionado ao carrinho!', '🤖');">
                         <div>
-                            <span class="font-black text-bordo text-base sm:text-lg">Vídeos & Animações com IA + CapCut (R$ 80,00 por minuto)</span>
-                            <p class="text-xs sm:text-sm text-bordo font-bold">Custo proporcional considerando o gasto de créditos de IA para cenários/personagens + edição.</p>
+                            <span class="font-black text-bordo text-base sm:text-lg block">Edição de Vídeos com IA</span>
+                            <p class="text-xs sm:text-sm text-bordo font-bold">Geração de cenários/personagens com IA + montagem e efeitos no CapCut.</p>
                         </div>
                         <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 80/min</span>
                     </label>
@@ -738,29 +901,30 @@
                     <div id="box-minutos-ia" class="hidden flex items-center justify-between pt-2 border-t border-rosaclaro/60 pl-9">
                         <span class="text-sm font-black text-bordo">Quantos Minutos de Vídeo com IA?</span>
                         <div class="flex items-center gap-2">
-                            <button type="button" onclick="mudarIaMinutos(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center">-</button>
+                            <button type="button" onclick="mudarIaMinutos(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">-</button>
                             <input type="number" id="input-minutos-ia" value="1" min="1" max="60" onchange="calcularTotal()" class="w-14 text-center border-2 border-rosaclaro rounded-lg font-black text-base py-1 bg-white">
-                            <button type="button" onclick="mudarIaMinutos(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center">+</button>
+                            <button type="button" onclick="mudarIaMinutos(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">+</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- EDIÇÃO DE VÍDEO GERAL POR MINUTAGEM -->
-                <div id="wrapper-video-geral" class="flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all">
+                <div id="wrapper-video-geral" class="calc-item-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo" onchange="toggleVideoGeral(); calcularTotal(); if(this.checked) mostrarToast('Edição Geral de Vídeos adicionada ao carrinho!', '🎬');">
                         <div>
-                            <span class="font-black text-bordo text-base sm:text-lg">Edição Geral de Vídeos (Reels, TikTok, Vlogs) - R$ 40,00/minuto</span>
+                            <span class="font-black text-bordo text-base sm:text-lg block">Edição de Vídeos CapCut</span>
+                            <p class="text-xs sm:text-sm text-bordo font-bold">Cortes dinâmicos, legendas sincronizadas, sonorização e transições de retenção.</p>
                         </div>
-                        <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 40/min</span>
+                        <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 45/min</span>
                     </label>
 
                     <div id="box-minutos-geral" class="hidden flex items-center justify-between pt-2 border-t border-rosaclaro/60 pl-9">
-                        <span class="text-sm font-black text-bordo">Quantos Minutos?</span>
+                        <span class="text-sm font-black text-bordo">Quantos Minutos de Edição?</span>
                         <div class="flex items-center gap-2">
-                            <button type="button" onclick="mudarMinutosGeral(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center">-</button>
+                            <button type="button" onclick="mudarMinutosGeral(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">-</button>
                             <input type="number" id="input-minutos-geral" value="1" min="1" max="120" onchange="calcularTotal()" class="w-14 text-center border-2 border-rosaclaro rounded-lg font-black text-base py-1 bg-white">
-                            <button type="button" onclick="mudarMinutosGeral(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center">+</button>
+                            <button type="button" onclick="mudarMinutosGeral(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">+</button>
                         </div>
                     </div>
                 </div>
@@ -783,9 +947,9 @@
                 </div>
 
                 <div class="bg-white border-2 border-rosaclaro rounded-xl p-4 text-left">
-                    <h3 class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider mb-2">🛍️ Itens no Carrinho (Você pode remover clicando abaixo):</h3>
+                    <h3 class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider mb-2">🛍️ Itens Selecionados no Orçamento:</h3>
                     <ul class="text-sm sm:text-base text-bordo font-bold space-y-2 divide-y divide-rosaclaro/40" id="resumo-entregas">
-                        <li class="pt-1">Seu carrinho está vazio. Adicione itens acima ou clique nas especialidades.</li>
+                        <li class="pt-1">Seu carrinho está vazio. Escolha seus serviços acima.</li>
                     </ul>
                 </div>
             </div>
@@ -800,7 +964,7 @@
             <div class="text-center mb-4">
                 <span class="inline-block bg-rosa text-bordo font-black text-xs px-3.5 py-1 rounded-full mb-1">📋 Mini Briefing & Pedido</span>
                 <h2 class="text-2xl sm:text-3xl font-black text-bordo">Quase Pronto! ✨</h2>
-                <p class="text-xs sm:text-sm text-bordo font-bold">Preencha os detalhes abaixo para salvarmos no Dashboard e abrirmos nosso Instagram!</p>
+                <p class="text-xs sm:text-sm text-bordo font-bold">Preencha os detalhes para gravarmos sua proposta e redirecionar ao direct do Instagram!</p>
             </div>
 
             <div class="bg-creme/60 p-3.5 rounded-2xl border border-rosaclaro mb-4">
@@ -808,7 +972,7 @@
                     <span class="text-xs font-black text-bordo uppercase">Resumo da Simulação:</span>
                     <strong class="text-base font-black text-bordo" id="modal-total-valor">R$ 0,00</strong>
                 </div>
-                <div id="modal-resumo-itens" class="text-xs text-bordo font-bold mt-1 max-h-20 overflow-y-auto"></div>
+                <div id="modal-resumo-itens" class="text-xs text-bordo font-bold mt-1 max-h-24 overflow-y-auto"></div>
             </div>
 
             <form id="formLead" onsubmit="enviarDadosPlanilha(event)">
@@ -834,7 +998,7 @@
 
                     <div>
                         <label class="block text-xs font-black text-bordo mb-1">4. Detalhes / Prazos / Minutos:*</label>
-                        <textarea id="cliente-detalhes-prazos" rows="4" required placeholder="Descreva o objetivo do projeto, minutagem do vídeo, prazos desejados..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
+                        <textarea id="cliente-detalhes-prazos" rows="4" required placeholder="Descreva o objetivo do projeto, tipo de site, quantidades, minutagem e referências desejadas..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
                     </div>
                 </div>
 
@@ -890,7 +1054,7 @@
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 max-w-md w-full text-center relative">
             <h2 class="text-2xl font-black text-bordo mb-3" id="modal-titulo">Ferramenta</h2>
             <p class="text-base text-bordo font-bold mb-6" id="modal-desc">Descrição</p>
-            <button type="button" onclick="fecharModal()" class="bg-bordo text-creme font-black text-xs py-3 px-8 rounded-xl">Fechar</button>
+            <button type="button" onclick="fecharModal()" class="bg-bordo text-creme font-black text-xs py-3 px-8 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Fechar</button>
         </div>
     </div>
 
@@ -951,6 +1115,15 @@
         }
 
         function notificarCheckboxDireto(checkbox, nomeServico) {
+            const labelParent = checkbox.closest('label');
+            if (labelParent) {
+                if (checkbox.checked) {
+                    labelParent.classList.add('card-selected');
+                } else {
+                    labelParent.classList.remove('card-selected');
+                }
+            }
+
             calcularTotal();
             if (checkbox.checked) {
                 mostrarToast(`"${nomeServico}" adicionado ao carrinho!`, "🛒");
@@ -973,7 +1146,7 @@
             if (itemEncontrado) {
                 const labelParent = itemEncontrado.closest('label');
                 if (labelParent) {
-                    labelParent.classList.add('card-feedback');
+                    labelParent.classList.add('card-selected', 'card-feedback');
                     setTimeout(() => labelParent.classList.remove('card-feedback'), 600);
                 }
             }
@@ -992,12 +1165,12 @@
 
                 const wrapper = document.getElementById('wrapper-' + idCheckbox.replace('check-', ''));
                 if (wrapper) {
-                    wrapper.classList.add('card-feedback');
+                    wrapper.classList.add('card-selected', 'card-feedback');
                     setTimeout(() => wrapper.classList.remove('card-feedback'), 600);
                 }
             }
             calcularTotal();
-            mostrarToast("Vídeos com IA adicionado ao carrinho!", "🛒");
+            mostrarToast("Serviço de vídeo adicionado ao carrinho!", "🎬");
             document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1006,14 +1179,18 @@
             items.forEach(item => {
                 if(item.getAttribute('data-name') === nomeServico) {
                     item.checked = false;
+                    const labelParent = item.closest('label');
+                    if (labelParent) labelParent.classList.remove('card-selected');
                 }
             });
-            if(nomeServico.includes('Vídeos com IA')) {
+            if(nomeServico.includes('Vídeos com IA') || nomeServico.includes('Edição de Vídeos com IA')) {
                 document.getElementById('check-video-ia').checked = false;
+                document.getElementById('wrapper-video-ia').classList.remove('card-selected');
                 toggleIaMinutos();
             }
-            if(nomeServico.includes('Edição Geral')) {
+            if(nomeServico.includes('Edição Geral') || nomeServico.includes('Edição de Vídeos CapCut')) {
                 document.getElementById('check-video-geral').checked = false;
+                document.getElementById('wrapper-video-geral').classList.remove('card-selected');
                 toggleVideoGeral();
             }
             calcularTotal();
@@ -1023,8 +1200,13 @@
         function toggleVideoGeral() {
             const isChecked = document.getElementById('check-video-geral').checked;
             const box = document.getElementById('box-minutos-geral');
+            const wrapper = document.getElementById('wrapper-video-geral');
             box.classList.toggle('hidden', !isChecked);
             box.classList.toggle('flex', isChecked);
+            if (wrapper) {
+                if(isChecked) wrapper.classList.add('card-selected');
+                else wrapper.classList.remove('card-selected');
+            }
         }
 
         function mudarMinutosGeral(qtd) {
@@ -1038,8 +1220,13 @@
         function toggleIaMinutos() {
             const isChecked = document.getElementById('check-video-ia').checked;
             const box = document.getElementById('box-minutos-ia');
+            const wrapper = document.getElementById('wrapper-video-ia');
             box.classList.toggle('hidden', !isChecked);
             box.classList.toggle('flex', isChecked);
+            if (wrapper) {
+                if(isChecked) wrapper.classList.add('card-selected');
+                else wrapper.classList.remove('card-selected');
+            }
         }
 
         function mudarIaMinutos(qtd) {
@@ -1051,18 +1238,41 @@
         }
 
         function limparCalculadora() {
-            document.querySelectorAll('.calc-item').forEach(item => item.checked = false);
+            document.querySelectorAll('.calc-item').forEach(item => {
+                item.checked = false;
+                const labelParent = item.closest('label');
+                if (labelParent) labelParent.classList.remove('card-selected');
+            });
 
             document.getElementById('check-video-geral').checked = false;
             document.getElementById('box-minutos-geral').classList.add('hidden');
             document.getElementById('input-minutos-geral').value = 1;
+            document.getElementById('wrapper-video-geral').classList.remove('card-selected');
 
             document.getElementById('check-video-ia').checked = false;
             document.getElementById('box-minutos-ia').classList.add('hidden');
             document.getElementById('input-minutos-ia').value = 1;
+            document.getElementById('wrapper-video-ia').classList.remove('card-selected');
 
             calcularTotal();
             mostrarToast("Carrinho esvaziado!", "🔄");
+        }
+
+        function filtrarCategoria(cat, btn) {
+            document.querySelectorAll('.btn-filtro').forEach(b => {
+                b.classList.remove('bg-bordo', 'text-creme', 'border-bordo');
+                b.classList.add('bg-white', 'text-bordo', 'border-rosaclaro');
+            });
+            btn.classList.add('bg-bordo', 'text-creme', 'border-bordo');
+            btn.classList.remove('bg-white', 'text-bordo', 'border-rosaclaro');
+
+            document.querySelectorAll('.calc-item-card').forEach(card => {
+                if(cat === 'todas' || card.getAttribute('data-cat') === cat) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
         }
 
         function obterItensSelecionadosTexto() {
@@ -1077,13 +1287,13 @@
             const checkIa = document.getElementById('check-video-ia');
             if(checkIa.checked) {
                 const minIa = document.getElementById('input-minutos-ia').value || 1;
-                lista.push(`Vídeos com IA + CapCut (${minIa} min)`);
+                lista.push(`Edição de Vídeos com IA (${minIa} min)`);
             }
 
             const checkGeral = document.getElementById('check-video-geral');
             if(checkGeral.checked) {
                 const minGeral = document.getElementById('input-minutos-geral').value || 1;
-                lista.push(`Edição Geral de Vídeos (${minGeral} min)`);
+                lista.push(`Edição de Vídeos CapCut (${minGeral} min)`);
             }
 
             return lista;
@@ -1118,25 +1328,25 @@
 
                 const li = document.createElement('li');
                 li.className = "pt-2 pb-1 flex justify-between items-center";
-                li.innerHTML = `<div><strong class="text-bordo">Vídeos com IA + CapCut (${minutosIa} min)</strong><br><span class="text-xs text-bordo font-bold">Custo de créditos de IA e edição (R$ 80/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoIa.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Vídeos com IA + CapCut')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
+                li.innerHTML = `<div><strong class="text-bordo">Edição de Vídeos com IA (${minutosIa} min)</strong><br><span class="text-xs text-bordo font-bold">Geração de cenários/personagens + CapCut (R$ 80/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoIa.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Edição de Vídeos com IA')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
                 resumoUl.appendChild(li);
             }
 
             const checkVideoGeral = document.getElementById('check-video-geral');
             if(checkVideoGeral.checked) {
                 const minutos = parseInt(document.getElementById('input-minutos-geral').value) || 1;
-                const precoVideo = minutos * 40;
+                const precoVideo = minutos * 45;
                 total += precoVideo;
                 selecionados++;
 
                 const li = document.createElement('li');
                 li.className = "pt-2 pb-1 flex justify-between items-center";
-                li.innerHTML = `<div><strong class="text-bordo">Edição Geral de Vídeos (${minutos} min)</strong><br><span class="text-xs text-bordo font-bold">Edição profissional no CapCut (R$ 40/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoVideo.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Edição Geral de Vídeos')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
+                li.innerHTML = `<div><strong class="text-bordo">Edição de Vídeos CapCut (${minutos} min)</strong><br><span class="text-xs text-bordo font-bold">Edição profissional e dinâmica (R$ 45/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoVideo.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Edição de Vídeos CapCut')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
                 resumoUl.appendChild(li);
             }
 
             if(selecionados === 0) {
-                resumoUl.innerHTML = '<li class="pt-1">Seu carrinho está vazio. Adicione itens acima ou clique nas especialidades.</li>';
+                resumoUl.innerHTML = '<li class="pt-1">Seu carrinho está vazio. Escolha seus serviços acima.</li>';
             }
 
             const totalFormatado = 'R$ ' + total.toFixed(2).replace('.', ',');
