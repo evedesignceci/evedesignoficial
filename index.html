@@ -6,13 +6,13 @@
     <title>Eve Design | Identidade Visual, Animações, Ilustração 2D, Sites & IA Criativa</title>
 
     <!-- FAVICON DA ABA DO NAVEGADOR -->
-    <link rel="icon" type="image/png" sizes="64x64" href="https://i.imgur.com/bm07Eug.png">
-    <link rel="apple-touch-icon" href="https://i.imgur.com/bm07Eug.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png">
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png">
 
     <!-- Meta tags Open Graph (Prévia de Link) -->
     <meta property="og:title" content="Eve Design | Identidade Visual, Animações, Ilustração 2D, Sites & IA Criativa">
     <meta property="og:description" content="Desenvolvo identidades visuais, ilustração 2D, vetorização, criação de personagens por IA, design de posts, sites e landing pages, cenários 3D e vídeos profissionais pelo CapCut.">
-    <meta property="og:image" content="https://i.imgur.com/RLBQIdy.png">
+    <meta property="og:image" content="https://res.cloudinary.com/oactqmgs/image/upload/v1786908961/EVE_LOGO_EVE_E_RAPOSA_1.png">
     <meta property="og:type" content="website">
 
     <!-- Tailwind CSS CDN -->
@@ -110,9 +110,10 @@
     <header class="w-full bg-white/95 backdrop-blur-md border-b-2 border-rosaclaro sticky top-0 z-40 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 
+            <!-- LOGO / IDENTIDADE -->
             <a href="#sobre-mim" class="flex items-center gap-3 group rounded-xl p-1 transition-all">
                 <div class="relative">
-                    <img src="https://i.imgur.com/DXgf8v3.png" alt="Evelyn Cecilia" class="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png" alt="Eve Design Studio" class="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-contain p-0.5 bg-creme border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
                     <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full" title="Disponível para novos projetos"></span>
                 </div>
                 <div>
@@ -121,7 +122,8 @@
                 </div>
             </a>
 
-            <nav class="hidden md:flex items-center gap-5 text-sm font-black text-bordo uppercase tracking-wide">
+            <!-- NAVEGAÇÃO DESKTOP -->
+            <nav class="hidden lg:flex items-center gap-5 text-sm font-black text-bordo uppercase tracking-wide">
                 <a href="#sobre-mim" class="hover:text-rosa transition-colors">Sobre Mim</a>
                 <a href="#especialidades" class="hover:text-rosa transition-colors">Especialidades</a>
                 <a href="#exemplos" class="hover:text-rosa transition-colors">Projetos</a>
@@ -129,20 +131,57 @@
                 <a href="#tabela" class="hover:text-rosa transition-colors">Tabela</a>
                 <a href="#faq" class="hover:text-rosa transition-colors">Dúvidas</a>
                 <a href="#simulador" class="hover:text-rosa transition-colors">Calculadora</a>
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="bg-rosa/20 text-bordo hover:bg-rosa transition-all font-black px-3.5 py-1.5 rounded-xl border border-rosa/50">Portfólio 📁</a>
+                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="bg-rosa/20 text-bordo hover:bg-rosa transition-all font-black px-3.5 py-1.5 rounded-xl border border-rosa/50 flex items-center gap-1.5">
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain">
+                    Portfólio
+                </a>
             </nav>
 
-            <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-2 px-4 rounded-xl flex items-center gap-2 transition-all shadow-sm">
-                <img src="https://i.imgur.com/EE5DwcB.png" alt="" class="w-3.5 h-3.5 object-contain brightness-200">
-                <span>Instagram</span>
-            </a>
+            <!-- AÇÕES RÁPIDAS & BOTÃO MOBILE -->
+            <div class="flex items-center gap-2">
+                <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="hidden sm:flex bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-2 px-3.5 rounded-xl items-center gap-2 transition-all shadow-sm">
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain">
+                    <span>Instagram</span>
+                </a>
+
+                <!-- BOTÃO MENU HAMBÚRGUER MOBILE -->
+                <button type="button" onclick="toggleMenuMobile()" aria-label="Abrir Menu" class="lg:hidden p-2 rounded-xl border-2 border-rosaclaro bg-creme/50 hover:bg-rosa text-bordo transition-all focus:outline-none">
+                    <svg id="icone-menu-abrir" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="icone-menu-fechar" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- MENU MOBILE EXPANSÍVEL -->
+        <div id="menu-mobile" class="hidden lg:hidden bg-white border-t-2 border-rosaclaro px-6 py-5 shadow-xl">
+            <nav class="flex flex-col gap-3.5 text-base font-black text-bordo uppercase">
+                <a href="#sobre-mim" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">👤 Sobre Mim</a>
+                <a href="#especialidades" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">⭐ Especialidades</a>
+                <a href="#exemplos" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">💼 Projetos & Clientes</a>
+                <a href="#depoimentos" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">💬 Avaliações</a>
+                <a href="#tabela" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">📋 Tabela de Preços</a>
+                <a href="#faq" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">❓ Dúvidas</a>
+                <a href="#simulador" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">🧮 Calculadora & Carrinho</a>
+                <div class="pt-3 border-t border-rosaclaro/60 flex flex-col gap-2.5">
+                    <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-full bg-rosa text-bordo font-black text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain"> Portfólio Canva
+                    </a>
+                    <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme font-black text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain"> Seguir no Instagram
+                    </a>
+                </div>
+            </nav>
         </div>
     </header>
 
     <!-- BANNER HERO -->
     <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2">
         <div class="rounded-3xl overflow-hidden border-2 border-rosa shadow-lg bg-white">
-            <img src="https://i.imgur.com/dXVvX40.png" alt="Eve Design Studio - Banner" class="w-full h-auto object-cover max-h-[400px]">
+            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/BANNER_EVE_DESIGN.png" alt="Eve Design Studio - Banner" class="w-full h-auto object-cover max-h-[420px]">
         </div>
     </section>
 
@@ -160,14 +199,22 @@
             Transformo ideias em ecossistemas digitais completos de alta conversão. Simule seu investimento em tempo real e envie seu pedido diretamente pelo Instagram.
         </p>
 
-        <!-- REDES SOCIAIS -->
+        <!-- REDES SOCIAIS & LINKS RÁPIDOS -->
         <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap max-w-3xl mx-auto mb-4">
             <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-rosa text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
-                📁 Portfólio Canva
+                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain"> Portfólio Canva
             </a>
             <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo">
-                <img src="https://i.imgur.com/EE5DwcB.png" alt="" class="w-3.5 h-3.5 object-contain">
+                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain">
                 <span>Instagram</span>
+            </a>
+            <a href="https://br.pinterest.com/eve_design_/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo">
+                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PINTEREST.png" alt="" class="w-4 h-4 object-contain">
+                <span>Pinterest</span>
+            </a>
+            <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo">
+                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/BEHANCE.png" alt="" class="w-4 h-4 object-contain">
+                <span>Behance</span>
             </a>
             <button type="button" onclick="abrirModalFeedback()" class="px-4 py-2 bg-amarelo text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
                 ⭐ Deixar meu Feedback
@@ -180,7 +227,9 @@
 
         <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="group relative w-full bg-white border-2 border-rosaclaro rounded-3xl p-6 flex flex-col justify-between text-left shadow-sm hover:shadow-xl hover:border-rosa hover:-translate-y-1 transition-all duration-300">
             <div>
-                <div class="w-12 h-12 rounded-2xl bg-bordo text-creme flex items-center justify-center font-extrabold text-2xl group-hover:bg-rosa group-hover:text-bordo transition-colors mb-4 shadow-md">📁</div>
+                <div class="w-12 h-12 rounded-2xl bg-bordo p-2.5 flex items-center justify-center group-hover:bg-rosa transition-colors mb-4 shadow-md">
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-full h-full object-contain">
+                </div>
                 <h2 class="font-black text-bordo text-xl group-hover:text-rosa transition-colors mb-1">Portfólio Interativo</h2>
                 <p class="text-sm sm:text-base text-bordo font-bold leading-snug mb-4">Acesse apresentações completas, ilustrações 2D, criação de sites e identidades visuais organizadas.</p>
             </div>
@@ -204,7 +253,7 @@
             </div>
             <div class="flex flex-col gap-2 w-full pt-2 border-t border-rosaclaro/60">
                 <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                    <img src="https://i.imgur.com/EE5DwcB.png" alt="" class="w-3.5 h-3.5 object-contain brightness-200"> Falar no Instagram
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain"> Falar no Instagram
                 </a>
                 <a href="#simulador" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs sm:text-sm py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-all text-center">
                     📋 Simular na Calculadora
@@ -219,11 +268,12 @@
         <div class="bg-white/90 border-2 border-rosaclaro rounded-3xl p-6 sm:p-10 shadow-lg backdrop-blur-sm">
             <div class="flex flex-col md:flex-row items-center gap-8">
 
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-40 h-40 md:w-52 md:h-52 shrink-0 relative group cursor-pointer" title="Clique para ver o Portfólio!">
+                <!-- MASCOTE / PERSONAGEM OFICIAL -->
+                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-48 h-48 md:w-56 md:h-56 shrink-0 relative group cursor-pointer" title="Clique para ver o Portfólio!">
                     <div class="absolute -inset-1 bg-gradient-to-r from-rosa to-amarelo rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                    <img src="https://i.imgur.com/GT41Uku.png" alt="Evelyn Ilustração - Ver Portfólio" class="relative w-full h-full object-contain rounded-2xl bg-rosaclaro/30 p-2 border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
-                    <span class="absolute bottom-2 right-2 bg-amarelo text-bordo font-black text-xs px-2.5 py-1 rounded-full border border-bordo shadow-md">
-                        📁 Portfólio
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png" alt="Personagem Eve Design Studio" class="relative w-full h-full object-contain rounded-2xl bg-rosaclaro/30 p-2 border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
+                    <span class="absolute bottom-2 right-2 bg-amarelo text-bordo font-black text-xs px-2.5 py-1 rounded-full border border-bordo shadow-md flex items-center gap-1">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-3 h-3 object-contain"> Portfólio
                     </span>
                 </a>
 
@@ -243,27 +293,43 @@
                         <h3 class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider mb-3">
                             Minha Caixa de Ferramentas (Clique para detalhes):
                         </h3>
-                        <div class="flex flex-wrap gap-2.5">
-                            <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais, ilustração 2D e vetorização técnica perfeita.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
-                                <img src="https://i.imgur.com/Q5aIApP.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2.5">
+                            
+                            <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais, ilustração 2D e vetorização técnica perfeita.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/ADOBE_ILUSTARTOR.png" alt="Adobe Illustrator" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Illustrator</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Blender 3D', 'Intermediário', 'Modelagem 3D, personagens e cenários texturizados.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
-                                <img src="https://i.imgur.com/jQt50UJ.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+
+                            <button type="button" onclick="mostrarNivel('Blender 3D', 'Intermediário', 'Modelagem 3D, personagens e cenários texturizados.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/BLENDER.png" alt="Blender 3D" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Blender 3D</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Canva Pro', 'Especialista', 'Layouts, capas e carrosséis com alto dinamismo.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
-                                <img src="https://i.imgur.com/9eCY7fO.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
-                                <span class="text-xs font-black text-bordo">Canva</span>
-                            </button>
-                            <button type="button" onclick="mostrarNivel('Gemini IA', 'Avançado', 'Criação de conceitos visuais, prompts de personagens e roteirização.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
-                                <img src="https://i.imgur.com/jzEwkZc.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
-                                <span class="text-xs font-black text-bordo">Gemini IA</span>
-                            </button>
-                            <button type="button" onclick="mostrarNivel('CapCut', 'Avançado', 'Edição profissional de vídeos, transições e cortes de alta retenção.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 min-w-[90px] flex-1 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
-                                <img src="https://i.imgur.com/7nzUf4g.png" alt="" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+
+                            <button type="button" onclick="mostrarNivel('CapCut Pro', 'Avançado', 'Edição profissional de vídeos, transições e cortes de alta retenção.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CAPCUT.png" alt="CapCut" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">CapCut</span>
                             </button>
+
+                            <button type="button" onclick="mostrarNivel('Canva Pro', 'Especialista', 'Layouts, capas e carrosséis com alto dinamismo.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CANVA.png" alt="Canva Pro" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+                                <span class="text-xs font-black text-bordo">Canva</span>
+                            </button>
+
+                            <button type="button" onclick="mostrarNivel('Gemini IA', 'Avançado', 'Criação de conceitos visuais, prompts de personagens e roteirização.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/GEMINI.png" alt="Gemini IA" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+                                <span class="text-xs font-black text-bordo">Gemini IA</span>
+                            </button>
+
+                            <button type="button" onclick="mostrarNivel('ChatGPT', 'Avançado', 'Engenharia de prompts estratégicos, redação publicitária e roteiros.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CHATGPT.png" alt="ChatGPT" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+                                <span class="text-xs font-black text-bordo">ChatGPT</span>
+                            </button>
+
+                            <button type="button" onclick="mostrarNivel('Grok IA', 'Avançado', 'Pesquisa criativa de tendências, geração e ideação em tempo real.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/GROK.png" alt="Grok IA" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+                                <span class="text-xs font-black text-bordo">Grok IA</span>
+                            </button>
+
                         </div>
                     </div>
                 </div>
@@ -283,7 +349,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-            <!-- CRIAÇÃO DE SITES (MULTIUSO) -->
+            <!-- CRIAÇÃO DE SITES -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">💻</div>
@@ -308,7 +374,7 @@
                 <div>
                     <div class="text-2xl mb-2">🔗</div>
                     <h3 class="font-black text-bordo text-xl mb-2">Link na Bio / Mini Site</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Central interativa com botões modernos e responsivos para reunir todos os links do seu Instagram em um só lugar.</p>
+                    <p class="text-sm text-bordo font-bold mb-4">Central interativa com botões modernos e responsivos para reunir todos os links do seu perfil em um só lugar.</p>
                 </div>
                 <button type="button" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
             </div>
@@ -386,24 +452,25 @@
             <p class="text-sm sm:text-base text-bordo font-bold mt-1">Conheça os canais, empresas e ecossistemas digitais desenvolvidos no Eve Design Studio:</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 sm:p-8 shadow-md flex flex-col justify-between">
+            <!-- TURMINHA DO XEXÉU -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Animação IA & CapCut</span>
-                        <span class="text-2xl">🧸</span>
+                        <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Animação IA & 3D</span>
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png" alt="Turminha do Xexéu" class="w-10 h-10 object-contain rounded-full border border-rosaclaro p-0.5">
                     </div>
                     <h3 class="font-black text-bordo text-2xl mb-2">Turminha do Xexéu</h3>
-                    <p class="text-sm sm:text-base text-bordo font-bold mb-6 leading-normal">
-                        Universo infantil autoral desenvolvido com Inteligência Artificial para geração de cenários 3D e criação de personagens, combinado com edição de vídeos e animações completas no CapCut para o YouTube.
+                    <p class="text-sm text-bordo font-bold mb-6 leading-normal">
+                        Universo infantil autoral com IA para geração de cenários 3D, personagens, edição de vídeos e animações completas no CapCut para o YouTube.
                     </p>
                     <div class="flex gap-2 flex-wrap mb-6">
-                        <a href="https://www.instagram.com/turminhaxe_xeu" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs sm:text-sm px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            <img src="https://i.imgur.com/EE5DwcB.png" alt="" class="w-3.5 h-3.5 object-contain"> @turminhaxe_xeu
+                        <a href="https://www.instagram.com/turminhaxe_xeu" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-3.5 h-3.5 object-contain"> @turminhaxe_xeu
                         </a>
-                        <a href="https://www.youtube.com/@turminhaxe_xeu" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs sm:text-sm px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            <img src="https://i.imgur.com/kviq76t.png" alt="" class="w-3.5 h-3.5 object-contain"> YouTube
+                        <a href="https://www.youtube.com/@turminhaxe_xeu" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
+                            YouTube
                         </a>
                     </div>
                 </div>
@@ -412,19 +479,20 @@
                 </a>
             </div>
 
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 sm:p-8 shadow-md flex flex-col justify-between">
+            <!-- 4G PROTEÇÃO VEICULAR -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Cliente Corporativo</span>
-                        <span class="text-2xl">🚗</span>
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/4G.png" alt="4G Proteção Veicular" class="w-10 h-10 object-contain rounded-full border border-rosaclaro p-0.5">
                     </div>
                     <h3 class="font-black text-bordo text-2xl mb-2">4G Proteção Veicular</h3>
-                    <p class="text-sm sm:text-base text-bordo font-bold mb-6 leading-normal">
-                        Estratégia visual focada em conversão, englobando o desenvolvimento de Landing Page de alta performance com simulador de cotação integrado ao WhatsApp, além da padronização de artes e anúncios para redes sociais.
+                    <p class="text-sm text-bordo font-bold mb-6 leading-normal">
+                        Landing Page de alta performance com simulador de cotação integrado ao WhatsApp, além de padronização de criativos e anúncios para redes sociais.
                     </p>
                     <div class="flex gap-2 flex-wrap mb-6">
-                        <a href="https://www.instagram.com/4gprotecaoveicular/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs sm:text-sm px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            <img src="https://i.imgur.com/EE5DwcB.png" alt="" class="w-3.5 h-3.5 object-contain"> @4gprotecaoveicular
+                        <a href="https://www.instagram.com/4gprotecaoveicular/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-3.5 h-3.5 object-contain"> @4gprotecaoveicular
                         </a>
                     </div>
                 </div>
@@ -433,66 +501,69 @@
                 </a>
             </div>
 
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 sm:p-8 shadow-md flex flex-col justify-between">
+            <!-- KRAKENS -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Identidade & Branding</span>
-                        <span class="text-2xl">⚡</span>
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png" alt="Krakens" class="w-10 h-10 object-contain rounded-full border border-rosaclaro p-0.5">
                     </div>
                     <h3 class="font-black text-bordo text-2xl mb-2">Krakens</h3>
-                    <p class="text-sm sm:text-base text-bordo font-bold mb-6 leading-normal">
-                        Criação e estruturação completa da identidade visual da marca, definindo paleta de cores, tipografia e diretrizes estéticas aplicadas ao design de posts para o Instagram.
+                    <p class="text-sm text-bordo font-bold mb-6 leading-normal">
+                        Criação e estruturação da identidade visual da marca, definindo paleta de cores, tipografia e diretrizes aplicadas ao design de posts para Instagram.
                     </p>
                     <div class="flex gap-2 flex-wrap mb-6">
-                        <a href="https://www.instagram.com/krakens__/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs sm:text-sm px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            <img src="https://i.imgur.com/EE5DwcB.png" alt="" class="w-3.5 h-3.5 object-contain"> @krakens__
+                        <a href="https://www.instagram.com/krakens__/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-3.5 h-3.5 object-contain"> @krakens__
                         </a>
                     </div>
                 </div>
                 <a href="https://www.instagram.com/krakens__/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                    ✨ Visitar Perfil no Instagram ➔
+                    ✨ Visitar Perfil ➔
                 </a>
             </div>
 
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 sm:p-8 shadow-md flex flex-col justify-between">
+            <!-- SAINT VISION HOME -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Design & Mídias Digitais</span>
-                        <span class="text-2xl">👓</span>
+                        <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Design & Mídias</span>
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png" alt="Saint Vision Home" class="w-10 h-10 object-contain rounded-full border border-rosaclaro p-0.5">
                     </div>
                     <h3 class="font-black text-bordo text-2xl mb-2">Saint Vision Home</h3>
-                    <p class="text-sm sm:text-base text-bordo font-bold mb-6 leading-normal">
-                        Direção de arte visual para ótica itinerante de atendimento domiciliar. Produção contínua de carrosséis educativos, posts focados em produtos e edição de vídeos dinâmicos no formato Reels.
+                    <p class="text-sm text-bordo font-bold mb-6 leading-normal">
+                        Direção de arte visual para ótica de atendimento domiciliar. Produção contínua de carrosséis educativos, posts de produtos e edição de Reels dinâmicos.
                     </p>
                     <div class="flex gap-2 flex-wrap mb-6">
-                        <a href="https://www.instagram.com/saint.visionhome/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs sm:text-sm px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            <img src="https://i.imgur.com/EE5DwcB.png" alt="" class="w-3.5 h-3.5 object-contain"> @saint.visionhome
+                        <a href="https://www.instagram.com/saint.visionhome/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-3.5 h-3.5 object-contain"> @saint.visionhome
                         </a>
                     </div>
                 </div>
                 <a href="https://www.instagram.com/saint.visionhome/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                    👓 Visitar Perfil da Ótica ➔
+                    👓 Visitar Perfil ➔
                 </a>
             </div>
 
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 sm:p-8 shadow-md flex flex-col justify-between md:col-span-2">
+            <!-- JULIA SALES -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between md:col-span-2 lg:col-span-2">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Produção Audiovisual & YouTube</span>
-                        <span class="text-2xl">🎤</span>
+                        <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Audiovisual & YouTube</span>
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png" alt="Julia Sales Brincar e Viver" class="w-10 h-10 object-contain rounded-full border border-rosaclaro p-0.5">
                     </div>
-                    <h3 class="font-black text-bordo text-2xl mb-2">Julia Sales (Canal Oficial)</h3>
-                    <p class="text-sm sm:text-base text-bordo font-bold mb-6 leading-normal">
-                        Gerenciamento de presença digital e produção audiovisual. Criação de thumbnails de alta atratividade, identidade gráfica de episódios e edição dinâmica de vídeo para o canal no YouTube.
+                    <h3 class="font-black text-bordo text-2xl mb-2">Julia Sales (Brincar e Viver)</h3>
+                    <p class="text-sm text-bordo font-bold mb-6 leading-normal">
+                        Gerenciamento visual e produção audiovisual. Criação de capas/thumbnails magnéticas, identidade gráfica de episódios e edição de vídeos dinâmicos no YouTube.
                     </p>
                     <div class="flex gap-2 flex-wrap mb-6">
-                        <a href="https://www.youtube.com/@juliasalesOficial" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs sm:text-sm px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            <img src="https://i.imgur.com/kviq76t.png" alt="" class="w-3.5 h-3.5 object-contain"> @juliasalesOficial
+                        <a href="https://www.youtube.com/@juliasalesOficial" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
+                            ▶️ @juliasalesOficial
                         </a>
                     </div>
                 </div>
                 <a href="https://www.youtube.com/@juliasalesOficial" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                    ▶️ Acessar Canal do YouTube ➔
+                    ▶️ Acessar Canal Oficial ➔
                 </a>
             </div>
 
@@ -509,39 +580,83 @@
             <p class="text-sm sm:text-base text-bordo font-bold mt-1">Confira o feedback de quem já transformou a marca com o Eve Design Studio:</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- FEEDBACK TURMINHA DO XEXÉU -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-3">
-                        <span class="font-black text-bordo text-lg">Turminha do Xexéu</span>
-                        <span class="text-amarelo text-sm font-black">⭐⭐⭐⭐⭐</span>
+                        <div class="flex items-center gap-2">
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png" alt="Turminha Logo" class="w-7 h-7 object-contain rounded-full border border-rosa">
+                            <span class="font-black text-bordo text-base">Turminha do Xexéu</span>
+                        </div>
+                        <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
                     <p class="text-sm text-bordo font-bold italic mb-4">"As animações dos personagens e os cenários no CapCut deram vida nova ao canal! O trabalho com IA e ilustração ficou perfeito."</p>
                 </div>
-                <span class="text-xs text-bordo/70 font-bold">Projeto de Animação IA</span>
+                <span class="text-xs text-bordo/70 font-bold">Projeto de Animação IA & 3D</span>
             </div>
 
+            <!-- FEEDBACK 4G PROTEÇÃO VEICULAR -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-3">
-                        <span class="font-black text-bordo text-lg">4G Proteção Veicular</span>
-                        <span class="text-amarelo text-sm font-black">⭐⭐⭐⭐⭐</span>
+                        <div class="flex items-center gap-2">
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/4G.png" alt="4G Logo" class="w-7 h-7 object-contain rounded-full border border-rosa">
+                            <span class="font-black text-bordo text-base">4G Proteção Veicular</span>
+                        </div>
+                        <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-bold italic mb-4">"A landing page e o formulário integrado trouxeram muito mais cotações direto pro nosso atendimento. Recomendo demais!"</p>
+                    <p class="text-sm text-bordo font-bold italic mb-4">"A landing page e o formulário integrado trouxeram muito mais cotações direto pro nosso WhatsApp. Recomendo demais!"</p>
                 </div>
-                <span class="text-xs text-bordo/70 font-bold">Landing Page & Artes</span>
+                <span class="text-xs text-bordo/70 font-bold">Landing Page & Redes Sociais</span>
             </div>
 
+            <!-- FEEDBACK KRAKENS -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-3">
-                        <span class="font-black text-bordo text-lg">Saint Vision Home</span>
-                        <span class="text-amarelo text-sm font-black">⭐⭐⭐⭐⭐</span>
+                        <div class="flex items-center gap-2">
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png" alt="Krakens Logo" class="w-7 h-7 object-contain rounded-full border border-rosa">
+                            <span class="font-black text-bordo text-base">Krakens</span>
+                        </div>
+                        <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-bold italic mb-4">"Os carrosséis para o Instagram da ótica ficaram elegantes e super explicativos. Atendimento rápido e criativo."</p>
+                    <p class="text-sm text-bordo font-bold italic mb-4">"A identidade visual e os posts ficaram modernos, com muita personalidade e presença forte no Instagram!"</p>
                 </div>
                 <span class="text-xs text-bordo/70 font-bold">Identidade Visual & Posts</span>
             </div>
+
+            <!-- FEEDBACK SAINT VISION HOME -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-2">
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png" alt="Saint Vision Logo" class="w-7 h-7 object-contain rounded-full border border-rosa">
+                            <span class="font-black text-bordo text-base">Saint Vision Home</span>
+                        </div>
+                        <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="text-sm text-bordo font-bold italic mb-4">"Os carrosséis para o Instagram da ótica ficaram elegantes e super explicativos. Atendimento impecável e criativo."</p>
+                </div>
+                <span class="text-xs text-bordo/70 font-bold">Direção de Arte & Carrosséis</span>
+            </div>
+
+            <!-- FEEDBACK JULIA SALES -->
+            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between md:col-span-2 lg:col-span-2">
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-2">
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png" alt="Julia Sales Logo" class="w-7 h-7 object-contain rounded-full border border-rosa">
+                            <span class="font-black text-bordo text-base">Julia Sales (Brincar e Viver)</span>
+                        </div>
+                        <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="text-sm text-bordo font-bold italic mb-4">"As capas do YouTube e as edições de vídeo aumentaram muito a taxa de cliques do canal. Edição rápida, dinâmica e profissional!"</p>
+                </div>
+                <span class="text-xs text-bordo/70 font-bold">Thumbnails & Edição Audiovisual</span>
+            </div>
+
         </div>
 
         <div class="mt-8 text-center">
@@ -1017,7 +1132,7 @@
                 </div>
 
                 <button type="submit" id="btn-enviar-lead" class="w-full mt-4 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
-                    <img src="https://i.imgur.com/EE5DwcB.png" alt="" class="w-4 h-4 object-contain brightness-200">
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain">
                     Enviar Briefing & Abrir Instagram ➔
                 </button>
             </form>
@@ -1089,6 +1204,9 @@
     <!-- RODAPÉ LEGAL & INSTITUCIONAL -->
     <footer class="w-full bg-white/90 border-t-2 border-rosaclaro py-8 text-center text-sm text-bordo font-bold mt-12 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 space-y-3">
+            <div class="flex justify-center mb-2">
+                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png" alt="Eve Design" class="w-12 h-12 object-contain">
+            </div>
             <p class="font-black text-base text-bordo">
                 Evelyn Cecília de Sales Pereira — Eve Design Studio
             </p>
@@ -1109,6 +1227,17 @@
     <script>
         const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbzXhkvwxpUBB1A2cfC90JUEOY9zyPF-du1gh5vB0v-9A8V9o9H-EcQtMoNY1vdsIBnNiA/exec";
         const SEU_INSTAGRAM = "eve.desi_gn"; 
+
+        /* MENU MOBILE INTERATIVO */
+        function toggleMenuMobile() {
+            const menu = document.getElementById('menu-mobile');
+            const iconeAbrir = document.getElementById('icone-menu-abrir');
+            const iconeFechar = document.getElementById('icone-menu-fechar');
+            
+            menu.classList.toggle('hidden');
+            iconeAbrir.classList.toggle('hidden');
+            iconeFechar.classList.toggle('hidden');
+        }
 
         /* GESTÃO DE COOKIES LGPD */
         function aceitarCookies() {
