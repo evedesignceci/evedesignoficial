@@ -36,7 +36,7 @@
         }
     </script>
 
-    <!-- Google Fonts: Darker Grotesque & Plus Jakarta Sans -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
@@ -86,7 +86,7 @@
 </head>
 <body class="bg-pattern min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-rosa selection:text-bordo">
 
-    <!-- TOAST DE FEEDBACK FLUTUANTE -->
+    <!-- TOAST FLUTUANTE -->
     <div id="toast-feedback" aria-live="polite" class="fixed top-6 right-6 bg-white border-2 border-rosa text-bordo px-6 py-4 rounded-2xl shadow-2xl z-50 hidden opacity-0 translate-y-3 toast-transition flex items-center gap-3 font-black text-sm">
         <span id="toast-icon">✨</span>
         <span id="toast-msg">Item adicionado com sucesso!</span>
@@ -96,7 +96,7 @@
     <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-bordo text-creme px-4 sm:px-6 py-4 shadow-2xl z-50 hidden border-t-2 border-rosa">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-bold">
             <p class="leading-normal text-center sm:text-left">
-                🍪 Utilizamos cookies e tecnologias essenciais para garantir o funcionamento do simulador e melhorar sua experiência. Ao continuar, você concorda com a nossa <button type="button" onclick="abrirModalLegal('privacidade')" class="underline text-rosa hover:text-amarelo font-black">Política de Privacidade</button>.
+                🍪 Utilizamos cookies essenciais para o funcionamento do simulador e orçamentos. Ao continuar, você concorda com a nossa <button type="button" onclick="abrirModalLegal('privacidade')" class="underline text-rosa hover:text-amarelo font-black">Política de Privacidade</button>.
             </p>
             <div class="flex items-center gap-2 shrink-0">
                 <button type="button" onclick="aceitarCookies()" class="bg-amarelo text-bordo hover:bg-rosa font-black text-xs py-2 px-6 rounded-xl transition-all shadow-sm">
@@ -106,11 +106,10 @@
         </div>
     </div>
 
-    <!-- HEADER DE NAVEGAÇÃO FIXO -->
+    <!-- HEADER DE NAVEGAÇÃO -->
     <header class="w-full bg-white/95 backdrop-blur-md border-b-2 border-rosaclaro sticky top-0 z-40 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
 
-            <!-- LOGO / IDENTIDADE -->
             <a href="#sobre-mim" class="flex items-center gap-3 group rounded-xl p-1 transition-all">
                 <div class="relative">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png" alt="Eve Design Studio" class="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-contain p-0.5 bg-creme border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
@@ -123,13 +122,13 @@
             </a>
 
             <!-- NAVEGAÇÃO DESKTOP -->
-            <nav class="hidden lg:flex items-center gap-5 text-sm font-black text-bordo uppercase tracking-wide">
-                <a href="#sobre-mim" class="hover:text-rosa transition-colors">Sobre Mim</a>
-                <a href="#especialidades" class="hover:text-rosa transition-colors">Especialidades</a>
+            <nav class="hidden lg:flex items-center gap-4 text-sm font-black text-bordo uppercase tracking-wide">
+                <a href="#sobre-mim" class="hover:text-rosa transition-colors">Sobre</a>
+                <a href="#especialidades" class="hover:text-rosa transition-colors">Serviços</a>
                 <a href="#exemplos" class="hover:text-rosa transition-colors">Projetos</a>
-                <a href="#depoimentos" class="hover:text-rosa transition-colors">Avaliações</a>
-                <a href="#tabela" class="hover:text-rosa transition-colors">Tabela</a>
-                <a href="#faq" class="hover:text-rosa transition-colors">Dúvidas</a>
+                <a href="#depoimentos" class="hover:text-rosa transition-colors">Depoimentos</a>
+                <a href="#tabela" class="hover:text-rosa transition-colors">Preços</a>
+                <a href="#faq-duvidas" class="hover:text-rosa transition-colors">Central de Ajuda</a>
                 <a href="#simulador" class="hover:text-rosa transition-colors">Calculadora</a>
                 <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="bg-rosa/20 text-bordo hover:bg-rosa transition-all font-black px-3.5 py-1.5 rounded-xl border border-rosa/50 flex items-center gap-1.5">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain">
@@ -137,15 +136,14 @@
                 </a>
             </nav>
 
-            <!-- AÇÕES RÁPIDAS & BOTÃO MOBILE -->
+            <!-- AÇÕES RÁPIDAS & MENU MOBILE -->
             <div class="flex items-center gap-2">
                 <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="hidden sm:flex bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-2 px-3.5 rounded-xl items-center gap-2 transition-all shadow-sm">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain">
                     <span>Instagram</span>
                 </a>
 
-                <!-- BOTÃO MENU HAMBÚRGUER MOBILE -->
-                <button type="button" onclick="toggleMenuMobile()" aria-label="Abrir Menu" class="lg:hidden p-2 rounded-xl border-2 border-rosaclaro bg-creme/50 hover:bg-rosa text-bordo transition-all focus:outline-none">
+                <button type="button" onclick="toggleMenuMobile()" aria-label="Abrir Menu" class="lg:hidden p-2 rounded-xl border-2 border-rosaclaro bg-creme/50 hover:bg-rosa text-bordo transition-all">
                     <svg id="icone-menu-abrir" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -156,23 +154,23 @@
             </div>
         </div>
 
-        <!-- MENU MOBILE EXPANSÍVEL -->
+        <!-- MENU MOBILE -->
         <div id="menu-mobile" class="hidden lg:hidden bg-white border-t-2 border-rosaclaro px-6 py-5 shadow-xl">
-            <nav class="flex flex-col gap-3.5 text-base font-black text-bordo uppercase">
-                <a href="#sobre-mim" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">👤 Sobre Mim</a>
-                <a href="#especialidades" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">⭐ Especialidades</a>
-                <a href="#exemplos" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">💼 Projetos & Clientes</a>
-                <a href="#depoimentos" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">💬 Avaliações</a>
-                <a href="#tabela" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">📋 Tabela de Preços</a>
-                <a href="#faq" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">❓ Dúvidas</a>
-                <a href="#simulador" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40 transition-colors">🧮 Calculadora & Carrinho</a>
-                <div class="pt-3 border-t border-rosaclaro/60 flex flex-col gap-2.5">
+            <nav class="flex flex-col gap-3 text-base font-black text-bordo uppercase">
+                <a href="#sobre-mim" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">👤 Sobre Mim</a>
+                <a href="#especialidades" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">⭐ Serviços & Especialidades</a>
+                <a href="#exemplos" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">💼 Projetos & Clientes</a>
+                <a href="#depoimentos" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">💬 Depoimentos Interativos</a>
+                <a href="#tabela" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">📋 Tabela de Valores</a>
+                <a href="#faq-duvidas" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">❓ Central de Dúvidas & Suporte</a>
+                <a href="#simulador" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">🧮 Calculadora & Carrinho</a>
+                <div class="pt-3 border-t border-rosaclaro/60 flex flex-col gap-2">
                     <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-full bg-rosa text-bordo font-black text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain"> Portfólio Canva
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain"> Ver Portfólio Canva
                     </a>
-                    <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme font-black text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain"> Seguir no Instagram
-                    </a>
+                    <button type="button" onclick="toggleMenuMobile(); abrirModalDuvida();" class="w-full bg-amarelo text-bordo font-black text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
+                        💬 Tirar Dúvida Direto por E-mail
+                    </button>
                 </div>
             </nav>
         </div>
@@ -185,7 +183,7 @@
         </div>
     </section>
 
-    <!-- BANNER HERO TEXTO & CHAMADA -->
+    <!-- CHAMADA & CTA PRINCIPAL -->
     <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-4 text-center">
         <span class="inline-flex items-center gap-2 bg-white/90 border-2 border-rosa text-bordo font-black text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-4 shadow-sm">
             ✨ Soluções Criativas, Sites & Visuais Estratégicos
@@ -196,42 +194,41 @@
         </h1>
 
         <p class="text-base sm:text-xl text-bordo font-bold max-w-2xl mx-auto leading-normal mb-6">
-            Transformo ideias em ecossistemas digitais completos de alta conversão. Simule seu investimento em tempo real e envie seu pedido diretamente pelo Instagram.
+            Transformo ideias em marcas memoráveis e ecossistemas digitais de alta conversão. Simule seu investimento e envie sua solicitação em poucos cliques!
         </p>
 
-        <!-- REDES SOCIAIS & LINKS RÁPIDOS -->
+        <!-- BOTÕES DE CONTATO E CONEXÕES RÁPIDAS -->
         <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap max-w-3xl mx-auto mb-4">
             <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-rosa text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain"> Portfólio Canva
             </a>
             <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo">
-                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain">
-                <span>Instagram</span>
+                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain"> Instagram
             </a>
             <a href="https://br.pinterest.com/eve_design_/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo">
-                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PINTEREST.png" alt="" class="w-4 h-4 object-contain">
-                <span>Pinterest</span>
+                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PINTEREST.png" alt="" class="w-4 h-4 object-contain"> Pinterest
             </a>
             <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo">
-                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/BEHANCE.png" alt="" class="w-4 h-4 object-contain">
-                <span>Behance</span>
+                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/BEHANCE.png" alt="" class="w-4 h-4 object-contain"> Behance
             </a>
-            <button type="button" onclick="abrirModalFeedback()" class="px-4 py-2 bg-amarelo text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
-                ⭐ Deixar meu Feedback
+            <button type="button" onclick="abrirModalDuvida()" class="px-4 py-2 bg-amarelo text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
+                ❓ Tirar Dúvida Rápida
+            </button>
+            <button type="button" onclick="abrirModalSuporte()" class="px-3.5 py-1.5 bg-rosaclaro text-bordo border border-rosa rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
+                🛠️ Suporte / Ajustes
             </button>
         </div>
     </section>
 
     <!-- CARDS DE ACESSO RÁPIDO -->
     <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-4 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-
         <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="group relative w-full bg-white border-2 border-rosaclaro rounded-3xl p-6 flex flex-col justify-between text-left shadow-sm hover:shadow-xl hover:border-rosa hover:-translate-y-1 transition-all duration-300">
             <div>
                 <div class="w-12 h-12 rounded-2xl bg-bordo p-2.5 flex items-center justify-center group-hover:bg-rosa transition-colors mb-4 shadow-md">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-full h-full object-contain">
                 </div>
                 <h2 class="font-black text-bordo text-xl group-hover:text-rosa transition-colors mb-1">Portfólio Interativo</h2>
-                <p class="text-sm sm:text-base text-bordo font-bold leading-snug mb-4">Acesse apresentações completas, ilustrações 2D, criação de sites e identidades visuais organizadas.</p>
+                <p class="text-sm sm:text-base text-bordo font-bold leading-snug mb-4">Apresentações completas, ilustrações autorais, identidade visual e sites organizados.</p>
             </div>
             <span class="text-bordo font-black text-sm flex items-center gap-2 group-hover:translate-x-2 transition-transform">Abrir Portfólio ➔</span>
         </a>
@@ -248,19 +245,18 @@
         <div class="group relative w-full bg-white border-2 border-rosaclaro rounded-3xl p-6 flex flex-col justify-between text-left shadow-sm hover:shadow-xl hover:border-rosa transition-all duration-300">
             <div>
                 <div class="w-12 h-12 rounded-2xl bg-bordo text-creme flex items-center justify-center font-extrabold text-2xl group-hover:bg-rosa group-hover:text-bordo transition-colors mb-4 shadow-md">📩</div>
-                <h2 class="font-black text-bordo text-xl mb-1">Solicitar Orçamento</h2>
-                <p class="text-sm sm:text-base text-bordo font-bold leading-snug mb-4">Entre em contato direto para propostas e projetos sob medida:</p>
+                <h2 class="font-black text-bordo text-xl mb-1">Solicitar Proposta</h2>
+                <p class="text-sm sm:text-base text-bordo font-bold leading-snug mb-4">Fale direto para propostas sob medida ou orçamentos personalizados:</p>
             </div>
             <div class="flex flex-col gap-2 w-full pt-2 border-t border-rosaclaro/60">
                 <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain"> Falar no Instagram
                 </a>
-                <a href="#simulador" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs sm:text-sm py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-all text-center">
-                    📋 Simular na Calculadora
-                </a>
+                <button type="button" onclick="abrirModalDuvida()" class="w-full bg-amarelo text-bordo hover:bg-rosa font-black text-xs sm:text-sm py-2.5 px-3 rounded-xl transition-all text-center">
+                    ✉️ Enviar Mensagem Direta
+                </button>
             </div>
         </div>
-
     </main>
 
     <!-- SEÇÃO SOBRE MIM -->
@@ -271,7 +267,7 @@
                 <!-- MASCOTE / PERSONAGEM OFICIAL -->
                 <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-48 h-48 md:w-56 md:h-56 shrink-0 relative group cursor-pointer" title="Clique para ver o Portfólio!">
                     <div class="absolute -inset-1 bg-gradient-to-r from-rosa to-amarelo rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786910166/PERSONAGEM_EVE_DESIGN.png" alt="Personagem Eve Design Studio" class="relative w-full h-full object-contain rounded-2xl bg-rosaclaro/30 p-2 border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png" alt="Personagem Eve Design Studio" class="relative w-full h-full object-contain rounded-2xl bg-rosaclaro/30 p-2 border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
                     <span class="absolute bottom-2 right-2 bg-amarelo text-bordo font-black text-xs px-2.5 py-1 rounded-full border border-bordo shadow-md flex items-center gap-1">
                         <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-3 h-3 object-contain"> Portfólio
                     </span>
@@ -294,7 +290,6 @@
                             Minha Caixa de Ferramentas (Clique para detalhes):
                         </h3>
                         <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2.5">
-                            
                             <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais, ilustração 2D e vetorização técnica perfeita.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/ADOBE_ILUSTARTOR.png" alt="Adobe Illustrator" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Illustrator</span>
@@ -329,7 +324,6 @@
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/GROK.png" alt="Grok IA" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Grok IA</span>
                             </button>
-
                         </div>
                     </div>
                 </div>
@@ -337,324 +331,106 @@
         </div>
     </section>
 
-    <!-- SEÇÃO: ESPECIALIDADES & SERVIÇOS EM DESTAQUE -->
-    <section id="especialidades" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
-        <div class="text-center mb-8">
-            <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
-                ⭐ O que eu faço
-            </span>
-            <h2 class="text-2xl sm:text-4xl font-black text-bordo">Especialidades & Soluções</h2>
-            <p class="text-sm sm:text-base text-bordo font-bold mt-1">Conheça cada área de atuação e clique para adicionar ao seu carrinho na calculadora:</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-            <!-- CRIAÇÃO DE SITES -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">💻</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Criação de Sites Completos</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Sites institucionais estruturados em várias páginas com design responsivo, alta velocidade e SEO básico.</p>
-                </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
-            </div>
-
-            <!-- LANDING PAGE -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">🌐</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Landing Page de Conversão</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Página de alta performance focada em captação de clientes, simulações de orçamento e conversão direta no WhatsApp.</p>
-                </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
-            </div>
-
-            <!-- LINK NA BIO -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">🔗</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Link na Bio / Mini Site</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Central interativa com botões modernos e responsivos para reunir todos os links do seu perfil em um só lugar.</p>
-                </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
-            </div>
-
-            <!-- ILUSTRAÇÃO 2D -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">✏️</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Ilustração 2D & Vetorização</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Criação de ilustrações autorais 2D, capas de livros infantis/comerciais e vetorização profissional de logos.</p>
-                </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Ilustração 2D / Capas & Vetorização')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
-            </div>
-
-            <!-- PERSONAGENS IA -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">🎭</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Criação de Personagens com IA</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Desenvolvimento e estilização consistente de mascotes e personagens por IA para marcas e canais.</p>
-                </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Criação de Personagens IA')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
-            </div>
-
-            <!-- IDENTIDADE VISUAL -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">🎨</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Identidade Visual Completa</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Logo profissional, paleta de cores, tipografia, aplicações e manual de marca oficial em PDF.</p>
-                </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
-            </div>
-
-            <!-- PLANOS DE POSTS -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">📱</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Planos de Posts & Carrosséis</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Pacotes estruturados de artes para feed (estáticos e carrosséis educativos) com design de alto engajamento.</p>
-                </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Plano Inicial: 4 Carrosséis ou 2+2')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Ver Planos de Posts 🛒</button>
-            </div>
-
-            <!-- COMBO COMPLETO -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">🚀</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Combo Mensal Completo</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Gestão visual mensal com mix de posts, carrosséis, Reels dinâmicos e Stories semanais.</p>
-                </div>
-                <button type="button" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
-            </div>
-
-            <!-- VÍDEOS COM IA -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="text-2xl mb-2">🤖</div>
-                    <h3 class="font-black text-bordo text-xl mb-2">Vídeos & Animações com IA</h3>
-                    <p class="text-sm text-bordo font-bold mb-4">Geração de cenários e animações com inteligência artificial, cobrindo créditos e montagem no CapCut.</p>
-                </div>
-                <button type="button" onclick="destacarOpcaoCalculadora('check-video-ia')" class="w-full bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs py-2.5 rounded-xl transition-all">Adicionar ao Carrinho 🛒</button>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SEÇÃO: EXEMPLOS DE PÁGINAS & PROJETOS -->
-    <section id="exemplos" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
-        <div class="text-center mb-8">
-            <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
-                💡 Portfólio em Ação
-            </span>
-            <h2 class="text-2xl sm:text-4xl font-black text-bordo">Projetos & Marcas Atendidas</h2>
-            <p class="text-sm sm:text-base text-bordo font-bold mt-1">Conheça os canais, empresas e ecossistemas digitais desenvolvidos no Eve Design Studio:</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <!-- TURMINHA DO XEXÉU -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Animação IA & 3D</span>
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png" alt="Turminha do Xexéu" class="w-10 h-10 object-contain rounded-full border border-rosaclaro p-0.5">
-                    </div>
-                    <h3 class="font-black text-bordo text-2xl mb-2">Turminha do Xexéu</h3>
-                    <p class="text-sm text-bordo font-bold mb-6 leading-normal">
-                        Universo infantil autoral com IA para geração de cenários 3D, personagens, edição de vídeos e animações completas no CapCut para o YouTube.
-                    </p>
-                    <div class="flex gap-2 flex-wrap mb-6">
-                        <a href="https://www.instagram.com/turminhaxe_xeu" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-3.5 h-3.5 object-contain"> @turminhaxe_xeu
-                        </a>
-                        <a href="https://www.youtube.com/@turminhaxe_xeu" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            YouTube
-                        </a>
-                    </div>
-                </div>
-                <a href="https://turminhadoxexeuoficiall.vercel.app/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                    🌐 Acessar Portal Oficial ➔
-                </a>
-            </div>
-
-            <!-- 4G PROTEÇÃO VEICULAR -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Cliente Corporativo</span>
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/4G.png" alt="4G Proteção Veicular" class="w-10 h-10 object-contain rounded-full border border-rosaclaro p-0.5">
-                    </div>
-                    <h3 class="font-black text-bordo text-2xl mb-2">4G Proteção Veicular</h3>
-                    <p class="text-sm text-bordo font-bold mb-6 leading-normal">
-                        Landing Page de alta performance com simulador de cotação integrado ao WhatsApp, além de padronização de criativos e anúncios para redes sociais.
-                    </p>
-                    <div class="flex gap-2 flex-wrap mb-6">
-                        <a href="https://www.instagram.com/4gprotecaoveicular/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-3.5 h-3.5 object-contain"> @4gprotecaoveicular
-                        </a>
-                    </div>
-                </div>
-                <a href="https://4gprotecaoveicularoficial.vercel.app/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                    🌐 Acessar Landing Page ➔
-                </a>
-            </div>
-
-            <!-- KRAKENS -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Identidade & Branding</span>
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png" alt="Krakens" class="w-10 h-10 object-contain rounded-full border border-rosaclaro p-0.5">
-                    </div>
-                    <h3 class="font-black text-bordo text-2xl mb-2">Krakens</h3>
-                    <p class="text-sm text-bordo font-bold mb-6 leading-normal">
-                        Criação e estruturação da identidade visual da marca, definindo paleta de cores, tipografia e diretrizes aplicadas ao design de posts para Instagram.
-                    </p>
-                    <div class="flex gap-2 flex-wrap mb-6">
-                        <a href="https://www.instagram.com/krakens__/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-3.5 h-3.5 object-contain"> @krakens__
-                        </a>
-                    </div>
-                </div>
-                <a href="https://www.instagram.com/krakens__/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                    ✨ Visitar Perfil ➔
-                </a>
-            </div>
-
-            <!-- SAINT VISION HOME -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Design & Mídias</span>
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png" alt="Saint Vision Home" class="w-10 h-10 object-contain rounded-full border border-rosaclaro p-0.5">
-                    </div>
-                    <h3 class="font-black text-bordo text-2xl mb-2">Saint Vision Home</h3>
-                    <p class="text-sm text-bordo font-bold mb-6 leading-normal">
-                        Direção de arte visual para ótica de atendimento domiciliar. Produção contínua de carrosséis educativos, posts de produtos e edição de Reels dinâmicos.
-                    </p>
-                    <div class="flex gap-2 flex-wrap mb-6">
-                        <a href="https://www.instagram.com/saint.visionhome/" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-3.5 h-3.5 object-contain"> @saint.visionhome
-                        </a>
-                    </div>
-                </div>
-                <a href="https://www.instagram.com/saint.visionhome/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                    👓 Visitar Perfil ➔
-                </a>
-            </div>
-
-            <!-- JULIA SALES -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between md:col-span-2 lg:col-span-2">
-                <div>
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="bg-amarelo text-bordo font-black text-xs px-3 py-1 rounded-full border border-bordo/30">Identidade Visual & Produção de Vídeos</span>
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png" alt="Julia Sales Brincar e Viver" class="w-10 h-10 object-contain rounded-full border border-rosaclaro p-0.5">
-                    </div>
-                    <h3 class="font-black text-bordo text-2xl mb-2">Julia Sales (Brincar e Viver)</h3>
-                    <p class="text-sm sm:text-base text-bordo font-bold mb-6 leading-normal">
-                        Desenvolvimento completo da identidade visual da marca e canal, unindo criação de logo oficial, paleta cromática, capas/thumbnails de alto clique e edição profissional contínua dos vídeos para o YouTube.
-                    </p>
-                    <div class="flex gap-2 flex-wrap mb-6">
-                        <a href="https://www.youtube.com/@juliasalesOficial" target="_blank" rel="noopener noreferrer" class="bg-rosaclaro/60 text-bordo font-black text-xs px-3.5 py-1.5 rounded-xl hover:bg-rosa transition-colors flex items-center gap-1.5">
-                            ▶️ @juliasalesOficial
-                        </a>
-                    </div>
-                </div>
-                <a href="https://www.youtube.com/@juliasalesOficial" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-sm">
-                    ▶️ Acessar Canal Oficial ➔
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SEÇÃO: DEPOIMENTOS & FEEDBACKS DOS CLIENTES -->
+    <!-- SEÇÃO: DEPOIMENTOS & CASOS DE SUCESSO (INTERATIVOS / CLICÁVEIS) -->
     <section id="depoimentos" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div class="text-center mb-8">
             <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
-                ⭐ Prova Social
+                ⭐ Prova Social & Clientes
             </span>
             <h2 class="text-2xl sm:text-4xl font-black text-bordo">O que os clientes dizem</h2>
-            <p class="text-sm sm:text-base text-bordo font-bold mt-1">Confira o feedback de quem já transformou a marca com o Eve Design Studio:</p>
+            <p class="text-sm sm:text-base text-bordo font-bold mt-1">Clique em qualquer depoimento para abrir o projeto detalhado, ver os posts, sites ou redes sociais!</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- FEEDBACK TURMINHA DO XEXÉU -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+            <!-- TURMINHA DO XEXÉU -->
+            <div onclick="abrirModalDepoimento('xexeu')" class="bg-white border-2 border-rosaclaro hover:border-rosa hover:-translate-y-1 transition-all duration-300 rounded-3xl p-6 shadow-md flex flex-col justify-between cursor-pointer group">
                 <div>
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-2">
-                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png" alt="Turminha Logo" class="w-7 h-7 object-contain rounded-full border border-rosa">
-                            <span class="font-black text-bordo text-base">Turminha do Xexéu</span>
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png" alt="Turminha Logo" class="w-8 h-8 object-contain rounded-full border border-rosa p-0.5">
+                            <span class="font-black text-bordo text-base group-hover:text-rosa transition-colors">Turminha do Xexéu</span>
                         </div>
                         <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
                     <p class="text-sm text-bordo font-bold italic mb-4">"As animações dos personagens e os cenários no CapCut deram vida nova ao canal! O trabalho com IA e ilustração ficou perfeito."</p>
                 </div>
-                <span class="text-xs text-bordo/70 font-bold">Projeto de Animação IA & 3D</span>
+                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
+                    <span>Animação IA & 3D</span>
+                    <span class="text-rosa group-hover:translate-x-1 transition-transform">Ver Projeto ➔</span>
+                </div>
             </div>
 
-            <!-- FEEDBACK 4G PROTEÇÃO VEICULAR -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+            <!-- 4G PROTEÇÃO VEICULAR -->
+            <div onclick="abrirModalDepoimento('4g')" class="bg-white border-2 border-rosaclaro hover:border-rosa hover:-translate-y-1 transition-all duration-300 rounded-3xl p-6 shadow-md flex flex-col justify-between cursor-pointer group">
                 <div>
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-2">
-                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/4G.png" alt="4G Logo" class="w-7 h-7 object-contain rounded-full border border-rosa">
-                            <span class="font-black text-bordo text-base">4G Proteção Veicular</span>
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/4G.png" alt="4G Logo" class="w-8 h-8 object-contain rounded-full border border-rosa p-0.5">
+                            <span class="font-black text-bordo text-base group-hover:text-rosa transition-colors">4G Proteção Veicular</span>
                         </div>
                         <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
                     <p class="text-sm text-bordo font-bold italic mb-4">"A landing page e o formulário integrado trouxeram muito mais cotações direto pro nosso WhatsApp. Recomendo demais!"</p>
                 </div>
-                <span class="text-xs text-bordo/70 font-bold">Landing Page & Redes Sociais</span>
+                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
+                    <span>Landing Page & Artes</span>
+                    <span class="text-rosa group-hover:translate-x-1 transition-transform">Ver Projeto ➔</span>
+                </div>
             </div>
 
-            <!-- FEEDBACK KRAKENS -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+            <!-- KRAKENS -->
+            <div onclick="abrirModalDepoimento('krakens')" class="bg-white border-2 border-rosaclaro hover:border-rosa hover:-translate-y-1 transition-all duration-300 rounded-3xl p-6 shadow-md flex flex-col justify-between cursor-pointer group">
                 <div>
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-2">
-                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png" alt="Krakens Logo" class="w-7 h-7 object-contain rounded-full border border-rosa">
-                            <span class="font-black text-bordo text-base">Krakens</span>
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png" alt="Krakens Logo" class="w-8 h-8 object-contain rounded-full border border-rosa p-0.5">
+                            <span class="font-black text-bordo text-base group-hover:text-rosa transition-colors">Krakens</span>
                         </div>
                         <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
                     <p class="text-sm text-bordo font-bold italic mb-4">"A identidade visual e os posts ficaram modernos, com muita personalidade e presença forte no Instagram!"</p>
                 </div>
-                <span class="text-xs text-bordo/70 font-bold">Identidade Visual & Posts</span>
+                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
+                    <span>Identidade & Social Media</span>
+                    <span class="text-rosa group-hover:translate-x-1 transition-transform">Ver Projeto ➔</span>
+                </div>
             </div>
 
-            <!-- FEEDBACK SAINT VISION HOME -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
+            <!-- SAINT VISION HOME -->
+            <div onclick="abrirModalDepoimento('saint')" class="bg-white border-2 border-rosaclaro hover:border-rosa hover:-translate-y-1 transition-all duration-300 rounded-3xl p-6 shadow-md flex flex-col justify-between cursor-pointer group">
                 <div>
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-2">
-                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png" alt="Saint Vision Logo" class="w-7 h-7 object-contain rounded-full border border-rosa">
-                            <span class="font-black text-bordo text-base">Saint Vision Home</span>
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png" alt="Saint Vision Logo" class="w-8 h-8 object-contain rounded-full border border-rosa p-0.5">
+                            <span class="font-black text-bordo text-base group-hover:text-rosa transition-colors">Saint Vision Home</span>
                         </div>
                         <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
                     <p class="text-sm text-bordo font-bold italic mb-4">"Os carrosséis para o Instagram da ótica ficaram elegantes e super explicativos. Atendimento impecável e criativo."</p>
                 </div>
-                <span class="text-xs text-bordo/70 font-bold">Direção de Arte & Carrosséis</span>
+                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
+                    <span>Carrosséis & Direção de Arte</span>
+                    <span class="text-rosa group-hover:translate-x-1 transition-transform">Ver Projeto ➔</span>
+                </div>
             </div>
 
-            <!-- FEEDBACK JULIA SALES -->
-            <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between md:col-span-2 lg:col-span-2">
+            <!-- JULIA SALES -->
+            <div onclick="abrirModalDepoimento('julia')" class="bg-white border-2 border-rosaclaro hover:border-rosa hover:-translate-y-1 transition-all duration-300 rounded-3xl p-6 shadow-md flex flex-col justify-between cursor-pointer group md:col-span-2 lg:col-span-2">
                 <div>
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-2">
-                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png" alt="Julia Sales Logo" class="w-7 h-7 object-contain rounded-full border border-rosa">
-                            <span class="font-black text-bordo text-base">Julia Sales (Brincar e Viver)</span>
+                            <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png" alt="Julia Sales Logo" class="w-8 h-8 object-contain rounded-full border border-rosa p-0.5">
+                            <span class="font-black text-bordo text-base group-hover:text-rosa transition-colors">Julia Sales (Brincar e Viver)</span>
                         </div>
                         <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
                     <p class="text-sm text-bordo font-bold italic mb-4">"A identidade visual completa da marca ficou encantadora e as edições de vídeo tornaram os episódios super dinâmicos e profissionais!"</p>
                 </div>
-                <span class="text-xs text-bordo/70 font-bold">Identidade Visual & Edição de Vídeos</span>
+                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
+                    <span>Identidade Visual & Edição de Vídeos</span>
+                    <span class="text-rosa group-hover:translate-x-1 transition-transform">Ver Projeto ➔</span>
+                </div>
             </div>
 
         </div>
@@ -677,8 +453,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-            <!-- COLUNA 1: Web Design & Branding -->
+            <!-- COLUNA 1 -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">💻</div>
@@ -712,7 +487,7 @@
                 </div>
             </div>
 
-            <!-- COLUNA 2: Ilustração, IA & Audiovisual -->
+            <!-- COLUNA 2 -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">🎨</div>
@@ -746,7 +521,7 @@
                 </div>
             </div>
 
-            <!-- COLUNA 3: Planos de Social Media & Avulsos -->
+            <!-- COLUNA 3 -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">📱</div>
@@ -771,24 +546,6 @@
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Plano Básico: 6 Carrosséis ou 4+2')">
-                                <strong class="text-bordo font-black">Plano Básico (6 Carrosséis / 4+2) ➔</strong>
-                                <span class="text-bordo font-bold">R$ 360,00</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Plano Médio: 8 Carrosséis ou 6+2')">
-                                <strong class="text-bordo font-black">Plano Médio (8 Carrosséis / 6+2) ➔</strong>
-                                <span class="text-bordo font-bold">R$ 490,00</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Plano Avançado: 12 Carrosséis ou 6+6')">
-                                <strong class="text-bordo font-black">Plano Avançado (12 Carrosséis / 6+6) ➔</strong>
-                                <span class="text-bordo font-bold">R$ 650,00</span>
-                            </button>
-                        </li>
-                        <li>
                             <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')">
                                 <strong class="text-bordo font-black">Combo Completo (Posts + Reels + Stories) ➔</strong>
                                 <span class="text-bordo font-bold">R$ 890,00</span>
@@ -797,60 +554,73 @@
                     </ul>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- SEÇÃO: PERGUNTAS FREQUENTES (FAQ) -->
-    <section id="faq" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
-        <div class="text-center mb-8">
-            <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
-                ❓ Dúvidas Comuns
-            </span>
-            <h2 class="text-2xl sm:text-4xl font-black text-bordo">Perguntas Frequentes</h2>
-            <p class="text-sm sm:text-base text-bordo font-bold mt-1">Tudo o que você precisa saber sobre prazos, pagamentos e processos:</p>
-        </div>
+    <!-- SEÇÃO CENTRAL DE DÚVIDAS & SUPORTE -->
+    <section id="faq-duvidas" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
+        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-lg">
+            <div class="text-center mb-8">
+                <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
+                    💬 Atendimento & Respostas Rápidas
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-bordo">Central de Dúvidas & Suporte</h2>
+                <p class="text-sm sm:text-base text-bordo font-bold mt-1">Precisa de auxílio imediato ou quer tirar dúvidas sobre projetos?</p>
+            </div>
 
-        <div class="space-y-4 max-w-4xl mx-auto">
-            <details class="group bg-white border-2 border-rosaclaro rounded-2xl p-5 shadow-sm transition-all duration-300 open:border-rosa">
-                <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-base sm:text-lg select-none">
-                    <span>⏳ Em quanto tempo recebo meu projeto?</span>
-                    <span class="faq-icon transition-transform duration-300 text-rosa text-xl">▼</span>
-                </summary>
-                <div class="mt-3 text-sm sm:text-base text-bordo font-bold leading-relaxed border-t border-rosaclaro/50 pt-3">
-                    Os prazos variam conforme a complexidade. Projetos pontuais (como artes, identidade visual e landing pages) levam em média de 3 a 7 dias úteis após o envio completo do briefing. Nos planos mensais de social media, as entregas seguem um cronograma semanal organizado.
-                </div>
-            </details>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <!-- FAQ ACCORDIONS -->
+                <div class="space-y-3">
+                    <details class="group bg-creme/40 border-2 border-rosaclaro rounded-2xl p-4 transition-all duration-300 open:border-rosa">
+                        <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-sm sm:text-base select-none">
+                            <span>⏳ Qual o prazo médio de entrega?</span>
+                            <span class="faq-icon transition-transform duration-300 text-rosa text-base">▼</span>
+                        </summary>
+                        <p class="mt-2 text-xs sm:text-sm text-bordo font-bold border-t border-rosaclaro/50 pt-2">
+                            Projetos avulsos levam de 3 a 7 dias úteis após envio do briefing. Planos mensais seguem cronograma semanal.
+                        </p>
+                    </details>
 
-            <details class="group bg-white border-2 border-rosaclaro rounded-2xl p-5 shadow-sm transition-all duration-300 open:border-rosa">
-                <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-base sm:text-lg select-none">
-                    <span>💳 Como funcionam as formas de pagamento?</span>
-                    <span class="faq-icon transition-transform duration-300 text-rosa text-xl">▼</span>
-                </summary>
-                <div class="mt-3 text-sm sm:text-base text-bordo font-bold leading-relaxed border-t border-rosaclaro/50 pt-3">
-                    Para projetos avulsos/fechados, trabalhamos com 50% de entrada (no início da produção) e os 50% restantes na entrega final aprovada. Para planos mensais recorrentes, o pagamento é antecipado a cada ciclo via PIX ou transferência.
-                </div>
-            </details>
+                    <details class="group bg-creme/40 border-2 border-rosaclaro rounded-2xl p-4 transition-all duration-300 open:border-rosa">
+                        <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-sm sm:text-base select-none">
+                            <span>💳 Formas de pagamento aceitas?</span>
+                            <span class="faq-icon transition-transform duration-300 text-rosa text-base">▼</span>
+                        </summary>
+                        <p class="mt-2 text-xs sm:text-sm text-bordo font-bold border-t border-rosaclaro/50 pt-2">
+                            50% de entrada na contratação e 50% na aprovação final. Pagamento prático via PIX ou transferência.
+                        </p>
+                    </details>
 
-            <details class="group bg-white border-2 border-rosaclaro rounded-2xl p-5 shadow-sm transition-all duration-300 open:border-rosa">
-                <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-base sm:text-lg select-none">
-                    <span>✏️ Tenho direito a quantas alterações no projeto?</span>
-                    <span class="faq-icon transition-transform duration-300 text-rosa text-xl">▼</span>
-                </summary>
-                <div class="mt-3 text-sm sm:text-base text-bordo font-bold leading-relaxed border-t border-rosaclaro/50 pt-3">
-                    Cada serviço inclui até 2 (duas) rodadas completas de revisões e ajustes finos dentro do escopo inicial acordado, garantindo que o resultado final fique 100% alinhado à sua expectativa.
+                    <details class="group bg-creme/40 border-2 border-rosaclaro rounded-2xl p-4 transition-all duration-300 open:border-rosa">
+                        <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-sm sm:text-base select-none">
+                            <span>✏️ Quantas revisões posso pedir?</span>
+                            <span class="faq-icon transition-transform duration-300 text-rosa text-base">▼</span>
+                        </summary>
+                        <p class="mt-2 text-xs sm:text-sm text-bordo font-bold border-t border-rosaclaro/50 pt-2">
+                            Estão inclusas até 2 rodadas completas de ajustes finos sem custo extra.
+                        </p>
+                    </details>
                 </div>
-            </details>
 
-            <details class="group bg-white border-2 border-rosaclaro rounded-2xl p-5 shadow-sm transition-all duration-300 open:border-rosa">
-                <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-base sm:text-lg select-none">
-                    <span>📦 Quais arquivos e direitos eu recebo?</span>
-                    <span class="faq-icon transition-transform duration-300 text-rosa text-xl">▼</span>
-                </summary>
-                <div class="mt-3 text-sm sm:text-base text-bordo font-bold leading-relaxed border-t border-rosaclaro/50 pt-3">
-                    Após a quitação integral, você recebe todos os direitos de uso comercial das peças em alta definição (PNG, JPG, PDF e MP4 para vídeos). Identidades visuais incluem também o manual de marca oficial em PDF.
+                <!-- BOX DE AÇÃO DIRETA -->
+                <div class="bg-creme border-2 border-rosaclaro rounded-2xl p-6 text-center flex flex-col justify-between h-full">
+                    <div>
+                        <div class="text-3xl mb-2">✉️</div>
+                        <h3 class="font-black text-bordo text-xl mb-2">Tem uma dúvida específica?</h3>
+                        <p class="text-xs sm:text-sm text-bordo font-bold mb-4">
+                            Envie uma mensagem direta! Sua dúvida será enviada para o meu e-mail com notificação imediata.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-2 justify-center">
+                        <button type="button" onclick="abrirModalDuvida()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all shadow-md">
+                            Enviar Dúvida por E-mail ➔
+                        </button>
+                        <button type="button" onclick="abrirModalSuporte()" class="bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all">
+                            Abrir Chamado / Suporte 🛠️
+                        </button>
+                    </div>
                 </div>
-            </details>
+            </div>
         </div>
     </section>
 
@@ -875,7 +645,6 @@
                 Filtre por categoria e marque os serviços desejados para calcular seu investimento em tempo real:
             </p>
 
-            <!-- ABAS DE FILTRO POR CATEGORIA -->
             <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-6 text-xs sm:text-sm font-black scrollbar-none">
                 <button type="button" onclick="filtrarCategoria('todas', this)" class="btn-filtro px-4 py-2 rounded-xl bg-bordo text-creme border-2 border-bordo transition-all shrink-0">Todos os Serviços</button>
                 <button type="button" onclick="filtrarCategoria('web', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0">🌐 Web & Sites</button>
@@ -885,9 +654,8 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8" id="grid-calc-items">
-
-                <!-- 1. SITE INSTITUCIONAL COMPLETO -->
-                <label id="label-site-completo" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="web">
+                <!-- 1. SITE INSTITUCIONAL -->
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="950" data-name="Site Institucional Multi-Páginas" data-summary="Site institucional completo em várias páginas, responsivo e moderno." onchange="notificarCheckboxDireto(this, 'Site Institucional Multi-Páginas')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Site Institucional Multi-Páginas</span>
@@ -897,7 +665,7 @@
                 </label>
 
                 <!-- 2. LANDING PAGE -->
-                <label id="label-landing-page" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="web">
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="550" data-name="Landing Page de Vendas / Captura" data-summary="Página de alta conversão responsiva com botão de WhatsApp/Cotação." onchange="notificarCheckboxDireto(this, 'Landing Page de Vendas / Captura')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Landing Page de Vendas / Captura</span>
@@ -907,7 +675,7 @@
                 </label>
 
                 <!-- 3. LINK NA BIO -->
-                <label id="label-link-bio" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="web">
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="180" data-name="Link na Bio / Mini Site Interativo" data-summary="Central de links interativa personalizada para bio." onchange="notificarCheckboxDireto(this, 'Link na Bio / Mini Site Interativo')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Link na Bio / Mini Site Interativo</span>
@@ -917,7 +685,7 @@
                 </label>
 
                 <!-- 4. IDENTIDADE VISUAL -->
-                <label id="label-identidade-visual" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="identidade">
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="450" data-name="Identidade Visual Completa + Manual" data-summary="Logo autoral, paleta cromática, tipografia e manual de marca em PDF." onchange="notificarCheckboxDireto(this, 'Identidade Visual Completa + Manual')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Identidade Visual Completa + Manual</span>
@@ -927,7 +695,7 @@
                 </label>
 
                 <!-- 5. ILUSTRAÇÃO 2D -->
-                <label id="label-ilustracao-2d" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="identidade">
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="250" data-name="Ilustração 2D / Capas & Vetorização" data-summary="Ilustrações infantis, capas de livros e vetorização vetorial." onchange="notificarCheckboxDireto(this, 'Ilustração 2D / Capas & Vetorização')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Ilustração 2D / Capas & Vetorização</span>
@@ -937,7 +705,7 @@
                 </label>
 
                 <!-- 6. PERSONAGENS IA -->
-                <label id="label-personagens-ia" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="identidade">
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="150" data-name="Criação de Personagens IA" data-summary="Criação de mascotes com prompts consistentes e direção de arte." onchange="notificarCheckboxDireto(this, 'Criação de Personagens IA')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Criação de Personagens IA</span>
@@ -946,8 +714,8 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 150</span>
                 </label>
 
-                <!-- 7. POST ESTÁTICO AVULSO -->
-                <label id="label-post-avulso" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
+                <!-- 7. POST ESTÁTICO -->
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="45" data-name="Post Estático Avulso" data-summary="Criação de 1 arte estática individual personalizada para o feed." onchange="notificarCheckboxDireto(this, 'Post Estático Avulso')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Post Estático Avulso</span>
@@ -957,7 +725,7 @@
                 </label>
 
                 <!-- 8. CARROSSEL AVULSO -->
-                <label id="label-carrossel-avulso" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="85" data-name="Carrossel Avulso (Até 6 lâminas)" data-summary="Criação de 1 carrossel educativo/informativo com até 6 telas." onchange="notificarCheckboxDireto(this, 'Carrossel Avulso (Até 6 lâminas)')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Carrossel Avulso (Até 6 Telas)</span>
@@ -966,48 +734,8 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 85</span>
                 </label>
 
-                <!-- 9. PLANO INICIAL POSTS -->
-                <label id="label-plano-inicial" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="280" data-name="Plano Inicial: 4 Carrosséis ou 2+2" data-summary="Pacote com 4 carrosséis ou 2 carrosséis + 2 posts estáticos." onchange="notificarCheckboxDireto(this, 'Plano Inicial: 4 Carrosséis ou 2+2')">
-                    <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Plano Inicial: 4 Carrosséis ou 2+2</span>
-                        <span class="text-xs text-bordo font-bold">Ideal para começar sua presença de feed</span>
-                    </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 280</span>
-                </label>
-
-                <!-- 10. PLANO BÁSICO POSTS -->
-                <label id="label-plano-basico" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="360" data-name="Plano Básico: 6 Carrosséis ou 4+2" data-summary="Pacote com 6 carrosséis ou 4 carrosséis + 2 posts estáticos." onchange="notificarCheckboxDireto(this, 'Plano Básico: 6 Carrosséis ou 4+2')">
-                    <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Plano Básico: 6 Carrosséis ou 4+2</span>
-                        <span class="text-xs text-bordo font-bold">Frequência semanal constante de publicações</span>
-                    </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 360</span>
-                </label>
-
-                <!-- 11. PLANO MÉDIO POSTS -->
-                <label id="label-plano-medio" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="490" data-name="Plano Médio: 8 Carrosséis ou 6+2" data-summary="Pacote com 8 carrosséis ou 6 carrosséis + 2 posts estáticos." onchange="notificarCheckboxDireto(this, 'Plano Médio: 8 Carrosséis ou 6+2')">
-                    <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Plano Médio: 8 Carrosséis ou 6+2</span>
-                        <span class="text-xs text-bordo font-bold">2 publicações semanais completas de alto nível</span>
-                    </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 490</span>
-                </label>
-
-                <!-- 12. PLANO AVANÇADO POSTS -->
-                <label id="label-plano-avancado" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60" data-cat="social">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="650" data-name="Plano Avançado: 12 Carrosséis ou 6+6" data-summary="Pacote com 12 carrosséis ou 6 carrosséis + 6 posts estáticos." onchange="notificarCheckboxDireto(this, 'Plano Avançado: 12 Carrosséis ou 6+6')">
-                    <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Plano Avançado: 12 Carrosséis ou 6+6</span>
-                        <span class="text-xs text-bordo font-bold">3 publicações semanais para autoridade máxima</span>
-                    </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 650</span>
-                </label>
-
-                <!-- 13. COMBO SOCIAL MEDIA COMPLETO -->
-                <label id="label-combo-completo" class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 hover:bg-creme/60 md:col-span-2" data-cat="social">
+                <!-- 9. COMBO COMPLETO -->
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 md:col-span-2" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="890" data-name="Combo Social Media Completo: Posts + Reels + Stories" data-summary="Feed mensal completo (posts/carrosséis) + 4 Reels editados no CapCut + Stories." onchange="notificarCheckboxDireto(this, 'Combo Social Media Completo: Posts + Reels + Stories')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Combo Social Media Completo: Posts + Reels + Stories</span>
@@ -1016,8 +744,8 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 890</span>
                 </label>
 
-                <!-- VÍDEOS COM IA POR MINUTAGEM -->
-                <div id="wrapper-video-ia" class="calc-item-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all" data-cat="video">
+                <!-- VÍDEOS COM IA -->
+                <div id="wrapper-video-ia" class="calc-item-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo" onchange="toggleIaMinutos(); calcularTotal(); if(this.checked) mostrarToast('Vídeos com IA adicionado ao carrinho!', '🤖');">
                         <div>
@@ -1037,13 +765,13 @@
                     </div>
                 </div>
 
-                <!-- EDIÇÃO DE VÍDEO GERAL POR MINUTAGEM -->
-                <div id="wrapper-video-geral" class="calc-item-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all" data-cat="video">
+                <!-- EDIÇÃO DE VÍDEO GERAL -->
+                <div id="wrapper-video-geral" class="calc-item-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer">
-                        <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo" onchange="toggleVideoGeral(); calcularTotal(); if(this.checked) mostrarToast('Edição Geral de Vídeos adicionada ao carrinho!', '🎬');">
+                        <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo" onchange="toggleVideoGeral(); calcularTotal(); if(this.checked) mostrarToast('Edição Geral de Vídeos adicionada!', '🎬');">
                         <div>
                             <span class="font-black text-bordo text-base sm:text-lg block">Edição de Vídeos CapCut</span>
-                            <p class="text-xs sm:text-sm text-bordo font-bold">Cortes dinâmicos, legendas sincronizadas, sonorização e transições de retenção.</p>
+                            <p class="text-xs sm:text-sm text-bordo font-bold">Cortes dinâmicos, legendas sincronizadas, sonorização e efeitos de retenção.</p>
                         </div>
                         <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 45/min</span>
                     </label>
@@ -1057,10 +785,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <!-- PAINEL DO CARRINHO / SOMA -->
+            <!-- PAINEL DO CARRINHO -->
             <div class="bg-creme border-2 border-bordo/20 rounded-2xl p-6 shadow-inner">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
                     <div>
@@ -1076,7 +803,7 @@
                 </div>
 
                 <div class="bg-white border-2 border-rosaclaro rounded-xl p-4 text-left">
-                    <h3 class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider mb-2">🛍️ Itens Selecionados no Orçamento:</h3>
+                    <h3 class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider mb-2">🛍️ Itens Selecionados:</h3>
                     <ul class="text-sm sm:text-base text-bordo font-bold space-y-2 divide-y divide-rosaclaro/40" id="resumo-entregas">
                         <li class="pt-1">Seu carrinho está vazio. Escolha seus serviços acima.</li>
                     </ul>
@@ -1085,11 +812,118 @@
         </div>
     </section>
 
-    <!-- MODAL DE CAPTURA & MINI BRIEFING -->
+    <!-- ==================== MODAIS DO SITE ==================== -->
+
+    <!-- MODAL 1: PROJETOS / DEPOIMENTO CLICÁVEL -->
+    <div id="modalDepoimento" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl text-left relative my-8">
+            <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalDepoimento()">&times;</button>
+            <div class="flex items-center gap-3 mb-4">
+                <img id="modal-dep-logo" src="" alt="Logo" class="w-12 h-12 object-contain rounded-full border border-rosa p-0.5">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black text-bordo" id="modal-dep-titulo">Nome do Projeto</h2>
+                    <span class="text-xs font-bold text-bordo/70" id="modal-dep-tag">Categoria</span>
+                </div>
+            </div>
+            <p class="text-sm text-bordo font-bold mb-4 bg-creme/60 p-3.5 rounded-xl border border-rosaclaro italic" id="modal-dep-comentario">Comentário</p>
+            <div class="text-xs text-bordo font-bold mb-6 space-y-1" id="modal-dep-detalhes">Detalhes dos serviços desenvolvidos.</div>
+            
+            <h3 class="text-xs font-black text-bordo uppercase tracking-wider mb-3">Escolha o que deseja acessar:</h3>
+            <div class="flex flex-col gap-2.5" id="modal-dep-links">
+                <!-- Links dinâmicos via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: TIRAR DÚVIDAS RÁPIDAS (ENVIA E-MAIL) -->
+    <div id="modalDuvida" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
+            <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalDuvida()">&times;</button>
+            <div class="text-center mb-4">
+                <span class="inline-block bg-rosa text-bordo font-black text-xs px-3.5 py-1 rounded-full mb-1">✉️ Contato Direto</span>
+                <h2 class="text-2xl font-black text-bordo">Tire sua Dúvida ✨</h2>
+                <p class="text-xs text-bordo font-bold">Recebo sua mensagem diretamente com notificação no meu e-mail!</p>
+            </div>
+
+            <form id="formDuvida" onsubmit="enviarDuvidaPlanilha(event)">
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">Seu Nome / @ do Instagram:*</label>
+                        <input type="text" id="duvida-nome" required placeholder="Ex: Evelyn" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">Seu WhatsApp ou E-mail para Resposta:*</label>
+                        <input type="text" id="duvida-contato" required placeholder="Ex: (11) 99999-9999 ou seu@email.com" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">Assunto da Dúvida:*</label>
+                        <select id="duvida-assunto" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                            <option value="Dúvida sobre Criação de Sites">Dúvida sobre Criação de Sites / Landing Page</option>
+                            <option value="Dúvida sobre Identidade Visual">Dúvida sobre Identidade Visual & Logos</option>
+                            <option value="Dúvida sobre Animações & CapCut">Dúvida sobre Animações 3D / Vídeos CapCut</option>
+                            <option value="Orçamento Personalizado / Prazos">Orçamento Personalizado & Prazos</option>
+                            <option value="Outro Assunto">Outro Assunto</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">Descreva sua Dúvida:*</label>
+                        <textarea id="duvida-mensagem" rows="4" required placeholder="Escreva o que você gostaria de saber..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full mt-4 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 rounded-xl transition-all shadow-md">
+                    Enviar Dúvida por E-mail ➔
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 3: SUPORTE & RECLAMAÇÕES -->
+    <div id="modalSuporte" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
+            <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalSuporte()">&times;</button>
+            <div class="text-center mb-4">
+                <span class="inline-block bg-amarelo text-bordo font-black text-xs px-3.5 py-1 rounded-full mb-1">🛠️ Central de Ajuda & Ajustes</span>
+                <h2 class="text-2xl font-black text-bordo">Suporte ao Cliente ✨</h2>
+                <p class="text-xs text-bordo font-bold">Teve algum problema ou precisa de revisão? Notifique o studio imediatamente:</p>
+            </div>
+
+            <form id="formSuporte" onsubmit="enviarSuportePlanilha(event)">
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">Nome do Cliente / Projeto:*</label>
+                        <input type="text" id="suporte-nome" required placeholder="Ex: Julia Sales / 4G" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">Contato Direto (WhatsApp / Insta):*</label>
+                        <input type="text" id="suporte-contato" required placeholder="Ex: (11) 99999-9999" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">Tipo de Solicitação:*</label>
+                        <select id="suporte-categoria" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
+                            <option value="Ajuste / Revisão em Projeto em Andamento">Ajuste / Revisão em Projeto em Andamento</option>
+                            <option value="Dificuldade de Acesso / Arquivos">Dificuldade com Arquivos / Drive</option>
+                            <option value="Reclamação ou Feedback Negativo">Reclamação ou Sugestão de Melhoria</option>
+                            <option value="Dúvida de Pós-Entrega">Dúvida de Pós-Entrega</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black text-bordo mb-1">Descrição Detalhada do Ocorrido:*</label>
+                        <textarea id="suporte-descricao" rows="4" required placeholder="Descreva com detalhes o ajuste ou problema que você precisa resolver..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full mt-4 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 rounded-xl transition-all shadow-md">
+                    Registrar Chamado de Suporte ➔
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL 4: ORÇAMENTO & BRIEFING -->
     <div id="modalOrcamento" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-xl w-full shadow-2xl text-left relative my-8 max-h-[90vh] overflow-y-auto">
-            <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo p-1 hover:text-rosa transition-colors" onclick="fecharModalOrcamento()">&times;</button>
-
+            <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo p-1 hover:text-rosa" onclick="fecharModalOrcamento()">&times;</button>
             <div class="text-center mb-4">
                 <span class="inline-block bg-rosa text-bordo font-black text-xs px-3.5 py-1 rounded-full mb-1">📋 Mini Briefing & Pedido</span>
                 <h2 class="text-2xl sm:text-3xl font-black text-bordo">Quase Pronto! ✨</h2>
@@ -1110,12 +944,10 @@
                         <label class="block text-xs font-black text-bordo mb-1">1. Nome do Cliente / Empresa:*</label>
                         <input type="text" id="cliente-nome" placeholder="Ex: Evelyn / Turminha do Xexéu" required class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
                     </div>
-
                     <div>
                         <label class="block text-xs font-black text-bordo mb-1">2. Contato (WhatsApp / Insta):*</label>
                         <input type="text" id="cliente-contato" placeholder="Ex: @seu_perfil ou (11) 99999-9999" required class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
                     </div>
-
                     <div>
                         <label class="block text-xs font-black text-bordo mb-1">3. Status do Logo:*</label>
                         <select id="cliente-logo-status" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
@@ -1124,10 +956,9 @@
                             <option value="Quero reformular/Redesign">Quero reformular (Redesign)</option>
                         </select>
                     </div>
-
                     <div>
                         <label class="block text-xs font-black text-bordo mb-1">4. Detalhes / Prazos / Minutos:*</label>
-                        <textarea id="cliente-detalhes-prazos" rows="4" required placeholder="Descreva o objetivo do projeto, tipo de site, quantidades, minutagem e referências desejadas..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
+                        <textarea id="cliente-detalhes-prazos" rows="4" required placeholder="Descreva o objetivo do projeto, tipo de site, quantidades, minutagem e referências..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
                     </div>
                 </div>
 
@@ -1139,14 +970,14 @@
         </div>
     </div>
 
-    <!-- MODAL DE FEEDBACK -->
+    <!-- MODAL 5: FEEDBACK DO CLIENTE -->
     <div id="modalFeedback" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
             <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo" onclick="fecharModalFeedback()">&times;</button>
             <div class="text-center mb-4">
                 <span class="inline-block bg-amarelo text-bordo font-black text-xs px-3.5 py-1 rounded-full mb-1">⭐ Avaliação de Cliente</span>
                 <h2 class="text-2xl font-black text-bordo">Deixe seu Feedback! ✨</h2>
-                <p class="text-xs text-bordo font-bold">Sua opinião ajuda o studio a crescer e criar artes ainda melhores!</p>
+                <p class="text-xs text-bordo font-bold">Sua opinião ajuda o studio a crescer!</p>
             </div>
 
             <form id="formFeedback" onsubmit="enviarFeedbackPlanilha(event)">
@@ -1155,7 +986,6 @@
                         <label class="block text-xs font-black text-bordo mb-1">Seu Nome / @ do Instagram:*</label>
                         <input type="text" id="fb-nome" required placeholder="Ex: @seu_perfil ou Nome" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
                     </div>
-
                     <div>
                         <label class="block text-xs font-black text-bordo mb-1">Sua Nota:*</label>
                         <select id="fb-estrelas" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo">
@@ -1164,7 +994,6 @@
                             <option value="3">⭐⭐⭐ (3/5 - Bom)</option>
                         </select>
                     </div>
-
                     <div>
                         <label class="block text-xs font-black text-bordo mb-1">Seu Depoimento / Comentário:*</label>
                         <textarea id="fb-comentario" rows="4" required placeholder="Conta pra gente como foi sua experiência com o projeto..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold bg-white focus:border-bordo resize-none"></textarea>
@@ -1178,7 +1007,7 @@
         </div>
     </div>
 
-    <!-- MODAL DE FERRAMENTAS -->
+    <!-- MODAL 6: FERRAMENTAS -->
     <div id="modal-ferramenta" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 max-w-md w-full text-center relative">
             <h2 class="text-2xl font-black text-bordo mb-3" id="modal-titulo">Ferramenta</h2>
@@ -1187,21 +1016,19 @@
         </div>
     </div>
 
-    <!-- MODAL LEGAL (TERMOS E PRIVACIDADE) -->
+    <!-- MODAL 7: TERMOS LEGAIS -->
     <div id="modalLegal" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-2xl w-full shadow-2xl text-left relative my-8 max-h-[85vh] overflow-y-auto">
-            <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo p-1 hover:text-rosa transition-colors" onclick="fecharModalLegal()">&times;</button>
+            <button type="button" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalLegal()">&times;</button>
             <h2 class="text-2xl sm:text-3xl font-black text-bordo mb-4" id="modal-legal-titulo">Documento Legal</h2>
-            <div class="text-sm sm:text-base text-bordo font-bold leading-relaxed space-y-3" id="modal-legal-conteudo">
-                <!-- Conteúdo dinâmico via JS -->
-            </div>
+            <div class="text-sm sm:text-base text-bordo font-bold leading-relaxed space-y-3" id="modal-legal-conteudo"></div>
             <div class="mt-6 text-center">
                 <button type="button" onclick="fecharModalLegal()" class="bg-bordo text-creme font-black text-xs py-2.5 px-8 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Entendido</button>
             </div>
         </div>
     </div>
 
-    <!-- RODAPÉ LEGAL & INSTITUCIONAL -->
+    <!-- RODAPÉ INSTITUCIONAL -->
     <footer class="w-full bg-white/90 border-t-2 border-rosaclaro py-8 text-center text-sm text-bordo font-bold mt-12 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 space-y-3">
             <div class="flex justify-center mb-2">
@@ -1223,20 +1050,178 @@
         </div>
     </footer>
 
-    <!-- SCRIPTS -->
+    <!-- SCRIPTS DE COMPORTAMENTO & DADOS -->
     <script>
         const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbzXhkvwxpUBB1A2cfC90JUEOY9zyPF-du1gh5vB0v-9A8V9o9H-EcQtMoNY1vdsIBnNiA/exec";
         const SEU_INSTAGRAM = "eve.desi_gn"; 
 
-        /* MENU MOBILE INTERATIVO */
+        /* DADOS DOS DEPOIMENTOS E CASOS CLICÁVEIS */
+        const PROJETOS_INFO = {
+            'xexeu': {
+                titulo: "Turminha do Xexéu",
+                tag: "Animação 3D, IA & Audiovisual",
+                logo: "https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png",
+                comentario: '"As animações dos personagens e os cenários no CapCut deram vida nova ao canal! O trabalho com IA e ilustração ficou perfeito."',
+                detalhes: "• Desenvolvimento de cenários 3D e personagens com Inteligência Artificial.<br>• Edição completa de episódios musicais infantis no CapCut.<br>• Identidade visual oficial e portal institucional na web.",
+                links: [
+                    { label: "🌐 Acessar Portal Oficial", url: "https://turminhadoxexeuoficiall.vercel.app/", classe: "bg-bordo text-creme" },
+                    { label: "▶️ Ver no YouTube", url: "https://www.youtube.com/@turminhaxe_xeu", classe: "bg-rosa text-bordo" },
+                    { label: "📱 Instagram @turminhaxe_xeu", url: "https://www.instagram.com/turminhaxe_xeu", classe: "bg-rosaclaro text-bordo" }
+                ]
+            },
+            '4g': {
+                titulo: "4G Proteção Veicular",
+                tag: "Landing Page de Conversão & Artes de Anúncio",
+                logo: "https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/4G.png",
+                comentario: '"A landing page e o formulário integrado trouxeram muito mais cotações direto pro nosso WhatsApp. Recomendo demais!"',
+                detalhes: "• Desenvolvimento de Landing Page de alta velocidade com cálculo dinâmico de cotações.<br>• Criação de artes estratégicas e padronização estética de anúncios para o feed.",
+                links: [
+                    { label: "🌐 Acessar Landing Page Oficial", url: "https://4gprotecaoveicularoficial.vercel.app/", classe: "bg-bordo text-creme" },
+                    { label: "📱 Perfil no Instagram", url: "https://www.instagram.com/4gprotecaoveicular/", classe: "bg-rosa text-bordo" }
+                ]
+            },
+            'krakens': {
+                titulo: "Krakens",
+                tag: "Identidade Visual Completa & Posts",
+                logo: "https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png",
+                comentario: '"A identidade visual e os posts ficaram modernos, com muita personalidade e presença forte no Instagram!"',
+                detalhes: "• Estruturação de manual de marca, tipografia e paleta cromática.<br>• Criação de layouts contínuos e templates de posts no Instagram.",
+                links: [
+                    { label: "📱 Acessar Perfil no Instagram", url: "https://www.instagram.com/krakens__/", classe: "bg-bordo text-creme" },
+                    { label: "📁 Ver no Portfólio Canva", url: "https://canva.link/portfolio-evelyn-cecilia", classe: "bg-rosa text-bordo" }
+                ]
+            },
+            'saint': {
+                titulo: "Saint Vision Home",
+                tag: "Carrosséis Educativos & Identidade",
+                logo: "https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png",
+                comentario: '"Os carrosséis para o Instagram da ótica ficaram elegantes e super explicativos. Atendimento impecável e criativo."',
+                detalhes: "• Direção de arte para ótica itinerante domiciliar.<br>• Produção contínua de carrosséis educativos de alta retenção e edição de Reels.",
+                links: [
+                    { label: "👓 Acessar Instagram da Ótica", url: "https://www.instagram.com/saint.visionhome/", classe: "bg-bordo text-creme" },
+                    { label: "📁 Ver Exemplos no Portfólio", url: "https://canva.link/portfolio-evelyn-cecilia", classe: "bg-rosa text-bordo" }
+                ]
+            },
+            'julia': {
+                titulo: "Julia Sales (Brincar e Viver)",
+                tag: "Identidade Visual & Produção de Vídeos",
+                logo: "https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png",
+                comentario: '"A identidade visual completa da marca ficou encantadora e as edições de vídeo tornaram os episódios super dinâmicos e profissionais!"',
+                detalhes: "• Criação da Identidade Visual oficial do canal infantil.<br>• Edição de vídeos com cortes dinâmicos e produção de thumbnails de alto clique para o YouTube.",
+                links: [
+                    { label: "▶️ Assistir no YouTube", url: "https://www.youtube.com/@juliasalesOficial", classe: "bg-bordo text-creme" },
+                    { label: "📁 Ver Apresentação de Identidade", url: "https://canva.link/portfolio-evelyn-cecilia", classe: "bg-rosa text-bordo" }
+                ]
+            }
+        };
+
+        function abrirModalDepoimento(chave) {
+            const dados = PROJETOS_INFO[chave];
+            if (!dados) return;
+
+            document.getElementById('modal-dep-titulo').innerText = dados.titulo;
+            document.getElementById('modal-dep-tag').innerText = dados.tag;
+            document.getElementById('modal-dep-logo').src = dados.logo;
+            document.getElementById('modal-dep-comentario').innerText = dados.comentario;
+            document.getElementById('modal-dep-detalhes').innerHTML = dados.detalhes;
+
+            const divLinks = document.getElementById('modal-dep-links');
+            divLinks.innerHTML = '';
+
+            dados.links.forEach(link => {
+                const a = document.createElement('a');
+                a.href = link.url;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.className = `w-full ${link.classe} font-black text-xs sm:text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 hover:scale-[1.02] transition-all shadow-sm text-center`;
+                a.innerHTML = link.label;
+                divLinks.appendChild(a);
+            });
+
+            document.getElementById('modalDepoimento').classList.remove('hidden');
+            document.getElementById('modalDepoimento').classList.add('flex');
+        }
+
+        function fecharModalDepoimento() {
+            document.getElementById('modalDepoimento').classList.add('hidden');
+            document.getElementById('modalDepoimento').classList.remove('flex');
+        }
+
+        /* GESTÃO DO MENU MOBILE */
         function toggleMenuMobile() {
             const menu = document.getElementById('menu-mobile');
             const iconeAbrir = document.getElementById('icone-menu-abrir');
             const iconeFechar = document.getElementById('icone-menu-fechar');
-            
             menu.classList.toggle('hidden');
             iconeAbrir.classList.toggle('hidden');
             iconeFechar.classList.toggle('hidden');
+        }
+
+        /* GESTÃO DE MODAIS DE DÚVIDA E SUPORTE */
+        function abrirModalDuvida() {
+            document.getElementById('modalDuvida').classList.remove('hidden');
+            document.getElementById('modalDuvida').classList.add('flex');
+        }
+
+        function fecharModalDuvida() {
+            document.getElementById('modalDuvida').classList.add('hidden');
+            document.getElementById('modalDuvida').classList.remove('flex');
+        }
+
+        function abrirModalSuporte() {
+            document.getElementById('modalSuporte').classList.remove('hidden');
+            document.getElementById('modalSuporte').classList.add('flex');
+        }
+
+        function fecharModalSuporte() {
+            document.getElementById('modalSuporte').classList.add('hidden');
+            document.getElementById('modalSuporte').classList.remove('flex');
+        }
+
+        function enviarDuvidaPlanilha(e) {
+            e.preventDefault();
+            const nomeVal = document.getElementById('duvida-nome').value.trim();
+            const contatoVal = document.getElementById('duvida-contato').value.trim();
+            const assuntoVal = document.getElementById('duvida-assunto').value;
+            const mensagemVal = document.getElementById('duvida-mensagem').value.trim();
+
+            const payload = { tipo: "duvida", nome: nomeVal, contato: contatoVal, assunto: assuntoVal, mensagem: mensagemVal };
+
+            if (URL_APPS_SCRIPT) {
+                fetch(URL_APPS_SCRIPT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }).catch(err => console.log('Erro duvida:', err));
+            }
+
+            mostrarToast("Dúvida enviada com sucesso! Notificação recebida no e-mail ✨", "✉️");
+            fecharModalDuvida();
+            document.getElementById('formDuvida').reset();
+        }
+
+        function enviarSuportePlanilha(e) {
+            e.preventDefault();
+            const nomeVal = document.getElementById('suporte-nome').value.trim();
+            const contatoVal = document.getElementById('suporte-contato').value.trim();
+            const categoriaVal = document.getElementById('suporte-categoria').value;
+            const descricaoVal = document.getElementById('suporte-descricao').value.trim();
+
+            const payload = { tipo: "suporte", nome: nomeVal, contato: contatoVal, categoria: categoriaVal, descricao: descricaoVal };
+
+            if (URL_APPS_SCRIPT) {
+                fetch(URL_APPS_SCRIPT, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }).catch(err => console.log('Erro suporte:', err));
+            }
+
+            mostrarToast("Chamado de suporte registrado! Retornaremos o contato em breve.", "🛠️");
+            fecharModalSuporte();
+            document.getElementById('formSuporte').reset();
         }
 
         /* GESTÃO DE COOKIES LGPD */
@@ -1251,7 +1236,7 @@
             }
         });
 
-        /* GESTÃO DE MODAIS LEGAIS */
+        /* MODAL LEGAL */
         function abrirModalLegal(tipo) {
             const modal = document.getElementById('modalLegal');
             const titulo = document.getElementById('modal-legal-titulo');
@@ -1261,28 +1246,19 @@
                 titulo.innerText = "Política de Privacidade & LGPD";
                 conteudo.innerHTML = `
                     <p><strong>Última atualização:</strong> Agosto de 2026</p>
-                    <p>A <strong>Eve Design Studio</strong>, representada por <strong>Evelyn Cecília de Sales Pereira</strong> (Francisco Morato – SP), valoriza a sua privacidade e cumpre integralmente as diretrizes da Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD).</p>
+                    <p>A <strong>Eve Design Studio</strong>, representada por <strong>Evelyn Cecília de Sales Pereira</strong> (Francisco Morato – SP), valoriza a sua privacidade e cumpre integralmente a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD).</p>
                     <h3 class="font-black text-base pt-2">1. Coleta de Informações</h3>
-                    <p>Coletamos apenas os dados fornecidos voluntariamente através dos nossos formulários de simulação, orçamentos ou feedback (nome, contato de WhatsApp/Instagram e detalhes do projeto).</p>
-                    <h3 class="font-black text-base pt-2">2. Finalidade de Uso</h3>
-                    <p>Os dados são utilizados exclusivamente para: elaboração de briefings e orçamentos, contato direto sobre o andamento dos projetos e emissão formal de contratos de prestação de serviços.</p>
-                    <h3 class="font-black text-base pt-2">3. Segurança dos Dados</h3>
-                    <p>Nenhum dado é vendido, alugado ou compartilhado com terceiros para fins de marketing. Para solicitar a exclusão de seus dados, envie um e-mail para: <strong>evececi.design@gmail.com</strong>.</p>
+                    <p>Coletamos apenas os dados fornecidos voluntariamente através dos formulários (nome, contato e detalhes do projeto).</p>
+                    <h3 class="font-black text-base pt-2">2. Finalidade</h3>
+                    <p>Os dados são utilizados exclusivamente para orçamentos, contato sobre projetos e suporte.</p>
                 `;
-            } else if (tipo === 'termos') {
+            } else {
                 titulo.innerText = "Termos de Uso";
                 conteudo.innerHTML = `
                     <p><strong>Última atualização:</strong> Agosto de 2026</p>
-                    <p>Ao navegar e utilizar a calculadora interativa deste site, você concorda com os seguintes termos:</p>
-                    <h3 class="font-black text-base pt-2">1. Estimativa de Valores</h3>
-                    <p>Os valores gerados pelo simulador representam propostas de investimento e estão sujeitos à validação do escopo no momento da formalização do contrato.</p>
-                    <h3 class="font-black text-base pt-2">2. Direitos Autorais</h3>
-                    <p>Todas as marcas, ilustrações, códigos e conceitos apresentados neste portfólio são de propriedade de Evelyn Cecília de Sales Pereira ou de seus respectivos clientes parceiros.</p>
-                    <h3 class="font-black text-base pt-2">3. Contratação Formal</h3>
-                    <p>O início de qualquer projeto dar-se-á mediante aprovação do briefing e assinatura de Contrato de Prestação de Serviços específico.</p>
+                    <p>Ao utilizar este site e calculadora, você concorda com as diretrizes de propostas e direitos autorais do studio.</p>
                 `;
             }
-
             modal.classList.remove('hidden');
             modal.classList.add('flex');
         }
@@ -1297,15 +1273,13 @@
             const toast = document.getElementById('toast-feedback');
             document.getElementById('toast-msg').innerText = mensagem;
             document.getElementById('toast-icon').innerText = icone;
-
             toast.classList.remove('hidden', 'opacity-0');
             toast.classList.add('opacity-100');
-
             setTimeout(() => {
                 toast.classList.remove('opacity-100');
                 toast.classList.add('opacity-0');
                 setTimeout(() => toast.classList.add('hidden'), 300);
-            }, 3000);
+            }, 3200);
         }
 
         function abrirModalFeedback() {
@@ -1343,24 +1317,16 @@
         function notificarCheckboxDireto(checkbox, nomeServico) {
             const labelParent = checkbox.closest('label');
             if (labelParent) {
-                if (checkbox.checked) {
-                    labelParent.classList.add('card-selected');
-                } else {
-                    labelParent.classList.remove('card-selected');
-                }
+                if (checkbox.checked) labelParent.classList.add('card-selected');
+                else labelParent.classList.remove('card-selected');
             }
-
             calcularTotal();
-            if (checkbox.checked) {
-                mostrarToast(`"${nomeServico}" adicionado ao carrinho!`, "🛒");
-            } else {
-                mostrarToast(`"${nomeServico}" removido do carrinho.`, "🗑️");
-            }
+            if (checkbox.checked) mostrarToast(`"${nomeServico}" adicionado ao carrinho!`, "🛒");
+            else mostrarToast(`"${nomeServico}" removido do carrinho.`, "🗑️");
         }
 
         function selecionarServicoPorTabela(nomeServico) {
             filtrarCategoria('todas', document.querySelector('.btn-filtro'));
-
             const items = document.querySelectorAll('.calc-item');
             let itemEncontrado = null;
 
@@ -1378,7 +1344,6 @@
                     setTimeout(() => labelParent.classList.remove('card-feedback'), 600);
                 }
             }
-
             calcularTotal();
             mostrarToast(`"${nomeServico}" adicionado ao carrinho!`, "🛒");
             document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
@@ -1386,7 +1351,6 @@
 
         function destacarOpcaoCalculadora(idCheckbox) {
             filtrarCategoria('todas', document.querySelector('.btn-filtro'));
-
             const checkbox = document.getElementById(idCheckbox);
             if (checkbox) {
                 checkbox.checked = true;
@@ -1473,7 +1437,6 @@
                 const labelParent = item.closest('label');
                 if (labelParent) labelParent.classList.remove('card-selected');
             });
-
             document.getElementById('check-video-geral').checked = false;
             document.getElementById('box-minutos-geral').classList.add('hidden');
             document.getElementById('input-minutos-geral').value = 1;
@@ -1497,37 +1460,27 @@
                 btn.classList.add('bg-bordo', 'text-creme', 'border-bordo');
                 btn.classList.remove('bg-white', 'text-bordo', 'border-rosaclaro');
             }
-
             document.querySelectorAll('.calc-item-card').forEach(card => {
-                if(cat === 'todas' || card.getAttribute('data-cat') === cat) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
+                if(cat === 'todas' || card.getAttribute('data-cat') === cat) card.classList.remove('hidden');
+                else card.classList.add('hidden');
             });
         }
 
         function obterItensSelecionadosTexto() {
             let lista = [];
-
             document.querySelectorAll('.calc-item').forEach(item => {
-                if(item.checked) {
-                    lista.push(item.getAttribute('data-name'));
-                }
+                if(item.checked) lista.push(item.getAttribute('data-name'));
             });
-
             const checkIa = document.getElementById('check-video-ia');
             if(checkIa.checked) {
                 const minIa = document.getElementById('input-minutos-ia').value || 1;
                 lista.push(`Edição de Vídeos com IA (${minIa} min)`);
             }
-
             const checkGeral = document.getElementById('check-video-geral');
             if(checkGeral.checked) {
                 const minGeral = document.getElementById('input-minutos-geral').value || 1;
                 lista.push(`Edição de Vídeos CapCut (${minGeral} min)`);
             }
-
             return lista;
         }
 
@@ -1543,7 +1496,6 @@
                     total += preco;
                     selecionados++;
                     const nomeServico = item.getAttribute('data-name');
-
                     const li = document.createElement('li');
                     li.className = "pt-2 pb-1 flex justify-between items-center";
                     li.innerHTML = `<div><strong class="text-bordo">${nomeServico}</strong><br><span class="text-xs text-bordo font-bold">${item.getAttribute('data-summary')}</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${preco.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('${nomeServico}')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
@@ -1557,7 +1509,6 @@
                 const precoIa = minutosIa * 80;
                 total += precoIa;
                 selecionados++;
-
                 const li = document.createElement('li');
                 li.className = "pt-2 pb-1 flex justify-between items-center";
                 li.innerHTML = `<div><strong class="text-bordo">Edição de Vídeos com IA (${minutosIa} min)</strong><br><span class="text-xs text-bordo font-bold">Geração de cenários/personagens + CapCut (R$ 80/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoIa.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Edição de Vídeos com IA')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
@@ -1570,7 +1521,6 @@
                 const precoVideo = minutos * 45;
                 total += precoVideo;
                 selecionados++;
-
                 const li = document.createElement('li');
                 li.className = "pt-2 pb-1 flex justify-between items-center";
                 li.innerHTML = `<div><strong class="text-bordo">Edição de Vídeos CapCut (${minutos} min)</strong><br><span class="text-xs text-bordo font-bold">Edição profissional e dinâmica (R$ 45/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoVideo.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Edição de Vídeos CapCut')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
@@ -1592,7 +1542,6 @@
                 mostrarToast('Selecione pelo menos um serviço no carrinho!', '⚠️');
                 return;
             }
-
             const itens = obterItensSelecionadosTexto();
             const resumoDiv = document.getElementById('modal-resumo-itens');
             resumoDiv.innerHTML = '• ' + itens.join('<br>• ');
@@ -1609,7 +1558,6 @@
 
         function enviarDadosPlanilha(e) {
             e.preventDefault();
-
             const nomeVal = document.getElementById('cliente-nome').value.trim();
             const contatoVal = document.getElementById('cliente-contato').value.trim();
             const logoStatusVal = document.getElementById('cliente-logo-status').value;
@@ -1635,7 +1583,7 @@
                     mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
-                }).catch(err => console.log('Erro ao enviar:', err));
+                }).catch(err => console.log('Erro pedido:', err));
             }
 
             const textoInstagram = `✨ NOVO BRIEFING & PEDIDO - EVE DESIGN STUDIO ✨\n\n` +
