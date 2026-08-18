@@ -204,10 +204,10 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div class="bg-creme/40 border-2 border-rosaclaro rounded-2xl p-5 text-left flex flex-col justify-between">
+                <div onclick="selecionarServicoPorTabela('Total Área 01: Web Design & Branding')" class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-5 text-left flex flex-col justify-between cursor-pointer group transition-all">
                     <div>
                         <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 01</span>
-                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Web Design & Branding</h3>
+                        <h3 class="text-lg font-black text-bordo mt-2 mb-1 group-hover:text-rosa transition-colors">Web Design & Branding</h3>
                         <p class="text-xs text-bordo font-bold mb-3">Link na Bio + Identidade Visual + Landing Page.</p>
                     </div>
                     <div class="pt-3 border-t border-rosaclaro/60 flex items-center justify-between">
@@ -216,10 +216,10 @@
                     </div>
                 </div>
 
-                <div class="bg-creme/40 border-2 border-rosaclaro rounded-2xl p-5 text-left flex flex-col justify-between">
+                <div onclick="selecionarServicoPorTabela('Total Área 02: Ilustração & Arte')" class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-5 text-left flex flex-col justify-between cursor-pointer group transition-all">
                     <div>
                         <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 02</span>
-                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Ilustração & Arte</h3>
+                        <h3 class="text-lg font-black text-bordo mt-2 mb-1 group-hover:text-rosa transition-colors">Ilustração & Arte</h3>
                         <p class="text-xs text-bordo font-bold mb-3">Personagem IA + Personagem 2D + Ilustração 2D/Capas.</p>
                     </div>
                     <div class="pt-3 border-t border-rosaclaro/60 flex items-center justify-between">
@@ -228,10 +228,10 @@
                     </div>
                 </div>
 
-                <div class="bg-creme/40 border-2 border-rosaclaro rounded-2xl p-5 text-left flex flex-col justify-between">
+                <div onclick="selecionarServicoPorTabela('Total Área 03: Redes Sociais & Conteúdo')" class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-5 text-left flex flex-col justify-between cursor-pointer group transition-all">
                     <div>
                         <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 03</span>
-                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Redes Sociais & Conteúdo</h3>
+                        <h3 class="text-lg font-black text-bordo mt-2 mb-1 group-hover:text-rosa transition-colors">Redes Sociais & Conteúdo</h3>
                         <p class="text-xs text-bordo font-bold mb-3">Posts avulsos, carrosséis e Combo Social Media.</p>
                     </div>
                     <div class="pt-3 border-t border-rosaclaro/60 flex items-center justify-between">
@@ -657,6 +657,35 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8" id="grid-calc-items">
+                <!-- Totais por Área -->
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="1180" data-name="Total Área 01: Web Design & Branding" data-summary="Link na Bio + Identidade Visual + Landing Page." onchange="notificarCheckboxDireto(this, 'Total Área 01: Web Design & Branding')">
+                    <div>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Total Área 01: Web Design & Branding</span>
+                        <span class="text-xs text-bordo font-bold">Link na Bio + Identidade Visual + Landing Page</span>
+                    </div>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 1.180</span>
+                </label>
+
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="600" data-name="Total Área 02: Ilustração & Arte" data-summary="Personagem IA + Personagem 2D + Ilustração 2D/Capas." onchange="notificarCheckboxDireto(this, 'Total Área 02: Ilustração & Arte')">
+                    <div>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Total Área 02: Ilustração & Arte</span>
+                        <span class="text-xs text-bordo font-bold">Personagem IA + Personagem 2D + Ilustração 2D/Capas</span>
+                    </div>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 600</span>
+                </label>
+
+                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="700" data-name="Total Área 03: Redes Sociais & Conteúdo" data-summary="Posts avulsos, carrosséis e Combo Social Media." onchange="notificarCheckboxDireto(this, 'Total Área 03: Redes Sociais & Conteúdo')">
+                    <div>
+                        <span class="font-black text-bordo text-base sm:text-lg block">Total Área 03: Redes Sociais & Conteúdo</span>
+                        <span class="text-xs text-bordo font-bold">Posts avulsos, carrosséis e Combo Social Media</span>
+                    </div>
+                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 700</span>
+                </label>
+
+                <!-- Serviços Avulsos -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="950" data-name="Site Institucional Multi-Páginas" data-summary="Site institucional completo em várias páginas, responsivo e moderno." onchange="notificarCheckboxDireto(this, 'Site Institucional Multi-Páginas')">
                     <div>
@@ -730,7 +759,7 @@
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="85" data-name="Carrossel Avulso (Até 6 lâminas)" data-summary="Criação de 1 carrossel educativo/informativo com até 6 telas." onchange="notificarCheckboxDireto(this, 'Carrossel Avulso (Até 6 lâminas)')">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="85" data-name="Carrossel Avulso (Até 6 telas)" data-summary="Criação de 1 carrossel educativo/informativo com até 6 telas." onchange="notificarCheckboxDireto(this, 'Carrossel Avulso (Até 6 telas)')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Carrossel Avulso (Até 6 Telas)</span>
                         <span class="text-xs text-bordo font-bold">Sequência visual contínua para alto engajamento</span>
@@ -1276,7 +1305,7 @@
             recalcularModalTotal();
         }
 
-        function recalcalcularModalTotal() {
+        function recalcularModalTotal() {
             let total = 0;
             document.querySelectorAll('.calc-item').forEach(item => { if(item.checked) total += parseFloat(item.getAttribute('data-price')); });
             
