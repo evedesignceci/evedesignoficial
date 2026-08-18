@@ -324,7 +324,7 @@
                         <h3 class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider mb-3">
                             Minha Caixa de Ferramentas (Clique para detalhes):
                         </h3>
-                        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2.5">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2.5">
                             <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais, ilustração 2D, vetorização e design de posts.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/ADOBE_ILUSTARTOR.png" loading="lazy" alt="Adobe Illustrator" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Illustrator</span>
@@ -341,8 +341,12 @@
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CANVA.png" loading="lazy" alt="Canva Pro" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Canva</span>
                             </button>
+                            <button type="button" onclick="mostrarNivel('Código & Web', 'Avançado', 'Desenvolvimento de sites responsivos, HTML, CSS, JavaScript e automações.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                                <div class="w-8 h-8 flex items-center justify-center bg-bordo text-creme rounded-xl font-black text-sm mb-1 group-hover:scale-110 transition-transform">&lt;/&gt;</div>
+                                <span class="text-xs font-black text-bordo">Código & Web</span>
+                            </button>
                             <button type="button" onclick="mostrarNivel('Gemini IA', 'Avançado', 'Criação de conceitos visuais, prompts de personagens e roteirização.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
-                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/GEMINI.png" loading="lazy" alt="Gemini IA" class="w-8 h-8 object-contain mb-1 group-hover:scale-105 transition-transform">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/GEMINI.png" loading="lazy" alt="Gemini IA" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Gemini IA</span>
                             </button>
                             <button type="button" onclick="mostrarNivel('ChatGPT', 'Avançado', 'Engenharia de prompts estratégicos, redação publicitária e roteiros.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
@@ -814,7 +818,7 @@
     </section>
 
     <!-- ==================== MODAL: GERADOR DE ORÇAMENTO FORMAL (ESTILO APP) ==================== -->
-    <div id="modalOrcamento" role="dialog" aria-modal="true" aria-labelledby="modal-orcamento-titulo" class="fixed inset-0 bg-bordo/80 backdrop-blur-md hidden items-center justify-center p-2 sm:p-4 z-50 overflow-y-auto">
+    <div id="modalOrcamento" role="dialog" aria-modal="true" class="fixed inset-0 bg-bordo/80 backdrop-blur-md hidden items-center justify-center p-2 sm:p-4 z-50 overflow-y-auto">
         <div class="bg-cinzaclaro rounded-3xl w-full max-w-2xl shadow-2xl relative my-4 flex flex-col max-h-[95vh]">
             <div class="bg-white border-b border-gray-200 p-4 sm:p-6 rounded-t-3xl flex items-center justify-between shrink-0">
                 <div>
@@ -1083,15 +1087,21 @@
         function selecionarServicoPorTabela(nomeServico) {
             filtrarCategoria('todas');
             const items = document.querySelectorAll('.calc-item');
+            let encontrado = false;
             items.forEach(item => { 
                 if(item.getAttribute('data-name') === nomeServico) { 
                     item.checked = true; 
+                    encontrado = true;
                     const label = item.closest('label');
                     if(label) label.classList.add('card-selected'); 
                 } 
             });
             calcularTotal();
-            mostrarToast(`"${nomeServico}" adicionado!`, "🛒");
+            if(encontrado) {
+                mostrarToast(`"${nomeServico}" adicionado!`, "🛒");
+            } else {
+                mostrarToast(`Serviço selecionado!`, "✨");
+            }
             document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
         }
 
@@ -1235,6 +1245,7 @@
 
             document.getElementById('modalOrcamento').classList.remove('hidden');
             document.getElementById('modalOrcamento').classList.add('flex');
+            recalcularModalTotal();
             mostrarToast("Abrindo formulário de orçamento formal...", "📋");
         }
 
