@@ -122,7 +122,7 @@
 
             <nav class="hidden xl:flex items-center gap-5 text-xs sm:text-sm font-black text-bordo uppercase tracking-wider">
                 <a href="#sobre-mim" class="hover:text-rosa transition-colors py-1">Sobre</a>
-                <a href="#resumo-valores" class="hover:text-rosa transition-colors py-1">Pacotes & Valores</a>
+                <a href="#resumo-valores" class="hover:text-rosa transition-colors py-1">Totais por Área</a>
                 <a href="#branding" class="hover:text-rosa transition-colors py-1">Branding</a>
                 <a href="#tabela" class="hover:text-rosa transition-colors py-1">Serviços</a>
                 <a href="#depoimentos" class="hover:text-rosa transition-colors py-1">Clientes</a>
@@ -148,9 +148,9 @@
         <div id="menu-mobile" class="hidden xl:hidden bg-white border-t-2 border-rosaclaro px-6 py-5 shadow-xl">
             <nav class="flex flex-col gap-3 text-sm sm:text-base font-black text-bordo uppercase">
                 <a href="#sobre-mim" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">👤 Sobre Mim</a>
-                <a href="#resumo-valores" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">📋 Pacotes & Valores Fixos</a>
+                <a href="#resumo-valores" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">📊 Totais por Área & Planos</a>
                 <a href="#branding" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">🎨 Branding & Identidade</a>
-                <a href="#tabela" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">⭐ Serviços & Preços</a>
+                <a href="#tabela" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">⭐ Serviços Avulsos</a>
                 <a href="#depoimentos" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">💬 Depoimentos</a>
                 <a href="#simulador" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">🧮 Novo Orçamento</a>
             </nav>
@@ -167,13 +167,13 @@
     <!-- CTA -->
     <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-4 text-center">
         <span class="inline-flex items-center gap-2 bg-white/90 border-2 border-rosa text-bordo font-black text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-4 shadow-sm">
-            ✨ Soluções Criativas, Sites, Vídeos & Assessoria Mensal
+            ✨ Soluções Criativas, Sites, Vídeos & Planos Mensais
         </span>
         <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-bordo tracking-tight mb-3 leading-none">
             Criação de Sites, Identidade Visual, Personagens 2D, <br class="hidden sm:inline"> Ilustrações, Animações & Planos Mensais
         </h1>
         <p class="text-base sm:text-xl text-bordo font-bold max-w-2xl mx-auto leading-normal mb-6">
-            Transformo ideias em marcas memoráveis e ecossistemas digitais de alta conversão. Confira nossos pacotes fixos abaixo ou monte seu orçamento personalizado!
+            Transformo ideias em marcas memoráveis e ecossistemas digitais de alta conversão. Confira os totais por área abaixo ou monte seu orçamento personalizado!
         </p>
 
         <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap max-w-3xl mx-auto mb-4">
@@ -192,100 +192,72 @@
         </div>
     </section>
 
-    <!-- ==================== SEÇÃO: RESUMO DE PACOTES & VALORES FIXOS (LOGO NO INÍCIO) ==================== -->
+    <!-- ==================== SEÇÃO: TOTAIS POR ÁREA & PLANO COMPLETO MENSAL ==================== -->
     <section id="resumo-valores" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-xl">
             <div class="text-center mb-8">
                 <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
-                    💼 Transparência & Investimento
+                    📊 Totais por Área & Investimento
                 </span>
-                <h2 class="text-2xl sm:text-4xl font-black text-bordo">Resumo de Pacotes & Valores Fixos</h2>
-                <p class="text-sm sm:text-base text-bordo font-bold mt-1">Conheça nossos principais serviços e pacotes fechados com valores redondos:</p>
+                <h2 class="text-2xl sm:text-4xl font-black text-bordo">Valores Totais por Área de Atuação</h2>
+                <p class="text-sm sm:text-base text-bordo font-bold mt-1">Veja quanto custa fechar cada área completa ou contrate tudo junto no plano mensal:</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                <!-- Card 1 -->
-                <div class="bg-creme/40 border-2 border-rosaclaro rounded-2xl p-5 flex flex-col justify-between text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Bloco 1: Web & Branding -->
+                <div class="bg-creme/40 border-2 border-rosaclaro rounded-2xl p-5 text-left flex flex-col justify-between">
                     <div>
-                        <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Branding</span>
-                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Identidade Visual Completa</h3>
-                        <p class="text-xs text-bordo font-bold mb-4">Logotipo autoral, paleta de cores, tipografia e manual de marca em PDF.</p>
+                        <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 01</span>
+                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Web Design & Branding</h3>
+                        <p class="text-xs text-bordo font-bold mb-3">Inclui: Link na Bio (R$ 180) + Identidade Visual (R$ 450) + Landing Page (R$ 550) + Site Institucional (R$ 950).</p>
                     </div>
                     <div class="pt-3 border-t border-rosaclaro/60 flex items-center justify-between">
-                        <span class="text-xl font-black text-bordo">R$ 450,00</span>
-                        <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="text-xs bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black py-2 px-3 rounded-xl transition-all">Adicionar 🛒</button>
+                        <span class="text-sm font-bold text-bordo">Total da Área:</span>
+                        <span class="text-xl font-black text-bordo">R$ 2.130,00</span>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-creme/40 border-2 border-rosaclaro rounded-2xl p-5 flex flex-col justify-between text-left">
+                <!-- Bloco 2: Ilustração & Personagens -->
+                <div class="bg-creme/40 border-2 border-rosaclaro rounded-2xl p-5 text-left flex flex-col justify-between">
                     <div>
-                        <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Web Design</span>
-                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Landing Page de Vendas</h3>
-                        <p class="text-xs text-bordo font-bold mb-4">Página única de alta conversão responsiva focada em fechar negócios no WhatsApp.</p>
+                        <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 02</span>
+                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Ilustração & Personagens</h3>
+                        <p class="text-xs text-bordo font-bold mb-3">Inclui: Personagem IA (R$ 150) + Personagem 2D Illustrator (R$ 200) + Ilustração 2D/Capas (R$ 250).</p>
                     </div>
                     <div class="pt-3 border-t border-rosaclaro/60 flex items-center justify-between">
-                        <span class="text-xl font-black text-bordo">R$ 550,00</span>
-                        <button type="button" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')" class="text-xs bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black py-2 px-3 rounded-xl transition-all">Adicionar 🛒</button>
+                        <span class="text-sm font-bold text-bordo">Total da Área:</span>
+                        <span class="text-xl font-black text-bordo">R$ 600,00</span>
                     </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="bg-creme/40 border-2 border-rosaclaro rounded-2xl p-5 flex flex-col justify-between text-left">
+                <!-- Bloco 3: Redes Sociais & Conteúdo (Atualizado para R$ 700) -->
+                <div class="bg-creme/40 border-2 border-rosaclaro rounded-2xl p-5 text-left flex flex-col justify-between">
                     <div>
-                        <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Sites</span>
-                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Site Institucional</h3>
-                        <p class="text-xs text-bordo font-bold mb-4">Estrutura completa com até 5 páginas (Início, Sobre, Serviços, Contato, etc.).</p>
+                        <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 03</span>
+                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Redes Sociais & Conteúdo</h3>
+                        <p class="text-xs text-bordo font-bold mb-3">Inclui: Posts, Carrosséis e direção de arte completa para engajamento contínuo.</p>
                     </div>
                     <div class="pt-3 border-t border-rosaclaro/60 flex items-center justify-between">
-                        <span class="text-xl font-black text-bordo">R$ 950,00</span>
-                        <button type="button" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')" class="text-xs bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black py-2 px-3 rounded-xl transition-all">Adicionar 🛒</button>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="bg-creme/40 border-2 border-rosaclaro rounded-2xl p-5 flex flex-col justify-between text-left">
-                    <div>
-                        <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Social Media</span>
-                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Combo Social Media</h3>
-                        <p class="text-xs text-bordo font-bold mb-4">Mix mensal de engajamento com posts, carrosséis, Reels editados e Stories.</p>
-                    </div>
-                    <div class="pt-3 border-t border-rosaclaro/60 flex items-center justify-between">
-                        <span class="text-xl font-black text-bordo">R$ 500,00</span>
-                        <button type="button" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')" class="text-xs bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black py-2 px-3 rounded-xl transition-all">Adicionar 🛒</button>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="bg-creme/40 border-2 border-rosaclaro rounded-2xl p-5 flex flex-col justify-between text-left">
-                    <div>
-                        <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Ilustração</span>
-                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Personagem 2D (Illustrator)</h3>
-                        <p class="text-xs text-bordo font-bold mb-4">Desenvolvimento de personagem vetorizado autoral com expressões e detalhes.</p>
-                    </div>
-                    <div class="pt-3 border-t border-rosaclaro/60 flex items-center justify-between">
-                        <span class="text-xl font-black text-bordo">R$ 200,00</span>
-                        <button type="button" onclick="selecionarServicoPorTabela('Criação de Personagem 2D (Illustrator)')" class="text-xs bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black py-2 px-3 rounded-xl transition-all">Adicionar 🛒</button>
-                    </div>
-                </div>
-
-                <!-- Card 6 (Destaque Mensal) -->
-                <div class="bg-gradient-to-br from-rosa/20 to-creme border-2 border-rosa rounded-2xl p-5 flex flex-col justify-between text-left">
-                    <div>
-                        <span class="text-[11px] font-black uppercase bg-bordo text-creme px-2.5 py-1 rounded-md">⭐ Tudo Incluso</span>
-                        <h3 class="text-lg font-black text-bordo mt-2 mb-1">Assessoria Mensal Dedicada</h3>
-                        <p class="text-xs text-bordo font-bold mb-4">Gestão integral e contínua de marca, posts recorrentes e vídeos todos os meses.</p>
-                    </div>
-                    <div class="pt-3 border-t border-rosa/60 flex items-center justify-between">
-                        <span class="text-xl font-black text-bordo">R$ 2.000 / mês</span>
-                        <button type="button" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Recorrente)')" class="text-xs bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black py-2 px-3 rounded-xl transition-all">Contratar 🛒</button>
+                        <span class="text-sm font-bold text-bordo">Total da Área:</span>
+                        <span class="text-xl font-black text-bordo">R$ 700,00</span>
                     </div>
                 </div>
             </div>
 
-            <p class="text-xs text-bordo/70 font-bold text-center">
-                💡 Precisa de algo personalizado? Use nossa <a href="#simulador" class="underline text-bordo font-black hover:text-rosa">Calculadora de Orçamento</a> abaixo para montar seu pacote sob medida!
-            </p>
+            <!-- Destaque para o Plano Mensal Completo (Tudo Incluso) -->
+            <div class="bg-gradient-to-r from-rosa/25 to-creme border-2 border-rosa rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="text-left">
+                    <span class="text-xs font-black uppercase bg-bordo text-creme px-3 py-1 rounded-md">⭐ Oportunidade Completa</span>
+                    <h3 class="text-xl sm:text-2xl font-black text-bordo mt-2">Assessoria Mensal Dedicada (Tudo Incluso)</h3>
+                    <p class="text-xs sm:text-sm text-bordo font-bold mt-1">Engloba todas as áreas acima de forma contínua: gestão de marca, rotina de posts, carrosséis, vídeos e suporte mensal dedicado.</p>
+                </div>
+                <div class="flex flex-col items-center sm:items-end shrink-0 gap-2">
+                    <span class="text-2xl sm:text-3xl font-black text-bordo">R$ 2.000 / mês</span>
+                    <button type="button" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Tudo Incluso)')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-2.5 px-6 rounded-xl transition-all shadow-md">
+                        Contratar Plano Completo 🛒
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -582,9 +554,9 @@
                     <h3 class="font-black text-bordo text-xl mb-3">3. Redes Sociais & Mensal</h3>
                     <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
                         <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Post Estático Avulso')"><strong class="text-bordo font-black">Post Estático Avulso ➔</strong><span class="text-bordo font-bold">R$ 45,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Carrossel Avulso (Até 6 lâminas)')"><strong class="text-bordo font-black">Carrossel Avulso (Até 6 telas) ➔</strong><span class="text-bordo font-bold">R$ 85,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Carrossel Avulso (Até 6 telas)')"><strong class="text-bordo font-black">Carrossel Avulso (Até 6 telas) ➔</strong><span class="text-bordo font-bold">R$ 85,00</span></button></li>
                         <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')"><strong class="text-bordo font-black">Combo Social Media Completo ➔</strong><span class="text-bordo font-bold">R$ 500,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl bg-bordo/10 hover:bg-rosa/30 transition-colors flex flex-col border border-rosa" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Recorrente)')"><strong class="text-bordo font-black">⭐ Assessoria Mensal (Recorrente) ➔</strong><span class="text-bordo font-bold">R$ 2.000,00 / mês</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl bg-bordo/10 hover:bg-rosa/30 transition-colors flex flex-col border border-rosa" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Tudo Incluso)')"><strong class="text-bordo font-black">⭐ Assessoria Mensal (Recorrente) ➔</strong><span class="text-bordo font-bold">R$ 2.000,00 / mês</span></button></li>
                     </ul>
                 </div>
             </div>
