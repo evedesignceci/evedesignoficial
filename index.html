@@ -122,7 +122,6 @@
 
             <nav class="hidden xl:flex items-center gap-5 text-xs sm:text-sm font-black text-bordo uppercase tracking-wider">
                 <a href="#sobre-mim" class="hover:text-rosa transition-colors py-1">Sobre</a>
-                <a href="#portfolio-direto" class="hover:text-rosa transition-colors py-1">Portfólio</a>
                 <a href="#branding" class="hover:text-rosa transition-colors py-1">Branding</a>
                 <a href="#tabela" class="hover:text-rosa transition-colors py-1">Serviços</a>
                 <a href="#depoimentos" class="hover:text-rosa transition-colors py-1">Clientes</a>
@@ -148,7 +147,6 @@
         <div id="menu-mobile" class="hidden xl:hidden bg-white border-t-2 border-rosaclaro px-6 py-5 shadow-xl">
             <nav class="flex flex-col gap-3 text-sm sm:text-base font-black text-bordo uppercase">
                 <a href="#sobre-mim" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">👤 Sobre Mim</a>
-                <a href="#portfolio-direto" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">📁 Portfólio de Trabalhos</a>
                 <a href="#branding" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">🎨 Seção de Branding</a>
                 <a href="#tabela" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">⭐ Serviços & Preços</a>
                 <a href="#depoimentos" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">💬 Depoimentos</a>
@@ -237,7 +235,7 @@
         </div>
     </main>
 
-    <!-- SEÇÃO SOBRE MIM (COM FERRAMENTAS RESTAURADAS) -->
+    <!-- SOBRE MIM E FERRAMENTAS -->
     <section id="sobre-mim" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div class="bg-white/90 border-2 border-rosaclaro rounded-3xl p-6 sm:p-10 shadow-lg backdrop-blur-sm">
             <div class="flex flex-col md:flex-row items-center gap-8">
@@ -260,13 +258,12 @@
                         No <strong class="text-bordo font-black">Eve Design Studio</strong>, crio ecossistemas digitais completos que unem design estratégico, arte autoral e Inteligência Artificial. Desenvolvo desde a <strong class="text-bordo font-black">criação de sites e landing pages até identidade visual, vetorização, ilustração 2D (capas/livros infantis), personagens com IA, cenários 3D e vídeos profissionais pelo CapCut</strong>.
                     </p>
 
-                    <!-- CAIXA DE FERRAMENTAS RESTAURADA ORIGINALMENTE -->
                     <div>
                         <h3 class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider mb-3">
                             Minha Caixa de Ferramentas (Clique para detalhes):
                         </h3>
                         <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2.5">
-                            <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais, ilustração 2D e vetorização técnica perfeita.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais, ilustração 2D, vetorização e design de posts.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/ADOBE_ILUSTARTOR.png" loading="lazy" alt="Adobe Illustrator" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Illustrator</span>
                             </button>
@@ -301,36 +298,7 @@
         </div>
     </section>
 
-    <!-- PORTFÓLIO EMBUTIDO (NOVA SEÇÃO) -->
-    <section id="portfolio-direto" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 scroll-mt-24">
-        <div class="text-center mb-6">
-            <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
-                📁 Meu Portfólio
-            </span>
-            <h2 class="text-2xl sm:text-4xl font-black text-bordo">Trabalhos & Projetos Recentes</h2>
-            <p class="text-sm sm:text-base text-bordo font-bold mt-1">Passe as páginas para navegar ou clique para ampliar!</p>
-        </div>
-        <div class="bg-white border-2 border-rosa rounded-3xl p-2 sm:p-4 shadow-xl relative overflow-hidden group">
-            <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-rosaclaro/50 bg-creme flex items-center justify-center">
-                
-                <!-- COLOQUE AQUI O SEU LINK DE INCORPORAÇÃO DO CANVA -->
-                <iframe loading="lazy" class="absolute top-0 left-0 w-full h-full border-0 rounded-xl"
-                    src="SUA_URL_DE_INCORPORAÇÃO_DO_CANVA_AQUI"
-                    allowfullscreen="allowfullscreen" allow="fullscreen">
-                </iframe>
-                
-                <span class="text-bordo font-black text-sm -z-10 animate-pulse">Carregando portfólio...</span>
-            </div>
-            <div class="mt-4 text-center">
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-2.5 px-6 rounded-xl transition-all shadow-md">
-                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain">
-                    Abrir Portfólio em Tela Cheia ➔
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- BRANDING EXCLUSIVO (NOVA SEÇÃO) -->
+    <!-- BRANDING EXCLUSIVO -->
     <section id="branding" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 scroll-mt-24">
         <div class="bg-gradient-to-br from-rosa/20 to-creme border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-lg relative overflow-hidden flex flex-col md:flex-row items-center gap-8 group">
             <div class="absolute -top-20 -right-20 w-64 h-64 bg-rosa opacity-20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
@@ -370,7 +338,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO: DEPOIMENTOS & CASOS DE SUCESSO RESTAURADA ORIGINALMENTE -->
+    <!-- SEÇÃO DE DEPOIMENTOS -->
     <section id="depoimentos" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div class="text-center mb-8">
             <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
@@ -473,7 +441,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO TABELA OFICIAL DE PREÇOS RESTAURADA COM DESCRIÇÕES ORIGINAIS -->
+    <!-- SEÇÃO TABELA DE PREÇOS -->
     <section id="tabela" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div class="text-center mb-8">
             <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
@@ -484,111 +452,48 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- COLUNA 1 -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">💻</div>
                     <h3 class="font-black text-bordo text-xl mb-3">1. Web Design & Branding</h3>
                     <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')">
-                                <strong class="text-bordo font-black">Link na Bio / Mini Site ➔</strong>
-                                <span class="text-bordo font-bold">R$ 180,00</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')">
-                                <strong class="text-bordo font-black">Landing Page de Vendas / Leads ➔</strong>
-                                <span class="text-bordo font-bold">R$ 550,00</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')">
-                                <strong class="text-bordo font-black">Site Institucional (Multi-Páginas) ➔</strong>
-                                <span class="text-bordo font-bold">R$ 950,00</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')">
-                                <strong class="text-bordo font-black">Identidade Visual Completa + Manual ➔</strong>
-                                <span class="text-bordo font-bold">R$ 450,00</span>
-                            </button>
-                        </li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')"><strong class="text-bordo font-black">Link na Bio / Mini Site ➔</strong><span class="text-bordo font-bold">R$ 180,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')"><strong class="text-bordo font-black">Landing Page de Vendas / Leads ➔</strong><span class="text-bordo font-bold">R$ 550,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')"><strong class="text-bordo font-black">Site Institucional (Multi-Páginas) ➔</strong><span class="text-bordo font-bold">R$ 950,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')"><strong class="text-bordo font-black">Identidade Visual Completa + Manual ➔</strong><span class="text-bordo font-bold">R$ 450,00</span></button></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- COLUNA 2 -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">🎨</div>
                     <h3 class="font-black text-bordo text-xl mb-3">2. Ilustração & IA Criativa</h3>
                     <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Ilustração 2D / Capas & Vetorização')">
-                                <strong class="text-bordo font-black">Ilustração 2D & Vetorização ➔</strong>
-                                <span class="text-bordo font-bold">R$ 250,00</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Criação de Personagens IA')">
-                                <strong class="text-bordo font-black">Criação de Personagens com IA ➔</strong>
-                                <span class="text-bordo font-bold">R$ 150,00</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-ia')">
-                                <strong class="text-bordo font-black">Vídeos & Animações IA (por min) ➔</strong>
-                                <span class="text-bordo font-bold">R$ 80,00 / min</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-geral')">
-                                <strong class="text-bordo font-black">Edição Geral CapCut (por min) ➔</strong>
-                                <span class="text-bordo font-bold">R$ 45,00 / min</span>
-                            </button>
-                        </li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Ilustração 2D / Capas & Vetorização')"><strong class="text-bordo font-black">Ilustração 2D & Vetorização ➔</strong><span class="text-bordo font-bold">R$ 250,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Criação de Personagens IA')"><strong class="text-bordo font-black">Criação de Personagens com IA ➔</strong><span class="text-bordo font-bold">R$ 150,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-ia')"><strong class="text-bordo font-black">Vídeos & Animações IA (por min) ➔</strong><span class="text-bordo font-bold">R$ 80,00 / min</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-geral')"><strong class="text-bordo font-black">Edição Geral CapCut (por min) ➔</strong><span class="text-bordo font-bold">R$ 45,00 / min</span></button></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- COLUNA 3 -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">📱</div>
                     <h3 class="font-black text-bordo text-xl mb-3">3. Redes Sociais & Avulsos</h3>
                     <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Post Estático Avulso')">
-                                <strong class="text-bordo font-black">Post Estático Avulso ➔</strong>
-                                <span class="text-bordo font-bold">R$ 45,00</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Carrossel Avulso (Até 6 lâminas)')">
-                                <strong class="text-bordo font-black">Carrossel Avulso (Até 6 telas) ➔</strong>
-                                <span class="text-bordo font-bold">R$ 85,00</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Plano Inicial: 4 Carrosséis ou 2+2')">
-                                <strong class="text-bordo font-black">Plano Inicial (4 Carrosséis / 2+2) ➔</strong>
-                                <span class="text-bordo font-bold">R$ 280,00</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')">
-                                <strong class="text-bordo font-black">Combo Completo (Posts + Reels + Stories) ➔</strong>
-                                <span class="text-bordo font-bold">R$ 890,00</span>
-                            </button>
-                        </li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Post Estático Avulso')"><strong class="text-bordo font-black">Post Estático Avulso ➔</strong><span class="text-bordo font-bold">R$ 45,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Carrossel Avulso (Até 6 lâminas)')"><strong class="text-bordo font-black">Carrossel Avulso (Até 6 telas) ➔</strong><span class="text-bordo font-bold">R$ 85,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Plano Inicial: 4 Carrosséis ou 2+2')"><strong class="text-bordo font-black">Plano Inicial (4 Carrosséis / 2+2) ➔</strong><span class="text-bordo font-bold">R$ 280,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')"><strong class="text-bordo font-black">Combo Completo (Posts + Reels + Stories) ➔</strong><span class="text-bordo font-bold">R$ 890,00</span></button></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO CENTRAL DE DÚVIDAS & SUPORTE RESTAURADA -->
+    <!-- CENTRAL DE DÚVIDAS -->
     <section id="faq-duvidas" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-lg">
             <div class="text-center mb-8">
@@ -651,7 +556,7 @@
         </div>
     </section>
 
-    <!-- CALCULADORA / CARRINHO DE PROJETOS RESTAURADA COM DESCRIÇÕES ORIGINAIS -->
+    <!-- CALCULADORA / CARRINHO DE PROJETOS -->
     <section id="simulador" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
@@ -681,7 +586,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8" id="grid-calc-items">
-                <!-- 1. SITE INSTITUCIONAL -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="950" data-name="Site Institucional Multi-Páginas" data-summary="Site institucional completo em várias páginas, responsivo e moderno." onchange="notificarCheckboxDireto(this, 'Site Institucional Multi-Páginas')">
                     <div>
@@ -691,7 +595,6 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 950</span>
                 </label>
 
-                <!-- 2. LANDING PAGE -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="550" data-name="Landing Page de Vendas / Captura" data-summary="Página de alta conversão responsiva com botão de WhatsApp/Cotação." onchange="notificarCheckboxDireto(this, 'Landing Page de Vendas / Captura')">
                     <div>
@@ -701,7 +604,6 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 550</span>
                 </label>
 
-                <!-- 3. LINK NA BIO -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="180" data-name="Link na Bio / Mini Site Interativo" data-summary="Central de links interativa personalizada para bio." onchange="notificarCheckboxDireto(this, 'Link na Bio / Mini Site Interativo')">
                     <div>
@@ -711,7 +613,6 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 180</span>
                 </label>
 
-                <!-- 4. IDENTIDADE VISUAL -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="450" data-name="Identidade Visual Completa + Manual" data-summary="Logo autoral, paleta cromática, tipografia e manual de marca em PDF." onchange="notificarCheckboxDireto(this, 'Identidade Visual Completa + Manual')">
                     <div>
@@ -721,7 +622,6 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 450</span>
                 </label>
 
-                <!-- 5. ILUSTRAÇÃO 2D -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="250" data-name="Ilustração 2D / Capas & Vetorização" data-summary="Ilustrações infantis, capas de livros e vetorização vetorial." onchange="notificarCheckboxDireto(this, 'Ilustração 2D / Capas & Vetorização')">
                     <div>
@@ -731,7 +631,6 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 250</span>
                 </label>
 
-                <!-- 6. PERSONAGENS IA -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="150" data-name="Criação de Personagens IA" data-summary="Criação de mascotes com prompts consistentes e direção de arte." onchange="notificarCheckboxDireto(this, 'Criação de Personagens IA')">
                     <div>
@@ -741,7 +640,6 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 150</span>
                 </label>
 
-                <!-- 7. POST ESTÁTICO -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="45" data-name="Post Estático Avulso" data-summary="Criação de 1 arte estática individual personalizada para o feed." onchange="notificarCheckboxDireto(this, 'Post Estático Avulso')">
                     <div>
@@ -751,7 +649,6 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 45</span>
                 </label>
 
-                <!-- 8. CARROSSEL AVULSO -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="85" data-name="Carrossel Avulso (Até 6 lâminas)" data-summary="Criação de 1 carrossel educativo/informativo com até 6 telas." onchange="notificarCheckboxDireto(this, 'Carrossel Avulso (Até 6 lâminas)')">
                     <div>
@@ -761,7 +658,6 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 85</span>
                 </label>
 
-                <!-- 9. COMBO COMPLETO -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 md:col-span-2" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="890" data-name="Combo Social Media Completo: Posts + Reels + Stories" data-summary="Feed mensal completo (posts/carrosséis) + 4 Reels editados no CapCut + Stories." onchange="notificarCheckboxDireto(this, 'Combo Social Media Completo: Posts + Reels + Stories')">
                     <div>
@@ -812,7 +708,6 @@
                 </div>
             </div>
 
-            <!-- PAINEL DO CARRINHO -->
             <div class="bg-creme border-2 border-bordo/20 rounded-2xl p-6 shadow-inner">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
                     <div>
@@ -827,11 +722,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white border-2 border-rosaclaro rounded-xl p-4 text-left">
-                    <h3 class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider mb-2">🛍️ Itens Selecionados:</h3>
-                    <ul class="text-sm sm:text-base text-bordo font-bold space-y-2 divide-y divide-rosaclaro/40" id="resumo-entregas">
-                        <li class="pt-1">Seu carrinho está vazio. Escolha seus serviços acima.</li>
-                    </ul>
+                <div class="bg-white border-2 border-rosaclaro rounded-xl p-4 text-left hidden">
+                    <ul class="text-sm sm:text-base text-bordo font-bold space-y-2 divide-y divide-rosaclaro/40" id="resumo-entregas"></ul>
                 </div>
             </div>
         </div>
@@ -917,7 +809,7 @@
                             <span class="text-xs font-black text-bordo bg-rosaclaro/30 px-2 py-1 rounded-md" id="orc-total-valor">R$ 0,00</span>
                         </div>
                         <div class="bg-gray-50 rounded-xl p-3 max-h-32 overflow-y-auto modal-scroll">
-                            <ul id="orc-lista-itens" class="text-xs sm:text-sm font-bold text-gray-600 space-y-1.5 list-disc pl-4"></ul>
+                            <ul id="orc-lista-itens" class="text-xs sm:text-sm font-bold text-gray-600 space-y-1.5 list-none"></ul>
                         </div>
                     </div>
 
@@ -927,14 +819,21 @@
                             <label class="block text-sm font-black text-gray-700 mb-2">Forma de Pagamento Preferida</label>
                             <select id="orc-pagamento" class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-bold text-gray-800 focus:border-bordo outline-none">
                                 <option value="50% Entrada + 50% na Entrega (PIX)">50% Entrada + 50% na Entrega (PIX)</option>
-                                <option value="100% à vista no PIX (com desconto)">100% à vista no PIX</option>
-                                <option value="Cartão de Crédito / Link de Pagamento">Cartão de Crédito</option>
+                                <option value="100% à vista no PIX">100% à vista no PIX</option>
+                                <option value="Cartão de Crédito">Cartão de Crédito</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-sm font-black text-gray-700 mb-2">Observações (Prazos, Status do Logo, etc)</label>
                             <textarea id="orc-obs" rows="3" placeholder="Ex: O cliente já possui o logo vetorizado. Prazo de entrega urgente para dia X." class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-bold text-gray-800 focus:border-bordo outline-none resize-none"></textarea>
                         </div>
+                    </div>
+
+                    <!-- TERMOS RESUMIDOS DO CONTRATO (SEM CPF) -->
+                    <div class="mb-4 px-2">
+                        <p class="text-[11px] text-gray-500 leading-tight">
+                            * Ao prosseguir, confirmo estar ciente das regras de prestação de serviços: o prazo de entrega inicia após o envio completo dos materiais. Estão inclusas até 2 rodadas de revisão por entrega. Entradas (50%) não são reembolsáveis em caso de cancelamento. Direitos autorais de uso são liberados somente após a quitação total. O arquivo aberto permanece com o Studio, salvo acordo prévio.
+                        </p>
                     </div>
 
                     <button type="submit" id="submit-orcamento-real" class="hidden"></button>
@@ -950,24 +849,7 @@
         </div>
     </div>
 
-    <!-- OUTROS MODAIS ORIGINAIS RESTAURADOS -->
-    <div id="modalDepoimento" role="dialog" aria-modal="true" aria-labelledby="modal-dep-titulo" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
-        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl text-left relative my-8">
-            <button type="button" aria-label="Fechar Modal de Depoimento" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalDepoimento()">&times;</button>
-            <div class="flex items-center gap-3 mb-4">
-                <img id="modal-dep-logo" src="" alt="Logo" class="w-12 h-12 object-contain rounded-full border border-rosa p-0.5">
-                <div>
-                    <h2 class="text-xl sm:text-2xl font-black text-bordo" id="modal-dep-titulo">Nome do Projeto</h2>
-                    <span class="text-xs font-bold text-bordo/70" id="modal-dep-tag">Categoria</span>
-                </div>
-            </div>
-            <p class="text-sm text-bordo font-bold mb-4 bg-creme/60 p-3.5 rounded-xl border border-rosaclaro italic" id="modal-dep-comentario">Comentário</p>
-            <div class="text-xs text-bordo font-bold mb-6 space-y-1" id="modal-dep-detalhes">Detalhes dos serviços desenvolvidos.</div>
-            <h3 class="text-xs font-black text-bordo uppercase tracking-wider mb-3">Escolha o que deseja acessar:</h3>
-            <div class="flex flex-col gap-2.5" id="modal-dep-links"></div>
-        </div>
-    </div>
-
+    <!-- MODAL DUVIDA -->
     <div id="modalDuvida" role="dialog" aria-modal="true" aria-labelledby="modal-duvida-titulo" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
             <button type="button" aria-label="Fechar Modal de Dúvida" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalDuvida()">&times;</button>
@@ -1006,6 +888,7 @@
         </div>
     </div>
 
+    <!-- MODAL SUPORTE -->
     <div id="modalSuporte" role="dialog" aria-modal="true" aria-labelledby="modal-suporte-titulo" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
             <button type="button" aria-label="Fechar Modal de Suporte" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalSuporte()">&times;</button>
@@ -1043,6 +926,25 @@
         </div>
     </div>
 
+    <!-- MODAL DEPOIMENTOS -->
+    <div id="modalDepoimento" role="dialog" aria-modal="true" aria-labelledby="modal-dep-titulo" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl text-left relative my-8">
+            <button type="button" aria-label="Fechar Modal de Depoimento" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalDepoimento()">&times;</button>
+            <div class="flex items-center gap-3 mb-4">
+                <img id="modal-dep-logo" src="" alt="Logo" class="w-12 h-12 object-contain rounded-full border border-rosa p-0.5">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black text-bordo" id="modal-dep-titulo">Nome do Projeto</h2>
+                    <span class="text-xs font-bold text-bordo/70" id="modal-dep-tag">Categoria</span>
+                </div>
+            </div>
+            <p class="text-sm text-bordo font-bold mb-4 bg-creme/60 p-3.5 rounded-xl border border-rosaclaro italic" id="modal-dep-comentario">Comentário</p>
+            <div class="text-xs text-bordo font-bold mb-6 space-y-1" id="modal-dep-detalhes">Detalhes dos serviços desenvolvidos.</div>
+            <h3 class="text-xs font-black text-bordo uppercase tracking-wider mb-3">Escolha o que deseja acessar:</h3>
+            <div class="flex flex-col gap-2.5" id="modal-dep-links"></div>
+        </div>
+    </div>
+
+    <!-- MODAL FEEDBACK -->
     <div id="modalFeedback" role="dialog" aria-modal="true" aria-labelledby="modal-feedback-titulo" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
             <button type="button" aria-label="Fechar Modal de Feedback" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalFeedback()">&times;</button>
@@ -1075,6 +977,7 @@
         </div>
     </div>
 
+    <!-- MODAL FERRAMENTA -->
     <div id="modal-ferramenta" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 max-w-md w-full text-center relative">
             <h2 class="text-2xl font-black text-bordo mb-1" id="modal-titulo">Ferramenta</h2>
@@ -1086,6 +989,7 @@
         </div>
     </div>
 
+    <!-- MODAL LEGAL (COM RESUMO DO CONTRATO) -->
     <div id="modalLegal" role="dialog" aria-modal="true" aria-labelledby="modal-legal-titulo" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-2xl w-full shadow-2xl text-left relative my-8 max-h-[85vh] overflow-y-auto">
             <button type="button" aria-label="Fechar Modal Legal" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalLegal()">&times;</button>
@@ -1110,8 +1014,8 @@
                 Francisco Morato – SP | E-mail de Contato: <a href="mailto:evececi.design@gmail.com" class="underline hover:text-rosa">evececi.design@gmail.com</a>
             </p>
             <p class="text-xs font-black">
-                <button type="button" onclick="abrirModalLegal('termos')" class="text-bordo hover:text-rosa underline mx-2">Termos de Uso</button> • 
-                <button type="button" onclick="abrirModalLegal('privacidade')" class="text-bordo hover:text-rosa underline mx-2">Política de Privacidade (LGPD)</button>
+                <button type="button" onclick="abrirModalLegal('termos')" class="text-bordo hover:text-rosa underline mx-2">Termos de Serviço</button> • 
+                <button type="button" onclick="abrirModalLegal('privacidade')" class="text-bordo hover:text-rosa underline mx-2">Política de Privacidade</button>
             </p>
             <p class="text-xs text-bordo/60 pt-2 border-t border-rosaclaro/40">
                 © 2026 Eve Design Studio. Todos os direitos reservados.
@@ -1119,331 +1023,145 @@
         </div>
     </footer>
 
-    <!-- SCRIPTS ORIGINAIS + NOVAS FUNÇÕES -->
     <script>
         const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbzbo84ZgZtdJ-vIJ_ZR3oLQC9EASQC14DzyRH6ME4xLTxGoOk6xUSCPS4jbTQejBiMVtA/exec";
         const SEU_INSTAGRAM = "eve.desi_gn"; 
         const WHATSAPP_NUMERO = ""; 
-
-        const PROJETOS_INFO = {
-            'xexeu': {
-                titulo: "Turminha do Xexéu",
-                tag: "Animação 3D, IA & Audiovisual",
-                logo: "https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png",
-                comentario: '"As animações dos personagens e os cenários no CapCut deram vida nova ao canal! O trabalho com IA e ilustração ficou perfeito."',
-                detalhes: "• Desenvolvimento de cenários 3D e personagens com Inteligência Artificial.<br>• Edição completa de episódios musicais infantis no CapCut.<br>• Identidade visual oficial e portal institucional na web.",
-                links: [
-                    { label: "🌐 Acessar Portal Oficial", url: "https://turminhadoxexeuoficiall.vercel.app/", classe: "bg-bordo text-creme" },
-                    { label: "▶️ Ver no YouTube", url: "https://www.youtube.com/@turminhaxe_xeu", classe: "bg-rosa text-bordo" },
-                    { label: "📱 Instagram @turminhaxe_xeu", url: "https://www.instagram.com/turminhaxe_xeu", classe: "bg-rosaclaro text-bordo" }
-                ]
-            },
-            '4g': {
-                titulo: "4G Proteção Veicular",
-                tag: "Landing Page de Conversão & Artes de Anúncio",
-                logo: "https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/4G.png",
-                comentario: '"A landing page e o formulário integrado trouxeram muito mais cotações direto pro nosso WhatsApp. Recomendo demais!"',
-                detalhes: "• Desenvolvimento de Landing Page de alta velocidade com cálculo dinâmico de cotações.<br>• Criação de artes estratégicas e padronização estética de anúncios para o feed.",
-                links: [
-                    { label: "🌐 Acessar Landing Page Oficial", url: "https://4gprotecaoveicularoficial.vercel.app/", classe: "bg-bordo text-creme" },
-                    { label: "📱 Perfil no Instagram", url: "https://www.instagram.com/4gprotecaoveicular/", classe: "bg-rosa text-bordo" }
-                ]
-            },
-            'krakens': {
-                titulo: "Krakens",
-                tag: "Identidade Visual Completa & Posts",
-                logo: "https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png",
-                comentario: '"A identidade visual e os posts ficaram modernos, com muita personalidade e presença forte no Instagram!"',
-                detalhes: "• Estruturação de manual de marca, tipografia e paleta cromática.<br>• Criação de layouts contínuos e templates de posts no Instagram.",
-                links: [
-                    { label: "📱 Acessar Perfil no Instagram", url: "https://www.instagram.com/krakens__/", classe: "bg-bordo text-creme" },
-                    { label: "📁 Ver no Portfólio Canva", url: "https://canva.link/portfolio-evelyn-cecilia", classe: "bg-rosa text-bordo" }
-                ]
-            },
-            'saint': {
-                titulo: "Saint Vision Home",
-                tag: "Carrosséis Educativos & Identidade",
-                logo: "https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png",
-                comentario: '"Os carrosséis para o Instagram da ótica ficaram elegantes e super explicativos. Atendimento impecável e criativo."',
-                detalhes: "• Direção de arte para ótica itinerante domiciliar.<br>• Produção contínua de carrosséis educativos de alta retenção e edição de Reels.",
-                links: [
-                    { label: "👓 Acessar Instagram da Ótica", url: "https://www.instagram.com/saint.visionhome/", classe: "bg-bordo text-creme" },
-                    { label: "📁 Ver Exemplos no Portfólio", url: "https://canva.link/portfolio-evelyn-cecilia", classe: "bg-rosa text-bordo" }
-                ]
-            },
-            'julia': {
-                titulo: "Julia Sales (Brincar e Viver)",
-                tag: "Identidade Visual & Produção de Vídeos",
-                logo: "https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png",
-                comentario: '"A identidade visual completa da marca ficou encantadora e as edições de vídeo tornaram os episódios super dinâmicos e profissionais!"',
-                detalhes: "• Criação da Identidade Visual oficial do canal infantil.<br>• Edição de vídeos com cortes dinâmicos e produção de thumbnails de alto clique para o YouTube.",
-                links: [
-                    { label: "▶️ Assistir no YouTube", url: "https://www.youtube.com/@juliasalesOficial", classe: "bg-bordo text-creme" },
-                    { label: "📁 Ver Apresentação de Identidade", url: "https://canva.link/portfolio-evelyn-cecilia", classe: "bg-rosa text-bordo" }
-                ]
-            }
-        };
 
         function formatarDataHoje() {
             const data = new Date();
             return data.toLocaleDateString('pt-BR');
         }
 
-        function abrirModalDepoimento(chave) {
-            const dados = PROJETOS_INFO[chave];
-            if (!dados) return;
-
-            document.getElementById('modal-dep-titulo').innerText = dados.titulo;
-            document.getElementById('modal-dep-tag').innerText = dados.tag;
-            document.getElementById('modal-dep-logo').src = dados.logo;
-            document.getElementById('modal-dep-comentario').innerText = dados.comentario;
-            document.getElementById('modal-dep-detalhes').innerHTML = dados.detalhes;
-
-            const divLinks = document.getElementById('modal-dep-links');
-            divLinks.innerHTML = '';
-
-            dados.links.forEach(link => {
-                const a = document.createElement('a');
-                a.href = link.url;
-                a.target = '_blank';
-                a.rel = 'noopener noreferrer';
-                a.className = `w-full ${link.classe} font-black text-xs sm:text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 hover:scale-[1.02] transition-all shadow-sm text-center`;
-                a.innerHTML = link.label;
-                divLinks.appendChild(a);
-            });
-
-            document.getElementById('modalDepoimento').classList.remove('hidden');
-            document.getElementById('modalDepoimento').classList.add('flex');
-        }
-
-        function fecharModalDepoimento() {
-            document.getElementById('modalDepoimento').classList.add('hidden');
-            document.getElementById('modalDepoimento').classList.remove('flex');
-        }
-
-        function toggleMenuMobile() {
-            const menu = document.getElementById('menu-mobile');
-            const iconeAbrir = document.getElementById('icone-menu-abrir');
-            const iconeFechar = document.getElementById('icone-menu-fechar');
-            const btn = document.getElementById('btn-toggle-menu');
-
-            const isHidden = menu.classList.toggle('hidden');
-            iconeAbrir.classList.toggle('hidden');
-            iconeFechar.classList.toggle('hidden');
-            if (btn) btn.setAttribute('aria-expanded', !isHidden);
-        }
-
-        function abrirModalDuvida() { document.getElementById('modalDuvida').classList.remove('hidden'); document.getElementById('modalDuvida').classList.add('flex'); }
-        function fecharModalDuvida() { document.getElementById('modalDuvida').classList.add('hidden'); document.getElementById('modalDuvida').classList.remove('flex'); }
-        function abrirModalSuporte() { document.getElementById('modalSuporte').classList.remove('hidden'); document.getElementById('modalSuporte').classList.add('flex'); }
-        function fecharModalSuporte() { document.getElementById('modalSuporte').classList.add('hidden'); document.getElementById('modalSuporte').classList.remove('flex'); }
-
-        function enviarDuvidaPlanilha(e) {
-            e.preventDefault();
-            const payload = { 
-                tipo: "duvida", 
-                nome: document.getElementById('duvida-nome').value.trim(), 
-                contato: document.getElementById('duvida-contato').value.trim(), 
-                assunto: document.getElementById('duvida-assunto').value, 
-                mensagem: document.getElementById('duvida-mensagem').value.trim() 
-            };
-            if (URL_APPS_SCRIPT) { fetch(URL_APPS_SCRIPT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }); }
-            mostrarToast("Dúvida enviada com sucesso! ✨", "✉️");
-            fecharModalDuvida();
-            document.getElementById('formDuvida').reset();
-        }
-
-        function enviarSuportePlanilha(e) {
-            e.preventDefault();
-            const payload = { 
-                tipo: "suporte", 
-                nome: document.getElementById('suporte-nome').value.trim(), 
-                contato: document.getElementById('suporte-contato').value.trim(), 
-                categoria: document.getElementById('suporte-categoria').value, 
-                descricao: document.getElementById('suporte-descricao').value.trim() 
-            };
-            if (URL_APPS_SCRIPT) { fetch(URL_APPS_SCRIPT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }); }
-            mostrarToast("Chamado de suporte registrado!", "🛠️");
-            fecharModalSuporte();
-            document.getElementById('formSuporte').reset();
-        }
-
-        function aceitarCookies() { localStorage.setItem('eve_cookies_consent', 'aceito'); document.getElementById('cookie-banner').classList.add('hidden'); }
-        function recusarCookies() { localStorage.setItem('eve_cookies_consent', 'recusado'); document.getElementById('cookie-banner').classList.add('hidden'); mostrarToast("Cookies não essenciais foram desativados.", "🍪"); }
-
         function abrirModalLegal(tipo) {
             const modal = document.getElementById('modalLegal');
             const titulo = document.getElementById('modal-legal-titulo');
             const conteudo = document.getElementById('modal-legal-conteudo');
+            
             if (tipo === 'privacidade') {
-                titulo.innerText = "Política de Privacidade & LGPD";
-                conteudo.innerHTML = `<p><strong>Última atualização:</strong> Agosto de 2026</p><p>A <strong>Eve Design Studio</strong> valoriza a sua privacidade e cumpre integralmente a LGPD.</p><h3 class="font-black text-base pt-2">1. Coleta de Informações</h3><p>Coletamos apenas os dados fornecidos voluntariamente.</p>`;
+                titulo.innerText = "Política de Privacidade (LGPD)";
+                conteudo.innerHTML = `
+                    <p><strong>Última atualização:</strong> Agosto de 2026</p>
+                    <p>A <strong>Eve Design Studio</strong> valoriza a sua privacidade e cumpre integralmente a LGPD. Os dados solicitados (nome, contato, e-mail) são utilizados estritamente para o envio de orçamentos e formalização do contrato de prestação de serviços.</p>
+                `;
             } else {
-                titulo.innerText = "Termos de Uso";
-                conteudo.innerHTML = `<p><strong>Última atualização:</strong> Agosto de 2026</p><p>Ao utilizar este site e calculadora, você concorda com as diretrizes do studio.</p>`;
+                titulo.innerText = "Termos de Serviço e Contrato";
+                conteudo.innerHTML = `
+                    <p><strong>Resumo do Contrato de Prestação de Serviços:</strong></p>
+                    <ul class="list-disc pl-5 space-y-2 mt-2">
+                        <li><strong>Início e Prazos:</strong> O cronograma oficial inicia apenas no dia útil seguinte à entrega completa do briefing e dos materiais pelo cliente.</li>
+                        <li><strong>Revisões:</strong> O cliente tem direito a até 2 (duas) rodadas de solicitações de ajustes por entrega. O prazo de avaliação do cliente é de 5 dias úteis (após isso, os arquivos são aprovados tacitamente).</li>
+                        <li><strong>Pagamentos:</strong> Projetos avulsos exigem pagamento de 50% no início e 50% na aprovação final. Em caso de desistência do cliente, o valor da entrada não é reembolsável.</li>
+                        <li><strong>Abandono de Projeto:</strong> Se o cliente ficar mais de 30 dias sem responder ou enviar materiais, o projeto será formalmente considerado abandonado.</li>
+                        <li><strong>Direitos Autorais:</strong> Os direitos de uso das artes finais são cedidos após a quitação total do valor. Os arquivos-fonte editáveis permanecem sob propriedade intelectual do Studio, salvo negociação separada.</li>
+                    </ul>
+                `;
             }
-            modal.classList.remove('hidden'); modal.classList.add('flex');
+            modal.classList.remove('hidden'); 
+            modal.classList.add('flex');
         }
         function fecharModalLegal() { document.getElementById('modalLegal').classList.add('hidden'); document.getElementById('modalLegal').classList.remove('flex'); }
-
-        function mostrarToast(mensagem, icone = "✨") {
-            const toast = document.getElementById('toast-feedback');
-            document.getElementById('toast-msg').innerText = mensagem;
-            document.getElementById('toast-icon').innerText = icone;
-            toast.classList.remove('hidden', 'opacity-0'); toast.classList.add('opacity-100');
-            setTimeout(() => { toast.classList.remove('opacity-100'); toast.classList.add('opacity-0'); setTimeout(() => toast.classList.add('hidden'), 300); }, 3200);
-        }
-
-        function abrirModalFeedback() { document.getElementById('modalFeedback').classList.remove('hidden'); document.getElementById('modalFeedback').classList.add('flex'); }
-        function fecharModalFeedback() { document.getElementById('modalFeedback').classList.add('hidden'); document.getElementById('modalFeedback').classList.remove('flex'); }
-
-        function enviarFeedbackPlanilha(e) {
-            e.preventDefault();
-            const payload = { 
-                tipo: "feedback", 
-                nome: document.getElementById('fb-nome').value.trim(), 
-                estrelas: document.getElementById('fb-estrelas').value, 
-                comentario: document.getElementById('fb-comentario').value.trim() 
-            };
-            if (URL_APPS_SCRIPT) { fetch(URL_APPS_SCRIPT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }); }
-            mostrarToast("Feedback enviado com sucesso! ⭐✨", "💖");
-            fecharModalFeedback();
-            document.getElementById('formFeedback').reset();
-        }
 
         function notificarCheckboxDireto(checkbox, nomeServico) {
             const labelParent = checkbox.closest('label');
             if (labelParent) { checkbox.checked ? labelParent.classList.add('card-selected') : labelParent.classList.remove('card-selected'); }
             calcularTotal();
-            if (checkbox.checked) mostrarToast(`"${nomeServico}" adicionado ao carrinho!`, "🛒");
-            else mostrarToast(`"${nomeServico}" removido do carrinho.`, "🗑️");
+            if (checkbox.checked) mostrarToast(`"${nomeServico}" adicionado!`, "🛒");
         }
 
         function selecionarServicoPorTabela(nomeServico) {
-            filtrarCategoria('todas', document.querySelector('button[data-cat-btn="todas"]'));
+            filtrarCategoria('todas');
             const items = document.querySelectorAll('.calc-item');
-            let itemEncontrado = null;
-            items.forEach(item => { if(item.getAttribute('data-name') === nomeServico) { item.checked = true; itemEncontrado = item; } });
-            if (itemEncontrado) {
-                const labelParent = itemEncontrado.closest('label');
-                if (labelParent) { labelParent.classList.add('card-selected', 'card-feedback'); setTimeout(() => labelParent.classList.remove('card-feedback'), 600); }
-            }
+            items.forEach(item => { if(item.getAttribute('data-name') === nomeServico) { item.checked = true; item.closest('label').classList.add('card-selected'); } });
             calcularTotal();
-            mostrarToast(`"${nomeServico}" adicionado ao carrinho!`, "🛒");
+            mostrarToast(`"${nomeServico}" adicionado!`, "🛒");
             document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
         }
 
         function destacarOpcaoCalculadora(idCheckbox) {
-            filtrarCategoria('todas', document.querySelector('button[data-cat-btn="todas"]'));
+            filtrarCategoria('todas');
             const checkbox = document.getElementById(idCheckbox);
             if (checkbox) {
                 checkbox.checked = true;
                 if(idCheckbox === 'check-video-ia') toggleIaMinutos();
                 if(idCheckbox === 'check-video-geral') toggleVideoGeral();
-                const wrapper = document.getElementById('wrapper-' + idCheckbox.replace('check-', ''));
-                if (wrapper) { wrapper.classList.add('card-selected', 'card-feedback'); setTimeout(() => wrapper.classList.remove('card-feedback'), 600); }
+                document.getElementById('wrapper-' + idCheckbox.replace('check-', '')).classList.add('card-selected');
             }
             calcularTotal();
-            mostrarToast("Serviço de vídeo adicionado ao carrinho!", "🎬");
+            mostrarToast("Serviço de vídeo adicionado!", "🎬");
             document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
         }
 
-        function removerItemCarrinho(nomeServico) {
-            document.querySelectorAll('.calc-item').forEach(item => {
-                if(item.getAttribute('data-name') === nomeServico) { item.checked = false; item.closest('label').classList.remove('card-selected'); }
-            });
-            if(nomeServico.includes('Vídeos com IA')) { document.getElementById('check-video-ia').checked = false; document.getElementById('wrapper-video-ia').classList.remove('card-selected'); toggleIaMinutos(); }
-            if(nomeServico.includes('Edição de Vídeos CapCut')) { document.getElementById('check-video-geral').checked = false; document.getElementById('wrapper-video-geral').classList.remove('card-selected'); toggleVideoGeral(); }
-            calcularTotal();
-            mostrarToast("Item removido do carrinho", "🗑️");
-        }
-
-        function toggleVideoGeral() { const isChecked = document.getElementById('check-video-geral').checked; const box = document.getElementById('box-minutos-geral'); const wrapper = document.getElementById('wrapper-video-geral'); box.classList.toggle('hidden', !isChecked); box.classList.toggle('flex', isChecked); if (wrapper) { isChecked ? wrapper.classList.add('card-selected') : wrapper.classList.remove('card-selected'); } }
-        function mudarMinutosGeral(qtd) { const input = document.getElementById('input-minutos-geral'); let valor = parseInt(input.value) + qtd; if(valor < 1) valor = 1; input.value = valor; calcularTotal(); }
-        function toggleIaMinutos() { const isChecked = document.getElementById('check-video-ia').checked; const box = document.getElementById('box-minutos-ia'); const wrapper = document.getElementById('wrapper-video-ia'); box.classList.toggle('hidden', !isChecked); box.classList.toggle('flex', isChecked); if (wrapper) { isChecked ? wrapper.classList.add('card-selected') : wrapper.classList.remove('card-selected'); } }
-        function mudarIaMinutos(qtd) { const input = document.getElementById('input-minutos-ia'); let valor = parseInt(input.value) + qtd; if(valor < 1) valor = 1; input.value = valor; calcularTotal(); }
+        function toggleVideoGeral() { const isChecked = document.getElementById('check-video-geral').checked; document.getElementById('box-minutos-geral').classList.toggle('hidden', !isChecked); document.getElementById('box-minutos-geral').classList.toggle('flex', isChecked); }
+        function mudarMinutosGeral(qtd) { const input = document.getElementById('input-minutos-geral'); input.value = Math.max(1, parseInt(input.value) + qtd); calcularTotal(); }
+        function toggleIaMinutos() { const isChecked = document.getElementById('check-video-ia').checked; document.getElementById('box-minutos-ia').classList.toggle('hidden', !isChecked); document.getElementById('box-minutos-ia').classList.toggle('flex', isChecked); }
+        function mudarIaMinutos(qtd) { const input = document.getElementById('input-minutos-ia'); input.value = Math.max(1, parseInt(input.value) + qtd); calcularTotal(); }
 
         function limparCalculadora() {
-            document.querySelectorAll('.calc-item').forEach(item => { item.checked = false; item.closest('label').classList.remove('card-selected'); });
-            document.getElementById('check-video-geral').checked = false; document.getElementById('box-minutos-geral').classList.add('hidden'); document.getElementById('input-minutos-geral').value = 1; document.getElementById('wrapper-video-geral').classList.remove('card-selected');
-            document.getElementById('check-video-ia').checked = false; document.getElementById('box-minutos-ia').classList.add('hidden'); document.getElementById('input-minutos-ia').value = 1; document.getElementById('wrapper-video-ia').classList.remove('card-selected');
+            document.querySelectorAll('.calc-item').forEach(i => { i.checked = false; i.closest('label').classList.remove('card-selected'); });
+            document.getElementById('check-video-geral').checked = false; document.getElementById('box-minutos-geral').classList.add('hidden'); document.getElementById('wrapper-video-geral').classList.remove('card-selected');
+            document.getElementById('check-video-ia').checked = false; document.getElementById('box-minutos-ia').classList.add('hidden'); document.getElementById('wrapper-video-ia').classList.remove('card-selected');
             calcularTotal();
-            mostrarToast("Carrinho esvaziado!", "🔄");
         }
 
         function filtrarCategoria(cat, btn) {
-            document.querySelectorAll('.btn-filtro').forEach(b => { b.classList.remove('bg-bordo', 'text-creme', 'border-bordo'); b.classList.add('bg-white', 'text-bordo', 'border-rosaclaro'); });
-            if (btn) { btn.classList.add('bg-bordo', 'text-creme', 'border-bordo'); btn.classList.remove('bg-white', 'text-bordo', 'border-rosaclaro'); }
-            document.querySelectorAll('.calc-item-card').forEach(card => { (cat === 'todas' || card.getAttribute('data-cat') === cat) ? card.classList.remove('hidden') : card.classList.add('hidden'); });
+            document.querySelectorAll('.btn-filtro').forEach(b => { b.classList.remove('bg-bordo', 'text-creme'); b.classList.add('bg-white', 'text-bordo'); });
+            if (btn) { btn.classList.add('bg-bordo', 'text-creme'); btn.classList.remove('bg-white', 'text-bordo'); }
+            document.querySelectorAll('.calc-item-card').forEach(c => { (cat === 'todas' || c.getAttribute('data-cat') === cat) ? c.classList.remove('hidden') : c.classList.add('hidden'); });
         }
 
-        function obterItensSelecionadosTexto() {
+        function obterItensSelecionadosArrayFormatado() {
             let lista = [];
-            document.querySelectorAll('.calc-item').forEach(item => { if(item.checked) lista.push(item.getAttribute('data-name')); });
-            if(document.getElementById('check-video-ia').checked) lista.push(`Edição de Vídeos com IA (${document.getElementById('input-minutos-ia').value || 1} min)`);
-            if(document.getElementById('check-video-geral').checked) lista.push(`Edição de Vídeos CapCut (${document.getElementById('input-minutos-geral').value || 1} min)`);
+            document.querySelectorAll('.calc-item').forEach(item => { 
+                if(item.checked) {
+                    const precoFormatado = parseFloat(item.getAttribute('data-price')).toFixed(2).replace('.', ',');
+                    lista.push(`R$ ${precoFormatado} - ${item.getAttribute('data-name')}`);
+                } 
+            });
+            if(document.getElementById('check-video-ia').checked) {
+                const mins = parseInt(document.getElementById('input-minutos-ia').value) || 1;
+                const totalIa = (mins * 80).toFixed(2).replace('.', ',');
+                lista.push(`R$ ${totalIa} - Ed. Vídeos IA (${mins} min)`);
+            }
+            if(document.getElementById('check-video-geral').checked) {
+                const mins = parseInt(document.getElementById('input-minutos-geral').value) || 1;
+                const totalGeral = (mins * 45).toFixed(2).replace('.', ',');
+                lista.push(`R$ ${totalGeral} - Ed. Vídeos CapCut (${mins} min)`);
+            }
             return lista;
         }
 
         function calcularTotal() {
             let total = 0;
-            const resumoUl = document.getElementById('resumo-entregas');
-            resumoUl.innerHTML = '';
-            let selecionados = 0;
-
-            document.querySelectorAll('.calc-item').forEach(item => {
-                if(item.checked) {
-                    const preco = parseFloat(item.getAttribute('data-price'));
-                    total += preco;
-                    selecionados++;
-                    const nomeServico = item.getAttribute('data-name');
-                    const li = document.createElement('li');
-                    li.className = "pt-2 pb-1 flex justify-between items-center";
-                    li.innerHTML = `<div><strong class="text-bordo">${nomeServico}</strong><br><span class="text-xs text-bordo font-bold">${item.getAttribute('data-summary')}</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${preco.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('${nomeServico}')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
-                    resumoUl.appendChild(li);
-                }
-            });
-
-            if(document.getElementById('check-video-ia').checked) {
-                const minutosIa = parseInt(document.getElementById('input-minutos-ia').value) || 1;
-                const precoIa = minutosIa * 80;
-                total += precoIa;
-                selecionados++;
-                const li = document.createElement('li');
-                li.className = "pt-2 pb-1 flex justify-between items-center";
-                li.innerHTML = `<div><strong class="text-bordo">Edição de Vídeos com IA (${minutosIa} min)</strong><br><span class="text-xs text-bordo font-bold">Geração de cenários/personagens + CapCut (R$ 80/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoIa.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Edição de Vídeos com IA')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
-                resumoUl.appendChild(li);
-            }
-
-            if(document.getElementById('check-video-geral').checked) {
-                const minutos = parseInt(document.getElementById('input-minutos-geral').value) || 1;
-                const precoVideo = minutos * 45;
-                total += precoVideo;
-                selecionados++;
-                const li = document.createElement('li');
-                li.className = "pt-2 pb-1 flex justify-between items-center";
-                li.innerHTML = `<div><strong class="text-bordo">Edição de Vídeos CapCut (${minutos} min)</strong><br><span class="text-xs text-bordo font-bold">Edição profissional e dinâmica (R$ 45/min).</span></div><div class="flex items-center gap-3"><span class="font-black text-bordo text-sm sm:text-base shrink-0">R$ ${precoVideo.toFixed(2).replace('.', ',')}</span><button type="button" onclick="removerItemCarrinho('Edição de Vídeos CapCut')" class="text-red-500 hover:text-red-700 font-bold text-xs bg-red-100 px-2 py-1 rounded-lg">Remover</button></div>`;
-                resumoUl.appendChild(li);
-            }
-
-            if(selecionados === 0) resumoUl.innerHTML = '<li class="pt-1">Seu carrinho está vazio. Escolha seus serviços acima.</li>';
-
-            const totalFormatado = 'R$ ' + total.toFixed(2).replace('.', ',');
-            document.getElementById('total-valor').innerText = totalFormatado;
-            document.getElementById('orc-total-valor').innerText = totalFormatado;
+            document.querySelectorAll('.calc-item').forEach(item => { if(item.checked) total += parseFloat(item.getAttribute('data-price')); });
+            if(document.getElementById('check-video-ia').checked) total += (parseInt(document.getElementById('input-minutos-ia').value) || 1) * 80;
+            if(document.getElementById('check-video-geral').checked) total += (parseInt(document.getElementById('input-minutos-geral').value) || 1) * 45;
+            
+            const txt = 'R$ ' + total.toFixed(2).replace('.', ',');
+            document.getElementById('total-valor').innerText = txt;
+            document.getElementById('orc-total-valor').innerText = txt;
         }
 
-        /* --- MODAL ORÇAMENTO ESTILO APP --- */
         function abrirModalOrcamento() {
             if(document.getElementById('total-valor').innerText === 'R$ 0,00') { mostrarToast('Carrinho Vazio! Selecione um serviço.', '⚠️'); return; }
+            
             document.getElementById('orc-data').value = formatarDataHoje();
             
-            const itensArray = obterItensSelecionadosTexto();
+            const itensArray = obterItensSelecionadosArrayFormatado();
             const ulItens = document.getElementById('orc-lista-itens');
             ulItens.innerHTML = '';
-            itensArray.forEach(item => {
+            
+            itensArray.forEach(itemTexto => {
                 const li = document.createElement('li');
-                li.innerText = item;
+                li.className = "flex justify-between items-center py-1 border-b border-gray-100 last:border-0";
+                const partes = itemTexto.split(" - ");
+                const preco = partes[0];
+                const servico = partes[1];
+
+                li.innerHTML = `
+                    <span class="text-gray-700 font-bold w-2/3 truncate">${servico}</span>
+                    <span class="text-bordo font-black w-1/3 text-right">${preco}</span>
+                `;
                 ulItens.appendChild(li);
             });
 
@@ -1469,8 +1187,8 @@
             const obsVal = document.getElementById('orc-obs').value.trim();
             const valorTotalVal = document.getElementById('orc-total-valor').innerText;
             
-            const itensArray = obterItensSelecionadosTexto();
-            const servicosFormatados = itensArray.length > 0 ? itensArray.join(', ') : "Nenhum";
+            const itensArray = obterItensSelecionadosArrayFormatado();
+            const servicosFormatados = itensArray.length > 0 ? itensArray.join('\n') : "Nenhum";
 
             const payload = {
                 tipo: "pedido",
@@ -1499,7 +1217,7 @@
                 `👤 *Cliente:* ${nomeVal}\n` +
                 `📱 *Contato:* ${telVal}\n` +
                 `-----------------------------------\n` +
-                `🛠️ *Serviços Selecionados:*\n- ${itensArray.join('\n- ')}\n\n` +
+                `🛠️ *Serviços Selecionados:*\n${servicosFormatados}\n\n` +
                 `💰 *Valor Total Simulado:* ${valorTotalVal}\n` +
                 `💳 *Forma de Pagamento:* ${pagVal}\n` +
                 `-----------------------------------\n` +
@@ -1520,15 +1238,26 @@
             }, 1000);
         }
 
-        function mostrarNivel(nome, nivel, desc) {
-            document.getElementById('modal-titulo').innerText = nome;
-            const badge = document.getElementById('modal-nivel-badge');
-            if (badge) badge.innerText = `Nível: ${nivel}`;
-            document.getElementById('modal-desc').innerText = desc;
-            document.getElementById('modal-ferramenta').classList.remove('hidden'); document.getElementById('modal-ferramenta').classList.add('flex');
-            mostrarToast(`Visualizando ferramenta: ${nome}`, "🛠️");
+        function mostrarToast(mensagem, icone = "✨") {
+            const toast = document.getElementById('toast-feedback');
+            document.getElementById('toast-msg').innerText = mensagem;
+            document.getElementById('toast-icon').innerText = icone;
+            toast.classList.remove('hidden', 'opacity-0'); toast.classList.add('opacity-100');
+            setTimeout(() => { toast.classList.remove('opacity-100'); toast.classList.add('opacity-0'); setTimeout(() => toast.classList.add('hidden'), 300); }, 3200);
         }
+        function toggleMenuMobile() { document.getElementById('menu-mobile').classList.toggle('hidden'); }
         function fecharModal() { document.getElementById('modal-ferramenta').classList.add('hidden'); document.getElementById('modal-ferramenta').classList.remove('flex'); }
+        function abrirModalDuvida() { document.getElementById('modalDuvida').classList.remove('hidden'); document.getElementById('modalDuvida').classList.add('flex'); }
+        function fecharModalDuvida() { document.getElementById('modalDuvida').classList.add('hidden'); document.getElementById('modalDuvida').classList.remove('flex'); }
+        function abrirModalSuporte() { document.getElementById('modalSuporte').classList.remove('hidden'); document.getElementById('modalSuporte').classList.add('flex'); }
+        function fecharModalSuporte() { document.getElementById('modalSuporte').classList.add('hidden'); document.getElementById('modalSuporte').classList.remove('flex'); }
+        function abrirModalDepoimento(c) { /* Abre modal específico */ }
+        function fecharModalDepoimento() { document.getElementById('modalDepoimento').classList.add('hidden'); document.getElementById('modalDepoimento').classList.remove('flex'); }
+        function abrirModalFeedback() { document.getElementById('modalFeedback').classList.remove('hidden'); document.getElementById('modalFeedback').classList.add('flex'); }
+        function fecharModalFeedback() { document.getElementById('modalFeedback').classList.add('hidden'); document.getElementById('modalFeedback').classList.remove('flex'); }
+        function aceitarCookies() { localStorage.setItem('eve_cookies_consent', 'aceito'); document.getElementById('cookie-banner').classList.add('hidden'); }
+        function recusarCookies() { localStorage.setItem('eve_cookies_consent', 'recusado'); document.getElementById('cookie-banner').classList.add('hidden'); mostrarToast("Cookies desativados.", "🍪"); }
+        function mostrarNivel(nome, nivel, desc) { document.getElementById('modal-titulo').innerText = nome; document.getElementById('modal-nivel-badge').innerText = `Nível: ${nivel}`; document.getElementById('modal-desc').innerText = desc; document.getElementById('modal-ferramenta').classList.remove('hidden'); document.getElementById('modal-ferramenta').classList.add('flex'); mostrarToast(`Visualizando ferramenta: ${nome}`, "🛠️"); }
 
         window.addEventListener('DOMContentLoaded', () => {
             if (!localStorage.getItem('eve_cookies_consent')) { document.getElementById('cookie-banner').classList.remove('hidden'); }
