@@ -1238,12 +1238,12 @@
             if(document.getElementById('total-valor').innerText === 'R$ 0,00') { mostrarToast('Carrinho Vazio! Selecione um serviço.', '⚠️'); return; }
             
             if(document.getElementById('check-video-ia').checked && (!document.getElementById('input-minutos-ia').value || parseInt(document.getElementById('input-minutos-ia').value) <= 0)) {
-                mostrarToast('Atenção: Defina a minutagem exata de Vídeos com IA!', '⚠️');
+                mostrarToast('Atenção: Defina a minutagem exata de Vídeos com IA na calculadora!', '⚠️');
                 document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
                 return;
             }
             if(document.getElementById('check-video-geral').checked && (!document.getElementById('input-minutos-geral').value || parseInt(document.getElementById('input-minutos-geral').value) <= 0)) {
-                mostrarToast('Atenção: Defina a minutagem exata de Edição CapCut!', '⚠️');
+                mostrarToast('Atenção: Defina a minutagem exata de Edição CapCut na calculadora!', '⚠️');
                 document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
                 return;
             }
@@ -1262,23 +1262,16 @@
                 ulItens.appendChild(li);
             });
 
-            // Sincronizar modal
-            document.getElementById('modal-check-capcut').checked = document.getElementById('check-video-geral').checked;
-            toggleModalCapcut();
-            if(document.getElementById('check-video-geral').checked) {
-                document.getElementById('modal-mins-capcut').value = document.getElementById('input-minutos-geral').value;
-            }
-
-            document.getElementById('modal-check-ia').checked = document.getElementById('check-video-ia').checked;
-            toggleModalIa();
-            if(document.getElementById('check-video-ia').checked) {
-                document.getElementById('modal-mins-ia').value = document.getElementById('input-minutos-ia').value;
-            }
-
             document.getElementById('modalOrcamento').classList.remove('hidden');
             document.getElementById('modalOrcamento').classList.add('flex');
-            recalcularModalTotal();
-            mostrarToast("Abrindo formulário de orçamento formal...", "📋");
+            
+            let totalNum = 0;
+            document.querySelectorAll('.calc-item').forEach(item => { if(item.checked) totalNum += parseFloat(item.getAttribute('data-price')); });
+            if(document.getElementById('check-video-ia').checked) totalNum += (parseInt(document.getElementById('input-minutos-ia').value) || 0) * 80;
+            if(document.getElementById('check-video-geral').checked) totalNum += (parseInt(document.getElementById('input-minutos-geral').value) || 0) * 45;
+            document.getElementById('orc-total-valor').innerText = 'R$ ' + totalNum.toFixed(2).replace('.', ',');
+
+            mostrarToast("Abrindo formulário de orçamento...", "📋");
         }
 
         function fecharModalOrcamento() {
@@ -1286,73 +1279,7 @@
             document.getElementById('modalOrcamento').classList.remove('flex');
         }
 
-        function toggleModalCapcut() {
-            const isChecked = document.getElementById('modal-check-capcut').checked;
-            const box = document.getElementById('modal-box-capcut');
-            box.classList.toggle('hidden', !isChecked);
-            box.classList.toggle('flex', isChecked);
-            if(isChecked && (!document.getElementById('modal-mins-capcut').value || parseInt(document.getElementById('modal-mins-capcut').value) < 1)) {
-                document.getElementById('modal-mins-capcut').value = 1;
-            }
-            recalcularModalTotal();
-        }
-
-        function toggleModalIa() {
-            const isChecked = document.getElementById('modal-check-ia').checked;
-            const box = document.getElementById('modal-box-ia');
-            box.classList.toggle('hidden', !isChecked);
-            box.classList.toggle('flex', isChecked);
-            if(isChecked && (!document.getElementById('modal-mins-ia').value || parseInt(document.getElementById('modal-mins-ia').value) < 1)) {
-                document.getElementById('modal-mins-ia').value = 1;
-            }
-            recalcularModalTotal();
-        }
-
-        function recalcularModalTotal() {
-            let total = 0;
-            document.querySelectorAll('.calc-item').forEach(item => { if(item.checked) total += parseFloat(item.getAttribute('data-price')); });
-            
-            const capChecked = document.getElementById('modal-check-capcut').checked;
-            const capMins = parseInt(document.getElementById('modal-mins-capcut').value) || 0;
-            if(capChecked) total += capMins * 45;
-
-            const iaChecked = document.getElementById('modal-check-ia').checked;
-            const iaMins = parseInt(document.getElementById('modal-mins-ia').value) || 0;
-            if(iaChecked) total += iaMins * 80;
-
-            const txt = 'R$ ' + total.toFixed(2).replace('.', ',');
-            document.getElementById('orc-total-valor').innerText = txt;
-        }
-
         function validarEEnviarOrcamento() {
-            const capChecked = document.getElementById('modal-check-capcut').checked;
-            const capMins = parseInt(document.getElementById('modal-mins-capcut').value) || 0;
-            if(capChecked && capMins <= 0) {
-                alert('Por favor, informe a minutagem correta para a Edição CapCut no formulário.');
-                document.getElementById('modal-mins-capcut').focus();
-                return;
-            }
-
-            const iaChecked = document.getElementById('modal-check-ia').checked;
-            const iaMins = parseInt(document.getElementById('modal-mins-ia').value) || 0;
-            if(iaChecked && iaMins <= 0) {
-                alert('Por favor, informe a minutagem correta para Vídeos com IA no formulário.');
-                document.getElementById('modal-mins-ia').focus();
-                return;
-            }
-
-            if(capChecked) {
-                document.getElementById('check-video-geral').checked = true;
-                toggleVideoGeral();
-                document.getElementById('input-minutos-geral').value = capMins;
-            }
-            if(iaChecked) {
-                document.getElementById('check-video-ia').checked = true;
-                toggleIaMinutos();
-                document.getElementById('input-minutos-ia').value = iaMins;
-            }
-            calcularTotal();
-
             document.getElementById('submit-orcamento-real').click();
         }
 
@@ -1369,24 +1296,10 @@
             
             let itensArray = obterItensSelecionadosArrayFormatado();
             
-            const capChecked = document.getElementById('modal-check-capcut').checked;
-            const capMins = parseInt(document.getElementById('modal-mins-capcut').value) || 0;
-            if(capChecked) {
-                const tCap = (capMins * 45).toFixed(2).replace('.', ',');
-                itensArray.push(`R$ ${tCap} - Ed. Vídeos CapCut (${capMins} min)`);
-            }
-
-            const iaChecked = document.getElementById('modal-check-ia').checked;
-            const iaMins = parseInt(document.getElementById('modal-mins-ia').value) || 0;
-            if(iaChecked) {
-                const tIa = (iaMins * 80).toFixed(2).replace('.', ',');
-                itensArray.push(`R$ ${tIa} - Ed. Vídeos IA (${iaMins} min)`);
-            }
-
             let valorTotalNum = 0;
             document.querySelectorAll('.calc-item').forEach(item => { if(item.checked) valorTotalNum += parseFloat(item.getAttribute('data-price')); });
-            if(capChecked) valorTotalNum += capMins * 45;
-            if(iaChecked) valorTotalNum += iaMins * 80;
+            if(document.getElementById('check-video-ia').checked) valorTotalNum += (parseInt(document.getElementById('input-minutos-ia').value) || 0) * 80;
+            if(document.getElementById('check-video-geral').checked) valorTotalNum += (parseInt(document.getElementById('input-minutos-geral').value) || 0) * 45;
             
             const valorTotalVal = 'R$ ' + valorTotalNum.toFixed(2).replace('.', ',');
             const servicosFormatados = itensArray.length > 0 ? itensArray.join('\n') : "Nenhum";
