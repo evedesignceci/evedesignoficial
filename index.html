@@ -855,7 +855,7 @@
             <div class="bg-white border-b border-gray-200 p-4 sm:p-6 rounded-t-3xl flex items-center justify-between shrink-0">
                 <div>
                     <h2 id="modal-orcamento-titulo" class="text-2xl font-black text-gray-800 leading-none">Novo orçamento</h2>
-                    <p class="text-xs text-gray-500 font-bold mt-1">Defina os serviços e minutagens exatas para registrar e enviar via WhatsApp/Direct.</p>
+                    <p class="text-xs text-gray-500 font-bold mt-1">Preencha os dados para registrar e enviar via WhatsApp/Direct.</p>
                 </div>
                 <button type="button" aria-label="Fechar" class="bg-gray-800 text-white hover:bg-rosa hover:text-bordo text-xs font-black py-2 px-4 rounded-full transition-colors" onclick="fecharModalOrcamento()">Cancelar</button>
             </div>
@@ -910,10 +910,10 @@
                         </div>
                     </div>
 
-                    <!-- BLOCO 3: ITENS SELECIONADOS NO CARRINHO -->
+                    <!-- BLOCO 3: ITENS DO SERVIÇO -->
                     <div class="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm mb-5">
                         <div class="flex items-center justify-between mb-3 border-b border-gray-100 pb-2">
-                            <h3 class="text-sm font-black text-gray-700">Serviços Selecionados</h3>
+                            <h3 class="text-sm font-black text-gray-700">Catálogo de Serviços / Itens</h3>
                             <span class="text-xs font-black text-bordo bg-rosaclaro/30 px-2 py-1 rounded-md" id="orc-total-valor">R$ 0,00</span>
                         </div>
                         <div class="bg-gray-50 rounded-xl p-3 max-h-32 overflow-y-auto modal-scroll">
@@ -921,37 +921,7 @@
                         </div>
                     </div>
 
-                    <!-- BLOCO 4: OBRIGATÓRIO - MINUTAGEM DE VÍDEOS E IA NO ORÇAMENTO -->
-                    <div class="bg-rosa/10 border-2 border-rosa rounded-2xl p-4 shadow-sm mb-5">
-                        <h3 class="text-sm font-black text-bordo mb-2">🎬 Especificação Obrigatória de Vídeos / Minutagem</h3>
-                        <p class="text-xs text-bordo font-bold mb-3">Se o seu projeto envolve vídeos (avulsos ou dentro de assessoria), especifique abaixo a minutagem exata para cálculo final:</p>
-                        
-                        <div class="space-y-3">
-                            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white p-3 rounded-xl border border-rosaclaro gap-2">
-                                <label class="text-xs font-black text-bordo flex items-center gap-2 cursor-pointer">
-                                    <input type="checkbox" id="modal-check-capcut" class="w-4 h-4 accent-bordo" onchange="toggleModalCapcut()">
-                                    Edição CapCut (R$ 45/min)
-                                </label>
-                                <div id="modal-box-capcut" class="hidden items-center gap-2">
-                                    <span class="text-xs font-bold text-gray-600">Minutos exatos:</span>
-                                    <input type="number" id="modal-mins-capcut" value="0" min="1" max="480" class="w-16 p-1 text-center border rounded font-bold text-xs" onchange="recalcularModalTotal()">
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white p-3 rounded-xl border border-rosaclaro gap-2">
-                                <label class="text-xs font-black text-bordo flex items-center gap-2 cursor-pointer">
-                                    <input type="checkbox" id="modal-check-ia" class="w-4 h-4 accent-bordo" onchange="toggleModalIa()">
-                                    Vídeos com IA (R$ 80/min)
-                                </label>
-                                <div id="modal-box-ia" class="hidden items-center gap-2">
-                                    <span class="text-xs font-bold text-gray-600">Minutos exatos:</span>
-                                    <input type="number" id="modal-mins-ia" value="0" min="1" max="240" class="w-16 p-1 text-center border rounded font-bold text-xs" onchange="recalcularModalTotal()">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- BLOCO 5: PAGAMENTO & OBSERVAÇÕES -->
+                    <!-- BLOCO 4: PAGAMENTO & OBSERVAÇÕES -->
                     <div class="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm mb-5">
                         <div class="mb-4">
                             <label class="block text-sm font-black text-gray-700 mb-2">Forma de Pagamento Preferida</label>
@@ -963,14 +933,14 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-sm font-black text-gray-700 mb-2">Observações Detalhadas (Conteúdo dos Vídeos, Prazos) *</label>
-                            <textarea id="orc-obs" rows="3" required placeholder="Ex: O projeto inclui X minutos de edição CapCut e Y minutos de vídeos com IA." class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-bold text-gray-800 focus:border-bordo outline-none resize-none"></textarea>
+                            <label class="block text-sm font-black text-gray-700 mb-2">Observações (Prazos, Minutagem, etc)</label>
+                            <textarea id="orc-obs" rows="3" placeholder="Ex: O cliente já possui o logo vetorizado. Prazo de entrega urgente para dia X." class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-bold text-gray-800 focus:border-bordo outline-none resize-none"></textarea>
                         </div>
                     </div>
 
                     <div class="mb-4 px-2">
                         <p class="text-[11px] text-gray-500 leading-tight">
-                            * Ao prosseguir, confirmo estar ciente das regras de prestação de serviços: o prazo de entrega inicia após o envio completo dos materiais e da minutagem exata estipulada acima.
+                            * Ao prosseguir, confirmo estar ciente das regras de prestação de serviços: o prazo de entrega inicia após o envio completo dos materiais. Estão inclusas até 2 rodadas de revisão por entrega. Entradas (50%) não são reembolsáveis em caso de cancelamento.
                         </p>
                     </div>
 
@@ -995,7 +965,7 @@
             <form id="formDuvida" onsubmit="enviarDuvidaPlanilha(event)">
                 <div class="space-y-3">
                     <input type="text" id="duvida-nome" required placeholder="Seu Nome / @ do Instagram" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold">
-                    <input type="text" id="duvida-contato" required placeholder="WhatsApp ou E-mail (Obrigatório)" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold">
+                    <input type="text" id="duvida-contato" required placeholder="WhatsApp ou E-mail" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold">
                     <select id="duvida-assunto" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold">
                         <option value="Dúvida sobre Sites">Dúvida sobre Sites</option>
                         <option value="Dúvida sobre Identidade Visual">Dúvida sobre Identidade Visual</option>
@@ -1015,7 +985,7 @@
             <form id="formSuporte" onsubmit="enviarSuportePlanilha(event)">
                 <div class="space-y-3">
                     <input type="text" id="suporte-nome" required placeholder="Nome do Cliente / Projeto" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold">
-                    <input type="text" id="suporte-contato" required placeholder="Contato Direto (Obrigatório)" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold">
+                    <input type="text" id="suporte-contato" required placeholder="Contato Direto" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold">
                     <select id="suporte-categoria" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-bold">
                         <option value="Ajuste / Revisão">Ajuste / Revisão</option>
                         <option value="Dificuldade com Arquivos">Dificuldade com Arquivos</option>
@@ -1098,10 +1068,9 @@
                 conteudo.innerHTML = `
                     <p><strong>Resumo do Contrato de Prestação de Serviços:</strong></p>
                     <ul class="list-disc pl-5 space-y-2 mt-2">
-                        <li><strong>Prazos:</strong> Início após envio completo dos materiais e minutagem exata dos vídeos.</li>
-                        <li><strong>Revisões:</strong> Até 2 rodadas de ajustes inclusas. Prazo de resposta de 5 dias úteis.</li>
-                        <li><strong>Pagamentos:</strong> 50% de entrada (não reembolsável) e 50% na aprovação final (ou mensalidade antecipada para planos recorrentes).</li>
-                        <li><strong>Abandono:</strong> Inatividade superior a 30 dias encerra o projeto.</li>
+                        <li><strong>Prazos:</strong> Início após envio completo dos materiais.</li>
+                        <li><strong>Revisões:</strong> Até 2 rodadas de ajustes inclusas.</li>
+                        <li><strong>Pagamentos:</strong> 50% de entrada e 50% na aprovação final.</li>
                     </ul>
                 `;
             }
@@ -1238,12 +1207,12 @@
             if(document.getElementById('total-valor').innerText === 'R$ 0,00') { mostrarToast('Carrinho Vazio! Selecione um serviço.', '⚠️'); return; }
             
             if(document.getElementById('check-video-ia').checked && (!document.getElementById('input-minutos-ia').value || parseInt(document.getElementById('input-minutos-ia').value) <= 0)) {
-                mostrarToast('Atenção: Defina a minutagem exata de Vídeos com IA na calculadora!', '⚠️');
+                mostrarToast('Atenção: Defina a minutagem exata de Vídeos com IA!', '⚠️');
                 document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
                 return;
             }
             if(document.getElementById('check-video-geral').checked && (!document.getElementById('input-minutos-geral').value || parseInt(document.getElementById('input-minutos-geral').value) <= 0)) {
-                mostrarToast('Atenção: Defina a minutagem exata de Edição CapCut na calculadora!', '⚠️');
+                mostrarToast('Atenção: Defina a minutagem exata de Edição CapCut!', '⚠️');
                 document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
                 return;
             }
@@ -1262,66 +1231,14 @@
                 ulItens.appendChild(li);
             });
 
-            // Sincronizar modal
-            document.getElementById('modal-check-capcut').checked = document.getElementById('check-video-geral').checked;
-            toggleModalCapcut();
-            if(document.getElementById('check-video-geral').checked) {
-                document.getElementById('modal-mins-capcut').value = document.getElementById('input-minutos-geral').value;
-            }
-
-            document.getElementById('modal-check-ia').checked = document.getElementById('check-video-ia').checked;
-            toggleModalIa();
-            if(document.getElementById('check-video-ia').checked) {
-                document.getElementById('modal-mins-ia').value = document.getElementById('input-minutos-ia').value;
-            }
-
             document.getElementById('modalOrcamento').classList.remove('hidden');
             document.getElementById('modalOrcamento').classList.add('flex');
-            recalcularModalTotal();
-            mostrarToast("Abrindo formulário de orçamento formal...", "📋");
+            mostrarToast("Abrindo formulário de orçamento...", "📋");
         }
 
         function fecharModalOrcamento() {
             document.getElementById('modalOrcamento').classList.add('hidden');
             document.getElementById('modalOrcamento').classList.remove('flex');
-        }
-
-        function toggleModalCapcut() {
-            const isChecked = document.getElementById('modal-check-capcut').checked;
-            const box = document.getElementById('modal-box-capcut');
-            box.classList.toggle('hidden', !isChecked);
-            box.classList.toggle('flex', isChecked);
-            if(isChecked && (!document.getElementById('modal-mins-capcut').value || parseInt(document.getElementById('modal-mins-capcut').value) < 1)) {
-                document.getElementById('modal-mins-capcut').value = 1;
-            }
-            recalcularModalTotal();
-        }
-
-        function toggleModalIa() {
-            const isChecked = document.getElementById('modal-check-ia').checked;
-            const box = document.getElementById('modal-box-ia');
-            box.classList.toggle('hidden', !isChecked);
-            box.classList.toggle('flex', isChecked);
-            if(isChecked && (!document.getElementById('modal-mins-ia').value || parseInt(document.getElementById('modal-mins-ia').value) < 1)) {
-                document.getElementById('modal-mins-ia').value = 1;
-            }
-            recalcularModalTotal();
-        }
-
-        function recalcularModalTotal() {
-            let total = 0;
-            document.querySelectorAll('.calc-item').forEach(item => { if(item.checked) total += parseFloat(item.getAttribute('data-price')); });
-            
-            const capChecked = document.getElementById('modal-check-capcut').checked;
-            const capMins = parseInt(document.getElementById('modal-mins-capcut').value) || 0;
-            if(capChecked) total += capMins * 45;
-
-            const iaChecked = document.getElementById('modal-check-ia').checked;
-            const iaMins = parseInt(document.getElementById('modal-mins-ia').value) || 0;
-            if(iaChecked) total += iaMins * 80;
-
-            const txt = 'R$ ' + total.toFixed(2).replace('.', ',');
-            document.getElementById('orc-total-valor').innerText = txt;
         }
 
         function validarEEnviarOrcamento() {
@@ -1341,24 +1258,10 @@
             
             let itensArray = obterItensSelecionadosArrayFormatado();
             
-            const capChecked = document.getElementById('modal-check-capcut').checked;
-            const capMins = parseInt(document.getElementById('modal-mins-capcut').value) || 0;
-            if(capChecked) {
-                const tCap = (capMins * 45).toFixed(2).replace('.', ',');
-                itensArray.push(`R$ ${tCap} - Ed. Vídeos CapCut (${capMins} min)`);
-            }
-
-            const iaChecked = document.getElementById('modal-check-ia').checked;
-            const iaMins = parseInt(document.getElementById('modal-mins-ia').value) || 0;
-            if(iaChecked) {
-                const tIa = (iaMins * 80).toFixed(2).replace('.', ',');
-                itensArray.push(`R$ ${tIa} - Ed. Vídeos IA (${iaMins} min)`);
-            }
-
             let valorTotalNum = 0;
             document.querySelectorAll('.calc-item').forEach(item => { if(item.checked) valorTotalNum += parseFloat(item.getAttribute('data-price')); });
-            if(capChecked) valorTotalNum += capMins * 45;
-            if(iaChecked) valorTotalNum += iaMins * 80;
+            if(document.getElementById('check-video-ia').checked) valorTotalNum += (parseInt(document.getElementById('input-minutos-ia').value) || 0) * 80;
+            if(document.getElementById('check-video-geral').checked) valorTotalNum += (parseInt(document.getElementById('input-minutos-geral').value) || 0) * 45;
             
             const valorTotalVal = 'R$ ' + valorTotalNum.toFixed(2).replace('.', ',');
             const servicosFormatados = itensArray.length > 0 ? itensArray.join('\n') : "Nenhum";
@@ -1397,17 +1300,13 @@
                 `📝 *Observações:* ${obsVal}`;
 
             navigator.clipboard.writeText(textoMensagem).then(() => {
-                mostrarToast("Orçamento Formal copiado! Redirecionando...", "✅");
+                mostrarToast("Orçamento copiado para a área de transferência!", "✅");
             }).catch(() => {});
 
             fecharModalOrcamento();
 
             setTimeout(() => {
-                if(WHATSAPP_NUMERO) {
-                    window.open(`https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(textoMensagem)}`, '_blank');
-                } else {
-                    window.open(`https://www.instagram.com/${SEU_INSTAGRAM}/`, '_blank');
-                }
+                window.open(`https://www.instagram.com/${SEU_INSTAGRAM}/`, '_blank');
             }, 1000);
         }
 
