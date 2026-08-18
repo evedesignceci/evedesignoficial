@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eve Design | Identidade Visual, Animações, Ilustração 2D, Sites & IA Criativa</title>
 
-    <!-- [1] META DESCRIPTION & SEO -->
+    <!-- META DESCRIPTION & SEO -->
     <meta name="description" content="Eve Design Studio por Evelyn Cecilia: criação de sites profissionais, identidades visuais completas, ilustrações 2D, animações 3D, edição de vídeo no CapCut e soluções com IA criativa.">
     <meta name="author" content="Evelyn Cecília de Sales Pereira">
 
@@ -19,7 +19,7 @@
     <meta property="og:image" content="https://res.cloudinary.com/oactqmgs/image/upload/v1786908961/EVE_LOGO_EVE_E_RAPOSA_1.png">
     <meta property="og:type" content="website">
 
-    <!-- [1] DADOS ESTRUTURADOS SCHEMA.ORG (ProfessionalService) -->
+    <!-- DADOS ESTRUTURADOS SCHEMA.ORG (ProfessionalService) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -70,7 +70,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* [2] LINE-HEIGHT OTIMIZADO PARA 1.5 */
         body {
             background-color: #F7E9D6;
             color: #6E1940;
@@ -121,7 +120,7 @@
         <span id="toast-msg">Item adicionado com sucesso!</span>
     </div>
 
-    <!-- [11] BANNER DE COOKIES (LGPD COM BOTÃO RECUSAR) -->
+    <!-- BANNER DE COOKIES (LGPD COM BOTÃO RECUSAR) -->
     <div id="cookie-banner" role="region" aria-label="Consentimento de Cookies" class="fixed bottom-0 left-0 w-full bg-bordo text-creme px-4 sm:px-6 py-4 shadow-2xl z-50 hidden border-t-2 border-rosa">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-bold">
             <p class="leading-normal text-center sm:text-left">
@@ -138,7 +137,7 @@
         </div>
     </div>
 
-    <!-- [10] BOTÃO VOLTAR AO TOPO FLUTUANTE -->
+    <!-- BOTÃO VOLTAR AO TOPO FLUTUANTE -->
     <button id="btn-back-to-top" type="button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Voltar ao topo" class="fixed bottom-6 right-6 z-40 bg-bordo text-creme hover:bg-rosa hover:text-bordo border-2 border-rosa p-3 rounded-2xl shadow-2xl hidden opacity-0 transition-all duration-300 transform hover:scale-110">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
@@ -147,56 +146,57 @@
 
     <!-- HEADER DE NAVEGAÇÃO -->
     <header class="w-full bg-white/95 backdrop-blur-md border-b-2 border-rosaclaro sticky top-0 z-40 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4">
 
-            <a href="#sobre-mim" class="flex items-center gap-3 group rounded-xl p-1 transition-all">
+            <!-- LOGO & IDENTIDADE -->
+            <a href="#sobre-mim" class="flex items-center gap-3 group rounded-xl p-1 transition-all shrink-0">
                 <div class="relative">
-                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png" alt="Eve Design Studio Logo" class="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-contain p-0.5 bg-creme border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
-                    <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full" title="Disponível para novos projetos"></span>
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png" alt="Eve Design Studio Logo" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-contain p-0.5 bg-creme border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
+                    <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full" title="Disponível para novos projetos"></span>
                 </div>
-                <div>
-                    <h2 class="font-extrabold text-bordo text-base sm:text-lg leading-none group-hover:text-rosa transition-colors">Evelyn Cecilia</h2>
-                    <p class="text-xs text-bordo font-bold">Eve Design Studio</p>
+                <div class="text-left">
+                    <h2 class="font-extrabold text-bordo text-sm sm:text-base leading-none group-hover:text-rosa transition-colors">Evelyn Cecilia</h2>
+                    <p class="text-[11px] sm:text-xs text-bordo/80 font-bold">Eve Design Studio</p>
                 </div>
             </a>
 
-            <!-- [3] NAVEGAÇÃO DESKTOP (LINKS CORRIGIDOS) -->
-            <nav class="hidden lg:flex items-center gap-4 text-sm font-black text-bordo uppercase tracking-wide">
-                <a href="#sobre-mim" class="hover:text-rosa transition-colors">Sobre</a>
-                <a href="#tabela" class="hover:text-rosa transition-colors">Serviços</a>
-                <a href="#depoimentos" class="hover:text-rosa transition-colors">Projetos & Clientes</a>
-                <a href="#depoimentos" class="hover:text-rosa transition-colors">Depoimentos</a>
-                <a href="#tabela" class="hover:text-rosa transition-colors">Preços</a>
-                <a href="#faq-duvidas" class="hover:text-rosa transition-colors">Central de Ajuda</a>
-                <a href="#simulador" class="hover:text-rosa transition-colors">Calculadora</a>
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="bg-rosa/20 text-bordo hover:bg-rosa transition-all font-black px-3.5 py-1.5 rounded-xl border border-rosa/50 flex items-center gap-1.5">
-                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain">
-                    Portfólio
-                </a>
+            <!-- NAVEGAÇÃO DESKTOP -->
+            <nav class="hidden xl:flex items-center gap-5 text-xs sm:text-sm font-black text-bordo uppercase tracking-wider">
+                <a href="#sobre-mim" class="hover:text-rosa transition-colors py-1">Sobre</a>
+                <a href="#tabela" class="hover:text-rosa transition-colors py-1">Serviços</a>
+                <a href="#depoimentos" class="hover:text-rosa transition-colors py-1">Projetos</a>
+                <a href="#depoimentos" class="hover:text-rosa transition-colors py-1">Depoimentos</a>
+                <a href="#tabela" class="hover:text-rosa transition-colors py-1">Preços</a>
+                <a href="#faq-duvidas" class="hover:text-rosa transition-colors py-1 whitespace-nowrap">Central de Ajuda</a>
+                <a href="#simulador" class="hover:text-rosa transition-colors py-1">Calculadora</a>
             </nav>
 
-            <!-- AÇÕES RÁPIDAS & MENU MOBILE -->
-            <div class="flex items-center gap-2">
-                <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="hidden sm:flex bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-2 px-3.5 rounded-xl items-center gap-2 transition-all shadow-sm">
-                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain">
+            <!-- AÇÕES RÁPIDAS (PORTFÓLIO + INSTAGRAM + TOGGLE MOBILE) -->
+            <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 bg-rosa/20 text-bordo hover:bg-rosa hover:text-bordo transition-all font-black text-xs px-3.5 py-2 rounded-xl border border-rosa/50">
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-3.5 h-3.5 object-contain">
+                    <span>Portfólio</span>
+                </a>
+
+                <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1.5 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-3.5 rounded-xl transition-all shadow-sm">
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-3.5 h-3.5 object-contain">
                     <span>Instagram</span>
                 </a>
 
-                <!-- [5] ARIA-EXPANDED NO BOTÃO DO MENU MOBILE -->
-                <button type="button" id="btn-toggle-menu" onclick="toggleMenuMobile()" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir Menu Principal" class="lg:hidden p-2 rounded-xl border-2 border-rosaclaro bg-creme/50 hover:bg-rosa text-bordo transition-all">
-                    <svg id="icone-menu-abrir" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button type="button" id="btn-toggle-menu" onclick="toggleMenuMobile()" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir Menu Principal" class="xl:hidden p-2 rounded-xl border-2 border-rosaclaro bg-creme/50 hover:bg-rosa text-bordo transition-all">
+                    <svg id="icone-menu-abrir" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
-                    <svg id="icone-menu-fechar" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg id="icone-menu-fechar" class="w-5 h-5 sm:w-6 sm:h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
         </div>
 
-        <!-- [3] MENU MOBILE (LINKS CORRIGIDOS) -->
-        <div id="menu-mobile" class="hidden lg:hidden bg-white border-t-2 border-rosaclaro px-6 py-5 shadow-xl">
-            <nav class="flex flex-col gap-3 text-base font-black text-bordo uppercase">
+        <!-- MENU MOBILE RETRÁTIL -->
+        <div id="menu-mobile" class="hidden xl:hidden bg-white border-t-2 border-rosaclaro px-6 py-5 shadow-xl">
+            <nav class="flex flex-col gap-3 text-sm sm:text-base font-black text-bordo uppercase">
                 <a href="#sobre-mim" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">👤 Sobre Mim</a>
                 <a href="#tabela" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">⭐ Serviços & Preços</a>
                 <a href="#depoimentos" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">💼 Projetos & Clientes</a>
@@ -208,15 +208,15 @@
                     <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-full bg-rosa text-bordo font-black text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
                         <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain"> Ver Portfólio Canva
                     </a>
-                    <button type="button" onclick="toggleMenuMobile(); abrirModalDuvida();" class="w-full bg-amarelo text-bordo font-black text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
-                        💬 Tirar Dúvida Direto por E-mail
-                    </button>
+                    <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme font-black text-sm py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain"> Abrir Instagram Direct
+                    </a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- BANNER HERO (Above the Fold) -->
+    <!-- BANNER HERO -->
     <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2">
         <div class="rounded-3xl overflow-hidden border-2 border-rosa shadow-lg bg-white">
             <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/BANNER_EVE_DESIGN.png" alt="Eve Design Studio - Banner Oficial" class="w-full h-auto object-cover max-h-[420px]">
@@ -304,7 +304,7 @@
         <div class="bg-white/90 border-2 border-rosaclaro rounded-3xl p-6 sm:p-10 shadow-lg backdrop-blur-sm">
             <div class="flex flex-col md:flex-row items-center gap-8">
 
-                <!-- MASCOTE / PERSONAGEM OFICIAL [6] LOADING LAZY -->
+                <!-- MASCOTE / PERSONAGEM OFICIAL -->
                 <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-48 h-48 md:w-56 md:h-56 shrink-0 relative group cursor-pointer" title="Clique para ver o Portfólio!">
                     <div class="absolute -inset-1 bg-gradient-to-r from-rosa to-amarelo rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png" loading="lazy" alt="Personagem Oficial Eve Design Studio" class="relative w-full h-full object-contain rounded-2xl bg-rosaclaro/30 p-2 border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
@@ -324,7 +324,7 @@
                         No <strong class="text-bordo font-black">Eve Design Studio</strong>, crio ecossistemas digitais completos que unem design estratégico, arte autoral e Inteligência Artificial. Desenvolvo desde a <strong class="text-bordo font-black">criação de sites e landing pages até identidade visual, vetorização, ilustração 2D (capas/livros infantis), personagens com IA, cenários 3D e vídeos profissionais pelo CapCut</strong>.
                     </p>
 
-                    <!-- CAIXA DE FERRAMENTAS [6] LOADING LAZY NOS ÍCONES -->
+                    <!-- CAIXA DE FERRAMENTAS -->
                     <div>
                         <h3 class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider mb-3">
                             Minha Caixa de Ferramentas (Clique para detalhes e nível):
@@ -852,7 +852,7 @@
         </div>
     </section>
 
-    <!-- ==================== [4] 7 MODAIS DO SITE COM ARIA ==================== -->
+    <!-- ==================== MODAIS DO SITE COM ARIA ==================== -->
 
     <!-- MODAL 1: PROJETOS / DEPOIMENTO CLICÁVEL -->
     <div id="modalDepoimento" role="dialog" aria-modal="true" aria-labelledby="modal-dep-titulo" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
@@ -1045,7 +1045,7 @@
         </div>
     </div>
 
-    <!-- MODAL 6: FERRAMENTAS [7] COM EXIBIÇÃO DE NÍVEL -->
+    <!-- MODAL 6: FERRAMENTAS COM EXIBIÇÃO DE NÍVEL -->
     <div id="modal-ferramenta" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" class="fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 max-w-md w-full text-center relative">
             <h2 class="text-2xl font-black text-bordo mb-1" id="modal-titulo">Ferramenta</h2>
@@ -1188,7 +1188,6 @@
             document.getElementById('modalDepoimento').classList.remove('flex');
         }
 
-        /* [5] GESTÃO DO MENU MOBILE COM ARIA-EXPANDED */
         function toggleMenuMobile() {
             const menu = document.getElementById('menu-mobile');
             const iconeAbrir = document.getElementById('icone-menu-abrir');
@@ -1204,7 +1203,6 @@
             }
         }
 
-        /* GESTÃO DE MODAIS DE DÚVIDA E SUPORTE */
         function abrirModalDuvida() {
             document.getElementById('modalDuvida').classList.remove('hidden');
             document.getElementById('modalDuvida').classList.add('flex');
@@ -1271,7 +1269,6 @@
             document.getElementById('formSuporte').reset();
         }
 
-        /* [11] GESTÃO DE COOKIES LGPD */
         function aceitarCookies() {
             localStorage.setItem('eve_cookies_consent', 'aceito');
             document.getElementById('cookie-banner').classList.add('hidden');
@@ -1283,7 +1280,6 @@
             mostrarToast("Cookies não essenciais foram desativados.", "🍪");
         }
 
-        /* MODAL LEGAL */
         function abrirModalLegal(tipo) {
             const modal = document.getElementById('modalLegal');
             const titulo = document.getElementById('modal-legal-titulo');
@@ -1315,7 +1311,6 @@
             document.getElementById('modalLegal').classList.remove('flex');
         }
 
-        /* TOAST E NOTIFICAÇÕES */
         function mostrarToast(mensagem, icone = "✨") {
             const toast = document.getElementById('toast-feedback');
             document.getElementById('toast-msg').innerText = mensagem;
@@ -1372,7 +1367,6 @@
             else mostrarToast(`"${nomeServico}" removido do carrinho.`, "🗑️");
         }
 
-        /* [8] CORRIGIDO FILTRO "TODOS" AO SELECIONAR PELA TABELA */
         function selecionarServicoPorTabela(nomeServico) {
             const btnTodos = document.querySelector('button[data-cat-btn="todas"]');
             filtrarCategoria('todas', btnTodos);
@@ -1659,7 +1653,6 @@
             }, 1000);
         }
 
-        /* [7] MOSTRAR NÍVEL DA FERRAMENTA */
         function mostrarNivel(nome, nivel, desc) {
             document.getElementById('modal-titulo').innerText = nome;
             const badge = document.getElementById('modal-nivel-badge');
@@ -1675,14 +1668,12 @@
             document.getElementById('modal-ferramenta').classList.remove('flex');
         }
 
-        /* ================= EVENTOS DOMContentLoaded ================= */
+        /* EVENTOS DOMContentLoaded */
         window.addEventListener('DOMContentLoaded', () => {
-            // Verificação de cookies LGPD
             if (!localStorage.getItem('eve_cookies_consent')) {
                 document.getElementById('cookie-banner').classList.remove('hidden');
             }
 
-            // [9] TECLA ESCAPE FECHA QUALQUER MODAL ABERTO
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     fecharModal();
@@ -1695,7 +1686,6 @@
                 }
             });
 
-            // [10] BOTÃO VOLTAR AO TOPO (APÓS 400PX DE SCROLL)
             const btnTopo = document.getElementById('btn-back-to-top');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 400) {
