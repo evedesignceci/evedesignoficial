@@ -200,7 +200,7 @@
                     📊 Totais por Área & Investimento
                 </span>
                 <h2 class="text-2xl sm:text-4xl font-black text-bordo">Valores Totais por Área de Atuação</h2>
-                <p class="text-sm sm:text-base text-bordo font-bold mt-1">Valores fixos para design, sites e artes. (Vídeos e edições com IA são calculados à parte por minutagem).</p>
+                <p class="text-sm sm:text-base text-bordo font-bold mt-1">Valores fixos para web, design e artes. ⚠️ <em>Vídeos e edições com IA são cobrados à parte por minutagem exata</em>.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -245,13 +245,13 @@
             <div class="bg-gradient-to-r from-rosa/25 to-creme border-2 border-rosa rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div class="text-left">
                     <span class="text-xs font-black uppercase bg-bordo text-creme px-3 py-1 rounded-md">⭐ Oportunidade Completa</span>
-                    <h3 class="text-xl sm:text-2xl font-black text-bordo mt-2">Assessoria Mensal Dedicada (Tudo Incluso)</h3>
-                    <p class="text-xs sm:text-sm text-bordo font-bold mt-1">Valor fixo base de gestão e criação contínua. ⚠️ *Vídeos longos ou edições com IA avançada são calculados à parte por minutagem na calculadora abaixo*.</p>
+                    <h3 class="text-xl sm:text-2xl font-black text-bordo mt-2">Assessoria Mensal Dedicada (Base Fixa)</h3>
+                    <p class="text-xs sm:text-sm text-bordo font-bold mt-1">Valor fixo base de gestão, branding e rotina de posts. ⚠️ <em>Vídeos longos ou edições com IA avançada NÃO estão inclusos no valor base e devem ser selecionados obrigatoriamente por minutagem na calculadora abaixo</em>.</p>
                 </div>
                 <div class="flex flex-col items-center sm:items-end shrink-0 gap-2">
                     <span class="text-2xl sm:text-3xl font-black text-bordo">R$ 2.000 / mês</span>
                     <button type="button" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Tudo Incluso)')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-2.5 px-6 rounded-xl transition-all shadow-md">
-                        Contratar Plano Completo 🛒
+                        Contratar Plano Base 🛒
                     </button>
                 </div>
             </div>
@@ -641,7 +641,7 @@
             </div>
 
             <p class="text-sm sm:text-base text-bordo font-bold mb-4">
-                Filtre por categoria e marque os serviços desejados para calcular seu investimento em tempo real:
+                Filtre por categoria e marque os serviços desejados. ⚠️ <span class="text-red-600 font-black">Atenção: Para vídeos e IA, a minutagem exata é obrigatória para calcular o valor correto!</span>
             </p>
 
             <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-6 text-xs sm:text-sm font-black scrollbar-none">
@@ -745,49 +745,47 @@
 
                 <!-- ASSESSORIA MENSAL DEDICADA (R$ 2.000) -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosa rounded-2xl cursor-pointer hover:scale-[1.01] transition-all bg-rosa/10 md:col-span-2" data-cat="social">
-                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="2000" data-name="Assessoria Mensal Dedicada (Tudo Incluso)" data-summary="Gestão completa e contínua de branding, posts, vídeos e materiais mensais." onchange="notificarCheckboxDireto(this, 'Assessoria Mensal Dedicada (Tudo Incluso)')">
+                    <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="2000" data-name="Assessoria Mensal Dedicada (Base Fixa)" data-summary="Gestão base de branding, posts e rotina mensal." onchange="notificarCheckboxDireto(this, 'Assessoria Mensal Dedicada (Base Fixa)')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">⭐ Assessoria Mensal Dedicada (Tudo Incluso)</span>
-                        <span class="text-xs text-bordo font-bold">Pacote corporativo completo com rotina de posts, vídeos e acompanhamento integral</span>
+                        <span class="font-black text-bordo text-base sm:text-lg block">⭐ Assessoria Mensal Dedicada (Base Fixa)</span>
+                        <span class="text-xs text-bordo font-bold">Pacote base mensal (⚠️ Vídeos longos ou IA devem ser adicionados obrigatoriamente por minutagem abaixo)</span>
                     </div>
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 2.000 / mês</span>
                 </label>
 
-                <!-- VÍDEOS COM IA -->
+                <!-- VÍDEOS COM IA (OBRIGATÓRIO PREENCHER MINUTAGEM SE MARCADO) -->
                 <div id="wrapper-video-ia" class="calc-item-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer">
-                        <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo" onchange="toggleIaMinutos(); calcularTotal(); if(this.checked) mostrarToast('Vídeos com IA adicionado ao carrinho!', '🤖');">
+                        <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo" onchange="toggleIaMinutos(); calcularTotal(); if(this.checked) mostrarToast('Defina a minutagem de Vídeos com IA!', '🤖');">
                         <div>
-                            <span class="font-black text-bordo text-base sm:text-lg block">Edição de Vídeos com IA</span>
-                            <p class="text-xs sm:text-sm text-bordo font-bold">Geração de cenários/personagens com IA + montagem e efeitos no CapCut.</p>
+                            <span class="font-black text-bordo text-base sm:text-lg block">🎬 Edição de Vídeos com Inteligência Artificial (Obrigatório Minutagem)</span>
+                            <p class="text-xs sm:text-sm text-bordo font-bold">Geração de cenários/personagens com IA + montagem. (<span class="text-bordo font-black">R$ 80 / min</span>)</p>
                         </div>
-                        <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 80/min</span>
                     </label>
                     <div id="box-minutos-ia" class="hidden flex items-center justify-between pt-2 border-t border-rosaclaro/60 pl-9">
-                        <span class="text-sm font-black text-bordo">Quantos Minutos de Vídeo com IA?</span>
+                        <span class="text-sm font-black text-bordo">Quantos Minutos de Vídeo com IA exatos? *</span>
                         <div class="flex items-center gap-2">
                             <button type="button" aria-label="Diminuir minutos IA" onclick="mudarIaMinutos(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">-</button>
-                            <input type="number" id="input-minutos-ia" aria-label="Minutos de vídeo IA" value="1" min="1" max="120" onchange="calcularTotal()" class="w-14 text-center border-2 border-rosaclaro rounded-lg font-black text-base py-1 bg-white">
+                            <input type="number" id="input-minutos-ia" aria-label="Minutos de vídeo IA" value="1" min="1" max="240" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-lg font-black text-base py-1 bg-white">
                             <button type="button" aria-label="Aumentar minutos IA" onclick="mudarIaMinutos(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">+</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- EDIÇÃO DE VÍDEO GERAL -->
+                <!-- EDIÇÃO DE VÍDEO GERAL (OBRIGATÓRIO PREENCHER MINUTAGEM SE MARCADO) -->
                 <div id="wrapper-video-geral" class="calc-item-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer">
-                        <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo" onchange="toggleVideoGeral(); calcularTotal(); if(this.checked) mostrarToast('Edição Geral de Vídeos adicionada!', '🎬');">
+                        <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo" onchange="toggleVideoGeral(); calcularTotal(); if(this.checked) mostrarToast('Defina a minutagem de Edição CapCut!', '🎬');">
                         <div>
-                            <span class="font-black text-bordo text-base sm:text-lg block">Edição de Vídeos CapCut</span>
-                            <p class="text-xs sm:text-sm text-bordo font-bold">Cortes dinâmicos, legendas sincronizadas, sonorização e efeitos de retenção.</p>
+                            <span class="font-black text-bordo text-base sm:text-lg block">🎬 Edição Geral CapCut / Sem IA (Obrigatório Minutagem)</span>
+                            <p class="text-xs sm:text-sm text-bordo font-bold">Cortes dinâmicos, legendas e retenção. (<span class="text-bordo font-black">R$ 45 / min</span> - Ex: até 1 hora ou mais)</p>
                         </div>
-                        <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 45/min</span>
                     </label>
                     <div id="box-minutos-geral" class="hidden flex items-center justify-between pt-2 border-t border-rosaclaro/60 pl-9">
-                        <span class="text-sm font-black text-bordo">Quantos Minutos de Edição?</span>
+                        <span class="text-sm font-black text-bordo">Quantos Minutos de Edição exatos? *</span>
                         <div class="flex items-center gap-2">
                             <button type="button" aria-label="Diminuir minutos CapCut" onclick="mudarMinutosGeral(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">-</button>
-                            <input type="number" id="input-minutos-geral" aria-label="Minutos de vídeo CapCut" value="1" min="1" max="240" onchange="calcularTotal()" class="w-14 text-center border-2 border-rosaclaro rounded-lg font-black text-base py-1 bg-white">
+                            <input type="number" id="input-minutos-geral" aria-label="Minutos de vídeo CapCut" value="1" min="1" max="480" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-lg font-black text-base py-1 bg-white">
                             <button type="button" aria-label="Aumentar minutos CapCut" onclick="mudarMinutosGeral(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">+</button>
                         </div>
                     </div>
@@ -842,7 +840,7 @@
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-gray-500 mb-1">Validade</label>
-                                <input type="text" value="30 dias" readonly class="w-full p-2 bg-gray-50 border border-gray-200 rounded-lg text-sm font-bold text-gray-700">
+                                <input type="text" value="30 days" readonly class="w-full p-2 bg-gray-50 border border-gray-200 rounded-lg text-sm font-bold text-gray-700">
                             </div>
                         </div>
                         <div>
@@ -911,8 +909,8 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-sm font-black text-gray-700 mb-2">Observações (Prazos, Minutagem detalhada de vídeos, etc)</label>
-                            <textarea id="orc-obs" rows="3" placeholder="Ex: O cliente possui 30 minutos de vídeo no CapCut para edição. Prazo para dia X." class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-bold text-gray-800 focus:border-bordo outline-none resize-none"></textarea>
+                            <label class="block text-sm font-black text-gray-700 mb-2">Observações (Prazos, Minutagem exata de vídeos, etc) *</label>
+                            <textarea id="orc-obs" rows="3" required placeholder="Ex: O cliente contratou X minutos de edição no CapCut e Y minutos de vídeos com IA." class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-bold text-gray-800 focus:border-bordo outline-none resize-none"></textarea>
                         </div>
                     </div>
 
@@ -1046,7 +1044,7 @@
                 conteudo.innerHTML = `
                     <p><strong>Resumo do Contrato de Prestação de Serviços:</strong></p>
                     <ul class="list-disc pl-5 space-y-2 mt-2">
-                        <li><strong>Prazos:</strong> Início após envio completo dos materiais pelo cliente.</li>
+                        <li><strong>Prazos:</strong> Início após envio completo dos materiais e minutagem exata dos vídeos.</li>
                         <li><strong>Revisões:</strong> Até 2 rodadas de ajustes inclusas. Prazo de resposta de 5 dias úteis.</li>
                         <li><strong>Pagamentos:</strong> 50% de entrada (não reembolsável) e 50% na aprovação final (ou mensalidade antecipada para planos recorrentes).</li>
                         <li><strong>Abandono:</strong> Inatividade superior a 30 dias encerra o projeto.</li>
@@ -1087,9 +1085,28 @@
             document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
         }
 
-        function toggleVideoGeral() { const isChecked = document.getElementById('check-video-geral').checked; document.getElementById('box-minutos-geral').classList.toggle('hidden', !isChecked); document.getElementById('box-minutos-geral').classList.toggle('flex', isChecked); }
+        function toggleVideoGeral() { 
+            const isChecked = document.getElementById('check-video-geral').checked; 
+            const box = document.getElementById('box-minutos-geral');
+            box.classList.toggle('hidden', !isChecked); 
+            box.classList.toggle('flex', isChecked); 
+            if(isChecked) {
+                const input = document.getElementById('input-minutos-geral');
+                if(!input.value || parseInt(input.value) < 1) input.value = 1;
+            }
+        }
         function mudarMinutosGeral(qtd) { const input = document.getElementById('input-minutos-geral'); input.value = Math.max(1, parseInt(input.value) + qtd); calcularTotal(); }
-        function toggleIaMinutos() { const isChecked = document.getElementById('check-video-ia').checked; document.getElementById('box-minutos-ia').classList.toggle('hidden', !isChecked); document.getElementById('box-minutos-ia').classList.toggle('flex', isChecked); }
+        
+        function toggleIaMinutos() { 
+            const isChecked = document.getElementById('check-video-ia').checked; 
+            const box = document.getElementById('box-minutos-ia');
+            box.classList.toggle('hidden', !isChecked); 
+            box.classList.toggle('flex', isChecked); 
+            if(isChecked) {
+                const input = document.getElementById('input-minutos-ia');
+                if(!input.value || parseInt(input.value) < 1) input.value = 1;
+            }
+        }
         function mudarIaMinutos(qtd) { const input = document.getElementById('input-minutos-ia'); input.value = Math.max(1, parseInt(input.value) + qtd); calcularTotal(); }
 
         function limparCalculadora() {
@@ -1114,12 +1131,12 @@
                 } 
             });
             if(document.getElementById('check-video-ia').checked) {
-                const mins = parseInt(document.getElementById('input-minutos-ia').value) || 1;
+                const mins = parseInt(document.getElementById('input-minutos-ia').value) || 0;
                 const totalIa = (mins * 80).toFixed(2).replace('.', ',');
                 lista.push(`R$ ${totalIa} - Ed. Vídeos IA (${mins} min)`);
             }
             if(document.getElementById('check-video-geral').checked) {
-                const mins = parseInt(document.getElementById('input-minutos-geral').value) || 1;
+                const mins = parseInt(document.getElementById('input-minutos-geral').value) || 0;
                 const totalGeral = (mins * 45).toFixed(2).replace('.', ',');
                 lista.push(`R$ ${totalGeral} - Ed. Vídeos CapCut (${mins} min)`);
             }
@@ -1129,8 +1146,13 @@
         function calcularTotal() {
             let total = 0;
             document.querySelectorAll('.calc-item').forEach(item => { if(item.checked) total += parseFloat(item.getAttribute('data-price')); });
-            if(document.getElementById('check-video-ia').checked) total += (parseInt(document.getElementById('input-minutos-ia').value) || 1) * 80;
-            if(document.getElementById('check-video-geral').checked) total += (parseInt(document.getElementById('input-minutos-geral').value) || 1) * 45;
+            
+            if(document.getElementById('check-video-ia').checked) {
+                total += (parseInt(document.getElementById('input-minutos-ia').value) || 0) * 80;
+            }
+            if(document.getElementById('check-video-geral').checked) {
+                total += (parseInt(document.getElementById('input-minutos-geral').value) || 0) * 45;
+            }
             
             const txt = 'R$ ' + total.toFixed(2).replace('.', ',');
             document.getElementById('total-valor').innerText = txt;
@@ -1140,6 +1162,18 @@
         function abrirModalOrcamento() {
             if(document.getElementById('total-valor').innerText === 'R$ 0,00') { mostrarToast('Carrinho Vazio! Selecione um serviço.', '⚠️'); return; }
             
+            // Validação estrita obrigatória para minutagem de vídeos
+            if(document.getElementById('check-video-ia').checked && (!document.getElementById('input-minutos-ia').value || parseInt(document.getElementById('input-minutos-ia').value) <= 0)) {
+                mostrarToast('Atenção: Defina a minutagem exata de Vídeos com IA!', '⚠️');
+                document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+            if(document.getElementById('check-video-geral').checked && (!document.getElementById('input-minutos-geral').value || parseInt(document.getElementById('input-minutos-geral').value) <= 0)) {
+                mostrarToast('Atenção: Defina a minutagem exata de Edição CapCut!', '⚠️');
+                document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+
             document.getElementById('orc-data').value = formatarDataHoje();
             
             const itensArray = obterItensSelecionadosArrayFormatado();
@@ -1206,11 +1240,11 @@
                 `👤 *Cliente:* ${nomeVal}\n` +
                 `📱 *Contato:* ${telVal}\n` +
                 `-----------------------------------\n` +
-                `🛠️ *Serviços Selecionados:*\n${servicosFormatados}\n\n` +
+                `🛠️ *Serviços & Minutagem:*\n${servicosFormatados}\n\n` +
                 `💰 *Valor Total Simulado:* ${valorTotalVal}\n` +
                 `💳 *Forma de Pagamento:* ${pagVal}\n` +
                 `-----------------------------------\n` +
-                `📝 *Observações:* ${obsVal || "Nenhuma."}`;
+                `📝 *Observações:* ${obsVal}`;
 
             navigator.clipboard.writeText(textoMensagem).then(() => {
                 mostrarToast("Orçamento Formal copiado! Redirecionando...", "✅");
@@ -1225,6 +1259,19 @@
                     window.open(`https://www.instagram.com/${SEU_INSTAGRAM}/`, '_blank');
                 }
             }, 1000);
+        }
+
+        function aceitarCookies() {
+            localStorage.setItem('eve_cookies_consent', 'aceito');
+            const banner = document.getElementById('cookie-banner');
+            if (banner) banner.classList.add('hidden');
+        }
+
+        function recusarCookies() {
+            localStorage.setItem('eve_cookies_consent', 'recusado');
+            const banner = document.getElementById('cookie-banner');
+            if (banner) banner.classList.add('hidden');
+            mostrarToast("Cookies desativados.", "🍪");
         }
 
         function mostrarToast(mensagem, icone = "✨") {
@@ -1245,7 +1292,10 @@
         function mostrarNivel(nome, nivel, desc) { document.getElementById('modal-titulo').innerText = nome; document.getElementById('modal-nivel-badge').innerText = `Nível: ${nivel}`; document.getElementById('modal-desc').innerText = desc; document.getElementById('modal-ferramenta').classList.remove('hidden'); document.getElementById('modal-ferramenta').classList.add('flex'); mostrarToast(`Visualizando ferramenta: ${nome}`, "🛠️"); }
 
         window.addEventListener('DOMContentLoaded', () => {
-            if (!localStorage.getItem('eve_cookies_consent')) { document.getElementById('cookie-banner').classList.remove('hidden'); }
+            if (!localStorage.getItem('eve_cookies_consent')) { 
+                const banner = document.getElementById('cookie-banner');
+                if (banner) banner.classList.remove('hidden'); 
+            }
             
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
