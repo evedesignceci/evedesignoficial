@@ -33,7 +33,6 @@
         "addressRegion": "SP",
         "addressCountry": "BR"
       },
-      "email": "evececi.design@gmail.com",
       "url": "https://evececi-design.vercel.app",
       "priceRange": "R$ 45,00 - R$ 2.000,00"
     }
@@ -584,7 +583,7 @@
                     </div>
                     <div class="flex flex-col sm:flex-row gap-2 justify-center">
                         <button type="button" onclick="abrirModalDuvida()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all shadow-md">
-                            Enviar Dúvida por E-mail ➔
+                            Enviar Dúvida Direta ➔
                         </button>
                         <button type="button" onclick="abrirModalSuporte()" class="bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all">
                             Abrir Chamado / Suporte 🛠️
@@ -864,10 +863,6 @@
                                     <input type="text" id="orc-telefone" required placeholder="(11) 99999-9999" class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-semibold text-gray-800 focus:border-bordo outline-none">
                                 </div>
                             </div>
-                            <div>
-                                <label class="block text-xs font-bold text-gray-500 mb-1">E-mail (Opcional)</label>
-                                <input type="email" id="orc-email" placeholder="cliente@email.com" class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-semibold text-gray-800 focus:border-bordo outline-none">
-                            </div>
                         </div>
                     </div>
 
@@ -926,7 +921,7 @@
             <form id="formDuvida" onsubmit="enviarDuvida(event)">
                 <div class="space-y-3">
                     <input type="text" id="duvida-nome" required placeholder="Seu Nome / @ do Instagram" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
-                    <input type="text" id="duvida-contato" required placeholder="WhatsApp ou E-mail" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
+                    <input type="text" id="duvida-contato" required placeholder="WhatsApp ou @ do Instagram" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
                     <select id="duvida-assunto" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
                         <option value="Dúvida sobre Sites">Dúvida sobre Sites</option>
                         <option value="Dúvida sobre Identidade Visual">Dúvida sobre Identidade Visual</option>
@@ -947,7 +942,7 @@
             <form id="formSuporte" onsubmit="enviarSuporte(event)">
                 <div class="space-y-3">
                     <input type="text" id="suporte-nome" required placeholder="Nome do Cliente / Projeto" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
-                    <input type="text" id="suporte-contato" required placeholder="Contato Direto" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
+                    <input type="text" id="suporte-contato" required placeholder="Contato Direto (WhatsApp ou @)" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
                     <select id="suporte-categoria" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
                         <option value="Ajuste / Revisão">Ajuste / Revisão</option>
                         <option value="Dificuldade com Arquivos">Dificuldade com Arquivos</option>
@@ -1004,7 +999,7 @@
         <div class="max-w-6xl mx-auto px-4 space-y-3">
             <div class="flex justify-center mb-2"><img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png" loading="lazy" alt="Logo" class="w-12 h-12 object-contain"></div>
             <p class="font-black text-base text-bordo">Evelyn Cecília de Sales Pereira — Eve Design Studio</p>
-            <p class="text-xs sm:text-sm text-bordo/80 font-semibold">Francisco Morato – SP | E-mail: <a href="mailto:evececi.design@gmail.com" class="underline">evececi.design@gmail.com</a></p>
+            <p class="text-xs sm:text-sm text-bordo/80 font-semibold">Francisco Morato – SP</p>
             <p class="text-xs font-black">
                 <button type="button" onclick="abrirModalLegal('termos')" class="underline mx-2">Termos de Serviço</button> • 
                 <button type="button" onclick="abrirModalLegal('privacidade')" class="underline mx-2">Política de Privacidade</button>
@@ -1283,7 +1278,6 @@
             const nomeVal = document.getElementById('orc-cliente-nome').value.trim();
             const cpfVal = document.getElementById('orc-cpf').value.trim();
             const telVal = document.getElementById('orc-telefone').value.trim();
-            const emailVal = document.getElementById('orc-email').value.trim();
             const pagVal = document.getElementById('orc-pagamento').value;
             const obsVal = document.getElementById('orc-obs').value.trim();
             
@@ -1313,7 +1307,6 @@
                 nome: nomeVal,
                 cpfCnpj: cpfVal || "Não informado",
                 contato: telVal,
-                email: emailVal || "Não informado",
                 servicos: servicosFormatados,
                 pagamento: pagVal,
                 observacoes: obsVal || "Nenhuma",
