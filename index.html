@@ -82,7 +82,7 @@
 </head>
 <body class="bg-pattern min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-rosa selection:text-bordo">
 
-    <!-- TOAST FEEDBACK NOTIFICATION -->
+    <!-- TOAST FEEDBACK -->
     <div id="toast-feedback" aria-live="polite" class="fixed top-6 right-6 bg-white border-2 border-rosa text-bordo px-5 py-3 rounded-2xl shadow-2xl z-50 hidden opacity-0 translate-y-3 toast-transition flex items-center gap-3 font-extrabold text-sm sm:text-base pointer-events-none">
         <span id="toast-icon" class="text-xl">✨</span>
         <span id="toast-msg">Item adicionado com sucesso!</span>
@@ -200,7 +200,7 @@
                     📊 Totais por Área & Investimento
                 </span>
                 <h2 class="text-2xl sm:text-4xl font-black text-bordo">Valores Totais por Área de Atuação</h2>
-                <p class="text-sm sm:text-base text-bordo font-semibold mt-1">Valores fixos para web, design e artes. ⚠️ <em>Vídeos e edições com IA são cobrados à parte por minutagem exata</em>.</p>
+                <p class="text-sm sm:text-base text-bordo font-semibold mt-1">Valores fixos para web, design e artes. ⚠️ <em>Vídeos e edições são cobrados à parte por minutagem exata</em>.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -613,7 +613,7 @@
             </div>
 
             <p class="text-sm sm:text-base text-bordo font-semibold mb-4">
-                Filtre por categoria e marque os serviços desejados. ⚠️ <span class="text-red-600 font-black">Atenção: Para vídeos e IA, a minutagem exata é obrigatória para calcular o valor correto!</span>
+                Filtre por categoria e marque os serviços desejados. ⚠️ <span class="text-red-600 font-black">Atenção: Os Totais por Área e a Assessoria Mensal exigem que você marque ao menos um tipo de edição de vídeo com a minutagem exata!</span>
             </p>
 
             <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-6 text-xs sm:text-sm font-black scrollbar-none">
@@ -630,7 +630,7 @@
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="1180" data-name="Total Área 01: Web Design & Branding" data-summary="Link na Bio + Identidade Visual + Landing Page." onchange="notificarCheckboxDireto(this, 'Total Área 01: Web Design & Branding')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Total Área 01: Web Design & Branding</span>
-                        <span class="text-xs text-bordo font-medium">Link na Bio + Identidade Visual + Landing Page</span>
+                        <span class="text-xs text-bordo font-medium">Link na Bio + Identidade Visual + Landing Page (Exige Vídeo)</span>
                     </div>
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 1.180</span>
                 </label>
@@ -639,7 +639,7 @@
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="600" data-name="Total Área 02: Ilustração & Arte" data-summary="Personagem IA + Personagem 2D + Ilustração 2D/Capas." onchange="notificarCheckboxDireto(this, 'Total Área 02: Ilustração & Arte')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Total Área 02: Ilustração & Arte</span>
-                        <span class="text-xs text-bordo font-medium">Personagem IA + Personagem 2D + Ilustração 2D/Capas</span>
+                        <span class="text-xs text-bordo font-medium">Personagem IA + Personagem 2D + Ilustração 2D/Capas (Exige Vídeo)</span>
                     </div>
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 600</span>
                 </label>
@@ -648,7 +648,7 @@
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="700" data-name="Total Área 03: Redes Sociais & Conteúdo" data-summary="Posts avulsos, carrosséis e Combo Social Media." onchange="notificarCheckboxDireto(this, 'Total Área 03: Redes Sociais & Conteúdo')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Total Área 03: Redes Sociais & Conteúdo</span>
-                        <span class="text-xs text-bordo font-medium">Posts avulsos, carrosséis e Combo Social Media</span>
+                        <span class="text-xs text-bordo font-medium">Posts avulsos, carrosséis e Combo Social Media (Exige Vídeo)</span>
                     </div>
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 700</span>
                 </label>
@@ -749,7 +749,7 @@
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="2000" data-name="Assessoria Mensal Dedicada (Base Fixa)" data-summary="Gestão base de branding, posts e rotina mensal." onchange="notificarCheckboxDireto(this, 'Assessoria Mensal Dedicada (Base Fixa)')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">⭐ Assessoria Mensal Dedicada (Base Fixa)</span>
-                        <span class="text-xs text-bordo font-medium">Pacote base mensal (⚠️ Vídeos longos ou IA devem ser adicionados obrigatoriamente por minutagem abaixo)</span>
+                        <span class="text-xs text-bordo font-medium">Pacote base mensal (⚠️ Exige que você adicione ao menos um tipo de edição de vídeo por minutagem abaixo)</span>
                     </div>
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 2.000 / mês</span>
                 </label>
@@ -1016,7 +1016,7 @@
     <script>
         const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbzbo84ZgZtdJ-vIJ_ZR3oLQC9EASQC14DzyRH6ME4xLTxGoOk6xUSCPS4jbTQejBiMVtA/exec";
         const SEU_INSTAGRAM = "eve.desi_gn"; 
-        const WHATSAPP_NUMERO = ""; // Preencha se desejar redirecionar para o WhatsApp (ex: "5511999999999")
+        const WHATSAPP_NUMERO = ""; 
 
         function formatarDataHoje() {
             return new Date().toLocaleDateString('pt-BR');
@@ -1043,6 +1043,18 @@
             modal.classList.remove('hidden'); modal.classList.add('flex');
         }
         function fecharModalLegal() { document.getElementById('modalLegal').classList.add('hidden'); document.getElementById('modalLegal').classList.remove('flex'); }
+
+        function temEdicaoDeVideoSelecionada() {
+            const checkIa = document.getElementById('check-video-ia');
+            const minIa = parseInt(document.getElementById('input-minutos-ia').value) || 0;
+            const checkGeral = document.getElementById('check-video-geral');
+            const minGeral = parseInt(document.getElementById('input-minutos-geral').value) || 0;
+
+            const iaValido = checkIa && checkIa.checked && minIa > 0;
+            const geralValido = checkGeral && checkGeral.checked && minGeral > 0;
+
+            return iaValido || geralValido;
+        }
 
         function notificarCheckboxDireto(checkbox, nomeServico) {
             const labelParent = checkbox.closest('label');
@@ -1121,7 +1133,7 @@
         function mudarIaMinutos(qtd) { const input = document.getElementById('input-minutos-ia'); input.value = Math.max(1, parseInt(input.value) + qtd); calcularTotal(); }
 
         function limparCalculadora() {
-            document.querySelectorAll('.calc-item').forEach(i => { i.checked = false; const l = i.closest('label'); if(l) l.classList.remove('card-selected'); });
+            document.querySelectorAll('.calc-item').forEach(i => { i.checked = false; const l = i.closest('label'); if(l) l.classList.remove('card-selected', 'border-red-400', 'bg-red-50/50'); });
             document.getElementById('check-video-geral').checked = false; document.getElementById('box-minutos-geral').classList.add('hidden'); document.getElementById('wrapper-video-geral').classList.remove('card-selected');
             document.getElementById('check-video-ia').checked = false; document.getElementById('box-minutos-ia').classList.add('hidden'); document.getElementById('wrapper-video-ia').classList.remove('card-selected');
             calcularTotal();
@@ -1136,10 +1148,18 @@
 
         function obterItensSelecionadosArrayFormatado() {
             let lista = [];
+            const temVideo = temEdicaoDeVideoSelecionada();
+
             document.querySelectorAll('.calc-item').forEach(item => { 
                 if(item.checked) {
+                    const nome = item.getAttribute('data-name');
+                    const ehPacoteOuTotal = nome.startsWith('Total Área') || nome.includes('Assessoria Mensal');
+                    
+                    if (ehPacoteOuTotal && !temVideo) {
+                        return;
+                    }
                     const precoFormatado = parseFloat(item.getAttribute('data-price')).toFixed(2).replace('.', ',');
-                    lista.push(`R$ ${precoFormatado} - ${item.getAttribute('data-name')}`);
+                    lista.push(`R$ ${precoFormatado} - ${nome}`);
                 } 
             });
             if(document.getElementById('check-video-ia').checked) {
@@ -1157,31 +1177,70 @@
 
         function calcularTotal() {
             let total = 0;
-            document.querySelectorAll('.calc-item').forEach(item => { if(item.checked) total += parseFloat(item.getAttribute('data-price')); });
-            
-            if(document.getElementById('check-video-ia').checked) {
+            const temVideo = temEdicaoDeVideoSelecionada();
+            let tentouAreaSemVideo = false;
+
+            document.querySelectorAll('.calc-item').forEach(item => {
+                if (item.checked) {
+                    const nome = item.getAttribute('data-name');
+                    const ehPacoteOuTotal = nome.startsWith('Total Área') || nome.includes('Assessoria Mensal');
+
+                    if (ehPacoteOuTotal && !temVideo) {
+                        tentouAreaSemVideo = true;
+                        const label = item.closest('label');
+                        if (label) {
+                            label.classList.remove('card-selected');
+                            label.classList.add('border-red-400', 'bg-red-50/50');
+                        }
+                    } else {
+                        const label = item.closest('label');
+                        if (label) {
+                            label.classList.remove('border-red-400', 'bg-red-50/50');
+                            label.classList.add('card-selected');
+                        }
+                        total += parseFloat(item.getAttribute('data-price'));
+                    }
+                } else {
+                    const label = item.closest('label');
+                    if (label) label.classList.remove('border-red-400', 'bg-red-50/50');
+                }
+            });
+
+            if (document.getElementById('check-video-ia').checked) {
                 total += (parseInt(document.getElementById('input-minutos-ia').value) || 0) * 80;
             }
-            if(document.getElementById('check-video-geral').checked) {
+            if (document.getElementById('check-video-geral').checked) {
                 total += (parseInt(document.getElementById('input-minutos-geral').value) || 0) * 45;
             }
-            
+
             const txt = 'R$ ' + total.toFixed(2).replace('.', ',');
             document.getElementById('total-valor').innerText = txt;
             document.getElementById('orc-total-valor').innerText = txt;
+
+            if (tentouAreaSemVideo) {
+                mostrarToast("Selecione a minutagem de Vídeo (IA ou CapCut) para liberar o Total!", "⚠️");
+            }
         }
 
         function abrirModalOrcamento() {
-            if(document.getElementById('total-valor').innerText === 'R$ 0,00') { mostrarToast('Carrinho Vazio! Selecione um serviço.', '⚠️'); return; }
-            
-            if(document.getElementById('check-video-ia').checked && (!document.getElementById('input-minutos-ia').value || parseInt(document.getElementById('input-minutos-ia').value) <= 0)) {
-                mostrarToast('Atenção: Defina a minutagem exata de Vídeos com IA!', '⚠️');
-                document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
+            const temVideo = temEdicaoDeVideoSelecionada();
+            let temPacoteMarcado = false;
+
+            document.querySelectorAll('.calc-item:checked').forEach(item => {
+                const nome = item.getAttribute('data-name');
+                if (nome.startsWith('Total Área') || nome.includes('Assessoria Mensal')) {
+                    temPacoteMarcado = true;
+                }
+            });
+
+            if (temPacoteMarcado && !temVideo) {
+                mostrarToast("Obrigatório: Selecione ao menos 1 estilo de edição com a minutagem!", "🎬");
+                document.getElementById('wrapper-video-ia').scrollIntoView({ behavior: 'smooth' });
                 return;
             }
-            if(document.getElementById('check-video-geral').checked && (!document.getElementById('input-minutos-geral').value || parseInt(document.getElementById('input-minutos-geral').value) <= 0)) {
-                mostrarToast('Atenção: Defina a minutagem exata de Edição CapCut!', '⚠️');
-                document.getElementById('simulador').scrollIntoView({ behavior: 'smooth' });
+
+            if (document.getElementById('total-valor').innerText === 'R$ 0,00') {
+                mostrarToast('Carrinho Vazio! Selecione um serviço válido.', '⚠️');
                 return;
             }
 
@@ -1231,7 +1290,17 @@
             let itensArray = obterItensSelecionadosArrayFormatado();
             
             let valorTotalNum = 0;
-            document.querySelectorAll('.calc-item').forEach(item => { if(item.checked) valorTotalNum += parseFloat(item.getAttribute('data-price')); });
+            const temVideo = temEdicaoDeVideoSelecionada();
+
+            document.querySelectorAll('.calc-item').forEach(item => { 
+                if (item.checked) {
+                    const nome = item.getAttribute('data-name');
+                    const ehPacoteOuTotal = nome.startsWith('Total Área') || nome.includes('Assessoria Mensal');
+                    if (!ehPacoteOuTotal || temVideo) {
+                        valorTotalNum += parseFloat(item.getAttribute('data-price'));
+                    }
+                } 
+            });
             if(document.getElementById('check-video-ia').checked) valorTotalNum += (parseInt(document.getElementById('input-minutos-ia').value) || 0) * 80;
             if(document.getElementById('check-video-geral').checked) valorTotalNum += (parseInt(document.getElementById('input-minutos-geral').value) || 0) * 45;
             
@@ -1434,14 +1503,12 @@
                 if (banner) banner.classList.remove('hidden'); 
             }
             
-            // Fechar com ESC
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     fecharModal(); fecharModalDuvida(); fecharModalSuporte(); fecharModalOrcamento(); fecharModalFeedback(); fecharModalLegal();
                 }
             });
 
-            // Fechar ao clicar no fundo escuro (backdrop)
             document.querySelectorAll('.modal-backdrop').forEach(modal => {
                 modal.addEventListener('click', (e) => {
                     if (e.target === modal) {
