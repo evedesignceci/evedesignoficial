@@ -823,7 +823,6 @@
 
             <div class="p-4 sm:p-6 overflow-y-auto modal-scroll space-y-5 flex-1">
                 <form id="formOrcamentoFormal" onsubmit="enviarOrcamentoProfissional(event)">
-                    <!-- Honeypot contra Bots de Spam -->
                     <input type="text" id="hp-orc" class="hp-field" tabindex="-1" autocomplete="off">
                     
                     <!-- BLOCO 1: DETALHES -->
@@ -1019,7 +1018,6 @@
         const SEU_INSTAGRAM = "eve.desi_gn"; 
         const WHATSAPP_NUMERO = ""; 
 
-        // Função de Sanitização Front-end contra XSS
         function sanitizarFront(str) {
             if (!str) return "";
             const temp = document.createElement('div');
@@ -1294,7 +1292,6 @@
         function enviarOrcamentoProfissional(e) {
             e.preventDefault();
             
-            // Honeypot check
             if (document.getElementById('hp-orc').value) return;
 
             const btn = document.getElementById('btn-finalizar-orcamento');
@@ -1308,9 +1305,8 @@
             const pagVal = sanitizarFront(document.getElementById('orc-pagamento').value);
             const obsVal = sanitizarFront(document.getElementById('orc-obs').value.trim());
             
-            let itensArray = obterItensSelecionadosArrayFormatado();
-            
-            let valorTotalNum = 0;
+            // Coleta estrita dos nomes dos serviços selecionados para o backend recalcular o preço real
+            let itensSelecionadosArray = [];
             const temVideo = temEdicaoDeVideoSelecionada();
 
             document.querySelectorAll('.calc-item').forEach(item => { 
@@ -1318,15 +1314,13 @@
                     const nome = item.getAttribute('data-name');
                     const ehPacoteOuTotal = nome.startsWith('Total Área') || nome.includes('Assessoria Mensal');
                     if (!ehPacoteOuTotal || temVideo) {
-                        valorTotalNum += parseFloat(item.getAttribute('data-price'));
+                        itensSelecionadosArray.push(nome);
                     }
                 } 
             });
-            if(document.getElementById('check-video-ia').checked) valorTotalNum += (parseInt(document.getElementById('input-minutos-ia').value) || 0) * 80;
-            if(document.getElementById('check-video-geral').checked) valorTotalNum += (parseInt(document.getElementById('input-minutos-geral').value) || 0) * 45;
-            
-            const valorTotalVal = 'R$ ' + valorTotalNum.toFixed(2).replace('.', ',');
-            const servicosFormatados = itensArray.length > 0 ? itensArray.join('\n') : "Nenhum";
+
+            const minutosIaVal = document.getElementById('check-video-ia').checked ? (parseInt(document.getElementById('input-minutos-ia').value) || 0) : 0;
+            const minutosGeralVal = document.getElementById('check-video-geral').checked ? (parseInt(document.getElementById('input-minutos-geral').value) || 0) : 0;
 
             const payload = {
                 tipo: "pedido",
@@ -1334,10 +1328,11 @@
                 nome: nomeVal,
                 cpfCnpj: cpfVal || "Não informado",
                 contato: telVal,
-                servicos: servicosFormatados,
                 pagamento: pagVal,
                 observacoes: obsVal || "Nenhuma",
-                valorTotal: valorTotalVal
+                itensSelecionados: itensSelecionadosArray,
+                minutosIa: minutosIaVal,
+                minutosGeral: minutosGeralVal
             };
 
             if (URL_APPS_SCRIPT) {
@@ -1348,14 +1343,17 @@
                 }).catch(err => console.log('Erro pedido:', err));
             }
 
+            let itensFormatadosTexto = obterItensSelecionadosArrayFormatado().join('\n');
+            const valorTotalTela = document.getElementById('total-valor').innerText;
+
             const textoMensagem = `📄 *NOVO ORÇAMENTO GERADO* - Eve Design Studio\n` +
                 `-----------------------------------\n` +
                 `📌 *Ref:* ${refVal}\n` +
                 `👤 *Cliente:* ${nomeVal}\n` +
                 `📱 *Contato:* ${telVal}\n` +
                 `-----------------------------------\n` +
-                `🛠️ *Serviços:*\n${servicosFormatados}\n\n` +
-                `💰 *Valor Total:* ${valorTotalVal}\n` +
+                `🛠️ *Serviços:*\n${itensFormatadosTexto}\n\n` +
+                `💰 *Valor Total Estimado:* ${valorTotalTela}\n` +
                 `💳 *Forma de Pagamento:* ${pagVal}\n` +
                 `-----------------------------------\n` +
                 `📝 *Observações:* ${obsVal || 'Nenhuma'}`;
