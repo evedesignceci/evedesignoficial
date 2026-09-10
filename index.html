@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eve Design | Identidade Visual, Animações, Ilustração 2D, Sites & IA Criativa</title>
 
-    <meta name="description" content="Eve Design Studio por Evelyn Cecilia: criação de sites profissionais, identidades visuais completas, ilustrações 2D, animações 3D, edição de vídeo no CapCut e soluções com IA criativa.">
-    <meta name="author" content="Evelyn Cecília de Sales Pereira">
+    <meta name="description" content="Eve Design Studio: criação de sites profissionais, identidades visuais completas, ilustrações 2D, animações 3D, edição de vídeo no CapCut e soluções com IA criativa.">
+    <meta name="author" content="Eve Design Studio">
 
     <link rel="icon" type="image/png" sizes="64x64" href="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png">
     <link rel="apple-touch-icon" href="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png">
@@ -15,28 +15,6 @@
     <meta property="og:description" content="Desenvolvo identidades visuais, ilustração 2D, vetorização, criação de personagens por IA, design de posts, sites e landing pages, cenários 3D e vídeos profissionais pelo CapCut.">
     <meta property="og:image" content="https://res.cloudinary.com/oactqmgs/image/upload/v1786908961/EVE_LOGO_EVE_E_RAPOSA_1.png">
     <meta property="og:type" content="website">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Eve Design Studio",
-      "image": "https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png",
-      "founder": {
-        "@type": "Person",
-        "name": "Evelyn Cecília de Sales Pereira"
-      },
-      "description": "Estúdio criativo especializado em Web Design, Identidade Visual, Ilustração 2D, Animações 3D, Edição de Vídeos no CapCut e IA Generativa.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Francisco Morato",
-        "addressRegion": "SP",
-        "addressCountry": "BR"
-      },
-      "url": "https://evececi-design.vercel.app",
-      "priceRange": "R$ 60,00 - R$ 2.600,00"
-    }
-    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -52,7 +30,8 @@
                         cinzaclaro: '#F9FAFB'
                     },
                     fontFamily: {
-                        sans: ['Darker Grotesque', 'Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Darker Grotesque', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
                     }
                 }
             }
@@ -61,15 +40,39 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        body { background-color: #F7E9D6; color: #6E1940; font-family: 'Darker Grotesque', sans-serif; font-size: 1.15rem; line-height: 1.5; }
-        .bg-pattern { background-image: radial-gradient(#F0C4D7 1.2px, transparent 1.2px); background-size: 24px 24px; }
-        .toast-transition { transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
-        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid #6E1940; outline-offset: 2px; }
-        .card-selected { border-color: #6E1940 !important; background-color: rgba(240, 196, 215, 0.45) !important; box-shadow: 0 4px 14px rgba(110, 25, 64, 0.12); }
-        details > summary { list-style: none; } details > summary::-webkit-details-marker { display: none; }
+        body { 
+            background-color: #F7E9D6; 
+            color: #6E1940; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            font-size: 0.95rem; 
+            line-height: 1.6; 
+        }
+        h1, h2, h3, .font-heading { 
+            font-family: 'Darker Grotesque', sans-serif; 
+            line-height: 1.1; 
+        }
+        .bg-pattern { 
+            background-image: radial-gradient(#F0C4D7 1.2px, transparent 1.2px); 
+            background-size: 24px 24px; 
+        }
+        .toast-transition { 
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); 
+        }
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { 
+            outline: 3px solid #6E1940; 
+            outline-offset: 2px; 
+        }
+        .card-selected { 
+            border-color: #6E1940 !important; 
+            background-color: rgba(240, 196, 215, 0.45) !important; 
+            box-shadow: 0 8px 20px rgba(110, 25, 64, 0.12); 
+            transform: translateY(-2px);
+        }
+        details > summary { list-style: none; } 
+        details > summary::-webkit-details-marker { display: none; }
         details[open] summary .faq-icon { transform: rotate(180deg); }
         .modal-scroll::-webkit-scrollbar { width: 6px; }
         .modal-scroll::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
@@ -81,20 +84,20 @@
 <body class="bg-pattern min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-rosa selection:text-bordo">
 
     <!-- TOAST FEEDBACK -->
-    <div id="toast-feedback" aria-live="polite" class="fixed top-6 right-6 bg-white border-2 border-rosa text-bordo px-5 py-3 rounded-2xl shadow-2xl z-50 hidden opacity-0 translate-y-3 toast-transition flex items-center gap-3 font-extrabold text-sm sm:text-base pointer-events-none">
+    <div id="toast-feedback" aria-live="polite" class="fixed top-6 right-6 bg-white border-2 border-rosa text-bordo px-5 py-3.5 rounded-2xl shadow-2xl z-50 hidden opacity-0 translate-y-3 toast-transition flex items-center gap-3 font-bold text-sm pointer-events-none">
         <span id="toast-icon" class="text-xl">✨</span>
-        <span id="toast-msg">Item adicionado com sucesso!</span>
+        <span id="toast-msg">Item atualizado com sucesso!</span>
     </div>
 
     <!-- BANNER DE COOKIES -->
     <div id="cookie-banner" role="region" aria-label="Consentimento de Cookies" class="fixed bottom-0 left-0 w-full bg-bordo text-creme px-4 sm:px-6 py-4 shadow-2xl z-50 hidden border-t-2 border-rosa">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-bold">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-medium">
             <p class="leading-normal text-center sm:text-left">
-                🍪 Utilizamos cookies essenciais para o funcionamento do simulador e orçamentos. Ao continuar, você concorda com a nossa <button type="button" onclick="abrirModalLegal('privacidade')" class="underline text-rosa hover:text-amarelo font-black">Política de Privacidade</button>.
+                🍪 Utilizamos cookies essenciais para o funcionamento do simulador e orçamentos. Ao continuar, você concorda com a nossa <button type="button" onclick="abrirModalLegal('privacidade')" class="underline text-rosa hover:text-amarelo font-bold">Política de Privacidade</button>.
             </p>
             <div class="flex items-center gap-2 shrink-0">
-                <button type="button" onclick="recusarCookies()" class="bg-white/10 text-creme hover:bg-white/20 font-black text-xs py-2 px-4 rounded-xl transition-all">Recusar</button>
-                <button type="button" onclick="aceitarCookies()" class="bg-amarelo text-bordo hover:bg-rosa font-black text-xs py-2 px-6 rounded-xl transition-all shadow-sm">Concordar & Fechar</button>
+                <button type="button" onclick="recusarCookies()" class="bg-white/10 text-creme hover:bg-white/20 font-bold text-xs py-2 px-4 rounded-xl transition-all">Recusar</button>
+                <button type="button" onclick="aceitarCookies()" class="bg-amarelo text-bordo hover:bg-rosa font-bold text-xs py-2 px-6 rounded-xl transition-all shadow-sm">Concordar & Fechar</button>
             </div>
         </div>
     </div>
@@ -113,26 +116,27 @@
                     <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></span>
                 </div>
                 <div class="text-left">
-                    <h2 class="font-extrabold text-bordo text-sm sm:text-base leading-none group-hover:text-rosa transition-colors">Evelyn Cecilia</h2>
-                    <p class="text-[11px] sm:text-xs text-bordo/80 font-bold">Eve Design Studio</p>
+                    <h2 class="font-black text-bordo text-lg leading-none group-hover:text-rosa transition-colors">Eve Design</h2>
+                    <p class="text-[11px] text-bordo/80 font-semibold tracking-wide">Creative Studio & Tech</p>
                 </div>
             </a>
 
-            <nav class="hidden xl:flex items-center gap-5 text-xs sm:text-sm font-black text-bordo uppercase tracking-wider">
+            <nav class="hidden xl:flex items-center gap-5 text-xs font-bold text-bordo uppercase tracking-wider">
                 <a href="#sobre-mim" class="hover:text-rosa transition-colors py-1">Sobre</a>
-                <a href="#resumo-valores" class="hover:text-rosa transition-colors py-1">Totais por Área</a>
-                <a href="#branding" class="hover:text-rosa transition-colors py-1">Branding</a>
+                <a href="#portfolio-galeria" class="hover:text-rosa transition-colors py-1">Portfólio</a>
+                <a href="#catalogo-entregaveis" class="hover:text-rosa transition-colors py-1">Catálogo</a>
+                <a href="#resumo-valores" class="hover:text-rosa transition-colors py-1">Totais</a>
                 <a href="#tabela" class="hover:text-rosa transition-colors py-1">Serviços</a>
                 <a href="#depoimentos" class="hover:text-rosa transition-colors py-1">Clientes</a>
                 <a href="#simulador" class="hover:text-rosa transition-colors py-1">Orçamento</a>
             </nav>
 
             <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 bg-rosa/20 text-bordo hover:bg-rosa hover:text-bordo transition-all font-black text-xs px-3.5 py-2 rounded-xl border border-rosa/50">
+                <a href="#portfolio-galeria" class="hidden sm:inline-flex items-center gap-1.5 bg-rosa/20 text-bordo hover:bg-rosa hover:text-bordo transition-all font-bold text-xs px-3.5 py-2 rounded-xl border border-rosa/50">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-3.5 h-3.5 object-contain">
-                    <span>Portfólio Canva</span>
+                    <span>Ver Trabalhos</span>
                 </a>
-                <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1.5 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-3.5 rounded-xl transition-all shadow-sm">
+                <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1.5 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs py-2 px-3.5 rounded-xl transition-all shadow-sm">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-3.5 h-3.5 object-contain">
                     <span>Instagram</span>
                 </a>
@@ -144,10 +148,11 @@
         </div>
 
         <div id="menu-mobile" class="hidden xl:hidden bg-white border-t-2 border-rosaclaro px-6 py-5 shadow-xl">
-            <nav class="flex flex-col gap-3 text-sm sm:text-base font-black text-bordo uppercase">
+            <nav class="flex flex-col gap-3 text-sm font-bold text-bordo uppercase">
                 <a href="#sobre-mim" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">👤 Sobre Mim</a>
-                <a href="#resumo-valores" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">📊 Totais por Área & Planos</a>
-                <a href="#branding" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">🎨 Branding & Identidade</a>
+                <a href="#portfolio-galeria" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">🖼️ Portfólio & Projetos</a>
+                <a href="#catalogo-entregaveis" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">📦 Catálogo de Entregas</a>
+                <a href="#resumo-valores" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">📊 Totais por Área</a>
                 <a href="#tabela" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">⭐ Serviços Avulsos</a>
                 <a href="#depoimentos" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">💬 Depoimentos</a>
                 <a href="#simulador" onclick="toggleMenuMobile()" class="p-2 rounded-lg hover:bg-rosaclaro/40">🧮 Novo Orçamento</a>
@@ -163,30 +168,274 @@
     </section>
 
     <!-- CTA & APRESENTAÇÃO -->
-    <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-4 pb-4 text-center">
-        <span class="inline-flex items-center gap-2 bg-white/90 border-2 border-rosa text-bordo font-black text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-4 shadow-sm">
-            ✨ Soluções Criativas, Sites, Vídeos & Planos Mensais
+    <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-4 text-center">
+        <span class="inline-flex items-center gap-2 bg-white/90 border-2 border-rosa text-bordo font-bold text-xs uppercase tracking-wider px-4 py-1.5 rounded-full mb-4 shadow-sm">
+            ✨ Design Estratégico, Desenvolvimento Web & IA Criativa
         </span>
-        <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-bordo tracking-tight mb-3 leading-none">
-            Criação de Sites, Identidade Visual, Personagens 2D, <br class="hidden sm:inline"> Ilustrações, Animações & Planos Mensais
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-bordo tracking-tight mb-4">
+            Transformando Marcas com Identidade Visual, <br class="hidden sm:inline"> Web Design, Ilustrações & Vídeos
         </h1>
-        <p class="text-base sm:text-xl text-bordo font-semibold max-w-2xl mx-auto leading-normal mb-6">
-            Transformo ideias em marcas memoráveis e ecossistemas digitais de alta conversão. Monte seu pacote personalizado na calculadora abaixo!
+        <p class="text-sm sm:text-base text-bordo/90 font-medium max-w-2xl mx-auto leading-relaxed mb-6">
+            Construo universos visuais marcantes e interfaces digitais de alta performance. Escolha os serviços no catálogo ou simule sua proposta personalizada em tempo real.
         </p>
 
         <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap max-w-3xl mx-auto mb-4">
-            <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-rosa text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
-                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain"> Portfólio Canva
+            <a href="#portfolio-galeria" class="px-5 py-2.5 bg-bordo text-creme rounded-full flex items-center gap-2 hover:bg-rosa hover:text-bordo transition-all shadow-md text-xs sm:text-sm font-bold">
+                🖼️ Explorar Portfólio
             </a>
-            <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo">
-                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain"> Instagram
+            <a href="#simulador" class="px-5 py-2.5 bg-rosa text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-bold">
+                🧮 Simular Orçamento
             </a>
-            <button type="button" onclick="abrirModalDuvida()" class="px-4 py-2 bg-amarelo text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
+            <button type="button" onclick="abrirModalDuvida()" class="px-4 py-2 bg-white border-2 border-rosaclaro hover:border-rosa text-bordo rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-bold">
                 ❓ Tirar Dúvida Rápida
             </button>
-            <button type="button" onclick="abrirModalSuporte()" class="px-3.5 py-1.5 bg-rosaclaro text-bordo border border-rosa rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
-                🛠️ Suporte / Ajustes
-            </button>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: PORTFÓLIO INTERATIVO COM GALERIA NATIVA -->
+    <section id="portfolio-galeria" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 scroll-mt-24">
+        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-xl">
+            <div class="text-center mb-8">
+                <span class="inline-block bg-rosa text-bordo font-bold text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm uppercase tracking-wide">
+                    🖼️ Portfólio Selecionado
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-bordo">Conheça Alguns dos Nossos Projetos</h2>
+                <p class="text-xs sm:text-sm text-bordo font-medium mt-1">Filtre por categoria para visualizar a direção artística e técnica de cada projeto entregue:</p>
+            </div>
+
+            <!-- Abas do Portfólio -->
+            <div class="flex items-center justify-center gap-2 overflow-x-auto pb-3 mb-8 text-xs sm:text-sm font-bold flex-wrap">
+                <button type="button" onclick="filtrarGaleria('todos', this)" class="btn-galeria px-4 py-2 rounded-xl bg-bordo text-creme border-2 border-bordo transition-all shadow-sm">
+                    🌟 Todos os Projetos
+                </button>
+                <button type="button" onclick="filtrarGaleria('web', this)" class="btn-galeria px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all">
+                    🌐 Web & Landing Pages
+                </button>
+                <button type="button" onclick="filtrarGaleria('branding', this)" class="btn-galeria px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all">
+                    🎨 Branding & Identidade
+                </button>
+                <button type="button" onclick="filtrarGaleria('arte', this)" class="btn-galeria px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all">
+                    🦊 2D, 3D & Animação
+                </button>
+                <button type="button" onclick="filtrarGaleria('social', this)" class="btn-galeria px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all">
+                    📱 Social Media
+                </button>
+            </div>
+
+            <!-- Grid de Itens do Portfólio -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-portfolio-itens">
+                <!-- Item 1: Turminha do Xexéu -->
+                <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="arte">
+                    <div class="relative overflow-hidden aspect-video bg-creme flex items-center justify-center">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png" alt="Turminha do Xexéu" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Animação & 3D</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-bordo text-xl mb-1">Turminha do Xexéu</h3>
+                            <p class="text-xs text-bordo/80 font-medium mb-3 leading-relaxed">Criação de personagens, texturização 3D no Blender e edição dinâmica de clipes animados no CapCut.</p>
+                        </div>
+                        <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-rosa uppercase">Blender • CapCut • IA</span>
+                            <button type="button" onclick="abrirPreviewPortfólio('Turminha do Xexéu', 'Animação 3D & Direção de Arte', 'Desenvolvimento de universo animado completo com mascotes autorais, roteirização, trilha sonora e modelagem 3D.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png')" class="text-xs font-bold text-bordo underline hover:text-rosa">Detalhes ➔</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: 4G Proteção Veicular -->
+                <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="web">
+                    <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/4G.png" alt="4G Proteção Veicular" class="max-h-24 object-contain group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Landing Page</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-bordo text-xl mb-1">4G Proteção Veicular</h3>
+                            <p class="text-xs text-bordo/80 font-medium mb-3 leading-relaxed">Landing page de alta conversão para captura de leads, integração com bot de cotação e campanhas.</p>
+                        </div>
+                        <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-rosa uppercase">HTML • Tailwind • Leads</span>
+                            <button type="button" onclick="abrirPreviewPortfólio('4G Proteção Veicular', 'Landing Page & Performance', 'Página web responsiva com funil de conversão rápida e formulário direto para o WhatsApp comercial.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/4G.png')" class="text-xs font-bold text-bordo underline hover:text-rosa">Detalhes ➔</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Saint Vision Home -->
+                <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="social">
+                    <div class="relative overflow-hidden aspect-video bg-creme flex items-center justify-center p-6">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png" alt="Saint Vision Home" class="max-h-24 object-contain group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Carrosséis & Feed</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-bordo text-xl mb-1">Saint Vision Home</h3>
+                            <p class="text-xs text-bordo/80 font-medium mb-3 leading-relaxed">Design de carrosséis educativos para Instagram e identidade visual clean para serviço de ótica domiciliar.</p>
+                        </div>
+                        <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-rosa uppercase">Social Media • Editorial</span>
+                            <button type="button" onclick="abrirPreviewPortfólio('Saint Vision Home', 'Social Media Estratégico', 'Design refinado e diagramação para Instagram transmitindo conforto, saúde visual e estética premium.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png')" class="text-xs font-bold text-bordo underline hover:text-rosa">Detalhes ➔</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Lydie Semijoias -->
+                <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="branding">
+                    <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center text-4xl">
+                        💎
+                        <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Branding Completo</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-bordo text-xl mb-1">Lydie Semijoias</h3>
+                            <p class="text-xs text-bordo/80 font-medium mb-3 leading-relaxed">Criação de logotipo sofisticado, paleta de cores institucional, manual de marca e design de catálogo digital.</p>
+                        </div>
+                        <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-rosa uppercase">Identidade • Catálogo</span>
+                            <button type="button" onclick="abrirPreviewPortfólio('Lydie Semijoias', 'Identidade Visual & E-commerce', 'Construção de marca moderna com paleta elegante para público feminino de alto padrão.', '')" class="text-xs font-bold text-bordo underline hover:text-rosa">Detalhes ➔</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Kraken's PC Store -->
+                <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="branding">
+                    <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center text-4xl">
+                        ⚡
+                        <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Tech & E-commerce</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-bordo text-xl mb-1">Kraken's PC Store & Lab</h3>
+                            <p class="text-xs text-bordo/80 font-medium mb-3 leading-relaxed">Branding com temática gamer/tech, catálogo de periféricos e templates dinâmicos para peças e setups.</p>
+                        </div>
+                        <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-rosa uppercase">Tech • Vector • UI</span>
+                            <button type="button" onclick="abrirPreviewPortfólio('Kraken\'s PC Store', 'Branding Tech & Peças Comerciais', 'Identidade imersiva com foco no público gamer e profissionais de hardware.', '')" class="text-xs font-bold text-bordo underline hover:text-rosa">Detalhes ➔</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6: Julia Sales - Brincar & Viver -->
+                <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="arte">
+                    <div class="relative overflow-hidden aspect-video bg-rosaclaro/40 flex items-center justify-center text-3xl font-black text-bordo">
+                        Ja
+                        <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-bold px-2.5 py-1 rounded-md uppercase">Ilustração Infantil</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-bordo text-xl mb-1">Julia Sales - Brincar & Viver</h3>
+                            <p class="text-xs text-bordo/80 font-medium mb-3 leading-relaxed">Ilustrações lúdicas e edição audiovisual com temática pedagógica para desenvolvimento infantil.</p>
+                        </div>
+                        <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
+                            <span class="text-[11px] font-bold text-rosa uppercase">Ilustração • Educação</span>
+                            <button type="button" onclick="abrirPreviewPortfólio('Julia Sales - Brincar & Viver', 'Conteúdo Lúdico & Pedagógico', 'Desenho de personagens carismáticos para interação e aprendizado na primeira infância.', '')" class="text-xs font-bold text-bordo underline hover:text-rosa">Detalhes ➔</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Link para portfólio completo em PDF/Canva -->
+            <div class="mt-8 p-4 bg-rosaclaro/30 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 border border-rosa/50">
+                <div class="flex items-center gap-3">
+                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-6 h-6 object-contain">
+                    <p class="text-xs sm:text-sm font-bold text-bordo text-center sm:text-left">Deseja conferir a apresentação completa de case studies em slides?</p>
+                </div>
+                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs py-2 px-5 rounded-xl transition-all shadow-sm shrink-0">
+                    Acessar Portfólio no Canva ➔
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: CATÁLOGO DE ENTREGÁVEIS (O QUE ESTÁ INCLUSO) -->
+    <section id="catalogo-entregaveis" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 scroll-mt-24">
+        <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 sm:p-10 shadow-lg">
+            <div class="text-center mb-8">
+                <span class="inline-block bg-rosa text-bordo font-bold text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm uppercase tracking-wide">
+                    📦 Catálogo de Serviços & Entregas
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-black text-bordo">O que Você Recebe em Cada Contratação</h2>
+                <p class="text-xs sm:text-sm text-bordo font-medium mt-1">Transparência total em arquivos, direitos autorais e formatos finais entregues:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Identidade Visual -->
+                <div class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl">🎨</span>
+                            <span class="bg-bordo text-creme text-[11px] font-bold px-2.5 py-1 rounded-md">Mais Vendido</span>
+                        </div>
+                        <h3 class="font-black text-bordo text-xl mb-1">Identidade Visual & Manual</h3>
+                        <p class="text-xs text-bordo/80 font-medium mb-4">A base estética definitiva para seu negócio se posicionar no mercado.</p>
+                        
+                        <ul class="space-y-2 text-xs font-semibold text-bordo mb-6">
+                            <li class="flex items-center gap-2">✓ Logotipo Principal + Versão Secundária</li>
+                            <li class="flex items-center gap-2">✓ Submarca / Marca d'água para posts</li>
+                            <li class="flex items-center gap-2">✓ Manual da Marca em PDF completo</li>
+                            <li class="flex items-center gap-2">✓ Códigos de cores (HEX, RGB e CMYK)</li>
+                            <li class="flex items-center gap-2">✓ Arquivos em Vetor (.AI, .SVG, .PDF, .PNG)</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-rosaclaro/60 flex items-center justify-between">
+                        <span class="text-lg font-black text-bordo">R$ 600,00</span>
+                        <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs py-2 px-4 rounded-xl transition-all shadow-sm">
+                            Adicionar +
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Sites & Landing Pages -->
+                <div class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl">🌐</span>
+                            <span class="bg-rosa text-bordo text-[11px] font-bold px-2.5 py-1 rounded-md">Alta Conversão</span>
+                        </div>
+                        <h3 class="font-black text-bordo text-xl mb-1">Landing Page / Vendas</h3>
+                        <p class="text-xs text-bordo/80 font-medium mb-4">Páginas modernas e otimizadas para converter visitantes em clientes pagantes.</p>
+                        
+                        <ul class="space-y-2 text-xs font-semibold text-bordo mb-6">
+                            <li class="flex items-center gap-2">✓ 100% responsiva (Mobile, Tablet, Desktop)</li>
+                            <li class="flex items-center gap-2">✓ Botões de ação diretos para o WhatsApp</li>
+                            <li class="flex items-center gap-2">✓ Copywriting inicial e diagramação limpa</li>
+                            <li class="flex items-center gap-2">✓ Otimização de carregamento ultrarrápido</li>
+                            <li class="flex items-center gap-2">✓ Publicação na nuvem (Vercel ou servidor)</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-rosaclaro/60 flex items-center justify-between">
+                        <span class="text-lg font-black text-bordo">R$ 750,00</span>
+                        <button type="button" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs py-2 px-4 rounded-xl transition-all shadow-sm">
+                            Adicionar +
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Assessoria & Social Media -->
+                <div class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-6 flex flex-col justify-between transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl">📱</span>
+                            <span class="bg-amarelo text-bordo text-[11px] font-bold px-2.5 py-1 rounded-md">Parceria Contínua</span>
+                        </div>
+                        <h3 class="font-black text-bordo text-xl mb-1">Assessoria & Social Media</h3>
+                        <p class="text-xs text-bordo/80 font-medium mb-4">Presença digital ativa e profissional mês a mês para alavancar seu alcance.</p>
+                        
+                        <ul class="space-y-2 text-xs font-semibold text-bordo mb-6">
+                            <li class="flex items-center gap-2">✓ Cronograma semanal de postagens</li>
+                            <li class="flex items-center gap-2">✓ Carrosséis educativos de alta retenção</li>
+                            <li class="flex items-center gap-2">✓ Edição de vídeos dinâmicos no CapCut</li>
+                            <li class="flex items-center gap-2">✓ Suporte e reuniões de alinhamento</li>
+                            <li class="flex items-center gap-2">✓ Ajustes finos contínuos nas redes</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-rosaclaro/60 flex items-center justify-between">
+                        <span class="text-lg font-black text-bordo">R$ 2.600 / mês</span>
+                        <button type="button" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs py-2 px-4 rounded-xl transition-all shadow-sm">
+                            Adicionar +
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -194,46 +443,46 @@
     <section id="resumo-valores" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-xl">
             <div class="text-center mb-8">
-                <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
+                <span class="inline-block bg-rosa text-bordo font-bold text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm uppercase tracking-wide">
                     📊 Totais por Área & Investimento
                 </span>
-                <h2 class="text-2xl sm:text-4xl font-black text-bordo">Valores Totais por Área de Atuação</h2>
-                <p class="text-sm sm:text-base text-bordo font-semibold mt-1">Valores fechados para web, design e artes. Vídeos podem ser somados à parte por minutagem exata.</p>
+                <h2 class="text-2xl sm:text-4xl font-black text-bordo">Valores Fechados por Categoria</h2>
+                <p class="text-xs sm:text-sm text-bordo font-medium mt-1">Pacotes agrupados com desconto em relação aos itens avulsos:</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div onclick="selecionarServicoPorTabela('Total Área 01: Web Design & Branding')" class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-5 text-left flex flex-col justify-between cursor-pointer group transition-all">
                     <div>
-                        <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 01</span>
+                        <span class="text-[10px] font-bold uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 01</span>
                         <h3 class="text-lg font-black text-bordo mt-2 mb-1 group-hover:text-rosa transition-colors">Web Design & Branding</h3>
-                        <p class="text-xs text-bordo font-medium mb-3">Link na Bio + Identidade Visual + Landing Page.</p>
+                        <p class="text-xs text-bordo/80 font-medium mb-3">Link na Bio + Identidade Visual + Landing Page de Alta Conversão.</p>
                     </div>
                     <div class="pt-3 border-t border-rosaclaro/60 flex items-center justify-between">
-                        <span class="text-sm font-bold text-bordo">Total da Área:</span>
+                        <span class="text-xs font-bold text-bordo">Total da Área:</span>
                         <span class="text-xl font-black text-bordo">R$ 1.590,00</span>
                     </div>
                 </div>
 
                 <div onclick="selecionarServicoPorTabela('Total Área 02: Ilustração & Arte')" class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-5 text-left flex flex-col justify-between cursor-pointer group transition-all">
                     <div>
-                        <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 02</span>
+                        <span class="text-[10px] font-bold uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 02</span>
                         <h3 class="text-lg font-black text-bordo mt-2 mb-1 group-hover:text-rosa transition-colors">Ilustração & Arte</h3>
-                        <p class="text-xs text-bordo font-medium mb-3">Personagem IA + Personagem 2D + Ilustração 2D/Capas.</p>
+                        <p class="text-xs text-bordo/80 font-medium mb-3">Personagem IA + Personagem 2D + Ilustração 2D/Capas de Livro.</p>
                     </div>
                     <div class="pt-3 border-t border-rosaclaro/60 flex items-center justify-between">
-                        <span class="text-sm font-bold text-bordo">Total da Área:</span>
+                        <span class="text-xs font-bold text-bordo">Total da Área:</span>
                         <span class="text-xl font-black text-bordo">R$ 800,00</span>
                     </div>
                 </div>
 
                 <div onclick="selecionarServicoPorTabela('Total Área 03: Redes Sociais & Conteúdo')" class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-5 text-left flex flex-col justify-between cursor-pointer group transition-all">
                     <div>
-                        <span class="text-[11px] font-black uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 03</span>
+                        <span class="text-[10px] font-bold uppercase bg-rosa/20 text-bordo px-2.5 py-1 rounded-md">Área 03</span>
                         <h3 class="text-lg font-black text-bordo mt-2 mb-1 group-hover:text-rosa transition-colors">Redes Sociais & Conteúdo</h3>
-                        <p class="text-xs text-bordo font-medium mb-3">Posts avulsos, carrosséis e Combo Social Media.</p>
+                        <p class="text-xs text-bordo/80 font-medium mb-3">Posts estáticos avulsos, carrosséis contínuos e Combo Social Media.</p>
                     </div>
                     <div class="pt-3 border-t border-rosaclaro/60 flex items-center justify-between">
-                        <span class="text-sm font-bold text-bordo">Total da Área:</span>
+                        <span class="text-xs font-bold text-bordo">Total da Área:</span>
                         <span class="text-xl font-black text-bordo">R$ 820,00</span>
                     </div>
                 </div>
@@ -241,13 +490,13 @@
 
             <div class="bg-gradient-to-r from-rosa/25 to-creme border-2 border-rosa rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div class="text-left">
-                    <span class="text-xs font-black uppercase bg-bordo text-creme px-3 py-1 rounded-md">⭐ Oportunidade Completa</span>
+                    <span class="text-xs font-bold uppercase bg-bordo text-creme px-3 py-1 rounded-md">⭐ Gestão Contínua</span>
                     <h3 class="text-xl sm:text-2xl font-black text-bordo mt-2">Assessoria Mensal Dedicada (Base Fixa)</h3>
-                    <p class="text-xs sm:text-sm text-bordo font-semibold mt-1">Valor fixo base de gestão, branding e rotina de posts digitais.</p>
+                    <p class="text-xs sm:text-sm text-bordo/90 font-medium mt-1">Gestão visual, criação de layouts, carrosséis e rotina de posts.</p>
                 </div>
                 <div class="flex flex-col items-center sm:items-end shrink-0 gap-2">
                     <span class="text-2xl sm:text-3xl font-black text-bordo">R$ 2.600 / mês</span>
-                    <button type="button" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-2.5 px-6 rounded-xl transition-all shadow-md">
+                    <button type="button" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs sm:text-sm py-2.5 px-6 rounded-xl transition-all shadow-md">
                         Contratar Plano Base 🛒
                     </button>
                 </div>
@@ -255,39 +504,39 @@
         </div>
     </section>
 
-    <!-- CARDS DE ACESSO -->
+    <!-- CARDS DE ACESSO RÁPIDO -->
     <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-4 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-        <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="group relative w-full bg-white border-2 border-rosaclaro rounded-3xl p-6 flex flex-col justify-between text-left shadow-sm hover:shadow-xl hover:border-rosa hover:-translate-y-1 transition-all duration-300">
+        <a href="#portfolio-galeria" class="group relative w-full bg-white border-2 border-rosaclaro rounded-3xl p-6 flex flex-col justify-between text-left shadow-sm hover:shadow-xl hover:border-rosa hover:-translate-y-1 transition-all duration-300">
             <div>
                 <div class="w-12 h-12 rounded-2xl bg-bordo p-2.5 flex items-center justify-center group-hover:bg-rosa transition-colors mb-4 shadow-md">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-full h-full object-contain">
                 </div>
-                <h2 class="font-black text-bordo text-xl group-hover:text-rosa transition-colors mb-1">Portfólio Interativo</h2>
-                <p class="text-sm sm:text-base text-bordo font-semibold leading-snug mb-4">Apresentações completas, ilustrações autorais, identidade visual e sites organizados.</p>
+                <h2 class="font-black text-bordo text-xl group-hover:text-rosa transition-colors mb-1">Galeria de Trabalhos</h2>
+                <p class="text-xs sm:text-sm text-bordo/80 font-medium leading-relaxed mb-4">Veja as identidades visuais, páginas e animações desenvolvidas para nossos clientes.</p>
             </div>
-            <span class="text-bordo font-black text-sm flex items-center gap-2 group-hover:translate-x-2 transition-transform">Abrir Portfólio ➔</span>
+            <span class="text-bordo font-bold text-xs flex items-center gap-2 group-hover:translate-x-2 transition-transform">Ver Projetos ➔</span>
         </a>
 
         <a href="#simulador" class="group relative w-full bg-white border-2 border-rosaclaro rounded-3xl p-6 flex flex-col justify-between text-left shadow-sm hover:shadow-xl hover:border-rosa hover:-translate-y-1 transition-all duration-300">
             <div>
                 <div class="w-12 h-12 rounded-2xl bg-bordo text-creme flex items-center justify-center font-extrabold text-2xl group-hover:bg-rosa group-hover:text-bordo transition-colors mb-4 shadow-md">🧮</div>
                 <h2 class="font-black text-bordo text-xl group-hover:text-rosa transition-colors mb-1">Calculadora de Projetos</h2>
-                <p class="text-sm sm:text-base text-bordo font-semibold leading-snug mb-4">Monte seu pacote personalizado com cálculo imediato de sites, posts, vídeos e ilustrações.</p>
+                <p class="text-xs sm:text-sm text-bordo/80 font-medium leading-relaxed mb-4">Monte seu pacote personalizado com cálculo imediato de sites, posts, vídeos e ilustrações.</p>
             </div>
-            <span class="text-bordo font-black text-sm flex items-center gap-2 group-hover:translate-x-2 transition-transform">Simular Agora ➔</span>
+            <span class="text-bordo font-bold text-xs flex items-center gap-2 group-hover:translate-x-2 transition-transform">Simular Agora ➔</span>
         </a>
 
         <div class="group relative w-full bg-white border-2 border-rosaclaro rounded-3xl p-6 flex flex-col justify-between text-left shadow-sm hover:shadow-xl hover:border-rosa transition-all duration-300">
             <div>
                 <div class="w-12 h-12 rounded-2xl bg-bordo text-creme flex items-center justify-center font-extrabold text-2xl group-hover:bg-rosa group-hover:text-bordo transition-colors mb-4 shadow-md">📩</div>
                 <h2 class="font-black text-bordo text-xl mb-1">Solicitar Proposta</h2>
-                <p class="text-sm sm:text-base text-bordo font-semibold leading-snug mb-4">Fale direto para propostas sob medida ou orçamentos personalizados:</p>
+                <p class="text-xs sm:text-sm text-bordo/80 font-medium leading-relaxed mb-4">Fale direto para propostas sob medida, dúvidas técnicas ou prazos emergenciais:</p>
             </div>
             <div class="flex flex-col gap-2 w-full pt-2 border-t border-rosaclaro/60">
-                <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
+                <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="w-full bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-all shadow-sm">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain"> Falar no Instagram
                 </a>
-                <button type="button" onclick="abrirModalDuvida()" class="w-full bg-amarelo text-bordo hover:bg-rosa font-black text-xs sm:text-sm py-2.5 px-3 rounded-xl transition-all text-center">
+                <button type="button" onclick="abrirModalDuvida()" class="w-full bg-amarelo text-bordo hover:bg-rosa font-bold text-xs py-2.5 px-3 rounded-xl transition-all text-center">
                     ✉️ Enviar Mensagem Direta
                 </button>
             </div>
@@ -295,64 +544,61 @@
     </main>
 
     <!-- SOBRE MIM E FERRAMENTAS -->
-    <section id="sobre-mim" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <section id="sobre-mim" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 scroll-mt-24">
         <div class="bg-white/90 border-2 border-rosaclaro rounded-3xl p-6 sm:p-10 shadow-lg backdrop-blur-sm">
             <div class="flex flex-col md:flex-row items-center gap-8">
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-48 h-48 md:w-56 md:h-56 shrink-0 relative group cursor-pointer" title="Clique para ver o Portfólio!">
+                <div class="w-48 h-48 md:w-56 md:h-56 shrink-0 relative group">
                     <div class="absolute -inset-1 bg-gradient-to-r from-rosa to-amarelo rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png" loading="lazy" alt="Personagem Eve Design Studio" class="relative w-full h-full object-contain rounded-2xl bg-rosaclaro/30 p-2 border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
-                    <span class="absolute bottom-2 right-2 bg-amarelo text-bordo font-black text-xs px-2.5 py-1 rounded-full border border-bordo shadow-md flex items-center gap-1">
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" loading="lazy" alt="" class="w-3 h-3 object-contain"> Portfólio
-                    </span>
-                </a>
+                </div>
 
                 <div class="flex-1 text-left">
-                    <div class="inline-block bg-rosa text-bordo font-black text-xs px-3.5 py-1.5 rounded-full mb-3 shadow-sm">
+                    <div class="inline-block bg-rosa text-bordo font-bold text-xs px-3.5 py-1.5 rounded-full mb-3 shadow-sm uppercase tracking-wide">
                         ✨ Bem-vindo(a) ao Eve Design Studio!
                     </div>
-                    <h2 class="text-2xl sm:text-4xl font-black text-bordo mb-3 leading-none">
-                        Olá, sou a Evelyn Cecilia! Web Designer, Ilustradora & Especialista em IA Criativa 🎨💻
+                    <h2 class="text-2xl sm:text-4xl font-black text-bordo mb-3">
+                        Design Estratégico, Código & Inteligência Artificial 🎨💻
                     </h2>
-                    <p class="text-base sm:text-lg text-bordo font-semibold leading-normal mb-6">
-                        No <strong class="text-bordo font-black">Eve Design Studio</strong>, crio ecossistemas digitais completos que unem design estratégico, arte autoral e Inteligência Artificial. Desenvolvo desde a <strong class="text-bordo font-black">criação de sites e landing pages até identidade visual, vetorização, ilustração 2D, personagens com IA, cenários 3D e vídeos profissionais pelo CapCut</strong>.
+                    <p class="text-sm sm:text-base text-bordo/90 font-medium leading-relaxed mb-6">
+                        No <strong>Eve Design Studio</strong>, transformamos visões em produtos digitais de alta conversão. Criamos desde <strong class="text-bordo">sites e landing pages responsivas até identidade visual, vetorização de logos, ilustrações 2D autorais, animações no Blender e edição dinâmica no CapCut</strong>.
                     </p>
 
                     <div>
-                        <h3 class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider mb-3">
-                            Minha Caixa de Ferramentas (Clique para detalhes):
+                        <h3 class="text-xs font-bold text-bordo uppercase tracking-wider mb-3">
+                            Minha Caixa de Ferramentas (Clique para detalhes técnicos):
                         </h3>
                         <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2.5">
-                            <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais, ilustração 2D, vetorização e design de posts.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais vetoriais, tipografia, logotipos e ilustrações escaláveis.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/ADOBE_ILUSTARTOR.png" loading="lazy" alt="Adobe Illustrator" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
-                                <span class="text-xs font-black text-bordo">Illustrator</span>
+                                <span class="text-xs font-bold text-bordo">Illustrator</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Blender 3D', 'Intermediário', 'Modelagem 3D, personagens e cenários texturizados.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Blender 3D', 'Intermediário', 'Modelagem 3D, personagens autorais e cenários texturizados para animação.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/BLENDER.png" loading="lazy" alt="Blender 3D" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
-                                <span class="text-xs font-black text-bordo">Blender 3D</span>
+                                <span class="text-xs font-bold text-bordo">Blender 3D</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('CapCut Pro', 'Avançado', 'Edição profissional de vídeos, transições e cortes de alta retenção.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('CapCut Pro', 'Avançado', 'Edição profissional de vídeos, cortes rítmicos, transições e auto-legendagem de alta retenção.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CAPCUT.png" loading="lazy" alt="CapCut" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
-                                <span class="text-xs font-black text-bordo">CapCut</span>
+                                <span class="text-xs font-bold text-bordo">CapCut</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Canva Pro', 'Especialista', 'Layouts, capas e carrosséis com alto dinamismo.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Canva Pro', 'Especialista', 'Layouts rápidos, capas editoriais e carrosséis com alto dinamismo para redes sociais.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CANVA.png" loading="lazy" alt="Canva Pro" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
-                                <span class="text-xs font-black text-bordo">Canva</span>
+                                <span class="text-xs font-bold text-bordo">Canva</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Código & Web', 'Avançado', 'Desenvolvimento de sites responsivos, HTML, CSS, JavaScript e automações.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
-                                <div class="w-8 h-8 flex items-center justify-center bg-bordo text-creme rounded-xl font-black text-sm mb-1 group-hover:scale-110 transition-transform">&lt;/&gt;</div>
-                                <span class="text-xs font-black text-bordo">Código & Web</span>
+                            <button type="button" onclick="mostrarNivel('Código & Web', 'Avançado', 'Desenvolvimento de sites responsivos, HTML5, CSS3, Tailwind CSS, JavaScript e deploy na Vercel.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                                <div class="w-8 h-8 flex items-center justify-center bg-bordo text-creme rounded-xl font-bold text-xs mb-1 group-hover:scale-110 transition-transform">&lt;/&gt;</div>
+                                <span class="text-xs font-bold text-bordo">Código & Web</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Gemini IA', 'Avançado', 'Criação de conceitos visuais, prompts de personagens e roteirização.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Gemini IA', 'Avançado', 'Criação de conceitos visuais, prompts de personagens, roteirização e automação de fluxos criativos.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/GEMINI.png" loading="lazy" alt="Gemini IA" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
-                                <span class="text-xs font-black text-bordo">Gemini IA</span>
+                                <span class="text-xs font-bold text-bordo">Gemini IA</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('ChatGPT', 'Avançado', 'Engenharia de prompts estratégicos, redação publicitária e roteiros.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('ChatGPT', 'Avançado', 'Engenharia de prompts estratégicos, redação publicitária e roteiros estruturados para vídeos.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CHATGPT.png" loading="lazy" alt="ChatGPT" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
-                                <span class="text-xs font-black text-bordo">ChatGPT</span>
+                                <span class="text-xs font-bold text-bordo">ChatGPT</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Grok IA', 'Avançado', 'Pesquisa criativa de tendências, geração e ideação em tempo real.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Grok IA', 'Avançado', 'Pesquisa criativa de tendências digitais, geração conceitual e ideação em tempo real.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/GROK.png" loading="lazy" alt="Grok IA" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
-                                <span class="text-xs font-black text-bordo">Grok IA</span>
+                                <span class="text-xs font-bold text-bordo">Grok IA</span>
                             </button>
                         </div>
                     </div>
@@ -365,39 +611,39 @@
     <section id="branding" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 scroll-mt-24">
         <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 sm:p-10 shadow-lg relative overflow-hidden">
             <div class="text-center mb-8">
-                <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
+                <span class="inline-block bg-rosa text-bordo font-bold text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm uppercase tracking-wide">
                     🎨 Estratégia, Posicionamento & Identidade Visual
                 </span>
                 <h2 class="text-2xl sm:text-4xl font-black text-bordo">O Processo Completo de Branding</h2>
-                <p class="text-sm sm:text-base text-bordo font-semibold mt-1">Construímos juntos a alma, a estética e a consistência profissional da sua marca no digital.</p>
+                <p class="text-xs sm:text-sm text-bordo font-medium mt-1">Construímos juntos a alma, a estética e a consistência profissional da sua marca no digital.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div class="bg-creme/50 border-2 border-rosaclaro rounded-2xl p-5 text-left">
                     <div class="text-2xl mb-2">🧠</div>
                     <h3 class="font-black text-bordo text-lg mb-1">1. Estratégia & Conceito</h3>
-                    <p class="text-xs sm:text-sm text-bordo font-medium">Definição do público-alvo, essência da marca, tom de voz e diretrizes visuais para diferenciação no mercado.</p>
+                    <p class="text-xs text-bordo/80 font-medium leading-relaxed">Definição do público-alvo, essência da marca, tom de voz e diretrizes visuais para diferenciação no mercado.</p>
                 </div>
                 <div class="bg-creme/50 border-2 border-rosaclaro rounded-2xl p-5 text-left">
                     <div class="text-2xl mb-2">✨</div>
                     <h3 class="font-black text-bordo text-lg mb-1">2. Logotipo & Variações</h3>
-                    <p class="text-xs sm:text-sm text-bordo font-medium">Criação do logotipo principal, versão secundária, submarca e elementos gráficos autorais vetorizados.</p>
+                    <p class="text-xs text-bordo/80 font-medium leading-relaxed">Criação do logotipo principal, versão secundária, submarca e elementos gráficos autorais vetorizados.</p>
                 </div>
                 <div class="bg-creme/50 border-2 border-rosaclaro rounded-2xl p-5 text-left">
                     <div class="text-2xl mb-2">📖</div>
                     <h3 class="font-black text-bordo text-lg mb-1">3. Manual de Identidade (PDF)</h3>
-                    <p class="text-xs sm:text-sm text-bordo font-medium">Guia oficial completo contendo paleta cromática (HEX/RGB), tipografia oficial, aplicações corretas e proibidas.</p>
+                    <p class="text-xs text-bordo/80 font-medium leading-relaxed">Guia oficial completo contendo paleta cromática (HEX/RGB), tipografia oficial, aplicações corretas e proibidas.</p>
                 </div>
             </div>
 
             <div class="bg-gradient-to-r from-rosa/25 to-creme border-2 border-rosa rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div class="text-left">
-                    <span class="text-xs font-black uppercase text-bordo">Pacote Fechado Recomendado:</span>
+                    <span class="text-xs font-bold uppercase text-bordo">Pacote Fechado Recomendado:</span>
                     <h3 class="text-xl sm:text-2xl font-black text-bordo">Identidade Visual Completa + Manual de Marca</h3>
                 </div>
                 <div class="flex items-center gap-4 shrink-0">
                     <span class="text-2xl sm:text-3xl font-black text-bordo">R$ 600,00</span>
-                    <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 px-6 rounded-xl transition-all shadow-md">
+                    <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs sm:text-sm py-3 px-6 rounded-xl transition-all shadow-md">
                         Contratar Branding 🛒
                     </button>
                 </div>
@@ -406,16 +652,16 @@
     </section>
 
     <!-- SEÇÃO DE DEPOIMENTOS DINÂMICOS & FILTROS -->
-    <section id="depoimentos" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <section id="depoimentos" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 scroll-mt-24">
         <div class="text-center mb-8">
-            <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
+            <span class="inline-block bg-rosa text-bordo font-bold text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm uppercase tracking-wide">
                 ⭐ Prova Social & Clientes
             </span>
-            <h2 class="text-2xl sm:text-4xl font-black text-bordo">O que os clientes dizem</h2>
-            <p class="text-sm sm:text-base text-bordo font-semibold mt-1">Selecione uma área abaixo para filtrar as avaliações reais dos nossos parceiros:</p>
+            <h2 class="text-2xl sm:text-4xl font-black text-bordo">O que os Parceiros Dizem</h2>
+            <p class="text-xs sm:text-sm text-bordo font-medium mt-1">Selecione uma área abaixo para filtrar as avaliações de projetos já concluídos:</p>
         </div>
 
-        <div class="flex items-center justify-center gap-2 overflow-x-auto pb-3 mb-8 text-xs sm:text-sm font-black scrollbar-none flex-wrap">
+        <div class="flex items-center justify-center gap-2 overflow-x-auto pb-3 mb-8 text-xs font-bold scrollbar-none flex-wrap">
             <button type="button" onclick="filtrarDepoimentos('todos', this)" class="btn-filtro-dep px-4 py-2 rounded-xl bg-bordo text-creme border-2 border-bordo transition-all shrink-0 shadow-sm">
                 🌟 Todos os Clientes
             </button>
@@ -445,14 +691,14 @@
                             <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png" alt="Turminha Logo" class="w-9 h-9 object-contain rounded-full border border-rosa p-0.5 bg-creme">
                             <div>
                                 <span class="font-black text-bordo text-base block leading-tight">Turminha do Xexéu</span>
-                                <span class="text-[11px] text-bordo/70 font-bold">Canal de Animação</span>
+                                <span class="text-[11px] text-bordo/70 font-semibold">Canal de Animação Infantil</span>
                             </div>
                         </div>
-                        <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
+                        <span class="text-amarelo text-xs font-bold">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-medium italic mb-4">"As animações dos personagens e os cenários no CapCut deram vida nova ao canal! O trabalho com IA, ilustração e direção ficou impecável."</p>
+                    <p class="text-xs text-bordo/90 font-medium italic mb-4 leading-relaxed">"As animações dos personagens e os cenários no CapCut deram vida nova ao canal! O trabalho com IA, ilustração e direção ficou impecável."</p>
                 </div>
-                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
+                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-[11px] font-bold text-bordo">
                     <span>Animação 3D & Ilustração</span>
                     <span class="text-rosa">YouTube Kids</span>
                 </div>
@@ -466,14 +712,14 @@
                             <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/4G.png" alt="4G Logo" class="w-9 h-9 object-contain rounded-full border border-rosa p-0.5 bg-creme">
                             <div>
                                 <span class="font-black text-bordo text-base block leading-tight">4G Proteção Veicular</span>
-                                <span class="text-[11px] text-bordo/70 font-bold">Corretora de Proteção</span>
+                                <span class="text-[11px] text-bordo/70 font-semibold">Corretora de Proteção</span>
                             </div>
                         </div>
-                        <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
+                        <span class="text-amarelo text-xs font-bold">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-medium italic mb-4">"A landing page e os formulários trouxeram muito mais cotações direto para o nosso WhatsApp. Os posts e carrosséis convertem demais!"</p>
+                    <p class="text-xs text-bordo/90 font-medium italic mb-4 leading-relaxed">"A landing page e os formulários trouxeram muito mais cotações direto para o nosso WhatsApp. Os posts e carrosséis convertem demais!"</p>
                 </div>
-                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
+                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-[11px] font-bold text-bordo">
                     <span>Landing Page & Tráfego</span>
                     <span class="text-rosa">Automotivo</span>
                 </div>
@@ -487,14 +733,14 @@
                             <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png" alt="Saint Vision Logo" class="w-9 h-9 object-contain rounded-full border border-rosa p-0.5 bg-creme">
                             <div>
                                 <span class="font-black text-bordo text-base block leading-tight">Saint Vision Home</span>
-                                <span class="text-[11px] text-bordo/70 font-bold">Atendimento em Domicílio</span>
+                                <span class="text-[11px] text-bordo/70 font-semibold">Atendimento em Domicílio</span>
                             </div>
                         </div>
-                        <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
+                        <span class="text-amarelo text-xs font-bold">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-medium italic mb-4">"Os carrosséis para o feed ficaram super elegantes e didáticos. A identidade visual transmitiu exatamente a sofisticação da nossa marca."</p>
+                    <p class="text-xs text-bordo/90 font-medium italic mb-4 leading-relaxed">"Os carrosséis para o feed ficaram super elegantes e didáticos. A identidade visual transmitiu exatamente a sofisticação da nossa marca."</p>
                 </div>
-                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
+                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-[11px] font-bold text-bordo">
                     <span>Carrosséis & Branding</span>
                     <span class="text-rosa">Ótica Especializada</span>
                 </div>
@@ -505,17 +751,17 @@
                 <div>
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-2.5">
-                            <div class="w-9 h-9 rounded-full bg-bordo text-creme flex items-center justify-center font-black text-sm border border-rosa">💎</div>
+                            <div class="w-9 h-9 rounded-full bg-bordo text-creme flex items-center justify-center font-bold text-sm border border-rosa">💎</div>
                             <div>
                                 <span class="font-black text-bordo text-base block leading-tight">Lydie Semijoias</span>
-                                <span class="text-[11px] text-bordo/70 font-bold">Joias & Acessórios</span>
+                                <span class="text-[11px] text-bordo/70 font-semibold">Joias & Acessórios</span>
                             </div>
                         </div>
-                        <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
+                        <span class="text-amarelo text-xs font-bold">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-medium italic mb-4">"O design do catálogo e a identidade visual trouxeram uma estética premium que aumentou a percepção de valor dos nossos produtos!"</p>
+                    <p class="text-xs text-bordo/90 font-medium italic mb-4 leading-relaxed">"O design do catálogo e a identidade visual trouxeram uma estética premium que aumentou a percepção de valor dos nossos produtos!"</p>
                 </div>
-                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
+                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-[11px] font-bold text-bordo">
                     <span>Identidade Visual & E-commerce</span>
                     <span class="text-rosa">Moda & Acessórios</span>
                 </div>
@@ -526,17 +772,17 @@
                 <div>
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-2.5">
-                            <div class="w-9 h-9 rounded-full bg-bordo text-creme flex items-center justify-center font-black text-sm border border-rosa">⚡</div>
+                            <div class="w-9 h-9 rounded-full bg-bordo text-creme flex items-center justify-center font-bold text-sm border border-rosa">⚡</div>
                             <div>
                                 <span class="font-black text-bordo text-base block leading-tight">Kraken's PC Store</span>
-                                <span class="text-[11px] text-bordo/70 font-bold">Hardware & Assistência</span>
+                                <span class="text-[11px] text-bordo/70 font-semibold">Hardware & Assistência</span>
                             </div>
                         </div>
-                        <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
+                        <span class="text-amarelo text-xs font-bold">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-medium italic mb-4">"Estruturação visual impecável, artes para posts técnicos de alto nível e um ecossistema digital muito ágil e profissional."</p>
+                    <p class="text-xs text-bordo/90 font-medium italic mb-4 leading-relaxed">"Estruturação visual impecável, artes para posts técnicos de alto nível e um ecossistema digital muito ágil e profissional."</p>
                 </div>
-                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
+                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-[11px] font-bold text-bordo">
                     <span>Branding & Social Media</span>
                     <span class="text-rosa">Informática & Tech</span>
                 </div>
@@ -547,17 +793,17 @@
                 <div>
                     <div class="flex items-center justify-between mb-3">
                         <div class="flex items-center gap-2.5">
-                            <div class="w-9 h-9 rounded-full bg-rosa text-bordo flex items-center justify-center font-black text-sm border border-bordo/30">Ja</div>
+                            <div class="w-9 h-9 rounded-full bg-rosa text-bordo flex items-center justify-center font-bold text-xs border border-bordo/30">Ja</div>
                             <div>
                                 <span class="font-black text-bordo text-base block leading-tight">Julia Sales</span>
-                                <span class="text-[11px] text-bordo/70 font-bold">Brincar & Viver</span>
+                                <span class="text-[11px] text-bordo/70 font-semibold">Brincar & Viver</span>
                             </div>
                         </div>
-                        <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
+                        <span class="text-amarelo text-xs font-bold">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-medium italic mb-4">"As artes autorais e os vídeos infantis têm uma sensibilidade incrível. Conseguem traduzir o universo das crianças com muito carinho e cor."</p>
+                    <p class="text-xs text-bordo/90 font-medium italic mb-4 leading-relaxed">"As artes autorais e os vídeos infantis têm uma sensibilidade incrível. Conseguem traduzir o universo das crianças com muito carinho e cor."</p>
                 </div>
-                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
+                <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-[11px] font-bold text-bordo">
                     <span>Ilustração & Edição Infantil</span>
                     <span class="text-rosa">Conteúdo Educativo</span>
                 </div>
@@ -565,20 +811,20 @@
         </div>
 
         <div class="mt-8 text-center">
-            <button type="button" onclick="abrirModalFeedback()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 px-6 rounded-2xl transition-all shadow-md">
+            <button type="button" onclick="abrirModalFeedback()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs sm:text-sm py-3 px-6 rounded-2xl transition-all shadow-md">
                 ✨ Já é cliente? Deixe seu Feedback aqui!
             </button>
         </div>
     </section>
 
     <!-- SEÇÃO TABELA DE PREÇOS -->
-    <section id="tabela" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <section id="tabela" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 scroll-mt-24">
         <div class="text-center mb-8">
-            <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
+            <span class="inline-block bg-rosa text-bordo font-bold text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm uppercase tracking-wide">
                 📋 Tabela Oficial & Precificação Justa
             </span>
             <h2 class="text-2xl sm:text-4xl font-black text-bordo">Serviços, Planos & Investimentos</h2>
-            <p class="text-sm sm:text-base text-bordo font-semibold mt-1">Dica: Clique em qualquer serviço para adicioná-lo automaticamente ao carrinho!</p>
+            <p class="text-xs sm:text-sm text-bordo font-medium mt-1">Dica: Clique em qualquer serviço para adicioná-lo automaticamente ao carrinho!</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -586,12 +832,12 @@
                 <div>
                     <div class="text-2xl mb-2">💻</div>
                     <h3 class="font-black text-bordo text-xl mb-3">1. Web Design & Branding</h3>
-                    <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')"><strong class="text-bordo font-black">Link na Bio / Mini Site ➔</strong><span class="text-bordo font-bold">R$ 240,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')"><strong class="text-bordo font-black">Landing Page de Vendas / Leads ➔</strong><span class="text-bordo font-bold">R$ 750,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')"><strong class="text-bordo font-black">Site Institucional (Multi-Páginas) ➔</strong><span class="text-bordo font-bold">R$ 1.300,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')"><strong class="text-bordo font-black">Identidade Visual Completa + Manual ➔</strong><span class="text-bordo font-bold">R$ 600,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa" onclick="selecionarServicoPorTabela('Total Área 01: Web Design & Branding')"><strong class="text-bordo font-black">📦 Total Área 01 (Web & Branding) ➔</strong><span class="text-bordo font-bold">R$ 1.590,00</span></button></li>
+                    <ul class="space-y-2 text-sm text-bordo font-medium">
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')"><strong class="text-bordo font-bold">Link na Bio / Mini Site ➔</strong><span class="text-bordo font-semibold">R$ 240,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')"><strong class="text-bordo font-bold">Landing Page de Vendas / Leads ➔</strong><span class="text-bordo font-semibold">R$ 750,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')"><strong class="text-bordo font-bold">Site Institucional (Multi-Páginas) ➔</strong><span class="text-bordo font-semibold">R$ 1.300,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')"><strong class="text-bordo font-bold">Identidade Visual Completa + Manual ➔</strong><span class="text-bordo font-semibold">R$ 600,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa" onclick="selecionarServicoPorTabela('Total Área 01: Web Design & Branding')"><strong class="text-bordo font-bold">📦 Total Área 01 (Web & Branding) ➔</strong><span class="text-bordo font-semibold">R$ 1.590,00</span></button></li>
                     </ul>
                 </div>
             </div>
@@ -600,13 +846,13 @@
                 <div>
                     <div class="text-2xl mb-2">🎨</div>
                     <h3 class="font-black text-bordo text-xl mb-3">2. Ilustração & IA Criativa</h3>
-                    <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Ilustração 2D / Capas & Vetorização')"><strong class="text-bordo font-black">Ilustração 2D & Vetorização ➔</strong><span class="text-bordo font-bold">R$ 340,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Criação de Personagem 2D (Illustrator)')"><strong class="text-bordo font-black">Criação de Personagem 2D ➔</strong><span class="text-bordo font-bold">R$ 260,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Criação de Personagens IA')"><strong class="text-bordo font-black">Criação de Personagens com IA ➔</strong><span class="text-bordo font-bold">R$ 200,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-ia')"><strong class="text-bordo font-black">Vídeos & Animações IA (por min) ➔</strong><span class="text-bordo font-bold">R$ 100,00 / min</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-geral')"><strong class="text-bordo font-black">Edição Geral CapCut (por min) ➔</strong><span class="text-bordo font-bold">R$ 60,00 / min</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa" onclick="selecionarServicoPorTabela('Total Área 02: Ilustração & Arte')"><strong class="text-bordo font-black">📦 Total Área 02 (Ilustração & Arte) ➔</strong><span class="text-bordo font-bold">R$ 800,00</span></button></li>
+                    <ul class="space-y-2 text-sm text-bordo font-medium">
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Ilustração 2D / Capas & Vetorização')"><strong class="text-bordo font-bold">Ilustração 2D & Vetorização ➔</strong><span class="text-bordo font-semibold">R$ 340,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Criação de Personagem 2D (Illustrator)')"><strong class="text-bordo font-bold">Criação de Personagem 2D ➔</strong><span class="text-bordo font-semibold">R$ 260,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Criação de Personagens IA')"><strong class="text-bordo font-bold">Criação de Personagens com IA ➔</strong><span class="text-bordo font-semibold">R$ 200,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-ia')"><strong class="text-bordo font-bold">Vídeos & Animações IA (por min) ➔</strong><span class="text-bordo font-semibold">R$ 100,00 / min</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-geral')"><strong class="text-bordo font-bold">Edição Geral CapCut (por min) ➔</strong><span class="text-bordo font-semibold">R$ 60,00 / min</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa" onclick="selecionarServicoPorTabela('Total Área 02: Ilustração & Arte')"><strong class="text-bordo font-bold">📦 Total Área 02 (Ilustração & Arte) ➔</strong><span class="text-bordo font-semibold">R$ 800,00</span></button></li>
                     </ul>
                 </div>
             </div>
@@ -615,12 +861,12 @@
                 <div>
                     <div class="text-2xl mb-2">📱</div>
                     <h3 class="font-black text-bordo text-xl mb-3">3. Redes Sociais & Mensal</h3>
-                    <ul class="space-y-2 text-sm sm:text-base text-bordo font-bold">
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Post Estático Avulso')"><strong class="text-bordo font-black">Post Estático Avulso ➔</strong><span class="text-bordo font-bold">R$ 60,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Carrossel Avulso (Até 6 telas)')"><strong class="text-bordo font-black">Carrossel Avulso (Até 6 telas) ➔</strong><span class="text-bordo font-bold">R$ 110,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')"><strong class="text-bordo font-black">Combo Social Media Completo ➔</strong><span class="text-bordo font-bold">R$ 650,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa" onclick="selecionarServicoPorTabela('Total Área 03: Redes Sociais & Conteúdo')"><strong class="text-bordo font-black">📦 Total Área 03 (Redes Sociais) ➔</strong><span class="text-bordo font-bold">R$ 820,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl bg-bordo/10 hover:bg-rosa/30 transition-colors flex flex-col border border-rosa" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')"><strong class="text-bordo font-black">⭐ Assessoria Mensal (Recorrente) ➔</strong><span class="text-bordo font-bold">R$ 2.600,00 / mês</span></button></li>
+                    <ul class="space-y-2 text-sm text-bordo font-medium">
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Post Estático Avulso')"><strong class="text-bordo font-bold">Post Estático Avulso ➔</strong><span class="text-bordo font-semibold">R$ 60,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Carrossel Avulso (Até 6 telas)')"><strong class="text-bordo font-bold">Carrossel Avulso (Até 6 telas) ➔</strong><span class="text-bordo font-semibold">R$ 110,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')"><strong class="text-bordo font-bold">Combo Social Media Completo ➔</strong><span class="text-bordo font-semibold">R$ 650,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa" onclick="selecionarServicoPorTabela('Total Área 03: Redes Sociais & Conteúdo')"><strong class="text-bordo font-bold">📦 Total Área 03 (Redes Sociais) ➔</strong><span class="text-bordo font-semibold">R$ 820,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2.5 rounded-xl bg-bordo/10 hover:bg-rosa/30 transition-colors flex flex-col border border-rosa" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')"><strong class="text-bordo font-bold">⭐ Assessoria Mensal (Recorrente) ➔</strong><span class="text-bordo font-semibold">R$ 2.600,00 / mês</span></button></li>
                     </ul>
                 </div>
             </div>
@@ -631,40 +877,40 @@
     <section id="faq-duvidas" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-lg">
             <div class="text-center mb-8">
-                <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
+                <span class="inline-block bg-rosa text-bordo font-bold text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm uppercase tracking-wide">
                     💬 Atendimento & Respostas Rápidas
                 </span>
                 <h2 class="text-2xl sm:text-4xl font-black text-bordo">Central de Dúvidas & Suporte</h2>
-                <p class="text-sm sm:text-base text-bordo font-semibold mt-1">Precisa de auxílio imediato ou quer tirar dúvidas sobre projetos?</p>
+                <p class="text-xs sm:text-sm text-bordo font-medium mt-1">Precisa de auxílio imediato ou quer tirar dúvidas sobre projetos?</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                 <div class="space-y-3">
                     <details class="group bg-creme/40 border-2 border-rosaclaro rounded-2xl p-4 transition-all duration-300 open:border-rosa">
-                        <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-sm sm:text-base select-none">
+                        <summary class="flex justify-between items-center font-bold text-bordo cursor-pointer text-sm select-none">
                             <span>⏳ Qual o prazo médio de entrega?</span>
-                            <span class="faq-icon transition-transform duration-300 text-rosa text-base">▼</span>
+                            <span class="faq-icon transition-transform duration-300 text-rosa text-xs">▼</span>
                         </summary>
-                        <p class="mt-2 text-xs sm:text-sm text-bordo font-medium border-t border-rosaclaro/50 pt-2">
-                            Projetos avulsos levam de 3 a 7 dias úteis após envio do briefing. Planos mensais seguem cronograma acordado.
+                        <p class="mt-2 text-xs text-bordo/80 font-medium border-t border-rosaclaro/50 pt-2 leading-relaxed">
+                            Projetos avulsos levam de 3 a 7 dias úteis após envio do briefing completo. Planos mensais seguem um cronograma contínuo acordado previamente.
                         </p>
                     </details>
                     <details class="group bg-creme/40 border-2 border-rosaclaro rounded-2xl p-4 transition-all duration-300 open:border-rosa">
-                        <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-sm sm:text-base select-none">
+                        <summary class="flex justify-between items-center font-bold text-bordo cursor-pointer text-sm select-none">
                             <span>💳 Formas de pagamento aceitas?</span>
-                            <span class="faq-icon transition-transform duration-300 text-rosa text-base">▼</span>
+                            <span class="faq-icon transition-transform duration-300 text-rosa text-xs">▼</span>
                         </summary>
-                        <p class="mt-2 text-xs sm:text-sm text-bordo font-medium border-t border-rosaclaro/50 pt-2">
-                            50% de entrada na contratação e 50% na aprovação final. Planos mensais vencem todo final de mês. Pagamento via PIX.
+                        <p class="mt-2 text-xs text-bordo/80 font-medium border-t border-rosaclaro/50 pt-2 leading-relaxed">
+                            50% de entrada na contratação e 50% na aprovação final do projeto. Planos mensais vencem todo final de mês. Aceitamos PIX ou transferência.
                         </p>
                     </details>
                     <details class="group bg-creme/40 border-2 border-rosaclaro rounded-2xl p-4 transition-all duration-300 open:border-rosa">
-                        <summary class="flex justify-between items-center font-black text-bordo cursor-pointer text-sm sm:text-base select-none">
+                        <summary class="flex justify-between items-center font-bold text-bordo cursor-pointer text-sm select-none">
                             <span>✏️ Quantas revisões posso pedir?</span>
-                            <span class="faq-icon transition-transform duration-300 text-rosa text-base">▼</span>
+                            <span class="faq-icon transition-transform duration-300 text-rosa text-xs">▼</span>
                         </summary>
-                        <p class="mt-2 text-xs sm:text-sm text-bordo font-medium border-t border-rosaclaro/50 pt-2">
-                            Estão inclusas até 2 rodadas completas de ajustes finos sem custo extra.
+                        <p class="mt-2 text-xs text-bordo/80 font-medium border-t border-rosaclaro/50 pt-2 leading-relaxed">
+                            Estão inclusas até 2 rodadas completas de ajustes finos sem nenhum custo adicional.
                         </p>
                     </details>
                 </div>
@@ -673,15 +919,15 @@
                     <div>
                         <div class="text-3xl mb-2">✉️</div>
                         <h3 class="font-black text-bordo text-xl mb-2">Tem uma dúvida específica?</h3>
-                        <p class="text-xs sm:text-sm text-bordo font-medium mb-4">
-                            Envie uma mensagem direta! Sua dúvida será registrada e respondida rapidamente.
+                        <p class="text-xs text-bordo/80 font-medium mb-4 leading-relaxed">
+                            Envie uma mensagem direta! Sua dúvida será registrada e respondida rapidamente pela nossa equipe.
                         </p>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-2 justify-center">
-                        <button type="button" onclick="abrirModalDuvida()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all shadow-md">
+                        <button type="button" onclick="abrirModalDuvida()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs sm:text-sm py-3 px-4 rounded-xl transition-all shadow-md">
                             Enviar Dúvida Direta ➔
                         </button>
-                        <button type="button" onclick="abrirModalSuporte()" class="bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all">
+                        <button type="button" onclick="abrirModalSuporte()" class="bg-rosaclaro text-bordo hover:bg-rosa font-bold text-xs sm:text-sm py-3 px-4 rounded-xl transition-all">
                             Abrir Chamado / Suporte 🛠️
                         </button>
                     </div>
@@ -691,27 +937,27 @@
     </section>
 
     <!-- CALCULADORA / CARRINHO DE PROJETOS -->
-    <section id="simulador" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <section id="simulador" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 scroll-mt-24">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
                 <div>
-                    <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-3 shadow-sm">
+                    <span class="inline-block bg-rosa text-bordo font-bold text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm uppercase tracking-wide">
                         🛒 Carrinho & Calculadora de Orçamento
                     </span>
-                    <h2 class="text-2xl sm:text-4xl font-black text-bordo mb-2">
+                    <h2 class="text-2xl sm:text-4xl font-black text-bordo mb-1">
                         Monte o seu Carrinho de Serviços 💻
                     </h2>
                 </div>
-                <button type="button" onclick="limparCalculadora()" class="bg-rosaclaro/60 hover:bg-rosa text-bordo font-black text-xs sm:text-sm py-2 px-4 rounded-xl transition-all border border-rosa/40 flex items-center gap-1.5">
+                <button type="button" onclick="limparCalculadora()" class="bg-rosaclaro/60 hover:bg-rosa text-bordo font-bold text-xs py-2 px-4 rounded-xl transition-all border border-rosa/40 flex items-center gap-1.5">
                     🔄 Esvaziar Carrinho
                 </button>
             </div>
 
-            <p class="text-sm sm:text-base text-bordo font-semibold mb-4">
+            <p class="text-xs sm:text-sm text-bordo/80 font-medium mb-4">
                 Filtre por categoria e marque os serviços desejados. Seus valores são somados automaticamente em tempo real!
             </p>
 
-            <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-6 text-xs sm:text-sm font-black scrollbar-none">
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-6 text-xs font-bold scrollbar-none">
                 <button type="button" data-cat-btn="todas" onclick="filtrarCategoria('todas', this)" class="btn-filtro px-4 py-2 rounded-xl bg-bordo text-creme border-2 border-bordo transition-all shrink-0">Todos os Serviços</button>
                 <button type="button" data-cat-btn="web" onclick="filtrarCategoria('web', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0">🌐 Web & Sites</button>
                 <button type="button" data-cat-btn="identidade" onclick="filtrarCategoria('identidade', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0">🎨 Identidade & Ilustração</button>
@@ -724,129 +970,129 @@
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="1590" data-name="Total Área 01: Web Design & Branding" onchange="notificarCheckboxDireto(this, 'Total Área 01: Web Design & Branding')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Total Área 01: Web Design & Branding</span>
-                        <span class="text-xs text-bordo font-medium">Link na Bio + Identidade Visual + Landing Page</span>
+                        <span class="font-black text-bordo text-base block">Total Área 01: Web Design & Branding</span>
+                        <span class="text-xs text-bordo/80 font-medium">Link na Bio + Identidade Visual + Landing Page</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 1.590</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 1.590</span>
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="800" data-name="Total Área 02: Ilustração & Arte" onchange="notificarCheckboxDireto(this, 'Total Área 02: Ilustração & Arte')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Total Área 02: Ilustração & Arte</span>
-                        <span class="text-xs text-bordo font-medium">Personagem IA + Personagem 2D + Ilustração 2D/Capas</span>
+                        <span class="font-black text-bordo text-base block">Total Área 02: Ilustração & Arte</span>
+                        <span class="text-xs text-bordo/80 font-medium">Personagem IA + Personagem 2D + Ilustração 2D/Capas</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 800</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 800</span>
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="820" data-name="Total Área 03: Redes Sociais & Conteúdo" onchange="notificarCheckboxDireto(this, 'Total Área 03: Redes Sociais & Conteúdo')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Total Área 03: Redes Sociais & Conteúdo</span>
-                        <span class="text-xs text-bordo font-medium">Posts avulsos, carrosséis e Combo Social Media</span>
+                        <span class="font-black text-bordo text-base block">Total Área 03: Redes Sociais & Conteúdo</span>
+                        <span class="text-xs text-bordo/80 font-medium">Posts avulsos, carrosséis e Combo Social Media</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 820</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 820</span>
                 </label>
 
                 <!-- Serviços Avulsos -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="1300" data-name="Site Institucional Multi-Páginas" onchange="notificarCheckboxDireto(this, 'Site Institucional Multi-Páginas')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Site Institucional Multi-Páginas</span>
-                        <span class="text-xs text-bordo font-medium">Até 5 páginas completas, institucional e responsivo</span>
+                        <span class="font-black text-bordo text-base block">Site Institucional Multi-Páginas</span>
+                        <span class="text-xs text-bordo/80 font-medium">Até 5 páginas completas, institucional e responsivo</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 1.300</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 1.300</span>
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="750" data-name="Landing Page de Vendas / Captura" onchange="notificarCheckboxDireto(this, 'Landing Page de Vendas / Captura')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Landing Page de Vendas / Captura</span>
-                        <span class="text-xs text-bordo font-medium">Página única focada em conversão de leads</span>
+                        <span class="font-black text-bordo text-base block">Landing Page de Vendas / Captura</span>
+                        <span class="text-xs text-bordo/80 font-medium">Página única focada em conversão de leads e WhatsApp</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 750</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 750</span>
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="240" data-name="Link na Bio / Mini Site Interativo" onchange="notificarCheckboxDireto(this, 'Link na Bio / Mini Site Interativo')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Link na Bio / Mini Site Interativo</span>
-                        <span class="text-xs text-bordo font-medium">Central de botões modernos para redes sociais</span>
+                        <span class="font-black text-bordo text-base block">Link na Bio / Mini Site Interativo</span>
+                        <span class="text-xs text-bordo/80 font-medium">Central de botões modernos para redes sociais</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 240</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 240</span>
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="600" data-name="Identidade Visual Completa + Manual" onchange="notificarCheckboxDireto(this, 'Identidade Visual Completa + Manual')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Identidade Visual Completa + Manual</span>
-                        <span class="text-xs text-bordo font-medium">Logo, manual em PDF e guia de uso oficial</span>
+                        <span class="font-black text-bordo text-base block">Identidade Visual Completa + Manual</span>
+                        <span class="text-xs text-bordo/80 font-medium">Logo, submarca, manual em PDF e guia de uso oficial</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 600</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 600</span>
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="340" data-name="Ilustração 2D / Capas & Vetorização" onchange="notificarCheckboxDireto(this, 'Ilustração 2D / Capas & Vetorização')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Ilustração 2D / Capas & Vetorização</span>
-                        <span class="text-xs text-bordo font-medium">Capas de livros, artes autorais e vetorização</span>
+                        <span class="font-black text-bordo text-base block">Ilustração 2D / Capas & Vetorização</span>
+                        <span class="text-xs text-bordo/80 font-medium">Capas de livros, artes autorais e vetorização de traços</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 340</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 340</span>
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="260" data-name="Criação de Personagem 2D (Illustrator)" onchange="notificarCheckboxDireto(this, 'Criação de Personagem 2D (Illustrator)')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Criação de Personagem 2D (Illustrator)</span>
-                        <span class="text-xs text-bordo font-medium">Personagem vetorizado e autoral</span>
+                        <span class="font-black text-bordo text-base block">Criação de Personagem 2D (Illustrator)</span>
+                        <span class="text-xs text-bordo/80 font-medium">Personagem vetorizado autoral com prancha de expressões</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 260</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 260</span>
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="200" data-name="Criação de Personagens IA" onchange="notificarCheckboxDireto(this, 'Criação de Personagens IA')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Criação de Personagens IA</span>
-                        <span class="text-xs text-bordo font-medium">Mascotes e arte conceitual com Inteligência Artificial</span>
+                        <span class="font-black text-bordo text-base block">Criação de Personagens com IA</span>
+                        <span class="text-xs text-bordo/80 font-medium">Mascotes e arte conceitual com Inteligência Artificial</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 200</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 200</span>
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="60" data-name="Post Estático Avulso" onchange="notificarCheckboxDireto(this, 'Post Estático Avulso')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Post Estático Avulso</span>
-                        <span class="text-xs text-bordo font-medium">1 arte individual de alto impacto para feed</span>
+                        <span class="font-black text-bordo text-base block">Post Estático Avulso</span>
+                        <span class="text-xs text-bordo/80 font-medium">1 arte individual de alto impacto visual para feed</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 60</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 60</span>
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="110" data-name="Carrossel Avulso (Até 6 telas)" onchange="notificarCheckboxDireto(this, 'Carrossel Avulso (Até 6 telas)')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Carrossel Avulso (Até 6 Telas)</span>
-                        <span class="text-xs text-bordo font-medium">Sequência visual contínua para alto engajamento</span>
+                        <span class="font-black text-bordo text-base block">Carrossel Avulso (Até 6 Telas)</span>
+                        <span class="text-xs text-bordo/80 font-medium">Sequência visual contínua para engajamento e retenção</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 110</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 110</span>
                 </label>
 
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 md:col-span-2" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="650" data-name="Combo Social Media Completo: Posts + Reels + Stories" onchange="notificarCheckboxDireto(this, 'Combo Social Media Completo: Posts + Reels + Stories')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">Combo Social Media Completo: Posts + Reels + Stories</span>
-                        <span class="text-xs text-bordo font-medium">Mix mensal de engajamento com carrosséis e vídeos dinâmicos</span>
+                        <span class="font-black text-bordo text-base block">Combo Social Media Completo: Posts + Reels + Stories</span>
+                        <span class="text-xs text-bordo/80 font-medium">Mix mensal de engajamento com carrosséis e vídeos dinâmicos</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 650</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 650</span>
                 </label>
 
                 <!-- ASSESSORIA MENSAL DEDICADA -->
                 <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosa rounded-2xl cursor-pointer hover:scale-[1.01] transition-all bg-rosa/10 md:col-span-2" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="2600" data-name="Assessoria Mensal Dedicada (Base Fixa)" onchange="notificarCheckboxDireto(this, 'Assessoria Mensal Dedicada (Base Fixa)')">
                     <div>
-                        <span class="font-black text-bordo text-base sm:text-lg block">⭐ Assessoria Mensal Dedicada (Base Fixa)</span>
-                        <span class="text-xs text-bordo font-medium">Pacote base mensal (⚠️ Exige que você defina a minutagem de vídeo abaixo)</span>
+                        <span class="font-black text-bordo text-base block">⭐ Assessoria Mensal Dedicada (Base Fixa)</span>
+                        <span class="text-xs text-bordo/80 font-medium">Pacote base mensal (⚠️ Exige que você defina a minutagem de vídeo abaixo)</span>
                     </div>
-                    <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 2.600 / mês</span>
+                    <span class="ml-auto font-black text-bordo text-base shrink-0">R$ 2.600 / mês</span>
                 </label>
 
                 <!-- VÍDEOS COM IA -->
@@ -854,16 +1100,16 @@
                     <label class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo" onchange="toggleIaMinutos(); calcularTotal(); if(this.checked) mostrarToast('Defina a minutagem de Vídeos com IA!', '🤖');">
                         <div>
-                            <span class="font-black text-bordo text-base sm:text-lg block">🎬 Edição de Vídeos com Inteligência Artificial</span>
-                            <p class="text-xs sm:text-sm text-bordo font-medium">Geração de cenários/personagens com IA + montagem (<span class="text-bordo font-black">R$ 100 / min</span>)</p>
+                            <span class="font-black text-bordo text-base block">🎬 Edição de Vídeos com Inteligência Artificial</span>
+                            <p class="text-xs text-bordo/80 font-medium">Geração de cenários/personagens com IA + montagem (<span class="text-bordo font-bold">R$ 100 / min</span>)</p>
                         </div>
                     </label>
                     <div id="box-minutos-ia" class="hidden flex items-center justify-between pt-2 border-t border-rosaclaro/60 pl-9">
-                        <span class="text-sm font-black text-bordo">Quantos Minutos de Vídeo com IA exatos?</span>
+                        <span class="text-xs font-bold text-bordo">Quantos Minutos de Vídeo com IA exatos?</span>
                         <div class="flex items-center gap-2">
-                            <button type="button" aria-label="Diminuir minutos IA" onclick="mudarIaMinutos(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">-</button>
-                            <input type="number" id="input-minutos-ia" aria-label="Minutos de vídeo IA" value="1" min="1" max="240" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-lg font-black text-base py-1 bg-white">
-                            <button type="button" aria-label="Aumentar minutos IA" onclick="mudarIaMinutos(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">+</button>
+                            <button type="button" aria-label="Diminuir minutos IA" onclick="mudarIaMinutos(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-bold flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">-</button>
+                            <input type="number" id="input-minutos-ia" aria-label="Minutos de vídeo IA" value="1" min="1" max="240" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-lg font-bold text-sm py-1 bg-white">
+                            <button type="button" aria-label="Aumentar minutos IA" onclick="mudarIaMinutos(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-bold flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">+</button>
                         </div>
                     </div>
                 </div>
@@ -873,16 +1119,16 @@
                     <label class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo" onchange="toggleVideoGeral(); calcularTotal(); if(this.checked) mostrarToast('Defina a minutagem de Edição CapCut!', '🎬');">
                         <div>
-                            <span class="font-black text-bordo text-base sm:text-lg block">🎬 Edição Geral CapCut / Sem IA</span>
-                            <p class="text-xs sm:text-sm text-bordo font-medium">Cortes dinâmicos, legendas e retenção (<span class="text-bordo font-black">R$ 60 / min</span>)</p>
+                            <span class="font-black text-bordo text-base block">🎬 Edição Geral CapCut / Sem IA</span>
+                            <p class="text-xs text-bordo/80 font-medium">Cortes dinâmicos, ritmo e legendas (<span class="text-bordo font-bold">R$ 60 / min</span>)</p>
                         </div>
                     </label>
                     <div id="box-minutos-geral" class="hidden flex items-center justify-between pt-2 border-t border-rosaclaro/60 pl-9">
-                        <span class="text-sm font-black text-bordo">Quantos Minutos de Edição exatos?</span>
+                        <span class="text-xs font-bold text-bordo">Quantos Minutos de Edição exatos?</span>
                         <div class="flex items-center gap-2">
-                            <button type="button" aria-label="Diminuir minutos CapCut" onclick="mudarMinutosGeral(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">-</button>
-                            <input type="number" id="input-minutos-geral" aria-label="Minutos de vídeo CapCut" value="1" min="1" max="480" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-lg font-black text-base py-1 bg-white">
-                            <button type="button" aria-label="Aumentar minutos CapCut" onclick="mudarMinutosGeral(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">+</button>
+                            <button type="button" aria-label="Diminuir minutos CapCut" onclick="mudarMinutosGeral(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-bold flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">-</button>
+                            <input type="number" id="input-minutos-geral" aria-label="Minutos de vídeo CapCut" value="1" min="1" max="480" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-lg font-bold text-sm py-1 bg-white">
+                            <button type="button" aria-label="Aumentar minutos CapCut" onclick="mudarMinutosGeral(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-bold flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">+</button>
                         </div>
                     </div>
                 </div>
@@ -891,12 +1137,12 @@
             <div class="bg-creme border-2 border-bordo/20 rounded-2xl p-6 shadow-inner">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-6">
                     <div>
-                        <span class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider">🛒 Total Estimado:</span>
-                        <div class="text-4xl sm:text-6xl font-black text-bordo" id="total-valor">R$ 0,00</div>
+                        <span class="text-xs font-bold text-bordo uppercase tracking-wider">🛒 Total Estimado do Pacote:</span>
+                        <div class="text-3xl sm:text-5xl font-black text-bordo" id="total-valor">R$ 0,00</div>
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                        <button type="button" onclick="abrirModalOrcamento()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm sm:text-base py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md">
+                        <button type="button" onclick="abrirModalOrcamento()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs sm:text-sm py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md">
                             Gerar Orçamento Formal ➔
                         </button>
                     </div>
@@ -905,15 +1151,34 @@
         </div>
     </section>
 
+    <!-- NOVO MODAL: PREVIEW DE DETALHES DO PROJETO DO PORTFÓLIO -->
+    <div id="modalPortfolioPreview" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/80 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl text-left relative my-8">
+            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-bold cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalPreview()">&times;</button>
+            <div class="mb-4">
+                <span id="preview-tag" class="inline-block bg-rosa text-bordo text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2">Categoria</span>
+                <h3 id="preview-titulo" class="text-2xl font-black text-bordo leading-tight">Nome do Projeto</h3>
+            </div>
+            <div id="preview-img-container" class="w-full h-48 bg-creme rounded-2xl overflow-hidden mb-4 flex items-center justify-center border border-rosaclaro">
+                <img id="preview-img" src="" alt="Projeto Preview" class="w-full h-full object-contain p-2">
+            </div>
+            <p id="preview-desc" class="text-xs sm:text-sm text-bordo/80 font-medium leading-relaxed mb-6">Descrição detalhada do projeto.</p>
+            <div class="flex items-center justify-between gap-3 border-t border-rosaclaro/60 pt-4">
+                <button type="button" onclick="fecharModalPreview()" class="bg-gray-100 text-bordo hover:bg-rosaclaro font-bold text-xs py-2.5 px-4 rounded-xl transition-colors">Fechar</button>
+                <a href="#simulador" onclick="fecharModalPreview()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs py-2.5 px-5 rounded-xl transition-colors shadow-sm">Simular Projeto Similar ➔</a>
+            </div>
+        </div>
+    </div>
+
     <!-- MODAL: GERADOR DE ORÇAMENTO FORMAL -->
     <div id="modalOrcamento" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/80 backdrop-blur-md hidden items-center justify-center p-2 sm:p-4 z-50 overflow-y-auto">
         <div class="bg-cinzaclaro rounded-3xl w-full max-w-2xl shadow-2xl relative my-4 flex flex-col max-h-[95vh] border border-gray-200">
             <div class="bg-white border-b border-gray-200 p-4 sm:p-6 rounded-t-3xl flex items-center justify-between shrink-0">
                 <div>
                     <h2 id="modal-orcamento-titulo" class="text-2xl font-black text-gray-800 leading-none">Novo Orçamento</h2>
-                    <p class="text-xs text-gray-500 font-semibold mt-1">Preencha os dados para registrar e enviar a proposta.</p>
+                    <p class="text-xs text-gray-500 font-medium mt-1">Preencha os dados para registrar e enviar a proposta.</p>
                 </div>
-                <button type="button" aria-label="Fechar" class="bg-gray-800 text-white hover:bg-rosa hover:text-bordo text-xs font-black py-2 px-4 rounded-full transition-colors" onclick="fecharModalOrcamento()">Cancelar</button>
+                <button type="button" aria-label="Fechar" class="bg-gray-800 text-white hover:bg-rosa hover:text-bordo text-xs font-bold py-2 px-4 rounded-full transition-colors" onclick="fecharModalOrcamento()">Cancelar</button>
             </div>
 
             <div class="p-4 sm:p-6 overflow-y-auto modal-scroll space-y-5 flex-1">
@@ -923,36 +1188,36 @@
                     <!-- BLOCO 1: DETALHES -->
                     <div class="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm mb-5">
                         <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-sm font-black text-gray-700">Detalhes do Projeto</h3>
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-gray-700">Detalhes do Projeto</h3>
                             <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-1 rounded font-bold">Visualização do Studio</span>
                         </div>
                         <div class="grid grid-cols-2 gap-4 mb-4">
                             <div>
                                 <label class="block text-xs font-bold text-gray-500 mb-1">Data de emissão</label>
-                                <input type="text" id="orc-data" readonly class="w-full p-2 bg-gray-50 border border-gray-200 rounded-lg text-sm font-bold text-gray-700">
+                                <input type="text" id="orc-data" readonly class="w-full p-2 bg-gray-50 border border-gray-200 rounded-lg text-xs font-bold text-gray-700">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-gray-500 mb-1">Validade</label>
-                                <input type="text" value="30 dias" readonly class="w-full p-2 bg-gray-50 border border-gray-200 rounded-lg text-sm font-bold text-gray-700">
+                                <input type="text" value="30 dias" readonly class="w-full p-2 bg-gray-50 border border-gray-200 rounded-lg text-xs font-bold text-gray-700">
                             </div>
                         </div>
                         <div>
                             <label class="block text-xs font-bold text-gray-500 mb-1">Referência (Nome do Projeto) *</label>
-                            <input type="text" id="orc-ref" required maxlength="120" placeholder="Ex: Criação de Identidade Visual Studio X" class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-semibold text-gray-800 focus:border-bordo outline-none">
+                            <input type="text" id="orc-ref" required maxlength="120" placeholder="Ex: Criação de Identidade Visual Studio X" class="w-full p-2.5 border border-gray-200 rounded-lg text-xs font-medium text-gray-800 focus:border-bordo outline-none">
                         </div>
                     </div>
 
                     <!-- BLOCO 2: DADOS DO CLIENTE -->
                     <div class="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm mb-5">
-                        <h3 class="text-sm font-black text-gray-700 mb-4 border-b border-gray-100 pb-2">Dados do Cliente</h3>
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-gray-700 mb-4 border-b border-gray-100 pb-2">Dados do Cliente</h3>
                         <div class="space-y-4">
                             <div>
                                 <label class="block text-xs font-bold text-gray-500 mb-1">Nome do Cliente ou @ do Instagram *</label>
-                                <input type="text" id="orc-cliente-nome" required maxlength="80" placeholder="Ex: @seu_perfil" class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-semibold text-gray-800 focus:border-bordo outline-none">
+                                <input type="text" id="orc-cliente-nome" required maxlength="80" placeholder="Ex: @seu_perfil" class="w-full p-2.5 border border-gray-200 rounded-lg text-xs font-medium text-gray-800 focus:border-bordo outline-none">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-gray-500 mb-1">Telefone (WhatsApp) *</label>
-                                <input type="text" id="orc-telefone" required maxlength="25" placeholder="(11) 99999-9999" class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-semibold text-gray-800 focus:border-bordo outline-none">
+                                <input type="text" id="orc-telefone" required maxlength="25" placeholder="(11) 99999-9999" class="w-full p-2.5 border border-gray-200 rounded-lg text-xs font-medium text-gray-800 focus:border-bordo outline-none">
                             </div>
                         </div>
                     </div>
@@ -960,19 +1225,19 @@
                     <!-- BLOCO 3: ITENS DO SERVIÇO -->
                     <div class="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm mb-5">
                         <div class="flex items-center justify-between mb-3 border-b border-gray-100 pb-2">
-                            <h3 class="text-sm font-black text-gray-700">Catálogo de Serviços / Itens</h3>
-                            <span class="text-xs font-black text-bordo bg-rosaclaro/30 px-2 py-1 rounded-md" id="orc-total-valor">R$ 0,00</span>
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-gray-700">Itens Selecionados no Pacote</h3>
+                            <span class="text-xs font-bold text-bordo bg-rosaclaro/30 px-2 py-1 rounded-md" id="orc-total-valor">R$ 0,00</span>
                         </div>
                         <div class="bg-gray-50 rounded-xl p-3 max-h-36 overflow-y-auto modal-scroll">
-                            <ul id="orc-lista-itens" class="text-xs sm:text-sm font-semibold text-gray-600 space-y-1.5 list-none"></ul>
+                            <ul id="orc-lista-itens" class="text-xs font-medium text-gray-600 space-y-1.5 list-none"></ul>
                         </div>
                     </div>
 
                     <!-- BLOCO 4: PAGAMENTO & OBSERVAÇÕES -->
                     <div class="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm mb-5">
                         <div class="mb-4">
-                            <label class="block text-sm font-black text-gray-700 mb-2">Forma de Pagamento Preferida</label>
-                            <select id="orc-pagamento" class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-semibold text-gray-800 focus:border-bordo outline-none">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Forma de Pagamento Preferida</label>
+                            <select id="orc-pagamento" class="w-full p-2.5 border border-gray-200 rounded-lg text-xs font-medium text-gray-800 focus:border-bordo outline-none">
                                 <option value="50% Entrada + 50% na Entrega (PIX)">50% Entrada + 50% na Entrega (PIX)</option>
                                 <option value="100% à vista no PIX">100% à vista no PIX</option>
                                 <option value="Cartão de Crédito">Cartão de Crédito</option>
@@ -980,14 +1245,14 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-sm font-black text-gray-700 mb-2">Observações (Prazos, Detalhes, etc)</label>
-                            <textarea id="orc-obs" rows="3" maxlength="400" placeholder="Ex: O cliente já possui o logo vetorizado. Prazo flexível." class="w-full p-2.5 border border-gray-200 rounded-lg text-sm font-semibold text-gray-800 focus:border-bordo outline-none resize-none"></textarea>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Observações (Prazos, Detalhes, etc)</label>
+                            <textarea id="orc-obs" rows="3" maxlength="400" placeholder="Ex: Já possuo material base. Gostaria de iniciar na próxima semana." class="w-full p-2.5 border border-gray-200 rounded-lg text-xs font-medium text-gray-800 focus:border-bordo outline-none resize-none"></textarea>
                         </div>
                     </div>
 
                     <div class="mb-4 px-2">
                         <p class="text-[11px] text-gray-500 leading-tight">
-                            * O prazo de entrega inicia após o envio completo dos materiais. Estão inclusas até 2 rodadas de revisão por projeto.
+                            * O prazo de entrega inicia após o envio completo dos materiais e briefing. Estão inclusas até 2 rodadas de revisão por projeto.
                         </p>
                     </div>
 
@@ -996,8 +1261,8 @@
             </div>
 
             <div class="bg-white border-t border-gray-200 p-4 sm:p-5 rounded-b-3xl flex items-center justify-between shrink-0">
-                <span class="text-xs font-semibold text-gray-400 hidden sm:block">Eve Design Studio - Sistema Integrado</span>
-                <button type="button" id="btn-finalizar-orcamento" onclick="validarEEnviarOrcamento()" class="w-full sm:w-auto bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 px-8 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                <span class="text-xs font-medium text-gray-400 hidden sm:block">Eve Design Studio • Sistema Integrado</span>
+                <button type="button" id="btn-finalizar-orcamento" onclick="validarEEnviarOrcamento()" class="w-full sm:w-auto bg-bordo text-creme hover:bg-rosa hover:text-bordo font-bold text-xs sm:text-sm py-3 px-8 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
                     ✅ Finalizar & Enviar Orçamento
                 </button>
             </div>
@@ -1007,22 +1272,22 @@
     <!-- MODAL DÚVIDA -->
     <div id="modalDuvida" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
-            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalDuvida()">&times;</button>
+            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-bold cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalDuvida()">&times;</button>
             <div class="text-center mb-4"><h2 class="text-2xl font-black text-bordo">Tire sua Dúvida ✨</h2></div>
             <form id="formDuvida" onsubmit="enviarDuvida(event)">
                 <input type="text" id="hp-duvida" name="website_hp" class="hp-field" tabindex="-1" autocomplete="off">
                 <div class="space-y-3">
-                    <input type="text" id="duvida-nome" required maxlength="80" placeholder="Seu Nome / @ do Instagram" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
-                    <input type="text" id="duvida-contato" required maxlength="80" placeholder="WhatsApp ou @ do Instagram" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
-                    <select id="duvida-assunto" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
+                    <input type="text" id="duvida-nome" required maxlength="80" placeholder="Seu Nome / @ do Instagram" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-xs font-medium">
+                    <input type="text" id="duvida-contato" required maxlength="80" placeholder="WhatsApp ou @ do Instagram" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-xs font-medium">
+                    <select id="duvida-assunto" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-xs font-medium">
                         <option value="Dúvida sobre Sites">Dúvida sobre Sites</option>
                         <option value="Dúvida sobre Identidade Visual">Dúvida sobre Identidade Visual</option>
                         <option value="Dúvida sobre Planos & Vídeos">Dúvida sobre Planos & Vídeos</option>
                         <option value="Outro Assunto">Outro Assunto</option>
                     </select>
-                    <textarea id="duvida-mensagem" rows="4" required maxlength="600" placeholder="Escreva sua dúvida..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold resize-none"></textarea>
+                    <textarea id="duvida-mensagem" rows="4" required maxlength="600" placeholder="Escreva sua dúvida com detalhes..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-xs font-medium resize-none"></textarea>
                 </div>
-                <button type="submit" id="btn-env-duvida" class="w-full mt-4 bg-bordo text-creme font-black text-sm py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Enviar Dúvida ➔</button>
+                <button type="submit" id="btn-env-duvida" class="w-full mt-4 bg-bordo text-creme font-bold text-xs py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Enviar Dúvida ➔</button>
             </form>
         </div>
     </div>
@@ -1030,21 +1295,21 @@
     <!-- MODAL SUPORTE -->
     <div id="modalSuporte" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
-            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalSuporte()">&times;</button>
+            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-bold cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalSuporte()">&times;</button>
             <div class="text-center mb-4"><h2 class="text-2xl font-black text-bordo">Suporte ao Cliente 🛠️</h2></div>
             <form id="formSuporte" onsubmit="enviarSuporte(event)">
                 <input type="text" id="hp-suporte" name="website_hp" class="hp-field" tabindex="-1" autocomplete="off">
                 <div class="space-y-3">
-                    <input type="text" id="suporte-nome" required maxlength="80" placeholder="Nome do Cliente / Projeto" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
-                    <input type="text" id="suporte-contato" required maxlength="80" placeholder="Contato Direto (WhatsApp ou @)" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
-                    <select id="suporte-categoria" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
+                    <input type="text" id="suporte-nome" required maxlength="80" placeholder="Nome do Cliente / Projeto" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-xs font-medium">
+                    <input type="text" id="suporte-contato" required maxlength="80" placeholder="Contato Direto (WhatsApp ou @)" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-xs font-medium">
+                    <select id="suporte-categoria" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-xs font-medium">
                         <option value="Ajuste / Revisão">Ajuste / Revisão</option>
                         <option value="Dificuldade com Arquivos">Dificuldade com Arquivos</option>
                         <option value="Outro Pedido">Outro Pedido</option>
                     </select>
-                    <textarea id="suporte-descricao" rows="4" required maxlength="600" placeholder="Descreva o ajuste necessário..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold resize-none"></textarea>
+                    <textarea id="suporte-descricao" rows="4" required maxlength="600" placeholder="Descreva o ajuste ou problema necessário..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-xs font-medium resize-none"></textarea>
                 </div>
-                <button type="submit" id="btn-env-suporte" class="w-full mt-4 bg-bordo text-creme font-black text-sm py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Registrar Suporte ➔</button>
+                <button type="submit" id="btn-env-suporte" class="w-full mt-4 bg-bordo text-creme font-bold text-xs py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Registrar Suporte ➔</button>
             </form>
         </div>
     </div>
@@ -1052,20 +1317,20 @@
     <!-- MODAL FEEDBACK -->
     <div id="modalFeedback" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
-            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalFeedback()">&times;</button>
+            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-bold cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalFeedback()">&times;</button>
             <div class="text-center mb-4"><h2 class="text-2xl font-black text-bordo">Deixe seu Feedback! ⭐</h2></div>
             <form id="formFeedback" onsubmit="enviarFeedback(event)">
                 <input type="text" id="hp-feedback" name="website_hp" class="hp-field" tabindex="-1" autocomplete="off">
                 <div class="space-y-3">
-                    <input type="text" id="fb-nome" required maxlength="80" placeholder="Seu Nome / @ do Instagram" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
-                    <select id="fb-estrelas" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold">
+                    <input type="text" id="fb-nome" required maxlength="80" placeholder="Seu Nome / @ do Instagram" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-xs font-medium">
+                    <select id="fb-estrelas" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-xs font-medium">
                         <option value="5">⭐⭐⭐⭐⭐ (Excelente)</option>
                         <option value="4">⭐⭐⭐⭐ (Muito Bom)</option>
                         <option value="3">⭐⭐⭐ (Bom)</option>
                     </select>
-                    <textarea id="fb-comentario" rows="4" required maxlength="600" placeholder="Como foi sua experiência?" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold resize-none"></textarea>
+                    <textarea id="fb-comentario" rows="4" required maxlength="600" placeholder="Conte como foi sua experiência com nossos serviços..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-xs font-medium resize-none"></textarea>
                 </div>
-                <button type="submit" id="btn-env-feedback" class="w-full mt-4 bg-bordo text-creme font-black text-sm py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Enviar Feedback ➔</button>
+                <button type="submit" id="btn-env-feedback" class="w-full mt-4 bg-bordo text-creme font-bold text-xs py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Enviar Feedback ➔</button>
             </form>
         </div>
     </div>
@@ -1074,33 +1339,33 @@
     <div id="modal-ferramenta" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 max-w-md w-full text-center relative shadow-2xl">
             <h2 class="text-2xl font-black text-bordo mb-1" id="modal-titulo">Ferramenta</h2>
-            <div class="mb-3"><span id="modal-nivel-badge" class="inline-block bg-rosa text-bordo font-black text-xs px-3 py-1 rounded-full">Nível</span></div>
-            <p class="text-base text-bordo font-semibold mb-6" id="modal-desc">Descrição</p>
-            <button type="button" onclick="fecharModal()" class="bg-bordo text-creme font-black text-xs py-3 px-8 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Fechar</button>
+            <div class="mb-3"><span id="modal-nivel-badge" class="inline-block bg-rosa text-bordo font-bold text-xs px-3 py-1 rounded-full">Nível</span></div>
+            <p class="text-xs sm:text-sm text-bordo/90 font-medium mb-6" id="modal-desc">Descrição</p>
+            <button type="button" onclick="fecharModal()" class="bg-bordo text-creme font-bold text-xs py-2.5 px-8 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Fechar</button>
         </div>
     </div>
 
     <!-- MODAL LEGAL -->
     <div id="modalLegal" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-2xl w-full shadow-2xl text-left relative my-8">
-            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalLegal()">&times;</button>
+            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-bold cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalLegal()">&times;</button>
             <h2 class="text-2xl sm:text-3xl font-black text-bordo mb-4" id="modal-legal-titulo">Documento Legal</h2>
-            <div class="text-sm sm:text-base text-bordo font-medium leading-relaxed space-y-3" id="modal-legal-conteudo"></div>
-            <div class="mt-6 text-center"><button type="button" onclick="fecharModalLegal()" class="bg-bordo text-creme font-black text-xs py-2.5 px-8 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Entendido</button></div>
+            <div class="text-xs sm:text-sm text-bordo/90 font-medium leading-relaxed space-y-3" id="modal-legal-conteudo"></div>
+            <div class="mt-6 text-center"><button type="button" onclick="fecharModalLegal()" class="bg-bordo text-creme font-bold text-xs py-2.5 px-8 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Entendido</button></div>
         </div>
     </div>
 
     <!-- FOOTER -->
-    <footer class="w-full bg-white/90 border-t-2 border-rosaclaro py-8 text-center text-sm text-bordo font-bold mt-12 shadow-sm">
+    <footer class="w-full bg-white/90 border-t-2 border-rosaclaro py-8 text-center text-xs text-bordo font-medium mt-12 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 space-y-3">
             <div class="flex justify-center mb-2"><img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png" loading="lazy" alt="Logo" class="w-12 h-12 object-contain"></div>
-            <p class="font-black text-base text-bordo">Evelyn Cecília de Sales Pereira — Eve Design Studio</p>
-            <p class="text-xs sm:text-sm text-bordo/80 font-semibold">Francisco Morato – SP</p>
-            <p class="text-xs font-black">
-                <button type="button" onclick="abrirModalLegal('termos')" class="underline mx-2">Termos de Serviço</button> • 
-                <button type="button" onclick="abrirModalLegal('privacidade')" class="underline mx-2">Política de Privacidade</button>
+            <p class="font-black text-base text-bordo">Eve Design Studio</p>
+            <p class="text-bordo/80">Design Estratégico, Desenvolvimento Web & IA Criativa</p>
+            <p class="font-bold">
+                <button type="button" onclick="abrirModalLegal('termos')" class="underline mx-2 hover:text-rosa">Termos de Serviço</button> • 
+                <button type="button" onclick="abrirModalLegal('privacidade')" class="underline mx-2 hover:text-rosa">Política de Privacidade</button>
             </p>
-            <p class="text-xs text-bordo/60 pt-2 border-t border-rosaclaro/40">© 2026 Eve Design Studio. Todos os direitos reservados.</p>
+            <p class="text-bordo/60 pt-2 border-t border-rosaclaro/40">© 2026 Eve Design Studio. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -1132,8 +1397,8 @@
                 conteudo.innerHTML = `
                     <p><strong>Resumo do Contrato de Prestação de Serviços:</strong></p>
                     <ul class="list-disc pl-5 space-y-2 mt-2">
-                        <li><strong>Prazos:</strong> Início após envio completo dos materiais.</li>
-                        <li><strong>Revisões:</strong> Até 2 rodadas de ajustes inclusas.</li>
+                        <li><strong>Prazos:</strong> Início após envio completo dos materiais e briefing.</li>
+                        <li><strong>Revisões:</strong> Até 2 rodadas de ajustes inclusas por projeto.</li>
                         <li><strong>Pagamentos:</strong> 50% de entrada e 50% na aprovação final.</li>
                     </ul>
                 `;
@@ -1273,6 +1538,53 @@
             });
         }
 
+        // FILTRO DA NOVA GALERIA DE PORTFÓLIO
+        function filtrarGaleria(categoria, botao) {
+            document.querySelectorAll('.btn-galeria').forEach(btn => {
+                btn.classList.remove('bg-bordo', 'text-creme', 'border-bordo');
+                btn.classList.add('bg-white', 'text-bordo', 'border-rosaclaro');
+            });
+
+            if (botao) {
+                botao.classList.remove('bg-white', 'text-bordo', 'border-rosaclaro');
+                botao.classList.add('bg-bordo', 'text-creme', 'border-bordo');
+            }
+
+            const cards = document.querySelectorAll('.card-portfolio');
+            cards.forEach(card => {
+                if (categoria === 'todos' || card.getAttribute('data-portfolio-cat') === categoria) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        function abrirPreviewPortfólio(titulo, tag, desc, imgSrc) {
+            document.getElementById('preview-titulo').innerText = titulo;
+            document.getElementById('preview-tag').innerText = tag;
+            document.getElementById('preview-desc').innerText = desc;
+            const containerImg = document.getElementById('preview-img-container');
+            const imgEl = document.getElementById('preview-img');
+            
+            if(imgSrc) {
+                imgEl.src = imgSrc;
+                containerImg.classList.remove('hidden');
+            } else {
+                containerImg.classList.add('hidden');
+            }
+
+            const modal = document.getElementById('modalPortfolioPreview');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function fecharModalPreview() {
+            const modal = document.getElementById('modalPortfolioPreview');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
         function obterItensSelecionadosArrayFormatado() {
             let lista = [];
 
@@ -1380,11 +1692,11 @@
                 const partes = itemTexto.split(" - ");
                 
                 const spanNome = document.createElement('span');
-                spanNome.className = "text-gray-700 font-semibold w-2/3 truncate";
+                spanNome.className = "text-gray-700 font-medium w-2/3 truncate";
                 spanNome.textContent = partes[1] || "";
 
                 const spanPreco = document.createElement('span');
-                spanPreco.className = "text-bordo font-black w-1/3 text-right";
+                spanPreco.className = "text-bordo font-bold w-1/3 text-right";
                 spanPreco.textContent = partes[0] || "";
 
                 li.appendChild(spanNome);
@@ -1635,7 +1947,7 @@
             
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
-                    fecharModal(); fecharModalDuvida(); fecharModalSuporte(); fecharModalOrcamento(); fecharModalFeedback(); fecharModalLegal();
+                    fecharModal(); fecharModalDuvida(); fecharModalSuporte(); fecharModalOrcamento(); fecharModalFeedback(); fecharModalLegal(); fecharModalPreview();
                 }
             });
 
