@@ -80,7 +80,7 @@
         .card-selected { 
             border-color: #6E1940 !important; 
             background-color: rgba(240, 196, 215, 0.45) !important; 
-            box-shadow: 0 8px 20px rgba(110, 25, 64, 0.12); 
+            box-shadow: 0 8px 22px rgba(110, 25, 64, 0.15); 
             transform: translateY(-2px);
         }
         details > summary { list-style: none; } 
@@ -91,6 +91,13 @@
         .modal-scroll::-webkit-scrollbar-thumb { background: #F0C4D7; border-radius: 10px; }
         .modal-scroll::-webkit-scrollbar-thumb:hover { background: #F384B2; }
         .hp-field { opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1; pointer-events: none; }
+        
+        .btn-dynamic {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-dynamic:active {
+            transform: scale(0.96) translateY(1px);
+        }
     </style>
 </head>
 <body class="bg-pattern min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-rosa selection:text-bordo">
@@ -108,14 +115,14 @@
                 🍪 Utilizamos cookies essenciais para o funcionamento do simulador e orçamentos. Ao continuar, você concorda com a nossa <button type="button" onclick="abrirModalLegal('privacidade')" class="underline text-rosa hover:text-amarelo font-bold">Política de Privacidade</button>.
             </p>
             <div class="flex items-center gap-2 shrink-0">
-                <button type="button" onclick="recusarCookies()" class="bg-white/10 text-creme hover:bg-white/20 font-bold text-xs py-2 px-4 rounded-xl transition-all">Recusar</button>
-                <button type="button" onclick="aceitarCookies()" class="bg-amarelo text-bordo hover:bg-rosa font-bold text-xs py-2 px-6 rounded-xl transition-all shadow-sm">Concordar & Fechar</button>
+                <button type="button" onclick="recusarCookies()" class="bg-white/10 text-creme hover:bg-white/20 font-bold text-xs py-2 px-4 rounded-xl transition-all btn-dynamic">Recusar</button>
+                <button type="button" onclick="aceitarCookies()" class="bg-amarelo text-bordo hover:bg-rosa font-bold text-xs py-2 px-6 rounded-xl transition-all shadow-sm btn-dynamic">Concordar & Fechar</button>
             </div>
         </div>
     </div>
 
     <!-- VOLTAR AO TOPO -->
-    <button id="btn-back-to-top" type="button" aria-label="Voltar ao topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 z-40 bg-bordo text-creme hover:bg-rosa hover:text-bordo border-2 border-rosa p-3 rounded-2xl shadow-2xl hidden opacity-0 transition-all duration-300 transform hover:scale-110">
+    <button id="btn-back-to-top" type="button" aria-label="Voltar ao topo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 z-40 bg-bordo text-creme hover:bg-rosa hover:text-bordo border-2 border-rosa p-3 rounded-2xl shadow-2xl hidden opacity-0 transition-all duration-300 transform hover:scale-110 btn-dynamic">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </button>
 
@@ -145,15 +152,15 @@
             </nav>
 
             <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 bg-rosa/20 text-bordo hover:bg-rosa hover:text-bordo transition-all font-black text-xs px-3.5 py-2 rounded-xl border border-rosa/50">
+                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 bg-rosa/20 text-bordo hover:bg-rosa hover:text-bordo transition-all font-black text-xs px-3.5 py-2 rounded-xl border border-rosa/50 btn-dynamic">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-3.5 h-3.5 object-contain">
                     <span>Portfólio Canva</span>
                 </a>
-                <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1.5 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-3.5 rounded-xl transition-all shadow-sm">
+                <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1.5 bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-3.5 rounded-xl transition-all shadow-sm btn-dynamic">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-3.5 h-3.5 object-contain">
                     <span>Instagram</span>
                 </a>
-                <button type="button" id="btn-toggle-menu" onclick="toggleMenuMobile()" aria-expanded="false" aria-label="Abrir menu" class="xl:hidden p-2 rounded-xl border-2 border-rosaclaro bg-creme/50 hover:bg-rosa text-bordo transition-all">
+                <button type="button" id="btn-toggle-menu" onclick="toggleMenuMobile()" aria-expanded="false" aria-label="Abrir menu" class="xl:hidden p-2 rounded-xl border-2 border-rosaclaro bg-creme/50 hover:bg-rosa text-bordo transition-all btn-dynamic">
                     <svg id="icone-menu-abrir" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     <svg id="icone-menu-fechar" class="w-5 h-5 sm:w-6 sm:h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
@@ -174,7 +181,7 @@
         </div>
     </header>
 
-    <!-- 1. BANNER HERO DINÂMICO & CLICÁVEL -->
+    <!-- BANNER HERO -->
     <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2">
         <a href="#simulador" class="group block rounded-3xl overflow-hidden border-2 border-rosa shadow-lg bg-white relative transition-all duration-300 hover:shadow-2xl" title="Clique para calcular seu orçamento">
             <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/BANNER_EVE_DESIGN.png" alt="Eve Design Studio - Soluções Criativas, Sites, Vídeos & Planos Mensais" class="w-full h-auto object-cover max-h-[420px] transition-transform duration-500 group-hover:scale-[1.01]">
@@ -198,31 +205,32 @@
         </p>
 
         <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap max-w-3xl mx-auto mb-4">
-            <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-rosa text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
+            <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-rosa text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black btn-dynamic">
                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain"> Portfólio Canva
             </a>
-            <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo">
+            <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 bg-white border border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black text-bordo btn-dynamic">
                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain"> Instagram
             </a>
-            <button type="button" onclick="abrirModalDuvida()" class="px-4 py-2 bg-amarelo text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
+            <button type="button" onclick="abrirModalDuvida()" class="px-4 py-2 bg-amarelo text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black btn-dynamic">
                 ❓ Tirar Dúvida Rápida
             </button>
-            <button type="button" onclick="abrirModalSuporte()" class="px-3.5 py-1.5 bg-rosaclaro text-bordo border border-rosa rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black">
+            <button type="button" onclick="abrirModalSuporte()" class="px-3.5 py-1.5 bg-rosaclaro text-bordo border border-rosa rounded-full flex items-center gap-2 hover:scale-105 transition-all shadow-sm text-xs sm:text-sm font-black btn-dynamic">
                 🛠️ Suporte / Ajustes
             </button>
         </div>
     </section>
 
-    <!-- 1. APRESENTAÇÃO PROFISSIONAL NO TOPO & CAIXA DE FERRAMENTAS (SEU PERSONAGEM MANTIDO) -->
+    <!-- 1. APRESENTAÇÃO PROFISSIONAL NO TOPO (PERSONAGEM DESTACADA) -->
     <section id="sobre-mim" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
         <div class="bg-white/95 border-2 border-rosaclaro rounded-3xl p-6 sm:p-10 shadow-lg backdrop-blur-sm">
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <!-- Personagem com glow e link para Canva original restaurado -->
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-48 h-48 md:w-56 md:h-56 shrink-0 relative group cursor-pointer" title="Clique para ver o Portfólio!">
-                    <div class="absolute -inset-1 bg-gradient-to-r from-rosa to-amarelo rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                    <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png" loading="lazy" alt="Personagem Eve Design Studio" class="relative w-full h-full object-contain rounded-2xl bg-rosaclaro/30 p-2 border-2 border-rosa shadow-sm group-hover:scale-105 transition-transform">
-                    <span class="absolute bottom-2 right-2 bg-amarelo text-bordo font-black text-xs px-2.5 py-1 rounded-full border border-bordo shadow-md flex items-center gap-1">
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" loading="lazy" alt="" class="w-3 h-3 object-contain"> Portfólio
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-60 h-60 sm:w-64 sm:h-64 lg:w-72 lg:h-72 shrink-0 relative group cursor-pointer" title="Clique para ver o Portfólio Canva!">
+                    <div class="absolute -inset-2 bg-gradient-to-tr from-rosa via-amarelo to-rosaclaro rounded-3xl blur-md opacity-80 group-hover:opacity-100 transition duration-300"></div>
+                    <div class="relative w-full h-full rounded-2xl bg-white/80 p-3 border-2 border-rosa shadow-inner flex items-center justify-center overflow-hidden">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png" loading="lazy" alt="Personagem Oficial Eve Design Studio" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <span class="absolute bottom-3 right-3 bg-amarelo text-bordo font-black text-xs px-3 py-1.5 rounded-full border border-bordo shadow-md flex items-center gap-1.5 group-hover:bg-rosa group-hover:text-white transition-colors">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" loading="lazy" alt="" class="w-3.5 h-3.5 object-contain"> Portfólio Canva
                     </span>
                 </a>
 
@@ -243,27 +251,27 @@
                             Minha Caixa de Ferramentas (Clique para detalhes):
                         </h3>
                         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2.5">
-                            <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais completas, ilustração 2D autoral, vetorização e design gráfico de alta fidelidade.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais completas, ilustração 2D autoral, vetorização e design gráfico de alta fidelidade.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group btn-dynamic">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/ADOBE_ILUSTARTOR.png" loading="lazy" alt="Adobe Illustrator" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Illustrator</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('CapCut Pro', 'Avançado', 'Edição profissional de vídeos dinâmicos, transições, legendas animadas e alta retenção para redes.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('CapCut Pro', 'Avançado', 'Edição profissional de vídeos dinâmicos, transições, legendas animadas e alta retenção para redes.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group btn-dynamic">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CAPCUT.png" loading="lazy" alt="CapCut" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">CapCut</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Canva Pro', 'Especialista', 'Desenvolvimento de apresentações corporativas, kits de marca, carrosséis educativos e materiais digitais.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Canva Pro', 'Especialista', 'Desenvolvimento de apresentações corporativas, kits de marca, carrosséis educativos e materiais digitais.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group btn-dynamic">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CANVA.png" loading="lazy" alt="Canva Pro" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Canva</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Blender 3D', 'Intermediário', 'Modelagem 3D, criação de assets, iluminação de cena e renderização para projetos visuais.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Blender 3D', 'Intermediário', 'Modelagem 3D, criação de assets, iluminação de cena e renderização para projetos visuais.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group btn-dynamic">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/BLENDER.png" loading="lazy" alt="Blender 3D" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">Blender 3D</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Código & Web', 'Avançado', 'Desenvolvimento de interfaces modernas, páginas responsivas com HTML5, Tailwind CSS e JavaScript.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Código & Web', 'Avançado', 'Desenvolvimento de interfaces modernas, páginas responsivas com HTML5, Tailwind CSS e JavaScript.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group btn-dynamic">
                                 <div class="w-8 h-8 flex items-center justify-center bg-bordo text-creme rounded-xl font-black text-xs mb-1 group-hover:scale-110 transition-transform">&lt;/&gt;</div>
                                 <span class="text-xs font-black text-bordo">Código & Web</span>
                             </button>
-                            <button type="button" onclick="mostrarNivel('Inteligência Artificial', 'Avançado', 'Geração de cenários conceituais, ideação visual de mascotes e roteirização com IA generativa.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group">
+                            <button type="button" onclick="mostrarNivel('Inteligência Artificial', 'Avançado', 'Geração de cenários conceituais, ideação visual de mascotes e roteirização com IA generativa.')" class="bg-creme border-2 border-rosaclaro hover:border-rosa rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm hover:scale-105 transition-all group btn-dynamic">
                                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/GEMINI.png" loading="lazy" alt="Inteligência Artificial" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
                                 <span class="text-xs font-black text-bordo">IA Criativa</span>
                             </button>
@@ -274,7 +282,7 @@
         </div>
     </section>
 
-    <!-- 2. PORTFÓLIO E PROJETOS EM DESTAQUE -->
+    <!-- 2. PORTFÓLIO E PROJETOS EM DESTAQUE (AJUSTADO: KRAKEN'S EM SOCIAL MEDIA E JULIA EM BRANDING) -->
     <section id="portfolio-galeria" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-xl">
             <div class="text-center mb-8">
@@ -286,25 +294,25 @@
             </div>
 
             <div class="flex items-center justify-center gap-2 overflow-x-auto pb-3 mb-8 text-xs sm:text-sm font-black flex-wrap">
-                <button type="button" onclick="filtrarGaleria('todos', this)" class="btn-galeria px-4 py-2 rounded-xl bg-bordo text-creme border-2 border-bordo transition-all shadow-sm">
+                <button type="button" onclick="filtrarGaleria('todos', this)" class="btn-galeria px-4 py-2 rounded-xl bg-bordo text-creme border-2 border-bordo transition-all shadow-sm btn-dynamic">
                     🌟 Todos os Projetos
                 </button>
-                <button type="button" onclick="filtrarGaleria('branding', this)" class="btn-galeria px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all">
+                <button type="button" onclick="filtrarGaleria('branding', this)" class="btn-galeria px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all btn-dynamic">
                     🎨 Branding & Identidade
                 </button>
-                <button type="button" onclick="filtrarGaleria('arte', this)" class="btn-galeria px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all">
+                <button type="button" onclick="filtrarGaleria('arte', this)" class="btn-galeria px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all btn-dynamic">
                     🎬 Animação & Vídeo
                 </button>
-                <button type="button" onclick="filtrarGaleria('social', this)" class="btn-galeria px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all">
+                <button type="button" onclick="filtrarGaleria('social', this)" class="btn-galeria px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all btn-dynamic">
                     📱 Social Media
                 </button>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-portfolio-itens">
-                <!-- Item 1: Turminha do Xexéu (Card com a arte do projeto preservada, tags CapCut e IA) -->
+                <!-- Item 1: Turminha do Xexéu (Animação & Audiovisual) -->
                 <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="arte">
-                    <div class="relative overflow-hidden aspect-video bg-creme flex items-center justify-center p-2">
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png" alt="Turminha do Xexéu" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
+                    <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png" alt="Turminha do Xexéu" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
                         <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Animação & Audiovisual</span>
                     </div>
                     <div class="p-5 flex-1 flex flex-col justify-between">
@@ -314,61 +322,61 @@
                         </div>
                         <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
                             <span class="text-xs font-black text-rosa">CapCut • IA</span>
-                            <button type="button" onclick="abrirPreviewPortfólio('Turminha do Xexéu', 'Animação Infantil & Audiovisual', 'Desenvolvimento de personagens, cenários com inteligência artificial e edição de ritmo no CapCut.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png')" class="text-xs font-black text-bordo underline hover:text-rosa">Detalhes ➔</button>
+                            <button type="button" onclick="abrirPreviewPortfólio('Turminha do Xexéu', 'Animação Infantil & Audiovisual', 'Desenvolvimento de personagens, cenários com inteligência artificial e edição de ritmo no CapCut.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png')" class="text-xs font-black text-bordo underline hover:text-rosa btn-dynamic">Detalhes ➔</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Item 2: Saint Vision Home -->
+                <!-- Item 2: Julia Sales - Brincar & Viver (SEU PROJETO DE IDENTIDADE VISUAL & ILUSTRAÇÃO) -->
+                <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="branding">
+                    <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png" alt="Julia Sales Logo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Identidade Visual & Ilustração</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-bordo text-xl mb-1">Julia Sales - Brincar & Viver</h3>
+                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Criação de identidade visual completa, logotipo acolhedor e ilustrações autorais para canal voltado ao desenvolvimento infantil.</p>
+                        </div>
+                        <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
+                            <span class="text-xs font-black text-rosa">Branding • Ilustração</span>
+                            <button type="button" onclick="abrirPreviewPortfólio('Julia Sales - Brincar & Viver', 'Identidade Visual Completa & Ilustração', 'Desenvolvimento completo do logotipo da marca, paleta de cores, tipografia e personagens ilustrados para o projeto.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png')" class="text-xs font-black text-bordo underline hover:text-rosa btn-dynamic">Detalhes ➔</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Saint Vision Home (Carrosséis & Feed) -->
                 <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="social">
-                    <div class="relative overflow-hidden aspect-video bg-creme flex items-center justify-center p-6">
+                    <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
                         <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png" alt="Saint Vision Home" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
                         <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Carrosséis & Feed</span>
                     </div>
                     <div class="p-5 flex-1 flex flex-col justify-between">
                         <div>
                             <h3 class="font-black text-bordo text-xl mb-1">Saint Vision Home</h3>
-                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Design de carrosséis educativos para Instagram e identidade visual clean para serviço de ótica domiciliar.</p>
+                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Design de carrosséis educativos para Instagram e estética clean para atendimento de ótica domiciliar.</p>
                         </div>
                         <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
                             <span class="text-xs font-black text-rosa">Social Media • Editorial</span>
-                            <button type="button" onclick="abrirPreviewPortfólio('Saint Vision Home', 'Social Media Estratégico', 'Design refinado e diagramação para Instagram transmitindo conforto, saúde visual e estética premium.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png')" class="text-xs font-black text-bordo underline hover:text-rosa">Detalhes ➔</button>
+                            <button type="button" onclick="abrirPreviewPortfólio('Saint Vision Home', 'Social Media Estratégico', 'Design refinado e diagramação para Instagram transmitindo conforto, saúde visual e estética premium.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png')" class="text-xs font-black text-bordo underline hover:text-rosa btn-dynamic">Detalhes ➔</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Item 3: Kraken's PC Store & Lab -->
-                <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="branding">
-                    <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6">
+                <!-- Item 4: Kraken's PC Store & Lab (AGORA CORRETO: SOCIAL MEDIA & PEÇAS DIGITAIS) -->
+                <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="social">
+                    <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
                         <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png" alt="Kraken's Logo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Tech & E-commerce</span>
+                        <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Social Media & Peças Digitais</span>
                     </div>
                     <div class="p-5 flex-1 flex flex-col justify-between">
                         <div>
                             <h3 class="font-black text-bordo text-xl mb-1">Kraken's PC Store & Lab</h3>
-                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Branding com temática gamer/tech, catálogo de periféricos e templates dinâmicos para peças e setups.</p>
+                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Criação contínua de posts promocionais para redes sociais, vitrines de periféricos, peças de hardware e templates para stories.</p>
                         </div>
                         <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
-                            <span class="text-xs font-black text-rosa">Tech • Vector • UI</span>
-                            <button type="button" onclick="abrirPreviewPortfólio('Kraken\'s PC Store', 'Branding Tech & Peças Comerciais', 'Identidade imersiva com foco no público gamer e profissionais de hardware.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png')" class="text-xs font-black text-bordo underline hover:text-rosa">Detalhes ➔</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 4: Julia Sales - Brincar & Viver -->
-                <div class="card-portfolio group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between" data-portfolio-cat="arte">
-                    <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6">
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png" alt="Julia Sales Logo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute top-3 left-3 bg-bordo text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Ilustração Infantil</span>
-                    </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
-                        <div>
-                            <h3 class="font-black text-bordo text-xl mb-1">Julia Sales - Brincar & Viver</h3>
-                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Ilustrações lúdicas e edição audiovisual com temática pedagógica para desenvolvimento infantil.</p>
-                        </div>
-                        <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
-                            <span class="text-xs font-black text-rosa">Ilustração • Educação</span>
-                            <button type="button" onclick="abrirPreviewPortfólio('Julia Sales - Brincar & Viver', 'Conteúdo Lúdico & Pedagógico', 'Desenho de personagens carismáticos para interação e aprendizado na primeira infância.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png')" class="text-xs font-black text-bordo underline hover:text-rosa">Detalhes ➔</button>
+                            <span class="text-xs font-black text-rosa">Social Media • Tech Posts</span>
+                            <button type="button" onclick="abrirPreviewPortfólio('Kraken\'s PC Store', 'Posts & Peças para Redes Sociais', 'Desenvolvimento de artes digitais com foco comercial, promoções de hardware gamer e suporte em mídias sociais.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png')" class="text-xs font-black text-bordo underline hover:text-rosa btn-dynamic">Detalhes ➔</button>
                         </div>
                     </div>
                 </div>
@@ -380,7 +388,7 @@
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-6 h-6 object-contain">
                     <p class="text-xs sm:text-sm font-black text-bordo text-center sm:text-left">Deseja conferir o portfólio completo interativo no Canva?</p>
                 </div>
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2.5 px-6 rounded-xl transition-all shadow-sm shrink-0">
+                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2.5 px-6 rounded-xl transition-all shadow-sm shrink-0 btn-dynamic">
                     Abrir Portfólio Canva ➔
                 </a>
             </div>
@@ -423,7 +431,7 @@
                 </div>
                 <div class="flex items-center gap-4 shrink-0">
                     <span class="text-2xl sm:text-3xl font-black text-bordo">R$ 600,00</span>
-                    <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 px-6 rounded-xl transition-all shadow-md">
+                    <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 px-6 rounded-xl transition-all shadow-md btn-dynamic">
                         Contratar Branding 🛒
                     </button>
                 </div>
@@ -431,7 +439,7 @@
         </div>
     </section>
 
-    <!-- 3. DEPOIMENTOS E PROVA SOCIAL -->
+    <!-- 4. DEPOIMENTOS E PROVA SOCIAL (ATUALIZADO) -->
     <section id="depoimentos" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
         <div class="text-center mb-8">
             <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
@@ -476,15 +484,15 @@
                         </div>
                         <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-medium italic mb-4">"Os carrosséis para o feed ficaram super elegantes e didáticos. A identidade visual transmitiu exatamente a sofisticação da nossa marca."</p>
+                    <p class="text-sm text-bordo font-medium italic mb-4">"Os carrosséis para o feed ficaram super elegantes e didáticos. O design transmitiu exatamente a sofisticação da nossa marca."</p>
                 </div>
                 <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
-                    <span>Carrosséis & Branding</span>
+                    <span>Carrosséis & Feed</span>
                     <span class="text-rosa">Ótica Especializada</span>
                 </div>
             </div>
 
-            <!-- 3. Kraken's PC Store & Lab -->
+            <!-- 3. Kraken's PC Store & Lab (CORRIGIDO: Social Media & Artes) -->
             <div class="card-depoimento bg-white border-2 border-rosaclaro hover:border-rosa hover:-translate-y-1 transition-all duration-300 rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-3">
@@ -492,28 +500,28 @@
                             <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png" alt="Kraken's Logo" class="w-9 h-9 object-contain rounded-full border border-rosa p-0.5 bg-creme">
                             <div>
                                 <span class="font-black text-bordo text-base block leading-tight">Kraken's PC Store</span>
-                                <span class="text-[11px] text-bordo/70 font-bold">Hardware & Assistência</span>
+                                <span class="text-[11px] text-bordo/70 font-bold">Hardware & Informática</span>
                             </div>
                         </div>
                         <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-medium italic mb-4">"Estruturação visual impecável, artes para posts técnicos de alto nível e um ecossistema digital muito ágil e profissional."</p>
+                    <p class="text-sm text-bordo font-medium italic mb-4">"Artes para redes sociais de alto nível técnico! O design dos posts e stories valorizou muito nossos produtos de informática."</p>
                 </div>
                 <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
-                    <span>Branding & Social Media</span>
+                    <span>Posts & Social Media</span>
                     <span class="text-rosa">Informática & Tech</span>
                 </div>
             </div>
         </div>
 
         <div class="mt-8 text-center">
-            <button type="button" onclick="abrirModalFeedback()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 px-6 rounded-2xl transition-all shadow-md">
+            <button type="button" onclick="abrirModalFeedback()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 px-6 rounded-2xl transition-all shadow-md btn-dynamic">
                 ✨ Já é cliente? Deixe seu Feedback aqui!
             </button>
         </div>
     </section>
 
-    <!-- 4. CATÁLOGO DE ENTREGÁVEIS -->
+    <!-- 5. CATÁLOGO DE ENTREGÁVEIS -->
     <section id="catalogo-entregaveis" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
         <div class="bg-white border-2 border-rosaclaro rounded-3xl p-6 sm:p-10 shadow-lg">
             <div class="text-center mb-8">
@@ -545,7 +553,7 @@
                     </div>
                     <div class="pt-4 border-t border-rosaclaro/60 flex items-center justify-between">
                         <span class="text-xl font-black text-bordo">R$ 600,00</span>
-                        <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-4 rounded-xl transition-all shadow-sm">
+                        <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-4 rounded-xl transition-all shadow-sm btn-dynamic">
                             Adicionar +
                         </button>
                     </div>
@@ -571,7 +579,7 @@
                     </div>
                     <div class="pt-4 border-t border-rosaclaro/60 flex items-center justify-between">
                         <span class="text-xl font-black text-bordo">R$ 750,00</span>
-                        <button type="button" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-4 rounded-xl transition-all shadow-sm">
+                        <button type="button" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-4 rounded-xl transition-all shadow-sm btn-dynamic">
                             Adicionar +
                         </button>
                     </div>
@@ -597,7 +605,7 @@
                     </div>
                     <div class="pt-4 border-t border-rosaclaro/60 flex items-center justify-between">
                         <span class="text-xl font-black text-bordo">R$ 2.600 / mês</span>
-                        <button type="button" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-4 rounded-xl transition-all shadow-sm">
+                        <button type="button" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-4 rounded-xl transition-all shadow-sm btn-dynamic">
                             Adicionar +
                         </button>
                     </div>
@@ -606,7 +614,7 @@
         </div>
     </section>
 
-    <!-- 4. CATÁLOGO DE SERVIÇOS & SEPARAÇÃO DAS 4 CATEGORIAS -->
+    <!-- 6. CATÁLOGO DE SERVIÇOS & CATEGORIAS -->
     <section id="tabela" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
         <div class="text-center mb-8">
             <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
@@ -623,33 +631,33 @@
                     <div class="text-2xl mb-2">💻</div>
                     <h3 class="font-black text-bordo text-lg mb-2">1. Web Design & Branding</h3>
                     <ul class="space-y-1.5 text-xs sm:text-sm text-bordo font-bold">
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')"><strong class="text-bordo font-black">Link na Bio / Mini Site ➔</strong><span>R$ 240,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')"><strong class="text-bordo font-black">Landing Page de Vendas ➔</strong><span>R$ 750,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')"><strong class="text-bordo font-black">Site Institucional ➔</strong><span>R$ 1.300,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')"><strong class="text-bordo font-black">Identidade Visual + Manual ➔</strong><span>R$ 600,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')"><strong class="text-bordo font-black">Link na Bio / Mini Site ➔</strong><span>R$ 240,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')"><strong class="text-bordo font-black">Landing Page de Vendas ➔</strong><span>R$ 750,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')"><strong class="text-bordo font-black">Site Institucional ➔</strong><span>R$ 1.300,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')"><strong class="text-bordo font-black">Identidade Visual + Manual ➔</strong><span>R$ 600,00</span></button></li>
                     </ul>
                 </div>
                 <div class="pt-3 border-t border-rosaclaro/60 mt-3">
-                    <button type="button" class="w-full p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa text-left" onclick="selecionarServicoPorTabela('Total Área 01: Web Design & Branding')">
+                    <button type="button" class="w-full p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa text-left btn-dynamic" onclick="selecionarServicoPorTabela('Total Área 01: Web Design & Branding')">
                         <strong class="text-bordo font-black text-xs">📦 Total Área 01 (Web & Branding)</strong>
                         <span class="text-bordo font-black text-sm">R$ 1.590,00</span>
                     </button>
                 </div>
             </div>
 
-            <!-- ÁREA 02: ILUSTRAÇÃO 2D & VETORIZAÇÃO (ISOLADA) -->
+            <!-- ÁREA 02: ILUSTRAÇÃO 2D & VETORIZAÇÃO -->
             <div class="bg-white border-2 border-rosaclaro rounded-3xl p-5 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="text-2xl mb-2">🎨</div>
                     <h3 class="font-black text-bordo text-lg mb-2">2. Ilustração 2D & Vetor</h3>
                     <ul class="space-y-1.5 text-xs sm:text-sm text-bordo font-bold">
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Ilustração 2D / Capas & Vetorização')"><strong class="text-bordo font-black">Ilustração 2D & Capas ➔</strong><span>R$ 340,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Criação de Personagem 2D (Illustrator)')"><strong class="text-bordo font-black">Personagem 2D Vetorial ➔</strong><span>R$ 260,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Criação de Personagens IA')"><strong class="text-bordo font-black">Personagens Conceituais IA ➔</strong><span>R$ 200,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Ilustração 2D / Capas & Vetorização')"><strong class="text-bordo font-black">Ilustração 2D & Capas ➔</strong><span>R$ 340,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Criação de Personagem 2D (Illustrator)')"><strong class="text-bordo font-black">Personagem 2D Vetorial ➔</strong><span>R$ 260,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Criação de Personagens IA')"><strong class="text-bordo font-black">Personagens Conceituais IA ➔</strong><span>R$ 200,00</span></button></li>
                     </ul>
                 </div>
                 <div class="pt-3 border-t border-rosaclaro/60 mt-3">
-                    <button type="button" class="w-full p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa text-left" onclick="selecionarServicoPorTabela('Total Área 02: Ilustração & Arte')">
+                    <button type="button" class="w-full p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa text-left btn-dynamic" onclick="selecionarServicoPorTabela('Total Área 02: Ilustração & Arte')">
                         <strong class="text-bordo font-black text-xs">📦 Total Área 02 (Ilustração)</strong>
                         <span class="text-bordo font-black text-sm">R$ 800,00</span>
                     </button>
@@ -662,8 +670,8 @@
                     <div class="text-2xl mb-2">🎬</div>
                     <h3 class="font-black text-bordo text-lg mb-2">Área Nova: Edição de Vídeo</h3>
                     <ul class="space-y-1.5 text-xs sm:text-sm text-bordo font-bold">
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-ia')"><strong class="text-bordo font-black">Vídeos/Cenários IA ➔</strong><span>R$ 100,00 / min</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="destacarOpcaoCalculadora('check-video-geral')"><strong class="text-bordo font-black">Edição CapCut Sem IA ➔</strong><span>R$ 60,00 / min</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="destacarOpcaoCalculadora('check-video-ia')"><strong class="text-bordo font-black">Vídeos/Cenários IA ➔</strong><span>R$ 100,00 / min</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="destacarOpcaoCalculadora('check-video-geral')"><strong class="text-bordo font-black">Edição CapCut Sem IA ➔</strong><span>R$ 60,00 / min</span></button></li>
                     </ul>
                 </div>
                 <div class="pt-3 border-t border-rosaclaro/60 mt-3">
@@ -680,14 +688,14 @@
                     <div class="text-2xl mb-2">📱</div>
                     <h3 class="font-black text-bordo text-lg mb-2">3. Redes Sociais & Mensal</h3>
                     <ul class="space-y-1.5 text-xs sm:text-sm text-bordo font-bold">
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Post Estático Avulso')"><strong class="text-bordo font-black">Post Estático Avulso ➔</strong><span>R$ 60,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Carrossel Avulso (Até 6 telas)')"><strong class="text-bordo font-black">Carrossel (Até 6 telas) ➔</strong><span>R$ 110,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')"><strong class="text-bordo font-black">Combo Social Media ➔</strong><span>R$ 650,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl bg-bordo/10 hover:bg-rosa/30 transition-colors flex flex-col border border-rosa" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')"><strong class="text-bordo font-black">⭐ Assessoria Mensal ➔</strong><span>R$ 2.600,00 / mês</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Post Estático Avulso')"><strong class="text-bordo font-black">Post Estático Avulso ➔</strong><span>R$ 60,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Carrossel Avulso (Até 6 telas)')"><strong class="text-bordo font-black">Carrossel (Até 6 telas) ➔</strong><span>R$ 110,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')"><strong class="text-bordo font-black">Combo Social Media ➔</strong><span>R$ 650,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl bg-bordo/10 hover:bg-rosa/30 transition-colors flex flex-col border border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')"><strong class="text-bordo font-black">⭐ Assessoria Mensal ➔</strong><span>R$ 2.600,00 / mês</span></button></li>
                     </ul>
                 </div>
                 <div class="pt-3 border-t border-rosaclaro/60 mt-3">
-                    <button type="button" class="w-full p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa text-left" onclick="selecionarServicoPorTabela('Total Área 03: Redes Sociais & Conteúdo')">
+                    <button type="button" class="w-full p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa text-left btn-dynamic" onclick="selecionarServicoPorTabela('Total Área 03: Redes Sociais & Conteúdo')">
                         <strong class="text-bordo font-black text-xs">📦 Total Área 03 (Redes Sociais)</strong>
                         <span class="text-bordo font-black text-sm">R$ 820,00</span>
                     </button>
@@ -696,7 +704,7 @@
         </div>
     </section>
 
-    <!-- 5. CENTRAL DE SUPORTE, FAQ E TERMOS -->
+    <!-- 7. CENTRAL DE SUPORTE, FAQ E TERMOS -->
     <section id="faq-duvidas" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-lg">
             <div class="text-center mb-8">
@@ -747,10 +755,10 @@
                         </p>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-2 justify-center">
-                        <button type="button" onclick="abrirModalDuvida()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all shadow-md">
+                        <button type="button" onclick="abrirModalDuvida()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all shadow-md btn-dynamic">
                             Enviar Dúvida Direta ➔
                         </button>
-                        <button type="button" onclick="abrirModalSuporte()" class="bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all">
+                        <button type="button" onclick="abrirModalSuporte()" class="bg-rosaclaro text-bordo hover:bg-rosa font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all btn-dynamic">
                             Abrir Chamado / Suporte 🛠️
                         </button>
                     </div>
@@ -759,7 +767,7 @@
         </div>
     </section>
 
-    <!-- 6. CALCULADORA, CARRINHO E MODAL DE ORÇAMENTO -->
+    <!-- 8. CALCULADORA, CARRINHO E MODAL DE ORÇAMENTO -->
     <section id="simulador" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden">
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
@@ -771,7 +779,7 @@
                         Monte o seu Carrinho de Serviços 💻
                     </h2>
                 </div>
-                <button type="button" onclick="limparCalculadora()" class="bg-rosaclaro/60 hover:bg-rosa text-bordo font-black text-xs sm:text-sm py-2 px-4 rounded-xl transition-all border border-rosa/40 flex items-center gap-1.5">
+                <button type="button" onclick="limparCalculadora()" class="bg-rosaclaro/60 hover:bg-rosa text-bordo font-black text-xs sm:text-sm py-2 px-4 rounded-xl transition-all border border-rosa/40 flex items-center gap-1.5 btn-dynamic">
                     🔄 Esvaziar Carrinho
                 </button>
             </div>
@@ -781,16 +789,16 @@
             </p>
 
             <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-6 text-xs sm:text-sm font-black scrollbar-none">
-                <button type="button" data-cat-btn="todas" onclick="filtrarCategoria('todas', this)" class="btn-filtro px-4 py-2 rounded-xl bg-bordo text-creme border-2 border-bordo transition-all shrink-0">Todos os Serviços</button>
-                <button type="button" data-cat-btn="web" onclick="filtrarCategoria('web', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0">🌐 Web & Sites</button>
-                <button type="button" data-cat-btn="identidade" onclick="filtrarCategoria('identidade', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0">🎨 Identidade & Ilustração</button>
-                <button type="button" data-cat-btn="video" onclick="filtrarCategoria('video', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0">🎬 Vídeos & IA</button>
-                <button type="button" data-cat-btn="social" onclick="filtrarCategoria('social', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0">📱 Redes Sociais & Mensal</button>
+                <button type="button" data-cat-btn="todas" onclick="filtrarCategoria('todas', this)" class="btn-filtro px-4 py-2 rounded-xl bg-bordo text-creme border-2 border-bordo transition-all shrink-0 btn-dynamic">Todos os Serviços</button>
+                <button type="button" data-cat-btn="web" onclick="filtrarCategoria('web', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0 btn-dynamic">🌐 Web & Sites</button>
+                <button type="button" data-cat-btn="identidade" onclick="filtrarCategoria('identidade', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0 btn-dynamic">🎨 Identidade & Ilustração</button>
+                <button type="button" data-cat-btn="video" onclick="filtrarCategoria('video', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0 btn-dynamic">🎬 Vídeos & IA</button>
+                <button type="button" data-cat-btn="social" onclick="filtrarCategoria('social', this)" class="btn-filtro px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa transition-all shrink-0 btn-dynamic">📱 Redes Sociais & Mensal</button>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8" id="grid-calc-items">
                 <!-- Totais por Área -->
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="1590" data-name="Total Área 01: Web Design & Branding" onchange="notificarCheckboxDireto(this, 'Total Área 01: Web Design & Branding')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Total Área 01: Web Design & Branding</span>
@@ -799,7 +807,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 1.590</span>
                 </label>
 
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="800" data-name="Total Área 02: Ilustração & Arte" onchange="notificarCheckboxDireto(this, 'Total Área 02: Ilustração & Arte')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Total Área 02: Ilustração & Arte</span>
@@ -808,7 +816,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 800</span>
                 </label>
 
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="820" data-name="Total Área 03: Redes Sociais & Conteúdo" onchange="notificarCheckboxDireto(this, 'Total Área 03: Redes Sociais & Conteúdo')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Total Área 03: Redes Sociais & Conteúdo</span>
@@ -818,7 +826,7 @@
                 </label>
 
                 <!-- Itens Avulsos Web -->
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="1300" data-name="Site Institucional Multi-Páginas" onchange="notificarCheckboxDireto(this, 'Site Institucional Multi-Páginas')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Site Institucional Multi-Páginas</span>
@@ -827,7 +835,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 1.300</span>
                 </label>
 
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="750" data-name="Landing Page de Vendas / Captura" onchange="notificarCheckboxDireto(this, 'Landing Page de Vendas / Captura')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Landing Page de Vendas / Captura</span>
@@ -836,7 +844,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 750</span>
                 </label>
 
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="240" data-name="Link na Bio / Mini Site Interativo" onchange="notificarCheckboxDireto(this, 'Link na Bio / Mini Site Interativo')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Link na Bio / Mini Site Interativo</span>
@@ -846,7 +854,7 @@
                 </label>
 
                 <!-- Itens Avulsos Branding & Ilustração -->
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="600" data-name="Identidade Visual Completa + Manual" onchange="notificarCheckboxDireto(this, 'Identidade Visual Completa + Manual')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Identidade Visual Completa + Manual</span>
@@ -855,7 +863,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 600</span>
                 </label>
 
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="340" data-name="Ilustração 2D / Capas & Vetorização" onchange="notificarCheckboxDireto(this, 'Ilustração 2D / Capas & Vetorização')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Ilustração 2D / Capas & Vetorização</span>
@@ -864,7 +872,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 340</span>
                 </label>
 
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="260" data-name="Criação de Personagem 2D (Illustrator)" onchange="notificarCheckboxDireto(this, 'Criação de Personagem 2D (Illustrator)')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Criação de Personagem 2D (Illustrator)</span>
@@ -873,7 +881,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 260</span>
                 </label>
 
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="200" data-name="Criação de Personagens IA" onchange="notificarCheckboxDireto(this, 'Criação de Personagens IA')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Criação de Personagens IA</span>
@@ -883,7 +891,7 @@
                 </label>
 
                 <!-- Itens Social Media -->
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="60" data-name="Post Estático Avulso" onchange="notificarCheckboxDireto(this, 'Post Estático Avulso')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Post Estático Avulso</span>
@@ -892,7 +900,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 60</span>
                 </label>
 
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="110" data-name="Carrossel Avulso (Até 6 telas)" onchange="notificarCheckboxDireto(this, 'Carrossel Avulso (Até 6 telas)')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Carrossel Avulso (Até 6 Telas)</span>
@@ -901,7 +909,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 110</span>
                 </label>
 
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 md:col-span-2" data-cat="social">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 md:col-span-2" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="650" data-name="Combo Social Media Completo: Posts + Reels + Stories" onchange="notificarCheckboxDireto(this, 'Combo Social Media Completo: Posts + Reels + Stories')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Combo Social Media Completo: Posts + Reels + Stories</span>
@@ -911,7 +919,7 @@
                 </label>
 
                 <!-- Assessoria Mensal -->
-                <label class="calc-item-card flex items-center gap-4 p-4 border-2 border-rosa rounded-2xl cursor-pointer hover:scale-[1.01] transition-all bg-rosa/10 md:col-span-2" data-cat="social">
+                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosa rounded-2xl cursor-pointer hover:scale-[1.01] transition-all bg-rosa/10 md:col-span-2" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="2600" data-name="Assessoria Mensal Dedicada (Base Fixa)" onchange="notificarCheckboxDireto(this, 'Assessoria Mensal Dedicada (Base Fixa)')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">⭐ Assessoria Mensal Dedicada (Base Fixa)</span>
@@ -921,7 +929,7 @@
                 </label>
 
                 <!-- VÍDEOS COM IA -->
-                <div id="wrapper-video-ia" class="calc-item-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2" data-cat="video">
+                <div id="wrapper-video-ia" class="calc-item-card relative flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo" onchange="toggleIaMinutos(); calcularTotal(); if(this.checked) mostrarToast('Defina a minutagem de Vídeos com IA!', '🤖');">
                         <div>
@@ -932,15 +940,15 @@
                     <div id="box-minutos-ia" class="hidden flex items-center justify-between pt-2 border-t border-rosaclaro/60 pl-9">
                         <span class="text-sm font-black text-bordo">Quantos Minutos de Vídeo com IA exatos?</span>
                         <div class="flex items-center gap-2">
-                            <button type="button" aria-label="Diminuir minutos IA" onclick="mudarIaMinutos(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">-</button>
+                            <button type="button" aria-label="Diminuir minutos IA" onclick="mudarIaMinutos(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors btn-dynamic">-</button>
                             <input type="number" id="input-minutos-ia" aria-label="Minutos de vídeo IA" value="1" min="1" max="240" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-lg font-black text-base py-1 bg-white">
-                            <button type="button" aria-label="Aumentar minutos IA" onclick="mudarIaMinutos(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">+</button>
+                            <button type="button" aria-label="Aumentar minutos IA" onclick="mudarIaMinutos(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors btn-dynamic">+</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- EDIÇÃO DE VÍDEO GERAL -->
-                <div id="wrapper-video-geral" class="calc-item-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2" data-cat="video">
+                <div id="wrapper-video-geral" class="calc-item-card relative flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo" onchange="toggleVideoGeral(); calcularTotal(); if(this.checked) mostrarToast('Defina a minutagem de Edição CapCut!', '🎬');">
                         <div>
@@ -951,9 +959,9 @@
                     <div id="box-minutos-geral" class="hidden flex items-center justify-between pt-2 border-t border-rosaclaro/60 pl-9">
                         <span class="text-sm font-black text-bordo">Quantos Minutos de Edição exatos?</span>
                         <div class="flex items-center gap-2">
-                            <button type="button" aria-label="Diminuir minutos CapCut" onclick="mudarMinutosGeral(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">-</button>
+                            <button type="button" aria-label="Diminuir minutos CapCut" onclick="mudarMinutosGeral(-1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors btn-dynamic">-</button>
                             <input type="number" id="input-minutos-geral" aria-label="Minutos de vídeo CapCut" value="1" min="1" max="480" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-lg font-black text-base py-1 bg-white">
-                            <button type="button" aria-label="Aumentar minutos CapCut" onclick="mudarMinutosGeral(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors">+</button>
+                            <button type="button" aria-label="Aumentar minutos CapCut" onclick="mudarMinutosGeral(1)" class="w-8 h-8 bg-bordo text-creme rounded-lg font-black flex items-center justify-center hover:bg-rosa hover:text-bordo transition-colors btn-dynamic">+</button>
                         </div>
                     </div>
                 </div>
@@ -967,7 +975,7 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                        <button type="button" onclick="abrirModalOrcamento()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm sm:text-base py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md">
+                        <button type="button" onclick="abrirModalOrcamento()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm sm:text-base py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md btn-dynamic">
                             Gerar Orçamento Formal ➔
                         </button>
                     </div>
@@ -979,23 +987,23 @@
     <!-- MODAL: PREVIEW DE DETALHES DO PROJETO DO PORTFÓLIO -->
     <div id="modalPortfolioPreview" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/80 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-2xl text-left relative my-8">
-            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalPreview()">&times;</button>
+            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa btn-dynamic" onclick="fecharModalPreview()">&times;</button>
             <div class="mb-4">
                 <span id="preview-tag" class="inline-block bg-rosa text-bordo text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider mb-2">Categoria</span>
                 <h3 id="preview-titulo" class="text-2xl font-black text-bordo leading-tight">Nome do Projeto</h3>
             </div>
-            <div id="preview-img-container" class="w-full h-48 bg-creme rounded-2xl overflow-hidden mb-4 flex items-center justify-center border border-rosaclaro">
-                <img id="preview-img" src="" alt="Projeto Preview" class="w-full h-full object-contain p-2">
+            <div id="preview-img-container" class="w-full h-48 bg-creme rounded-2xl overflow-hidden mb-4 flex items-center justify-center border border-rosaclaro p-3">
+                <img id="preview-img" src="" alt="Projeto Preview" class="w-full h-full object-contain">
             </div>
             <p id="preview-desc" class="text-sm text-bordo font-medium leading-relaxed mb-6">Descrição detalhada do projeto.</p>
             <div class="flex items-center justify-between gap-3 border-t border-rosaclaro/60 pt-4">
-                <button type="button" onclick="fecharModalPreview()" class="bg-gray-100 text-bordo hover:bg-rosaclaro font-black text-xs py-2.5 px-4 rounded-xl transition-colors">Fechar</button>
-                <a href="#simulador" onclick="fecharModalPreview()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2.5 px-5 rounded-xl transition-colors shadow-sm">Simular Projeto Similar ➔</a>
+                <button type="button" onclick="fecharModalPreview()" class="bg-gray-100 text-bordo hover:bg-rosaclaro font-black text-xs py-2.5 px-4 rounded-xl transition-colors btn-dynamic">Fechar</button>
+                <a href="#simulador" onclick="fecharModalPreview()" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2.5 px-5 rounded-xl transition-colors shadow-sm btn-dynamic">Simular Projeto Similar ➔</a>
             </div>
         </div>
     </div>
 
-    <!-- MODAL: GERADOR DE ORÇAMENTO FORMAL (HARMONIZADO VISUALMENTE & REFERÊNCIA OPCIONAL) -->
+    <!-- MODAL: GERADOR DE ORÇAMENTO FORMAL -->
     <div id="modalOrcamento" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/80 backdrop-blur-md hidden items-center justify-center p-2 sm:p-4 z-50 overflow-y-auto">
         <div class="bg-cinzaclaro rounded-3xl w-full max-w-2xl shadow-2xl relative my-4 flex flex-col max-h-[95vh] border-2 border-rosa">
             <div class="bg-white border-b-2 border-rosaclaro p-4 sm:p-6 rounded-t-3xl flex items-center justify-between shrink-0">
@@ -1003,7 +1011,7 @@
                     <h2 id="modal-orcamento-titulo" class="text-2xl font-black text-bordo leading-none">Novo Orçamento</h2>
                     <p class="text-xs text-bordo/70 font-semibold mt-1">Preencha os dados para registrar e enviar a proposta.</p>
                 </div>
-                <button type="button" aria-label="Fechar" class="bg-rosaclaro/40 text-bordo hover:bg-rosa text-xs font-black py-2 px-4 rounded-xl transition-colors" onclick="fecharModalOrcamento()">Cancelar</button>
+                <button type="button" aria-label="Fechar" class="bg-rosaclaro/40 text-bordo hover:bg-rosa text-xs font-black py-2 px-4 rounded-xl transition-colors btn-dynamic" onclick="fecharModalOrcamento()">Cancelar</button>
             </div>
 
             <div class="p-4 sm:p-6 overflow-y-auto modal-scroll space-y-4 flex-1">
@@ -1027,13 +1035,12 @@
                             </div>
                         </div>
                         <div>
-                            <!-- CAMPO REFERÊNCIA OPCIONAL -->
                             <label class="block text-xs font-bold text-bordo mb-1">Referência (Nome do Projeto) <span class="text-bordo/60 font-normal">(Opcional)</span></label>
                             <input type="text" id="orc-ref" maxlength="120" placeholder="Ex: Criação de Identidade Visual Studio X" class="w-full p-2.5 bg-creme/20 border border-rosaclaro rounded-lg text-sm font-semibold text-bordo focus:border-bordo outline-none">
                         </div>
                     </div>
 
-                    <!-- BLOCO 2: DADOS DO CLIENTE (OBRIGATÓRIOS) -->
+                    <!-- BLOCO 2: DADOS DO CLIENTE -->
                     <div class="bg-white border-2 border-rosaclaro rounded-2xl p-4 shadow-sm mb-4">
                         <h3 class="text-sm font-black text-bordo mb-3 border-b border-rosaclaro/60 pb-2">Dados do Cliente</h3>
                         <div class="space-y-3">
@@ -1060,7 +1067,7 @@
                         </div>
                     </div>
 
-                    <!-- BLOCO 4: PAGAMENTO & OBSERVAÇÕES -->
+                    <!-- BLOCO 4: FORMA DE PAGAMENTO -->
                     <div class="bg-white border-2 border-rosaclaro rounded-2xl p-4 shadow-sm mb-4">
                         <div class="mb-4">
                             <label class="block text-xs font-bold text-bordo mb-2">Forma de Pagamento Preferida *</label>
@@ -1101,7 +1108,7 @@
 
             <div class="bg-white border-t-2 border-rosaclaro p-4 sm:p-5 rounded-b-3xl flex items-center justify-between shrink-0">
                 <span class="text-xs font-semibold text-bordo/60 hidden sm:block">Eve Design Studio - Sistema Integrado</span>
-                <button type="button" id="btn-finalizar-orcamento" onclick="validarEEnviarOrcamento()" class="w-full sm:w-auto bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 px-8 rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                <button type="button" id="btn-finalizar-orcamento" onclick="validarEEnviarOrcamento()" class="w-full sm:w-auto bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 px-8 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 btn-dynamic">
                     ✅ Finalizar & Enviar Orçamento
                 </button>
             </div>
@@ -1111,7 +1118,7 @@
     <!-- MODAL DÚVIDA -->
     <div id="modalDuvida" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
-            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalDuvida()">&times;</button>
+            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa btn-dynamic" onclick="fecharModalDuvida()">&times;</button>
             <div class="text-center mb-4"><h2 class="text-2xl font-black text-bordo">Tire sua Dúvida ✨</h2></div>
             <form id="formDuvida" onsubmit="enviarDuvida(event)">
                 <input type="text" id="hp-duvida" name="website_hp" class="hp-field" tabindex="-1" autocomplete="off">
@@ -1126,7 +1133,7 @@
                     </select>
                     <textarea id="duvida-mensagem" rows="4" required maxlength="600" placeholder="Escreva sua dúvida..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold text-bordo outline-none focus:border-bordo resize-none"></textarea>
                 </div>
-                <button type="submit" id="btn-env-duvida" class="w-full mt-4 bg-bordo text-creme font-black text-sm py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Enviar Dúvida ➔</button>
+                <button type="submit" id="btn-env-duvida" class="w-full mt-4 bg-bordo text-creme font-black text-sm py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors btn-dynamic">Enviar Dúvida ➔</button>
             </form>
         </div>
     </div>
@@ -1134,7 +1141,7 @@
     <!-- MODAL SUPORTE -->
     <div id="modalSuporte" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
-            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalSuporte()">&times;</button>
+            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa btn-dynamic" onclick="fecharModalSuporte()">&times;</button>
             <div class="text-center mb-4"><h2 class="text-2xl font-black text-bordo">Suporte ao Cliente 🛠️</h2></div>
             <form id="formSuporte" onsubmit="enviarSuporte(event)">
                 <input type="text" id="hp-suporte" name="website_hp" class="hp-field" tabindex="-1" autocomplete="off">
@@ -1148,7 +1155,7 @@
                     </select>
                     <textarea id="suporte-descricao" rows="4" required maxlength="600" placeholder="Descreva o ajuste necessário..." class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold text-bordo outline-none focus:border-bordo resize-none"></textarea>
                 </div>
-                <button type="submit" id="btn-env-suporte" class="w-full mt-4 bg-bordo text-creme font-black text-sm py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Registrar Suporte ➔</button>
+                <button type="submit" id="btn-env-suporte" class="w-full mt-4 bg-bordo text-creme font-black text-sm py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors btn-dynamic">Registrar Suporte ➔</button>
             </form>
         </div>
     </div>
@@ -1156,7 +1163,7 @@
     <!-- MODAL FEEDBACK -->
     <div id="modalFeedback" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-left relative my-8">
-            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalFeedback()">&times;</button>
+            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa btn-dynamic" onclick="fecharModalFeedback()">&times;</button>
             <div class="text-center mb-4"><h2 class="text-2xl font-black text-bordo">Deixe seu Feedback! ⭐</h2></div>
             <form id="formFeedback" onsubmit="enviarFeedback(event)">
                 <input type="text" id="hp-feedback" name="website_hp" class="hp-field" tabindex="-1" autocomplete="off">
@@ -1169,7 +1176,7 @@
                     </select>
                     <textarea id="fb-comentario" rows="4" required maxlength="600" placeholder="Como foi sua experiência?" class="w-full p-2.5 border-2 border-rosaclaro rounded-xl text-sm font-semibold text-bordo outline-none focus:border-bordo resize-none"></textarea>
                 </div>
-                <button type="submit" id="btn-env-feedback" class="w-full mt-4 bg-bordo text-creme font-black text-sm py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Enviar Feedback ➔</button>
+                <button type="submit" id="btn-env-feedback" class="w-full mt-4 bg-bordo text-creme font-black text-sm py-3 rounded-xl hover:bg-rosa hover:text-bordo transition-colors btn-dynamic">Enviar Feedback ➔</button>
             </form>
         </div>
     </div>
@@ -1180,29 +1187,29 @@
             <h2 class="text-2xl font-black text-bordo mb-1" id="modal-titulo">Ferramenta</h2>
             <div class="mb-3"><span id="modal-nivel-badge" class="inline-block bg-rosa text-bordo font-black text-xs px-3 py-1 rounded-full">Nível</span></div>
             <p class="text-base text-bordo font-semibold mb-6" id="modal-desc">Descrição</p>
-            <button type="button" onclick="fecharModal()" class="bg-bordo text-creme font-black text-xs py-3 px-8 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Fechar</button>
+            <button type="button" onclick="fecharModal()" class="bg-bordo text-creme font-black text-xs py-3 px-8 rounded-xl hover:bg-rosa hover:text-bordo transition-colors btn-dynamic">Fechar</button>
         </div>
     </div>
 
     <!-- MODAL LEGAL -->
     <div id="modalLegal" role="dialog" aria-modal="true" class="modal-backdrop fixed inset-0 bg-bordo/70 backdrop-blur-sm hidden items-center justify-center p-4 z-50 overflow-y-auto">
         <div class="bg-white border-2 border-rosa rounded-3xl p-6 sm:p-8 max-w-2xl w-full shadow-2xl text-left relative my-8">
-            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa" onclick="fecharModalLegal()">&times;</button>
+            <button type="button" aria-label="Fechar" class="absolute top-4 right-4 text-2xl font-black cursor-pointer text-bordo hover:text-rosa btn-dynamic" onclick="fecharModalLegal()">&times;</button>
             <h2 class="text-2xl sm:text-3xl font-black text-bordo mb-4" id="modal-legal-titulo">Documento Legal</h2>
             <div class="text-sm sm:text-base text-bordo font-medium leading-relaxed space-y-3" id="modal-legal-conteudo"></div>
-            <div class="mt-6 text-center"><button type="button" onclick="fecharModalLegal()" class="bg-bordo text-creme font-black text-xs py-2.5 px-8 rounded-xl hover:bg-rosa hover:text-bordo transition-colors">Entendido</button></div>
+            <div class="mt-6 text-center"><button type="button" onclick="fecharModalLegal()" class="bg-bordo text-creme font-black text-xs py-2.5 px-8 rounded-xl hover:bg-rosa hover:text-bordo transition-colors btn-dynamic">Entendido</button></div>
         </div>
     </div>
 
-    <!-- 7. FOOTER INSTITUCIONAL (SEM ENDEREÇO OU DADOS PESSOAIS) -->
+    <!-- 9. FOOTER INSTITUCIONAL -->
     <footer class="w-full bg-white/90 border-t-2 border-rosaclaro py-8 text-center text-sm text-bordo font-bold mt-12 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 space-y-3">
             <div class="flex justify-center mb-2"><img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png" loading="lazy" alt="Logo Eve Design Studio" class="w-12 h-12 object-contain"></div>
             <p class="font-black text-base text-bordo">Eve Design Studio</p>
             <p class="text-xs sm:text-sm text-bordo/80 font-semibold">Design Estratégico, Identidades Visuais, Web & Vídeo</p>
             <p class="text-xs font-black">
-                <button type="button" onclick="abrirModalLegal('termos')" class="underline mx-2 hover:text-rosa">Termos de Serviço</button> • 
-                <button type="button" onclick="abrirModalLegal('privacidade')" class="underline mx-2 hover:text-rosa">Política de Privacidade</button>
+                <button type="button" onclick="abrirModalLegal('termos')" class="underline mx-2 hover:text-rosa btn-dynamic">Termos de Serviço</button> • 
+                <button type="button" onclick="abrirModalLegal('privacidade')" class="underline mx-2 hover:text-rosa btn-dynamic">Política de Privacidade</button>
             </p>
             <p class="text-xs text-bordo/60 pt-2 border-t border-rosaclaro/40">© 2026 Eve Design Studio. Todos os direitos reservados.</p>
         </div>
@@ -1559,7 +1566,7 @@
             document.getElementById('submit-orcamento-real').click();
         }
 
-        // DEBOUNCE E ENVIO SEGURO
+        // ENVIO SEGURO
         let enviandoOrcamento = false;
         function enviarOrcamentoProfissional(e) {
             e.preventDefault();
