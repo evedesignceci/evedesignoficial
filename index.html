@@ -16,6 +16,18 @@
     <meta property="og:image" content="https://res.cloudinary.com/oactqmgs/image/upload/v1786908961/EVE_LOGO_EVE_E_RAPOSA_1.png">
     <meta property="og:type" content="website">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Eve Design Studio",
+      "image": "https://res.cloudinary.com/oactqmgs/image/upload/v1786908915/EVE_LOGO_EVE_E_RAPOSA.png",
+      "description": "Estúdio criativo especializado em Web Design, Identidade Visual, Ilustração 2D, Edição de Vídeos no CapCut e IA Generativa.",
+      "url": "https://evececi-design.vercel.app",
+      "priceRange": "R$ 60,00 - R$ 2.600,00"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -66,8 +78,49 @@
         
         /* Interactive Physics */
         .btn-dynamic { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-        .btn-dynamic:active { transform: scale(0.96) translateY(1.5px); }
+        .btn-dynamic:active { transform: scale(0.94) translateY(2px) !important; }
         
+        /* Modern Hero Button Dynamics */
+        .btn-hero {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .btn-hero:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 12px 25px -5px rgba(243, 132, 178, 0.5), 0 8px 10px -6px rgba(110, 25, 64, 0.3);
+        }
+
+        /* Shimmer Sweep Animation */
+        .btn-shimmer-sweep {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shimmer-sweep::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -100%;
+            width: 50%;
+            height: 200%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg);
+            animation: shimmerSweep 4.5s infinite;
+        }
+        @keyframes shimmerSweep {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
+        }
+
+        /* Advanced Card Physics */
+        .card-advanced {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-advanced:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px -10px rgba(110, 25, 64, 0.15), 0 0 15px rgba(243, 132, 178, 0.3);
+            border-color: #F384B2 !important;
+        }
+
         .card-hover { transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); }
         .card-hover:hover { transform: translateY(-6px); box-shadow: 0 15px 30px -5px rgba(110, 25, 64, 0.15); border-color: #F384B2 !important; }
 
@@ -78,7 +131,7 @@
             transform: translateY(-2px);
         }
 
-        /* Shimmer Effect for high-intent CTAs */
+        /* Shimmer Effect for CTAs */
         .btn-shimmer { position: relative; overflow: hidden; }
         .btn-shimmer::after {
             content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
@@ -112,15 +165,15 @@
             100% { opacity: 1; transform: scale(1) translateY(0); }
         }
 
-        /* Error Shake Animation for Validation */
+        /* Validation Error Shake */
         @keyframes shakeError {
-            0%, 100% { transform: translateX(0); border-color: #ef4444; } /* red-500 */
+            0%, 100% { transform: translateX(0); border-color: #ef4444; box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3); } 
             20%, 60% { transform: translateX(-8px); border-color: #ef4444; }
             40%, 80% { transform: translateX(8px); border-color: #ef4444; }
         }
-        .shake-error { animation: shakeError 0.6s cubic-bezier(.36,.07,.19,.97) both !important; }
+        .shake-error { animation: shakeError 0.6s cubic-bezier(.36,.07,.19,.97) both !important; border-color: #ef4444 !important; }
 
-        /* Scrollbars & Accessibility */
+        /* General Adjustments */
         details > summary { list-style: none; } 
         details > summary::-webkit-details-marker { display: none; }
         details[open] summary .faq-icon { transform: rotate(180deg); }
@@ -133,7 +186,7 @@
 </head>
 <body class="bg-pattern min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-rosa selection:text-bordo">
 
-    <!-- DYNAMIC TOAST CONTAINER -->
+    <!-- DYNAMIC STACKING TOAST CONTAINER -->
     <div id="toast-container" class="fixed top-6 right-6 z-50 flex flex-col gap-3 pointer-events-none items-end w-full max-w-sm px-4 sm:px-0"></div>
 
     <!-- BANNER DE COOKIES -->
@@ -233,17 +286,17 @@
         </p>
 
         <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap max-w-3xl mx-auto mb-4">
-            <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-rosa text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 shadow-sm text-xs sm:text-sm font-black btn-dynamic">
-                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain"> Portfólio Canva
+            <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="group btn-hero btn-shimmer-sweep btn-dynamic px-5 py-2.5 bg-rosa text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 shadow-sm text-xs sm:text-sm font-black">
+                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6"> Portfólio Canva
             </a>
-            <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 bg-white border-2 border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa shadow-sm text-xs sm:text-sm font-black text-bordo btn-dynamic">
-                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain"> Instagram
+            <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="group btn-hero btn-dynamic px-5 py-2.5 bg-white border-2 border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa shadow-sm text-xs sm:text-sm font-black text-bordo">
+                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6"> Instagram
             </a>
-            <button type="button" onclick="abrirModalDuvida()" class="px-5 py-2.5 bg-amarelo text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 shadow-sm text-xs sm:text-sm font-black btn-dynamic">
-                ❓ Tirar Dúvida Rápida
+            <button type="button" onclick="abrirModalDuvida()" class="group btn-hero btn-shimmer-sweep btn-dynamic px-5 py-2.5 bg-amarelo text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 shadow-sm text-xs sm:text-sm font-black">
+                <span class="inline-block transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">❓</span> Tirar Dúvida Rápida
             </button>
-            <button type="button" onclick="abrirModalSuporte()" class="px-5 py-2.5 bg-rosaclaro text-bordo border-2 border-rosa rounded-full flex items-center gap-2 shadow-sm text-xs sm:text-sm font-black btn-dynamic">
-                🛠️ Suporte / Ajustes
+            <button type="button" onclick="abrirModalSuporte()" class="group btn-hero btn-dynamic px-5 py-2.5 bg-rosaclaro text-bordo border-2 border-rosa rounded-full flex items-center gap-2 shadow-sm text-xs sm:text-sm font-black">
+                <span class="inline-block transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">🛠️</span> Suporte / Ajustes
             </button>
         </div>
     </section>
@@ -338,7 +391,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="grid-portfolio-itens">
                 <!-- Julia Sales (Branding + Arte) -->
-                <div class="card-portfolio card-hover bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="branding arte">
+                <div class="card-portfolio card-advanced card-hover bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="branding arte">
                     <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
                         <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png" alt="Julia Sales Logo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
                         <span class="absolute top-3 left-3 bg-bordo text-creme text-[9px] font-black px-2.5 py-1 rounded-md uppercase">Branding & Vídeo</span>
@@ -356,7 +409,7 @@
                 </div>
 
                 <!-- Turminha do Xexéu (Arte + Social) -->
-                <div class="card-portfolio card-hover bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="arte social">
+                <div class="card-portfolio card-advanced card-hover bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="arte social">
                     <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
                         <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png" alt="Turminha do Xexéu" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
                         <span class="absolute top-3 left-3 bg-bordo text-creme text-[9px] font-black px-2.5 py-1 rounded-md uppercase">Animação & Social</span>
@@ -374,7 +427,7 @@
                 </div>
 
                 <!-- Kraken's (Social) -->
-                <div class="card-portfolio card-hover bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="social">
+                <div class="card-portfolio card-advanced card-hover bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="social">
                     <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
                         <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png" alt="Kraken's Logo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
                         <span class="absolute top-3 left-3 bg-bordo text-creme text-[9px] font-black px-2.5 py-1 rounded-md uppercase">Social Media Digital</span>
@@ -392,7 +445,7 @@
                 </div>
 
                 <!-- Saint Vision (Social) -->
-                <div class="card-portfolio card-hover bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="social">
+                <div class="card-portfolio card-advanced card-hover bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="social">
                     <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
                         <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png" alt="Saint Vision Home" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
                         <span class="absolute top-3 left-3 bg-bordo text-creme text-[9px] font-black px-2.5 py-1 rounded-md uppercase">Social Media Editorial</span>
@@ -458,7 +511,7 @@
                     <h3 class="text-xl sm:text-2xl font-black text-bordo">Identidade Visual Completa + Manual de Marca</h3>
                 </div>
                 <div class="flex items-center gap-4 shrink-0">
-                    <span class="text-2xl sm:text-3xl font-black text-bordo">R$ 600,00</span>
+                    <span class="text-2xl sm:text-3xl font-black text-bordo" id="preco-highlight-branding">R$ 600,00</span>
                     <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-sm py-3 px-6 rounded-xl transition-all shadow-md btn-dynamic btn-shimmer">
                         Contratar Branding 🛒
                     </button>
@@ -559,7 +612,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Card 1 -->
-                <div class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-6 flex flex-col justify-between transition-all card-hover">
+                <div class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-6 flex flex-col justify-between transition-all card-advanced card-hover">
                     <div>
                         <div class="flex items-center justify-between mb-3">
                             <span class="text-3xl">🎨</span>
@@ -577,7 +630,7 @@
                         </ul>
                     </div>
                     <div class="pt-4 border-t border-rosaclaro/60 flex items-center justify-between">
-                        <span class="text-xl font-black text-bordo">R$ 600,00</span>
+                        <span class="text-xl font-black text-bordo" id="preco-card-identidade">R$ 600,00</span>
                         <button type="button" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-4 rounded-xl transition-all shadow-sm btn-dynamic">
                             Adicionar +
                         </button>
@@ -585,7 +638,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-6 flex flex-col justify-between transition-all card-hover">
+                <div class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-6 flex flex-col justify-between transition-all card-advanced card-hover">
                     <div>
                         <div class="flex items-center justify-between mb-3">
                             <span class="text-3xl">🌐</span>
@@ -603,7 +656,7 @@
                         </ul>
                     </div>
                     <div class="pt-4 border-t border-rosaclaro/60 flex items-center justify-between">
-                        <span class="text-xl font-black text-bordo">R$ 750,00</span>
+                        <span class="text-xl font-black text-bordo" id="preco-card-landing">R$ 750,00</span>
                         <button type="button" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-4 rounded-xl transition-all shadow-sm btn-dynamic">
                             Adicionar +
                         </button>
@@ -611,7 +664,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-6 flex flex-col justify-between transition-all card-hover">
+                <div class="bg-creme/40 border-2 border-rosaclaro hover:border-rosa rounded-2xl p-6 flex flex-col justify-between transition-all card-advanced card-hover">
                     <div>
                         <div class="flex items-center justify-between mb-3">
                             <span class="text-3xl">📱</span>
@@ -629,7 +682,7 @@
                         </ul>
                     </div>
                     <div class="pt-4 border-t border-rosaclaro/60 flex items-center justify-between">
-                        <span class="text-xl font-black text-bordo">R$ 2.600 / mês</span>
+                        <span class="text-xl font-black text-bordo" id="preco-card-assessoria">R$ 2.600 / mês</span>
                         <button type="button" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')" class="bg-bordo text-creme hover:bg-rosa hover:text-bordo font-black text-xs py-2 px-4 rounded-xl transition-all shadow-sm btn-dynamic">
                             Adicionar +
                         </button>
@@ -656,16 +709,16 @@
                     <div class="text-2xl mb-2">💻</div>
                     <h3 class="font-black text-bordo text-lg mb-2">1. Web Design & Branding</h3>
                     <ul class="space-y-1.5 text-xs sm:text-sm text-bordo font-bold">
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')"><strong class="text-bordo font-black">Link na Bio / Mini Site ➔</strong><span>R$ 240,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')"><strong class="text-bordo font-black">Landing Page de Vendas ➔</strong><span>R$ 750,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')"><strong class="text-bordo font-black">Site Institucional ➔</strong><span>R$ 1.300,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')"><strong class="text-bordo font-black">Identidade Visual + Manual ➔</strong><span>R$ 600,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Link na Bio / Mini Site Interativo')"><strong class="text-bordo font-black">Link na Bio / Mini Site ➔</strong><span class="sync-price" data-sync="Link na Bio / Mini Site Interativo">R$ 240,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Landing Page de Vendas / Captura')"><strong class="text-bordo font-black">Landing Page de Vendas ➔</strong><span class="sync-price" data-sync="Landing Page de Vendas / Captura">R$ 750,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Site Institucional Multi-Páginas')"><strong class="text-bordo font-black">Site Institucional ➔</strong><span class="sync-price" data-sync="Site Institucional Multi-Páginas">R$ 1.300,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Identidade Visual Completa + Manual')"><strong class="text-bordo font-black">Identidade Visual + Manual ➔</strong><span class="sync-price" data-sync="Identidade Visual Completa + Manual">R$ 600,00</span></button></li>
                     </ul>
                 </div>
                 <div class="pt-3 border-t border-rosaclaro/60 mt-3">
                     <button type="button" class="w-full p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa text-left btn-dynamic" onclick="selecionarServicoPorTabela('Total Área 01: Web Design & Branding')">
                         <strong class="text-bordo font-black text-xs">📦 Total Área 01 (Web & Branding)</strong>
-                        <span class="text-bordo font-black text-sm">R$ 1.590,00</span>
+                        <span class="text-bordo font-black text-sm sync-price" data-sync="Total Área 01: Web Design & Branding">R$ 1.590,00</span>
                     </button>
                 </div>
             </div>
@@ -676,15 +729,15 @@
                     <div class="text-2xl mb-2">🎨</div>
                     <h3 class="font-black text-bordo text-lg mb-2">2. Ilustração 2D & Vetor</h3>
                     <ul class="space-y-1.5 text-xs sm:text-sm text-bordo font-bold">
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Ilustração 2D / Capas & Vetorização')"><strong class="text-bordo font-black">Ilustração 2D & Capas ➔</strong><span>R$ 340,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Criação de Personagem 2D (Illustrator)')"><strong class="text-bordo font-black">Personagem 2D Vetorial ➔</strong><span>R$ 260,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Criação de Personagens IA')"><strong class="text-bordo font-black">Personagens Conceituais IA ➔</strong><span>R$ 200,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Ilustração 2D / Capas & Vetorização')"><strong class="text-bordo font-black">Ilustração 2D & Capas ➔</strong><span class="sync-price" data-sync="Ilustração 2D / Capas & Vetorização">R$ 340,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Criação de Personagem 2D (Illustrator)')"><strong class="text-bordo font-black">Personagem 2D Vetorial ➔</strong><span class="sync-price" data-sync="Criação de Personagem 2D (Illustrator)">R$ 260,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Criação de Personagens IA')"><strong class="text-bordo font-black">Personagens Conceituais IA ➔</strong><span class="sync-price" data-sync="Criação de Personagens IA">R$ 200,00</span></button></li>
                     </ul>
                 </div>
                 <div class="pt-3 border-t border-rosaclaro/60 mt-3">
                     <button type="button" class="w-full p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa text-left btn-dynamic" onclick="selecionarServicoPorTabela('Total Área 02: Ilustração & Arte')">
                         <strong class="text-bordo font-black text-xs">📦 Total Área 02 (Ilustração)</strong>
-                        <span class="text-bordo font-black text-sm">R$ 800,00</span>
+                        <span class="text-bordo font-black text-sm sync-price" data-sync="Total Área 02: Ilustração & Arte">R$ 800,00</span>
                     </button>
                 </div>
             </div>
@@ -695,8 +748,8 @@
                     <div class="text-2xl mb-2">🎬</div>
                     <h3 class="font-black text-bordo text-lg mb-2">Área Nova: Edição de Vídeo</h3>
                     <ul class="space-y-1.5 text-xs sm:text-sm text-bordo font-bold">
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="destacarOpcaoCalculadora('check-video-ia')"><strong class="text-bordo font-black">Vídeos/Cenários IA ➔</strong><span>R$ 100,00 / min</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="destacarOpcaoCalculadora('check-video-geral')"><strong class="text-bordo font-black">Edição CapCut Sem IA ➔</strong><span>R$ 60,00 / min</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="destacarOpcaoCalculadora('check-video-ia')"><strong class="text-bordo font-black">Vídeos/Cenários IA ➔</strong><span id="preco-texto-ia" class="sync-price" data-sync="Edição de Vídeos com Inteligência Artificial">R$ 100,00 / min</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="destacarOpcaoCalculadora('check-video-geral')"><strong class="text-bordo font-black">Edição CapCut Sem IA ➔</strong><span id="preco-texto-geral" class="sync-price" data-sync="Edição Geral CapCut / Sem IA">R$ 60,00 / min</span></button></li>
                     </ul>
                 </div>
                 <div class="pt-3 border-t border-rosaclaro/60 mt-3">
@@ -713,16 +766,16 @@
                     <div class="text-2xl mb-2">📱</div>
                     <h3 class="font-black text-bordo text-lg mb-2">3. Redes Sociais & Mensal</h3>
                     <ul class="space-y-1.5 text-xs sm:text-sm text-bordo font-bold">
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Post Estático Avulso')"><strong class="text-bordo font-black">Post Estático Avulso ➔</strong><span>R$ 60,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Carrossel Avulso (Até 6 telas)')"><strong class="text-bordo font-black">Carrossel (Até 6 telas) ➔</strong><span>R$ 110,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')"><strong class="text-bordo font-black">Combo Social Media ➔</strong><span>R$ 650,00</span></button></li>
-                        <li><button type="button" class="w-full text-left p-2 rounded-xl bg-bordo/10 hover:bg-rosa/30 transition-colors flex flex-col border border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')"><strong class="text-bordo font-black">⭐ Assessoria Mensal ➔</strong><span>R$ 2.600,00 / mês</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Post Estático Avulso')"><strong class="text-bordo font-black">Post Estático Avulso ➔</strong><span class="sync-price" data-sync="Post Estático Avulso">R$ 60,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Carrossel Avulso (Até 6 telas)')"><strong class="text-bordo font-black">Carrossel (Até 6 telas) ➔</strong><span class="sync-price" data-sync="Carrossel Avulso (Até 6 telas)">R$ 110,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl hover:bg-rosaclaro/40 transition-colors flex flex-col border border-transparent hover:border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Combo Social Media Completo: Posts + Reels + Stories')"><strong class="text-bordo font-black">Combo Social Media ➔</strong><span class="sync-price" data-sync="Combo Social Media Completo: Posts + Reels + Stories">R$ 650,00</span></button></li>
+                        <li><button type="button" class="w-full text-left p-2 rounded-xl bg-bordo/10 hover:bg-rosa/30 transition-colors flex flex-col border border-rosa btn-dynamic" onclick="selecionarServicoPorTabela('Assessoria Mensal Dedicada (Base Fixa)')"><strong class="text-bordo font-black">⭐ Assessoria Mensal ➔</strong><span class="sync-price" data-sync="Assessoria Mensal Dedicada (Base Fixa)">R$ 2.600,00 / mês</span></button></li>
                     </ul>
                 </div>
                 <div class="pt-3 border-t border-rosaclaro/60 mt-3">
                     <button type="button" class="w-full p-2.5 rounded-xl bg-bordo/5 hover:bg-rosaclaro/40 transition-colors flex flex-col border border-rosaclaro hover:border-rosa text-left btn-dynamic" onclick="selecionarServicoPorTabela('Total Área 03: Redes Sociais & Conteúdo')">
                         <strong class="text-bordo font-black text-xs">📦 Total Área 03 (Redes Sociais)</strong>
-                        <span class="text-bordo font-black text-sm">R$ 820,00</span>
+                        <span class="text-bordo font-black text-sm sync-price" data-sync="Total Área 03: Redes Sociais & Conteúdo">R$ 820,00</span>
                     </button>
                 </div>
             </div>
@@ -823,7 +876,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8" id="grid-calc-items">
                 <!-- Totais por Área -->
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="1590" data-name="Total Área 01: Web Design & Branding" onchange="notificarCheckboxDireto(this, 'Total Área 01: Web Design & Branding')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Total Área 01: Web Design & Branding</span>
@@ -832,7 +885,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 1.590</span>
                 </label>
 
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="800" data-name="Total Área 02: Ilustração & Arte" onchange="notificarCheckboxDireto(this, 'Total Área 02: Ilustração & Arte')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Total Área 02: Ilustração & Arte</span>
@@ -841,7 +894,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 800</span>
                 </label>
 
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="820" data-name="Total Área 03: Redes Sociais & Conteúdo" onchange="notificarCheckboxDireto(this, 'Total Área 03: Redes Sociais & Conteúdo')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Total Área 03: Redes Sociais & Conteúdo</span>
@@ -851,7 +904,7 @@
                 </label>
 
                 <!-- Itens Avulsos Web -->
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="1300" data-name="Site Institucional Multi-Páginas" onchange="notificarCheckboxDireto(this, 'Site Institucional Multi-Páginas')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Site Institucional Multi-Páginas</span>
@@ -860,7 +913,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 1.300</span>
                 </label>
 
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="750" data-name="Landing Page de Vendas / Captura" onchange="notificarCheckboxDireto(this, 'Landing Page de Vendas / Captura')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Landing Page de Vendas / Captura</span>
@@ -869,7 +922,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 750</span>
                 </label>
 
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="web">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="240" data-name="Link na Bio / Mini Site Interativo" onchange="notificarCheckboxDireto(this, 'Link na Bio / Mini Site Interativo')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Link na Bio / Mini Site Interativo</span>
@@ -879,7 +932,7 @@
                 </label>
 
                 <!-- Itens Avulsos Branding & Ilustração -->
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="600" data-name="Identidade Visual Completa + Manual" onchange="notificarCheckboxDireto(this, 'Identidade Visual Completa + Manual')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Identidade Visual Completa + Manual</span>
@@ -888,7 +941,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 600</span>
                 </label>
 
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="340" data-name="Ilustração 2D / Capas & Vetorização" onchange="notificarCheckboxDireto(this, 'Ilustração 2D / Capas & Vetorização')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Ilustração 2D / Capas & Vetorização</span>
@@ -897,7 +950,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 340</span>
                 </label>
 
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="260" data-name="Criação de Personagem 2D (Illustrator)" onchange="notificarCheckboxDireto(this, 'Criação de Personagem 2D (Illustrator)')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Criação de Personagem 2D (Illustrator)</span>
@@ -906,7 +959,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 260</span>
                 </label>
 
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="identidade">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="200" data-name="Criação de Personagens IA" onchange="notificarCheckboxDireto(this, 'Criação de Personagens IA')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Criação de Personagens IA</span>
@@ -916,7 +969,7 @@
                 </label>
 
                 <!-- Itens Social Media -->
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="60" data-name="Post Estático Avulso" onchange="notificarCheckboxDireto(this, 'Post Estático Avulso')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Post Estático Avulso</span>
@@ -925,7 +978,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 60</span>
                 </label>
 
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="110" data-name="Carrossel Avulso (Até 6 telas)" onchange="notificarCheckboxDireto(this, 'Carrossel Avulso (Até 6 telas)')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Carrossel Avulso (Até 6 Telas)</span>
@@ -934,7 +987,7 @@
                     <span class="ml-auto font-black text-bordo text-base sm:text-lg shrink-0">R$ 110</span>
                 </label>
 
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 md:col-span-2" data-cat="social">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosaclaro rounded-2xl cursor-pointer hover:border-rosa transition-all bg-creme/30 md:col-span-2" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="650" data-name="Combo Social Media Completo: Posts + Reels + Stories" onchange="notificarCheckboxDireto(this, 'Combo Social Media Completo: Posts + Reels + Stories')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">Combo Social Media Completo: Posts + Reels + Stories</span>
@@ -944,7 +997,7 @@
                 </label>
 
                 <!-- Assessoria Mensal -->
-                <label class="calc-item-card relative flex items-center gap-4 p-4 border-2 border-rosa rounded-2xl cursor-pointer hover:scale-[1.01] transition-all bg-rosa/10 md:col-span-2" data-cat="social">
+                <label class="calc-item-card card-advanced relative flex items-center gap-4 p-4 border-2 border-rosa rounded-2xl cursor-pointer hover:scale-[1.01] transition-all bg-rosa/10 md:col-span-2" data-cat="social">
                     <input type="checkbox" class="w-5 h-5 accent-bordo calc-item" data-price="2600" data-name="Assessoria Mensal Dedicada (Base Fixa)" onchange="notificarCheckboxDireto(this, 'Assessoria Mensal Dedicada (Base Fixa)')">
                     <div>
                         <span class="font-black text-bordo text-base sm:text-lg block">⭐ Assessoria Mensal Dedicada (Base Fixa)</span>
@@ -954,7 +1007,7 @@
                 </label>
 
                 <!-- VÍDEOS COM IA -->
-                <div id="wrapper-video-ia" class="calc-item-card relative flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all duration-300" data-cat="video">
+                <div id="wrapper-video-ia" class="calc-item-card card-advanced relative flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all duration-300" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo" onchange="toggleIaMinutos(); calcularTotal(); if(this.checked) mostrarToastDinamico('Defina a minutagem de Vídeos com IA!', 'warning', '🤖'); else mostrarToastDinamico('Vídeos IA removidos.', 'remove', '🎬');">
                         <div>
@@ -973,7 +1026,7 @@
                 </div>
 
                 <!-- EDIÇÃO DE VÍDEO GERAL -->
-                <div id="wrapper-video-geral" class="calc-item-card relative flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all duration-300" data-cat="video">
+                <div id="wrapper-video-geral" class="calc-item-card card-advanced relative flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 transition-all duration-300" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer">
                         <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo" onchange="toggleVideoGeral(); calcularTotal(); if(this.checked) mostrarToastDinamico('Defina a minutagem de Edição CapCut!', 'warning', '🎬'); else mostrarToastDinamico('Edição Geral removida.', 'remove', '🎬');">
                         <div>
@@ -1240,6 +1293,10 @@
         const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbzKIommbDBjAEaoY0D8tLwZps1KUe80iEG9SjNlOR7vhj7TI1EqjIsqzEV-XyjNrggb/exec";
         const SEU_INSTAGRAM = "eve.desi_gn"; 
 
+        // GLOBALS PARA PRECIFICAÇÃO DINÂMICA
+        let precoMinutoIA = 100;
+        let precoMinutoGeral = 60;
+
         // SANITIZAÇÃO RIGOROSA
         function sanitizarFront(str) {
             if (!str) return "";
@@ -1302,6 +1359,45 @@
             `;
             container.appendChild(toast);
             setTimeout(() => { if(toast.parentElement) { toast.style.animation = "slideOutRight 0.3s forwards"; setTimeout(() => toast.remove(), 300); } }, 4000);
+        }
+
+        // FUNÇÃO DE SINCRONIZAÇÃO DE PREÇOS (APPS SCRIPT TO SITE)
+        async function sincronizarPrecos() {
+            try {
+                // Tentativa de puxar preços via GET.
+                // Requer que o Web App permita requisições anônimas.
+                const res = await fetch(URL_APPS_SCRIPT + "?action=getPrecos", { mode: 'cors' });
+                const data = await res.json();
+                
+                if(data && Array.isArray(data)) {
+                    data.forEach(serv => {
+                        const checkbox = document.querySelector(`.calc-item[data-name="${serv.nome}"]`);
+                        if(checkbox) {
+                            checkbox.setAttribute('data-price', serv.preco);
+                            // Atualiza texto nos spans relacionados
+                            const spanPreco = document.querySelector(`span.sync-price[data-sync="${serv.nome}"]`);
+                            if(spanPreco) {
+                                spanPreco.innerText = serv.tipo === 'mensal' ? `R$ ${serv.preco} / mês` : `R$ ${serv.preco}`;
+                            }
+                        }
+                        
+                        // Atualização direta para os campos de vídeo IA e Geral
+                        if (serv.nome === "Edição de Vídeos com Inteligência Artificial") {
+                            precoMinutoIA = parseFloat(serv.preco) || 100;
+                            const tIA = document.getElementById('preco-texto-ia');
+                            if(tIA) tIA.innerText = `R$ ${precoMinutoIA},00 / min`;
+                        }
+                        if (serv.nome === "Edição Geral CapCut / Sem IA") {
+                            precoMinutoGeral = parseFloat(serv.preco) || 60;
+                            const tGeral = document.getElementById('preco-texto-geral');
+                            if(tGeral) tGeral.innerText = `R$ ${precoMinutoGeral},00 / min`;
+                        }
+                    });
+                    calcularTotal(); // recalcula a UI
+                }
+            } catch (error) {
+                console.log("Valores padronizados carregados no front-end.", error);
+            }
         }
 
         function notificarCheckboxDireto(checkbox, nomeServico) {
@@ -1416,11 +1512,11 @@
             });
             if(document.getElementById('check-video-ia').checked) {
                 const mins = Math.max(1, parseInt(document.getElementById('input-minutos-ia').value) || 1);
-                lista.push(`R$ ${(mins * 100).toFixed(2).replace('.', ',')} - Ed. Vídeos IA (${mins} min)`);
+                lista.push(`R$ ${(mins * precoMinutoIA).toFixed(2).replace('.', ',')} - Ed. Vídeos IA (${mins} min)`);
             }
             if(document.getElementById('check-video-geral').checked) {
                 const mins = Math.max(1, parseInt(document.getElementById('input-minutos-geral').value) || 1);
-                lista.push(`R$ ${(mins * 60).toFixed(2).replace('.', ',')} - Ed. Vídeos CapCut (${mins} min)`);
+                lista.push(`R$ ${(mins * precoMinutoGeral).toFixed(2).replace('.', ',')} - Ed. Vídeos CapCut (${mins} min)`);
             }
             return lista;
         }
@@ -1432,8 +1528,8 @@
                 if (item.checked) { if (label) label.classList.add('card-selected'); total += parseFloat(item.getAttribute('data-price')) || 0; } 
                 else { if (label) label.classList.remove('card-selected'); }
             });
-            if (document.getElementById('check-video-ia').checked) total += Math.max(1, parseInt(document.getElementById('input-minutos-ia').value) || 1) * 100;
-            if (document.getElementById('check-video-geral').checked) total += Math.max(1, parseInt(document.getElementById('input-minutos-geral').value) || 1) * 60;
+            if (document.getElementById('check-video-ia').checked) total += Math.max(1, parseInt(document.getElementById('input-minutos-ia').value) || 1) * precoMinutoIA;
+            if (document.getElementById('check-video-geral').checked) total += Math.max(1, parseInt(document.getElementById('input-minutos-geral').value) || 1) * precoMinutoGeral;
             const txt = 'R$ ' + total.toFixed(2).replace('.', ',');
             document.getElementById('total-valor').innerText = txt;
             if (document.getElementById('orc-total-valor')) document.getElementById('orc-total-valor').innerText = txt;
@@ -1447,7 +1543,7 @@
             return (checkIa && checkIa.checked && minIa > 0) || (checkGeral && checkGeral.checked && minGeral > 0);
         }
 
-        // STRICT MONTHLY VALIDATION
+        // STRICT MONTHLY VALIDATION & SHAKE EFFECT
         function abrirModalOrcamento() {
             if (document.getElementById('total-valor').innerText === 'R$ 0,00') {
                 mostrarToastDinamico('Carrinho Vazio! Selecione ao menos um serviço.', 'warning', '⚠️');
@@ -1463,6 +1559,7 @@
                 mostrarToastDinamico("A Assessoria Mensal exige a definição de minutos de vídeo!", "warning", "🚨");
                 const wrapIa = document.getElementById('wrapper-video-ia');
                 const wrapGeral = document.getElementById('wrapper-video-geral');
+                
                 if(wrapIa) { 
                     wrapIa.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
                     wrapIa.classList.add('shake-error'); 
@@ -1558,9 +1655,15 @@
             e.preventDefault();
             if (document.getElementById('hp-feedback').value) return;
             const btn = document.getElementById('btn-env-feedback'); btn.disabled = true; btn.innerText = "Enviando feedback...";
-            const payload = { tipo: "feedback", nome: sanitizarFront(document.getElementById('fb-nome').value.trim()), estrelas: sanitizarFront(document.getElementById('fb-estrelas').value), comentario: sanitizarFront(document.getElementById('fb-comentario').value.trim()) };
             
-            // Optimistic UI Update with animation
+            const payload = { 
+                tipo: "feedback", 
+                nome: sanitizarFront(document.getElementById('fb-nome').value.trim()), 
+                estrelas: sanitizarFront(document.getElementById('fb-estrelas').value), 
+                comentario: sanitizarFront(document.getElementById('fb-comentario').value.trim()) 
+            };
+            
+            // OPTIMISTIC UI: Desenha o card instantaneamente na página
             const starsHTML = '⭐'.repeat(payload.estrelas);
             const newCard = document.createElement('div');
             newCard.className = 'card-depoimento card-hover bg-white border-2 border-rosa transition-all duration-300 rounded-3xl p-6 shadow-xl flex flex-col justify-between animacao-surgir relative overflow-hidden';
@@ -1581,7 +1684,17 @@
             `;
             document.getElementById('grid-depoimentos').prepend(newCard);
 
-            if (URL_APPS_SCRIPT) { fetch(URL_APPS_SCRIPT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }).finally(() => { fecharModalFeedback(); mostrarToastDinamico("Muito obrigado pelo seu feedback!", "success", "⭐"); document.getElementById('formFeedback').reset(); btn.disabled = false; btn.innerText = "Enviar Feedback ➔"; }); }
+            if (URL_APPS_SCRIPT) { 
+                fetch(URL_APPS_SCRIPT, { 
+                    method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) 
+                }).finally(() => { 
+                    fecharModalFeedback(); 
+                    mostrarToastDinamico("Muito obrigado pelo seu feedback!", "success", "⭐"); 
+                    document.getElementById('formFeedback').reset(); 
+                    btn.disabled = false; 
+                    btn.innerText = "Enviar Feedback ➔"; 
+                }); 
+            }
         }
 
         function aceitarCookies() { localStorage.setItem('eve_cookies_consent', 'aceito'); const banner = document.getElementById('cookie-banner'); if (banner) banner.classList.add('hidden'); }
@@ -1598,6 +1711,10 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             if (!localStorage.getItem('eve_cookies_consent')) { const banner = document.getElementById('cookie-banner'); if (banner) banner.classList.remove('hidden'); }
+            
+            // Dispara sincronização de preços
+            sincronizarPrecos();
+
             document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { fecharModal(); fecharModalDuvida(); fecharModalSuporte(); fecharModalOrcamento(); fecharModalFeedback(); fecharModalLegal(); fecharModalPreview(); } });
             document.querySelectorAll('.modal-backdrop').forEach(modal => { modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); } }); });
             const btnTopo = document.getElementById('btn-back-to-top');
