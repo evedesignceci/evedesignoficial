@@ -47,9 +47,9 @@
                     },
                     boxShadow: {
                         'soft-glow': '0 12px 30px -5px rgba(243, 132, 178, 0.38)',
-                        'bordo-glow': '0 14px 34px -4px rgba(110, 25, 64, 0.22)',
+                        'bordo-glow': '0 14px 34px -4px rgba(110, 25, 64, 0.15)',
                         'floating': '0 20px 45px -10px rgba(110, 25, 64, 0.18)',
-                        'card-hover': '0 20px 38px -8px rgba(110, 25, 64, 0.16)'
+                        'premium-hover': '0 25px 50px -12px rgba(110, 25, 64, 0.15), 0 0 0 2px rgba(243, 132, 178, 0.2)'
                     }
                 }
             }
@@ -77,10 +77,10 @@
             background-size: 26px 26px; 
         }
         
-        /* BOTÕES TÁTEIS COM EFEITO DE PRESSÃO REALISTA */
+        /* PREMIUM BUTTON DYNAMICS */
         .btn-dynamic {
-            transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), 
-                        box-shadow 0.2s ease, 
+            transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                        box-shadow 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), 
                         background-color 0.2s ease, 
                         border-color 0.2s ease,
                         color 0.2s ease;
@@ -92,11 +92,11 @@
             transform: translateY(-2px);
         }
         .btn-dynamic:active {
-            transform: translateY(1.5px) scale(0.96) !important;
-            box-shadow: 0 3px 8px rgba(110, 25, 64, 0.2) !important;
+            transform: translateY(2px) scale(0.95) !important;
+            box-shadow: 0 2px 5px rgba(110, 25, 64, 0.2) !important;
         }
 
-        /* EFEITO SHIMMER LUZ CORRENTE */
+        /* ENHANCED SHIMMER EFFECT */
         .btn-shimmer::after {
             content: '';
             position: absolute;
@@ -107,56 +107,65 @@
             background: linear-gradient(
                 60deg, 
                 rgba(255, 255, 255, 0) 20%, 
-                rgba(255, 255, 255, 0.4) 50%, 
+                rgba(255, 255, 255, 0.5) 50%, 
                 rgba(255, 255, 255, 0) 80%
             );
             transform: rotate(25deg);
             pointer-events: none;
-            animation: shimmerEffect 4.8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+            animation: shimmerEffect 4s infinite cubic-bezier(0.4, 0, 0.2, 1);
         }
         @keyframes shimmerEffect {
             0% { left: -80%; }
-            22% { left: 140%; }
+            25% { left: 140%; }
             100% { left: 140%; }
         }
 
-        /* CARDS DINÂMICOS COM TILT & ELEVAÇÃO SUAVE */
+        /* CHIC INTERACTIVE CARDS */
         .interactive-card {
-            transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
-                        box-shadow 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
-                        border-color 0.25s ease,
-                        background-color 0.25s ease;
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                        box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+                        border-color 0.3s ease,
+                        background-color 0.3s ease;
             position: relative;
         }
         .interactive-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 36px -8px rgba(110, 25, 64, 0.18);
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px -12px rgba(110, 25, 64, 0.15), 0 0 0 1px rgba(243, 132, 178, 0.15);
         }
 
-        /* ESTADO SELECIONADO NA CALCULADORA */
+        /* ELEGANT CALCULATOR SELECTION */
         .card-selected { 
             border-color: #6E1940 !important; 
             background-color: #FFFFFF !important; 
-            box-shadow: 0 16px 32px -6px rgba(110, 25, 64, 0.24), 0 0 0 2.5px #6E1940 !important; 
-            transform: translateY(-3px) scale(1.008);
+            box-shadow: 0 15px 35px -5px rgba(110, 25, 64, 0.18), 0 0 0 2px #6E1940 !important; 
+            transform: translateY(-4px) scale(1.01);
+            z-index: 10;
         }
         .card-selected .selected-pill {
             display: inline-flex !important;
-            animation: springPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            animation: springPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
         }
 
         @keyframes springPop {
             0% { transform: scale(0.5); opacity: 0; }
-            80% { transform: scale(1.1); }
+            70% { transform: scale(1.15); }
             100% { transform: scale(1); opacity: 1; }
         }
 
-        /* TOAST COM SPRING & PROGRESSO */
-        .toast-spring {
-            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+        /* MODERN STACKING TOAST SYSTEM */
+        .toast-item {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(243, 132, 178, 0.6);
+            transform: translateX(120%);
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+            opacity: 0;
+            box-shadow: 0 15px 35px -5px rgba(110, 25, 64, 0.15);
         }
-        .toast-progress-bar {
-            animation: toastProgress 3.2s linear forwards;
+        .toast-item.show {
+            transform: translateX(0);
+            opacity: 1;
         }
         @keyframes toastProgress {
             0% { width: 100%; }
@@ -164,13 +173,13 @@
         }
 
         .counter-btn {
-            transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         .counter-btn:active {
-            transform: scale(0.85);
+            transform: scale(0.8) !important;
         }
 
-        details > summary { list-style: none; } 
+        details > summary { list-style: none; outline: none; } 
         details > summary::-webkit-details-marker { display: none; }
         details[open] summary .faq-icon { transform: rotate(180deg); }
         .modal-scroll::-webkit-scrollbar { width: 6px; }
@@ -180,34 +189,22 @@
         .hp-field { opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1; pointer-events: none; }
         
         .glass-header {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
     </style>
 </head>
 <body class="bg-pattern min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-rosa selection:text-bordo">
 
-    <!-- TOAST FEEDBACK INTERATIVO COM BARRA DE TEMPO & ANIMAÇÃO SPRING -->
-    <div id="toast-feedback" aria-live="polite" class="fixed top-20 right-4 sm:right-8 bg-white/95 backdrop-blur-md border-2 border-rosa text-bordo rounded-2xl shadow-floating z-50 hidden opacity-0 translate-y-6 toast-spring max-w-sm overflow-hidden pointer-events-auto">
-        <div class="px-4 py-3 flex items-center gap-3">
-            <span id="toast-icon" class="text-2xl animate-bounce">✨</span>
-            <div class="flex-1 pr-2">
-                <span id="toast-title" class="text-[11px] font-black uppercase text-rosa block leading-tight">Atualização</span>
-                <span id="toast-msg" class="font-extrabold text-xs sm:text-sm text-bordo block leading-snug">Item adicionado com sucesso!</span>
-            </div>
-            <button type="button" aria-label="Fechar notificação" onclick="fecharToastImediato()" class="text-bordo/60 hover:text-bordo p-1 text-sm font-black">✕</button>
-        </div>
-        <div class="w-full bg-rosaclaro/40 h-1">
-            <div id="toast-bar" class="h-full bg-bordo toast-progress-bar"></div>
-        </div>
-    </div>
+    <!-- MODERN STACKING TOAST CONTAINER -->
+    <div id="toast-container" class="fixed top-20 right-4 sm:right-8 z-50 flex flex-col items-end gap-3 pointer-events-none"></div>
 
     <!-- BANNER DE COOKIES LGPD -->
     <div id="cookie-banner" role="region" aria-label="Consentimento de Cookies" class="fixed bottom-0 left-0 w-full bg-bordo text-creme px-4 sm:px-6 py-4 shadow-2xl z-50 hidden border-t-2 border-rosa">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-medium">
             <p class="leading-normal text-center sm:text-left">
-                🍪 Utilizamos cookies essenciais para o funcionamento do simulador e orçamentos. Ao continuar, você concorda com a nossa <button type="button" onclick="abrirModalLegal('privacidade')" class="underline text-rosa hover:text-amarelo font-bold">Política de Privacidade</button>.
+                🍪 Utilizamos cookies essenciais para o funcionamento do simulador e orçamentos. Ao continuar, você concorda com a nossa <button type="button" onclick="abrirModalLegal('privacidade')" class="underline text-rosa hover:text-amarelo font-bold transition-colors">Política de Privacidade</button>.
             </p>
             <div class="flex items-center gap-2 shrink-0">
                 <button type="button" onclick="recusarCookies()" class="btn-dynamic bg-white/10 text-creme hover:bg-white/20 font-bold text-xs py-2 px-4 rounded-xl">Recusar</button>
@@ -244,13 +241,13 @@
                 <a href="#tabela" class="btn-dynamic px-3 py-1.5 rounded-xl hover:bg-rosaclaro/40 hover:text-bordo">Serviços</a>
                 <a href="#depoimentos" class="btn-dynamic px-3 py-1.5 rounded-xl hover:bg-rosaclaro/40 hover:text-bordo">Clientes</a>
                 <a href="#faq-duvidas" class="btn-dynamic px-3 py-1.5 rounded-xl hover:bg-rosaclaro/40 hover:text-bordo">FAQ</a>
-                <a href="#simulador" class="btn-dynamic px-3.5 py-1.5 rounded-xl bg-rosa/25 text-bordo border border-rosa/50 hover:bg-rosa hover:shadow-soft-glow font-extrabold flex items-center gap-1.5">
+                <a href="#simulador" class="btn-dynamic px-3.5 py-1.5 rounded-xl bg-rosa/20 text-bordo border border-rosa/40 hover:bg-rosa hover:shadow-soft-glow font-extrabold flex items-center gap-1.5">
                     <span>🧮</span> Orçamento
                 </a>
             </nav>
 
             <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="btn-dynamic hidden sm:inline-flex items-center gap-1.5 bg-rosa/25 text-bordo hover:bg-rosa hover:shadow-soft-glow font-black text-xs px-3.5 py-2 rounded-xl border border-rosa/60">
+                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="btn-dynamic hidden sm:inline-flex items-center gap-1.5 bg-rosa/20 text-bordo hover:bg-rosa hover:shadow-soft-glow font-black text-xs px-3.5 py-2 rounded-xl border border-rosa/50">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-3.5 h-3.5 object-contain">
                     <span>Portfólio Canva</span>
                 </a>
@@ -278,17 +275,17 @@
                 <a href="#simulador" onclick="toggleMenuMobile()" class="btn-dynamic p-2.5 rounded-xl bg-rosa/20 border border-rosa/50 flex items-center gap-2 text-bordo">🧮 Novo Orçamento</a>
             </nav>
             <div class="mt-4 pt-4 border-t border-rosaclaro/60 flex items-center justify-center gap-3">
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="btn-dynamic flex-1 text-center py-2.5 px-3 bg-rosa/30 rounded-xl font-black text-xs text-bordo border border-rosa">Canva</a>
-                <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="btn-dynamic flex-1 text-center py-2.5 px-3 bg-bordo text-creme rounded-xl font-black text-xs">Instagram</a>
+                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="btn-dynamic flex-1 text-center py-2.5 px-3 bg-rosa/20 hover:bg-rosa rounded-xl font-black text-xs text-bordo border border-rosa">Canva</a>
+                <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="btn-dynamic flex-1 text-center py-2.5 px-3 bg-bordo text-creme hover:bg-rosa hover:text-bordo rounded-xl font-black text-xs">Instagram</a>
             </div>
         </div>
     </header>
 
     <!-- 1. BANNER HERO DINÂMICO & CLICÁVEL -->
     <section class="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-2">
-        <a href="#simulador" class="group block rounded-3xl overflow-hidden border-2 border-rosa shadow-soft-glow bg-white relative transition-all duration-300 hover:shadow-floating hover:border-bordo" title="Clique para calcular seu orçamento">
+        <a href="#simulador" class="interactive-card block rounded-3xl overflow-hidden border-2 border-rosa bg-white relative group" title="Clique para calcular seu orçamento">
             <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/BANNER_EVE_DESIGN.png" alt="Eve Design Studio - Soluções Criativas, Sites, Vídeos & Planos Mensais" class="w-full h-auto object-cover max-h-[440px] transition-transform duration-700 group-hover:scale-[1.015]">
-            <div class="btn-dynamic btn-shimmer absolute bottom-4 right-4 bg-bordo/95 backdrop-blur-md text-creme px-5 py-3 rounded-2xl text-xs sm:text-sm font-black flex items-center gap-2.5 border border-rosa shadow-lg group-hover:bg-rosa group-hover:text-bordo transition-all">
+            <div class="btn-shimmer absolute bottom-4 right-4 bg-bordo/95 backdrop-blur-md text-creme px-5 py-3 rounded-2xl text-xs sm:text-sm font-black flex items-center gap-2.5 border border-rosa shadow-lg group-hover:bg-rosa group-hover:text-bordo transition-colors">
                 <span>Simular Orçamento Imediato</span>
                 <span class="group-hover:translate-x-1.5 transition-transform duration-300">➔</span>
             </div>
@@ -308,16 +305,16 @@
         </p>
 
         <div class="flex items-center justify-center gap-2.5 sm:gap-3.5 flex-wrap max-w-3xl mx-auto mb-4">
-            <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="btn-dynamic px-5 py-3 bg-rosa text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 hover:shadow-soft-glow text-xs sm:text-sm font-black">
+            <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="btn-dynamic px-5 py-3 bg-rosa text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 shadow-sm text-xs sm:text-sm font-black">
                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-4 h-4 object-contain"> Portfólio Canva
             </a>
-            <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="btn-dynamic px-4 py-2.5 bg-white border-2 border-rosaclaro rounded-full flex items-center gap-2 hover:border-rosa text-xs sm:text-sm font-black text-bordo">
+            <a href="https://www.instagram.com/eve.desi_gn/" target="_blank" rel="noopener noreferrer" class="btn-dynamic px-4 py-2.5 bg-white border-2 border-rosaclaro rounded-full flex items-center gap-2 shadow-sm text-xs sm:text-sm font-black text-bordo hover:border-rosa">
                 <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/INDTAGRAM.png" alt="" class="w-4 h-4 object-contain"> Instagram
             </a>
-            <button type="button" onclick="abrirModalDuvida()" class="btn-dynamic px-4 py-2.5 bg-amarelo text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 text-xs sm:text-sm font-black">
+            <button type="button" onclick="abrirModalDuvida()" class="btn-dynamic px-4 py-2.5 bg-amarelo text-bordo border-2 border-bordo/20 rounded-full flex items-center gap-2 shadow-sm text-xs sm:text-sm font-black">
                 ❓ Tirar Dúvida Rápida
             </button>
-            <button type="button" onclick="abrirModalSuporte()" class="btn-dynamic px-4 py-2.5 bg-rosaclaro text-bordo border-2 border-rosa rounded-full flex items-center gap-2 text-xs sm:text-sm font-black">
+            <button type="button" onclick="abrirModalSuporte()" class="btn-dynamic px-4 py-2.5 bg-rosaclaro text-bordo border border-rosa rounded-full flex items-center gap-2 shadow-sm text-xs sm:text-sm font-black">
                 🛠️ Suporte / Ajustes
             </button>
         </div>
@@ -327,13 +324,13 @@
     <section id="sobre-mim" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
         <div class="interactive-card bg-white/95 border-2 border-rosaclaro rounded-3xl p-6 sm:p-10 shadow-bordo-glow backdrop-blur-sm">
             <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-                <!-- Personagem Aumentada com Efeito Glow & Badge de Alta Fidelidade -->
-                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-60 h-60 sm:w-64 sm:h-64 lg:w-72 lg:h-72 shrink-0 relative group cursor-pointer" title="Clique para ver o Portfólio Canva!">
+                <!-- Personagem -->
+                <a href="https://canva.link/portfolio-evelyn-cecilia" target="_blank" rel="noopener noreferrer" class="w-60 h-60 sm:w-64 sm:h-64 lg:w-72 lg:h-72 shrink-0 relative group cursor-pointer btn-dynamic hover:translate-y-0" title="Clique para ver o Portfólio Canva!">
                     <div class="absolute -inset-2 bg-gradient-to-tr from-rosa via-amarelo to-rosaclaro rounded-3xl blur-md opacity-80 group-hover:opacity-100 transition duration-500"></div>
                     <div class="relative w-full h-full rounded-2xl bg-white/80 p-3 border-2 border-rosa shadow-inner flex items-center justify-center overflow-hidden">
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png" loading="lazy" alt="Personagem Oficial Eve Design Studio" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786909148/MINHA_PERSONAGEM_EVE_DESIGN.png" loading="lazy" alt="Personagem Oficial Eve Design Studio" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <span class="btn-dynamic absolute bottom-3 right-3 bg-amarelo text-bordo font-black text-xs px-3 py-1.5 rounded-full border border-bordo shadow-md flex items-center gap-1.5 group-hover:bg-rosa group-hover:text-white transition-colors">
+                    <span class="absolute bottom-3 right-3 bg-amarelo text-bordo font-black text-xs px-3 py-1.5 rounded-full border border-bordo shadow-md flex items-center gap-1.5 group-hover:bg-rosa group-hover:text-white transition-colors">
                         <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" loading="lazy" alt="" class="w-3.5 h-3.5 object-contain"> Portfólio Canva
                     </span>
                 </a>
@@ -353,31 +350,31 @@
                     <div>
                         <h3 class="text-xs sm:text-sm font-black text-bordo uppercase tracking-wider mb-3 flex items-center gap-2">
                             <span>Minha Caixa de Ferramentas:</span>
-                            <span class="text-[10px] text-rosa font-black lowercase bg-rosaclaro/30 px-2.5 py-0.5 rounded-full">(clique para ver detalhes de uso)</span>
+                            <span class="text-[10px] text-rosa font-black lowercase bg-rosaclaro/30 px-2.5 py-0.5 rounded-full hidden sm:inline-block">(clique para detalhes)</span>
                         </h3>
                         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2.5">
                             <button type="button" onclick="mostrarNivel('Adobe Illustrator', 'Avançado', 'Criação de identidades visuais completas, ilustração 2D autoral, vetorização e design gráfico de alta fidelidade.')" class="btn-dynamic bg-creme/60 border-2 border-rosaclaro hover:border-rosa hover:bg-white rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm group">
-                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/ADOBE_ILUSTARTOR.png" loading="lazy" alt="Adobe Illustrator" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/ADOBE_ILUSTARTOR.png" loading="lazy" alt="Adobe Illustrator" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform duration-300">
                                 <span class="text-xs font-black text-bordo">Illustrator</span>
                             </button>
                             <button type="button" onclick="mostrarNivel('CapCut Pro', 'Avançado', 'Edição profissional de vídeos dinâmicos, transições, legendas animadas e alta retenção para redes.')" class="btn-dynamic bg-creme/60 border-2 border-rosaclaro hover:border-rosa hover:bg-white rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm group">
-                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CAPCUT.png" loading="lazy" alt="CapCut" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CAPCUT.png" loading="lazy" alt="CapCut" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform duration-300">
                                 <span class="text-xs font-black text-bordo">CapCut</span>
                             </button>
                             <button type="button" onclick="mostrarNivel('Canva Pro', 'Especialista', 'Desenvolvimento de apresentações corporativas, kits de marca, carrosséis educativos e materiais digitais.')" class="btn-dynamic bg-creme/60 border-2 border-rosaclaro hover:border-rosa hover:bg-white rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm group">
-                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CANVA.png" loading="lazy" alt="Canva Pro" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/CANVA.png" loading="lazy" alt="Canva Pro" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform duration-300">
                                 <span class="text-xs font-black text-bordo">Canva</span>
                             </button>
                             <button type="button" onclick="mostrarNivel('Blender 3D', 'Intermediário', 'Modelagem 3D, criação de assets, iluminação de cena e renderização para projetos visuais.')" class="btn-dynamic bg-creme/60 border-2 border-rosaclaro hover:border-rosa hover:bg-white rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm group">
-                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/BLENDER.png" loading="lazy" alt="Blender 3D" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908272/BLENDER.png" loading="lazy" alt="Blender 3D" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform duration-300">
                                 <span class="text-xs font-black text-bordo">Blender 3D</span>
                             </button>
                             <button type="button" onclick="mostrarNivel('Código & Web', 'Avançado', 'Desenvolvimento de interfaces modernas, páginas responsivas com HTML5, Tailwind CSS e JavaScript.')" class="btn-dynamic bg-creme/60 border-2 border-rosaclaro hover:border-rosa hover:bg-white rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm group">
-                                <div class="w-8 h-8 flex items-center justify-center bg-bordo text-creme rounded-xl font-black text-xs mb-1 group-hover:scale-110 transition-transform">&lt;/&gt;</div>
+                                <div class="w-8 h-8 flex items-center justify-center bg-bordo text-creme rounded-xl font-black text-xs mb-1 group-hover:scale-110 transition-transform duration-300">&lt;/&gt;</div>
                                 <span class="text-xs font-black text-bordo">Código & Web</span>
                             </button>
                             <button type="button" onclick="mostrarNivel('Inteligência Artificial', 'Avançado', 'Geração de cenários conceituais, ideação visual de mascotes e roteirização com IA generativa.')" class="btn-dynamic bg-creme/60 border-2 border-rosaclaro hover:border-rosa hover:bg-white rounded-2xl p-2.5 flex flex-col items-center text-center shadow-sm group">
-                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/GEMINI.png" loading="lazy" alt="Inteligência Artificial" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform">
+                                <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/GEMINI.png" loading="lazy" alt="Inteligência Artificial" class="w-8 h-8 object-contain mb-1 group-hover:scale-110 transition-transform duration-300">
                                 <span class="text-xs font-black text-bordo">IA Criativa</span>
                             </button>
                         </div>
@@ -387,9 +384,9 @@
         </div>
     </section>
 
-    <!-- 2. PORTFÓLIO E PROJETOS EM DESTAQUE (PAPÉIS EXATOS DE CADA CLIENTE) -->
+    <!-- 2. PORTFÓLIO E PROJETOS EM DESTAQUE -->
     <section id="portfolio-galeria" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
-        <div class="interactive-card bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-soft-glow">
+        <div class="interactive-card bg-white border-2 border-rosa rounded-3xl p-6 sm:p-10 shadow-bordo-glow">
             <div class="text-center mb-8">
                 <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
                     🖼️ Portfólio Selecionado & Galeria
@@ -402,93 +399,93 @@
                 <button type="button" onclick="filtrarGaleria('todos', this)" class="btn-galeria btn-dynamic px-4 py-2 rounded-xl bg-bordo text-creme border-2 border-bordo shadow-sm">
                     🌟 Todos os Projetos
                 </button>
-                <button type="button" onclick="filtrarGaleria('branding', this)" class="btn-galeria btn-dynamic px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa">
+                <button type="button" onclick="filtrarGaleria('branding', this)" class="btn-galeria btn-dynamic px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa shadow-sm">
                     🎨 Branding & Identidade
                 </button>
-                <button type="button" onclick="filtrarGaleria('arte', this)" class="btn-galeria btn-dynamic px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa">
+                <button type="button" onclick="filtrarGaleria('arte', this)" class="btn-galeria btn-dynamic px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa shadow-sm">
                     🎬 Animação & Vídeo
                 </button>
-                <button type="button" onclick="filtrarGaleria('social', this)" class="btn-galeria btn-dynamic px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa">
+                <button type="button" onclick="filtrarGaleria('social', this)" class="btn-galeria btn-dynamic px-4 py-2 rounded-xl bg-white text-bordo border-2 border-rosaclaro hover:border-rosa shadow-sm">
                     📱 Social Media
                 </button>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-portfolio-itens">
-                <!-- 1. Turminha do Xexéu: VÍDEOS, CENÁRIOS IA & REDES SOCIAIS -->
-                <div class="card-portfolio interactive-card group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="arte social">
-                    <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png" alt="Turminha do Xexéu" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-bordo/90 text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">Vídeos & Redes Sociais</span>
-                    </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
-                        <div>
-                            <h3 class="font-black text-bordo text-xl mb-1 group-hover:text-rosa transition-colors">Turminha do Xexéu</h3>
-                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Criação visual de clipes animados e cenários conceituais por IA, edição de ritmo no CapCut e design estratégico de posts para redes sociais.</p>
-                        </div>
-                        <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
-                            <span class="text-xs font-black text-rosa">Vídeos • IA • Social Media</span>
-                            <button type="button" onclick="abrirPreviewPortfólio('Turminha do Xexéu', 'Vídeos, Animação & Redes Sociais', 'Produção audiovisual completa, roteirização visual, cenários com inteligência artificial e criação de conteúdo para YouTube e redes sociais.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png')" class="btn-dynamic text-xs font-black text-bordo underline hover:text-rosa flex items-center gap-1">Detalhes ➔</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Julia Sales: IDENTIDADE VISUAL COMPLETA & EDIÇÃO DE VÍDEOS -->
-                <div class="card-portfolio interactive-card group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="branding arte">
+                <!-- 1. Julia Sales: IDENTIDADE VISUAL COMPLETA E EDIÇÃO DE VÍDEOS -->
+                <div class="card-portfolio interactive-card group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden flex flex-col justify-between" data-portfolio-cat="branding arte">
                     <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
                         <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png" alt="Julia Sales Logo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-bordo/90 text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">Identidade Visual & Vídeos</span>
+                        <span class="absolute top-3 left-3 bg-bordo/90 text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider backdrop-blur-sm">Identidade & Vídeos</span>
                     </div>
                     <div class="p-5 flex-1 flex flex-col justify-between">
                         <div>
                             <h3 class="font-black text-bordo text-xl mb-1 group-hover:text-rosa transition-colors">Julia Sales - Brincar & Viver</h3>
-                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Desenvolvimento da Identidade Visual oficial completa (logotipo, cores, tipografia) e edição dinâmica de vídeos lúdicos no CapCut para canal infantil.</p>
+                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Desenvolvimento da Identidade Visual Completa e Edição de Vídeos para canal lúdico focado no desenvolvimento infantil.</p>
                         </div>
                         <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
-                            <span class="text-xs font-black text-rosa">Branding • CapCut Pro</span>
-                            <button type="button" onclick="abrirPreviewPortfólio('Julia Sales - Brincar & Viver', 'Identidade Visual & Edição de Vídeos', 'Criação completa de marca (logo vetorizado, manual e paleta) somada à edição dinâmica de episódios em vídeo no CapCut para desenvolvimento na infância.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png')" class="btn-dynamic text-xs font-black text-bordo underline hover:text-rosa flex items-center gap-1">Detalhes ➔</button>
+                            <span class="text-xs font-black text-rosa">Branding • Edição de Vídeo</span>
+                            <button type="button" onclick="abrirPreviewPortfólio('Julia Sales - Brincar & Viver', 'Identidade Visual & Vídeos', 'Criação completa de marca (logo vetorizado, manual e paleta) somada à edição dinâmica de vídeos no CapCut.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908273/JULIA_SALES_BRINCAR_E_VIVER.png')" class="btn-dynamic bg-rosaclaro/30 text-bordo px-3 py-1.5 rounded-lg text-xs font-black hover:bg-rosa shadow-sm">Detalhes ➔</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 3. Saint Vision Home: REDES SOCIAIS & CARROSSÉIS -->
-                <div class="card-portfolio interactive-card group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="social">
+                <!-- 2. Turminha do Xexéu: VÍDEOS ANIMADOS & REDES SOCIAIS -->
+                <div class="card-portfolio interactive-card group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden flex flex-col justify-between" data-portfolio-cat="arte social">
                     <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
-                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png" alt="Saint Vision Home" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-bordo/90 text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">Redes Sociais & Carrosséis</span>
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png" alt="Turminha do Xexéu" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-bordo/90 text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider backdrop-blur-sm">Vídeos & Social Media</span>
                     </div>
                     <div class="p-5 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="font-black text-bordo text-xl mb-1 group-hover:text-rosa transition-colors">Saint Vision Home</h3>
-                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Design de carrosséis educativos para Instagram e identidade editorial clean para serviço de ótica especializado em atendimento domiciliar.</p>
+                            <h3 class="font-black text-bordo text-xl mb-1 group-hover:text-rosa transition-colors">Turminha do Xexéu</h3>
+                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Edição de Vídeos Animados e Gestão Completa de Redes Sociais com cenários conceituais lúdicos por Inteligência Artificial.</p>
                         </div>
                         <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
-                            <span class="text-xs font-black text-rosa">Social Media • Carrosséis</span>
-                            <button type="button" onclick="abrirPreviewPortfólio('Saint Vision Home', 'Social Media & Carrosséis Estratégicos', 'Diagramação visual de carrosséis educativos para Instagram transmitindo conforto, saúde dos olhos e atendimento humanizado.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png')" class="btn-dynamic text-xs font-black text-bordo underline hover:text-rosa flex items-center gap-1">Detalhes ➔</button>
+                            <span class="text-xs font-black text-rosa">Vídeos • Redes Sociais</span>
+                            <button type="button" onclick="abrirPreviewPortfólio('Turminha do Xexéu', 'Edição de Vídeos & Redes Sociais', 'Produção audiovisual completa, roteirização visual, cenários com inteligência artificial e criação de conteúdo para YouTube e redes sociais.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png')" class="btn-dynamic bg-rosaclaro/30 text-bordo px-3 py-1.5 rounded-lg text-xs font-black hover:bg-rosa shadow-sm">Detalhes ➔</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 4. Kraken's PC Store & Lab: REDES SOCIAIS & PEÇAS PROMOCIONAIS -->
-                <div class="card-portfolio interactive-card group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between" data-portfolio-cat="social">
+                <!-- 3. Kraken's PC Store: REDES SOCIAIS & POSTS -->
+                <div class="card-portfolio interactive-card group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden flex flex-col justify-between" data-portfolio-cat="social">
                     <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
                         <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png" alt="Kraken's Logo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 bg-bordo/90 text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">Redes Sociais & Peças Digitais</span>
+                        <span class="absolute top-3 left-3 bg-bordo/90 text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider backdrop-blur-sm">Redes Sociais & Posts</span>
                     </div>
                     <div class="p-5 flex-1 flex flex-col justify-between">
                         <div>
                             <h3 class="font-black text-bordo text-xl mb-1 group-hover:text-rosa transition-colors">Kraken's PC Store & Lab</h3>
-                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Criação contínua de peças para redes sociais, posts promocionais de periféricos gamer, vitrines de hardware e templates para stories.</p>
+                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Design estratégico para Redes Sociais e Criação de Posts promocionais técnicos focados em peças de hardware e assistência gamer.</p>
                         </div>
                         <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
                             <span class="text-xs font-black text-rosa">Social Media • Posts Tech</span>
-                            <button type="button" onclick="abrirPreviewPortfólio('Kraken\'s PC Store', 'Redes Sociais & Peças Digitais', 'Criação de criativos para Instagram e WhatsApp, com ofertas técnicas de placas de vídeo, memórias e montagem de computadores.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png')" class="btn-dynamic text-xs font-black text-bordo underline hover:text-rosa flex items-center gap-1">Detalhes ➔</button>
+                            <button type="button" onclick="abrirPreviewPortfólio('Kraken\'s PC Store', 'Redes Sociais & Posts', 'Criação de criativos para Instagram e WhatsApp, com ofertas técnicas de placas de vídeo, memórias e montagem de computadores.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/KRKAENS_LOGO.png')" class="btn-dynamic bg-rosaclaro/30 text-bordo px-3 py-1.5 rounded-lg text-xs font-black hover:bg-rosa shadow-sm">Detalhes ➔</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Saint Vision Home: REDES SOCIAIS & CARROSSÉIS -->
+                <div class="card-portfolio interactive-card group bg-creme/30 border-2 border-rosaclaro hover:border-rosa rounded-2xl overflow-hidden flex flex-col justify-between md:hidden lg:flex" data-portfolio-cat="social">
+                    <div class="relative overflow-hidden aspect-video bg-white flex items-center justify-center p-6 border-b border-rosaclaro/40">
+                        <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png" alt="Saint Vision Home" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-bordo/90 text-creme text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider backdrop-blur-sm">Redes Sociais & Carrosséis</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-black text-bordo text-xl mb-1 group-hover:text-rosa transition-colors">Saint Vision Home</h3>
+                            <p class="text-xs sm:text-sm text-bordo font-medium mb-3 leading-snug">Gestão de Redes Sociais e Diagramação de Carrosséis esteticamente clean para ótica especializada em atendimento domiciliar.</p>
+                        </div>
+                        <div class="pt-3 border-t border-rosaclaro/50 flex items-center justify-between">
+                            <span class="text-xs font-black text-rosa">Social Media • Carrosséis</span>
+                            <button type="button" onclick="abrirPreviewPortfólio('Saint Vision Home', 'Redes Sociais & Carrosséis', 'Diagramação visual de carrosséis educativos para Instagram transmitindo conforto, saúde dos olhos e atendimento humanizado.', 'https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/SAINT_VISION_AUREA.png')" class="btn-dynamic bg-rosaclaro/30 text-bordo px-3 py-1.5 rounded-lg text-xs font-black hover:bg-rosa shadow-sm">Detalhes ➔</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Botão Portfólio Canva -->
-            <div class="mt-8 p-4 sm:p-5 bg-rosaclaro/30 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 border border-rosa/60">
+            <div class="mt-8 p-4 sm:p-5 bg-rosaclaro/20 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 border border-rosa/50">
                 <div class="flex items-center gap-3">
                     <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908274/PORTIFOLIO_ICONE.png" alt="" class="w-7 h-7 object-contain shrink-0">
                     <p class="text-xs sm:text-sm font-black text-bordo text-center sm:text-left">Deseja conferir o portfólio completo interativo no Canva?</p>
@@ -544,7 +541,7 @@
         </div>
     </section>
 
-    <!-- 4. DEPOIMENTOS E PROVA SOCIAL (ATRIBUÍDOS CORRETAMENTE) -->
+    <!-- 4. DEPOIMENTOS E PROVA SOCIAL -->
     <section id="depoimentos" class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 scroll-mt-24">
         <div class="text-center mb-8">
             <span class="inline-block bg-rosa text-bordo font-black text-xs px-4 py-1.5 rounded-full mb-2 shadow-sm">
@@ -555,7 +552,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="grid-depoimentos">
-            <!-- 1. Turminha do Xexéu: VÍDEOS & REDES SOCIAIS -->
+            <!-- 1. Turminha do Xexéu -->
             <div class="card-depoimento interactive-card bg-white border-2 border-rosaclaro hover:border-rosa rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-3">
@@ -563,20 +560,20 @@
                             <img src="https://res.cloudinary.com/oactqmgs/image/upload/v1786908275/TURMINHA_LOGO.png" alt="Turminha Logo" class="w-9 h-9 object-contain rounded-full border border-rosa p-0.5 bg-creme">
                             <div>
                                 <span class="font-black text-bordo text-base block leading-tight">Turminha do Xexéu</span>
-                                <span class="text-[11px] text-bordo/70 font-bold">Canal Infantil & Animação</span>
+                                <span class="text-[11px] text-bordo/70 font-bold">Vídeos & Social Media</span>
                             </div>
                         </div>
                         <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-medium italic mb-4">"A edição e criação dos personagens deram vida nova ao canal! O trabalho com vídeos, cenários por IA e artes para as redes sociais ficou impecável."</p>
+                    <p class="text-sm text-bordo font-medium italic mb-4">"A edição e criação dos personagens deram vida nova ao canal! O trabalho com IA, animação de vídeos e gestão de redes foi impecável."</p>
                 </div>
                 <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
                     <span>Vídeos & Redes Sociais</span>
-                    <span class="text-rosa">YouTube & Redes</span>
+                    <span class="text-rosa">YouTube Kids</span>
                 </div>
             </div>
 
-            <!-- 2. Saint Vision Home: REDES SOCIAIS & CARROSSÉIS -->
+            <!-- 2. Saint Vision Home -->
             <div class="card-depoimento interactive-card bg-white border-2 border-rosaclaro hover:border-rosa rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-3">
@@ -589,7 +586,7 @@
                         </div>
                         <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-medium italic mb-4">"Os carrosséis para o feed ficaram super elegantes e didáticos. O design transmitiu exatamente o carinho e sofisticação do nosso atendimento."</p>
+                    <p class="text-sm text-bordo font-medium italic mb-4">"Os carrosséis para o feed ficaram super elegantes e didáticos. O design transmitiu exatamente o cuidado da nossa marca no digital."</p>
                 </div>
                 <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
                     <span>Carrosséis & Redes Sociais</span>
@@ -597,7 +594,7 @@
                 </div>
             </div>
 
-            <!-- 3. Kraken's PC Store & Lab: REDES SOCIAIS & PEÇAS -->
+            <!-- 3. Kraken's PC Store -->
             <div class="card-depoimento interactive-card bg-white border-2 border-rosaclaro hover:border-rosa rounded-3xl p-6 shadow-md flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-3">
@@ -610,7 +607,7 @@
                         </div>
                         <span class="text-amarelo text-xs font-black">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <p class="text-sm text-bordo font-medium italic mb-4">"Artes para redes sociais de alto nível técnico! O design dos posts, carrosséis e stories valorizou muito nossos produtos de informática."</p>
+                    <p class="text-sm text-bordo font-medium italic mb-4">"Artes para redes sociais de alto nível técnico! O design dos posts e promocionais valorizou imensamente nossas peças de informática."</p>
                 </div>
                 <div class="flex items-center justify-between pt-2 border-t border-rosaclaro/50 text-xs font-black text-bordo">
                     <span>Posts & Redes Sociais</span>
@@ -770,7 +767,7 @@
             </div>
 
             <!-- ÁREA NOVA: EDIÇÃO & PRODUÇÃO DE VÍDEO -->
-            <div class="interactive-card bg-white border-2 border-rosa rounded-3xl p-5 shadow-md flex flex-col justify-between hover:shadow-lg">
+            <div class="interactive-card bg-white border-2 border-rosa rounded-3xl p-5 shadow-md flex flex-col justify-between hover:shadow-premium">
                 <div>
                     <div class="text-2xl mb-2">🎬</div>
                     <h3 class="font-black text-bordo text-lg mb-2">Área Nova: Edição de Vídeo</h3>
@@ -1050,7 +1047,7 @@
                 <!-- VÍDEOS COM IA -->
                 <div id="wrapper-video-ia" class="calc-item-card interactive-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 relative" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer select-none">
-                        <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo shrink-0" onchange="toggleIaMinutos(); calcularTotal(); if(this.checked) mostrarToast('Defina a minutagem de Vídeos com IA!', '🤖', 'Minutagem');">
+                        <input type="checkbox" id="check-video-ia" class="w-5 h-5 accent-bordo shrink-0" onchange="toggleIaMinutos(); calcularTotal(); if(this.checked) mostrarToast('Defina a minutagem de Vídeos com IA!', '🤖', 'Audiovisual');">
                         <div class="flex-1 pr-14">
                             <span class="font-black text-bordo text-base sm:text-lg block">🎬 Edição de Vídeos com Inteligência Artificial</span>
                             <p class="text-xs sm:text-sm text-bordo font-medium">Geração de cenários/personagens com IA + montagem (<span class="text-bordo font-black">R$ 100 / min</span>)</p>
@@ -1061,7 +1058,7 @@
                         <span class="text-sm font-black text-bordo">Quantos Minutos de Vídeo com IA exatos?</span>
                         <div class="flex items-center gap-2">
                             <button type="button" aria-label="Diminuir minutos IA" onclick="mudarIaMinutos(-1)" class="counter-btn btn-dynamic w-9 h-9 bg-bordo text-creme rounded-xl font-black flex items-center justify-center hover:bg-rosa hover:text-bordo shadow-sm">-</button>
-                            <input type="number" id="input-minutos-ia" aria-label="Minutos de vídeo IA" value="1" min="1" max="240" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-xl font-black text-base py-1 bg-white">
+                            <input type="number" id="input-minutos-ia" aria-label="Minutos de vídeo IA" value="1" min="1" max="240" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-xl font-black text-base py-1 bg-white outline-none">
                             <button type="button" aria-label="Aumentar minutos IA" onclick="mudarIaMinutos(1)" class="counter-btn btn-dynamic w-9 h-9 bg-bordo text-creme rounded-xl font-black flex items-center justify-center hover:bg-rosa hover:text-bordo shadow-sm">+</button>
                         </div>
                     </div>
@@ -1070,7 +1067,7 @@
                 <!-- EDIÇÃO DE VÍDEO GERAL -->
                 <div id="wrapper-video-geral" class="calc-item-card interactive-card flex flex-col gap-3 p-4 border-2 border-rosaclaro rounded-2xl bg-creme/30 md:col-span-2 relative" data-cat="video">
                     <label class="flex items-center gap-4 cursor-pointer select-none">
-                        <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo shrink-0" onchange="toggleVideoGeral(); calcularTotal(); if(this.checked) mostrarToast('Defina a minutagem de Edição CapCut!', '🎬', 'Minutagem');">
+                        <input type="checkbox" id="check-video-geral" class="w-5 h-5 accent-bordo shrink-0" onchange="toggleVideoGeral(); calcularTotal(); if(this.checked) mostrarToast('Defina a minutagem de Edição CapCut!', '🎬', 'Audiovisual');">
                         <div class="flex-1 pr-14">
                             <span class="font-black text-bordo text-base sm:text-lg block">🎬 Edição Geral CapCut / Sem IA</span>
                             <p class="text-xs sm:text-sm text-bordo font-medium">Cortes dinâmicos, legendas e retenção (<span class="text-bordo font-black">R$ 60 / min</span>)</p>
@@ -1081,7 +1078,7 @@
                         <span class="text-sm font-black text-bordo">Quantos Minutos de Edição exatos?</span>
                         <div class="flex items-center gap-2">
                             <button type="button" aria-label="Diminuir minutos CapCut" onclick="mudarMinutosGeral(-1)" class="counter-btn btn-dynamic w-9 h-9 bg-bordo text-creme rounded-xl font-black flex items-center justify-center hover:bg-rosa hover:text-bordo shadow-sm">-</button>
-                            <input type="number" id="input-minutos-geral" aria-label="Minutos de vídeo CapCut" value="1" min="1" max="480" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-xl font-black text-base py-1 bg-white">
+                            <input type="number" id="input-minutos-geral" aria-label="Minutos de vídeo CapCut" value="1" min="1" max="480" onchange="calcularTotal()" class="w-16 text-center border-2 border-rosaclaro rounded-xl font-black text-base py-1 bg-white outline-none">
                             <button type="button" aria-label="Aumentar minutos CapCut" onclick="mudarMinutosGeral(1)" class="counter-btn btn-dynamic w-9 h-9 bg-bordo text-creme rounded-xl font-black flex items-center justify-center hover:bg-rosa hover:text-bordo shadow-sm">+</button>
                         </div>
                     </div>
@@ -1163,11 +1160,11 @@
                         <div class="grid grid-cols-2 gap-4 mb-3">
                             <div>
                                 <label class="block text-xs font-bold text-bordo/80 mb-1">Data de emissão</label>
-                                <input type="text" id="orc-data" readonly class="w-full p-2 bg-creme/40 border border-rosaclaro rounded-lg text-sm font-bold text-bordo">
+                                <input type="text" id="orc-data" readonly class="w-full p-2 bg-creme/40 border border-rosaclaro rounded-lg text-sm font-bold text-bordo outline-none">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-bordo/80 mb-1">Validade</label>
-                                <input type="text" value="30 dias" readonly class="w-full p-2 bg-creme/40 border border-rosaclaro rounded-lg text-sm font-bold text-bordo">
+                                <input type="text" value="30 dias" readonly class="w-full p-2 bg-creme/40 border border-rosaclaro rounded-lg text-sm font-bold text-bordo outline-none">
                             </div>
                         </div>
                         <div>
@@ -1176,7 +1173,7 @@
                         </div>
                     </div>
 
-                    <!-- BLOCO 2: DADOS DO CLIENTE (OBRIGATÓRIOS) -->
+                    <!-- BLOCO 2: DADOS DO CLIENTE -->
                     <div class="bg-white border-2 border-rosaclaro rounded-2xl p-4 shadow-sm mb-4">
                         <h3 class="text-sm font-black text-bordo mb-3 border-b border-rosaclaro/60 pb-2">Dados do Cliente</h3>
                         <div class="space-y-3">
@@ -1203,7 +1200,7 @@
                         </div>
                     </div>
 
-                    <!-- BLOCO 4: PAGAMENTO & OBSERVAÇÕES -->
+                    <!-- BLOCO 4: FORMA DE PAGAMENTO -->
                     <div class="bg-white border-2 border-rosaclaro rounded-2xl p-4 shadow-sm mb-4">
                         <div class="mb-4">
                             <label class="block text-xs font-bold text-bordo mb-2">Forma de Pagamento Preferida *</label>
@@ -1973,41 +1970,48 @@
             mostrarToast("Cookies desativados.", "🍪", "Privacidade");
         }
 
-        // SISTEMA DE NOTIFICAÇÃO TOAST COM SPRING & PROGRESSO
-        let toastTimeout;
+        // MODERN STACKING TOAST NOTIFICATION SYSTEM WITH PROGRESS BAR
         function mostrarToast(mensagem, icone = "✨", titulo = "Atualização") {
-            const toast = document.getElementById('toast-feedback');
-            const msgEl = document.getElementById('toast-msg');
-            const iconEl = document.getElementById('toast-icon');
-            const titleEl = document.getElementById('toast-title');
-            const barEl = document.getElementById('toast-bar');
+            const container = document.getElementById('toast-container');
+            if(!container) return;
 
-            msgEl.innerText = mensagem;
-            iconEl.innerText = icone;
-            titleEl.innerText = titulo;
+            const toast = document.createElement('div');
+            toast.className = 'toast-item relative w-72 sm:w-80 rounded-2xl flex flex-col pointer-events-auto';
 
-            // Reinicia a barra de progresso
-            barEl.classList.remove('toast-progress-bar');
-            void barEl.offsetWidth; // trigger reflow
-            barEl.classList.add('toast-progress-bar');
+            const duration = 3500; // Time before it dismisses automatically
 
-            toast.classList.remove('hidden');
+            toast.innerHTML = `
+                <div class="px-4 py-3.5 flex items-start gap-3">
+                    <span class="text-2xl animate-bounce mt-0.5 drop-shadow-sm">${icone}</span>
+                    <div class="flex-1 pr-2">
+                        <span class="text-[11px] font-black uppercase tracking-wider text-rosa block leading-tight mb-0.5">${titulo}</span>
+                        <span class="font-extrabold text-xs sm:text-sm text-bordo block leading-snug">${mensagem}</span>
+                    </div>
+                    <button type="button" aria-label="Fechar notificação" class="text-bordo/40 hover:text-bordo hover:bg-rosaclaro/30 p-1.5 rounded-lg text-xs font-black transition-all" onclick="this.closest('.toast-item').remove()">✕</button>
+                </div>
+                <div class="w-full bg-rosaclaro/30 h-1 rounded-b-2xl overflow-hidden">
+                    <div class="h-full bg-bordo rounded-b-2xl" style="animation: toastProgress ${duration}ms linear forwards;"></div>
+                </div>
+            `;
+
+            container.appendChild(toast);
+
+            // Slide in animation
             requestAnimationFrame(() => {
-                toast.classList.remove('opacity-0', 'translate-y-6');
-                toast.classList.add('opacity-100', 'translate-y-0');
+                requestAnimationFrame(() => {
+                    toast.classList.add('show');
+                });
             });
 
-            clearTimeout(toastTimeout);
-            toastTimeout = setTimeout(() => {
-                fecharToastImediato();
-            }, 3200);
-        }
-
-        function fecharToastImediato() {
-            const toast = document.getElementById('toast-feedback');
-            toast.classList.remove('opacity-100', 'translate-y-0');
-            toast.classList.add('opacity-0', 'translate-y-6');
-            setTimeout(() => toast.classList.add('hidden'), 350);
+            // Slide out and remove
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    if (toast.parentNode) {
+                        toast.parentNode.removeChild(toast);
+                    }
+                }, 500); // Matches CSS transition duration
+            }, duration);
         }
 
         function toggleMenuMobile() { 
